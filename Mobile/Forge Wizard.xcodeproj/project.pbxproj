@@ -13,6 +13,17 @@
 		FEBA3AB01FE5F27C0083FA11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEBA3AAE1FE5F27C0083FA11 /* Main.storyboard */; };
 		FEBA3AB21FE5F27C0083FA11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEBA3AB11FE5F27C0083FA11 /* Assets.xcassets */; };
 		FEBA3AB51FE5F27C0083FA11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEBA3AB31FE5F27C0083FA11 /* LaunchScreen.storyboard */; };
+		FEBA3AC21FE5F3C30083FA11 /* ChmpionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBA3AC11FE5F3C30083FA11 /* ChmpionCollectionViewCell.swift */; };
+		FEBA3AC41FE5F3DC0083FA11 /* LocalChampions.json in Resources */ = {isa = PBXBuildFile; fileRef = FEBA3AC31FE5F3DC0083FA11 /* LocalChampions.json */; };
+		FEBA3AC61FE5F3EF0083FA11 /* IBDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBA3AC51FE5F3EF0083FA11 /* IBDesignable.swift */; };
+		FEBA3AC81FE5F3FE0083FA11 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBA3AC71FE5F3FE0083FA11 /* Extentions.swift */; };
+		FEBA3AD31FE5F4210083FA11 /* Beaufort-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEBA3AC91FE5F41D0083FA11 /* Beaufort-Bold.ttf */; };
+		FEBA3AD41FE5F4210083FA11 /* Beaufort-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEBA3ACB1FE5F41D0083FA11 /* Beaufort-Italic.ttf */; };
+		FEBA3AD51FE5F4210083FA11 /* Beaufort-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEBA3ACD1FE5F41E0083FA11 /* Beaufort-Regular.ttf */; };
+		FEBA3AD61FE5F4210083FA11 /* Spiegel-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEBA3ACA1FE5F41D0083FA11 /* Spiegel-Italic.ttf */; };
+		FEBA3AD71FE5F4210083FA11 /* Spiegel-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEBA3ACC1FE5F41E0083FA11 /* Spiegel-Regular.ttf */; };
+		FEBA3ADA1FE5F44E0083FA11 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBA3AD91FE5F44E0083FA11 /* MainTabBarViewController.swift */; };
+		FEBA3ADC1FE5F46A0083FA11 /* LeadoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBA3ADB1FE5F46A0083FA11 /* LeadoutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +37,17 @@
 		FEBA3AB11FE5F27C0083FA11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FEBA3AB41FE5F27C0083FA11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FEBA3AB61FE5F27C0083FA11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FEBA3AC11FE5F3C30083FA11 /* ChmpionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChmpionCollectionViewCell.swift; sourceTree = "<group>"; };
+		FEBA3AC31FE5F3DC0083FA11 /* LocalChampions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LocalChampions.json; sourceTree = "<group>"; };
+		FEBA3AC51FE5F3EF0083FA11 /* IBDesignable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBDesignable.swift; sourceTree = "<group>"; };
+		FEBA3AC71FE5F3FE0083FA11 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
+		FEBA3AC91FE5F41D0083FA11 /* Beaufort-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Beaufort-Bold.ttf"; sourceTree = "<group>"; };
+		FEBA3ACA1FE5F41D0083FA11 /* Spiegel-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Spiegel-Italic.ttf"; sourceTree = "<group>"; };
+		FEBA3ACB1FE5F41D0083FA11 /* Beaufort-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Beaufort-Italic.ttf"; sourceTree = "<group>"; };
+		FEBA3ACC1FE5F41E0083FA11 /* Spiegel-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Spiegel-Regular.ttf"; sourceTree = "<group>"; };
+		FEBA3ACD1FE5F41E0083FA11 /* Beaufort-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Beaufort-Regular.ttf"; sourceTree = "<group>"; };
+		FEBA3AD91FE5F44E0083FA11 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		FEBA3ADB1FE5F46A0083FA11 /* LeadoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadoutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +82,11 @@
 		FEBA3A9E1FE5F27B0083FA11 = {
 			isa = PBXGroup;
 			children = (
+				FEBA3AD81FE5F4370083FA11 /* Controllers */,
+				FEBA3AC01FE5F3A50083FA11 /* Fonts */,
+				FEBA3ABF1FE5F39F0083FA11 /* Extentions */,
+				FEBA3ABD1FE5F3940083FA11 /* StaticData */,
+				FEBA3ABC1FE5F38D0083FA11 /* CellsNibs */,
 				FEBA3AA91FE5F27C0083FA11 /* Forge Wizard */,
 				FEBA3AA81FE5F27C0083FA11 /* Products */,
 				3C490FAC2460A45BA7A76FE8 /* Pods */,
@@ -86,6 +113,52 @@
 				FEBA3AB61FE5F27C0083FA11 /* Info.plist */,
 			);
 			path = "Forge Wizard";
+			sourceTree = "<group>";
+		};
+		FEBA3ABC1FE5F38D0083FA11 /* CellsNibs */ = {
+			isa = PBXGroup;
+			children = (
+				FEBA3AC11FE5F3C30083FA11 /* ChmpionCollectionViewCell.swift */,
+			);
+			path = CellsNibs;
+			sourceTree = "<group>";
+		};
+		FEBA3ABD1FE5F3940083FA11 /* StaticData */ = {
+			isa = PBXGroup;
+			children = (
+				FEBA3AC31FE5F3DC0083FA11 /* LocalChampions.json */,
+			);
+			path = StaticData;
+			sourceTree = "<group>";
+		};
+		FEBA3ABF1FE5F39F0083FA11 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				FEBA3AC51FE5F3EF0083FA11 /* IBDesignable.swift */,
+				FEBA3AC71FE5F3FE0083FA11 /* Extentions.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		FEBA3AC01FE5F3A50083FA11 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				FEBA3AC91FE5F41D0083FA11 /* Beaufort-Bold.ttf */,
+				FEBA3ACB1FE5F41D0083FA11 /* Beaufort-Italic.ttf */,
+				FEBA3ACD1FE5F41E0083FA11 /* Beaufort-Regular.ttf */,
+				FEBA3ACA1FE5F41D0083FA11 /* Spiegel-Italic.ttf */,
+				FEBA3ACC1FE5F41E0083FA11 /* Spiegel-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		FEBA3AD81FE5F4370083FA11 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FEBA3AD91FE5F44E0083FA11 /* MainTabBarViewController.swift */,
+				FEBA3ADB1FE5F46A0083FA11 /* LeadoutViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,9 +223,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEBA3AC41FE5F3DC0083FA11 /* LocalChampions.json in Resources */,
 				FEBA3AB51FE5F27C0083FA11 /* LaunchScreen.storyboard in Resources */,
+				FEBA3AD61FE5F4210083FA11 /* Spiegel-Italic.ttf in Resources */,
 				FEBA3AB21FE5F27C0083FA11 /* Assets.xcassets in Resources */,
 				FEBA3AB01FE5F27C0083FA11 /* Main.storyboard in Resources */,
+				FEBA3AD41FE5F4210083FA11 /* Beaufort-Italic.ttf in Resources */,
+				FEBA3AD51FE5F4210083FA11 /* Beaufort-Regular.ttf in Resources */,
+				FEBA3AD71FE5F4210083FA11 /* Spiegel-Regular.ttf in Resources */,
+				FEBA3AD31FE5F4210083FA11 /* Beaufort-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,8 +302,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEBA3ADC1FE5F46A0083FA11 /* LeadoutViewController.swift in Sources */,
 				FEBA3AAD1FE5F27C0083FA11 /* ViewController.swift in Sources */,
 				FEBA3AAB1FE5F27C0083FA11 /* AppDelegate.swift in Sources */,
+				FEBA3AC81FE5F3FE0083FA11 /* Extentions.swift in Sources */,
+				FEBA3ADA1FE5F44E0083FA11 /* MainTabBarViewController.swift in Sources */,
+				FEBA3AC61FE5F3EF0083FA11 /* IBDesignable.swift in Sources */,
+				FEBA3AC21FE5F3C30083FA11 /* ChmpionCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,11 +449,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7T7K9M39TB;
 				INFOPLIST_FILE = "Forge Wizard/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ahmedsafadi.Forge-Wizard";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -381,11 +466,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7T7K9M39TB;
 				INFOPLIST_FILE = "Forge Wizard/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ahmedsafadi.Forge-Wizard";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
