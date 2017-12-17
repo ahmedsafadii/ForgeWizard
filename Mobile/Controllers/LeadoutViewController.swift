@@ -10,6 +10,7 @@
 import UIKit
 import SwiftyJSON
 import AlamofireImage
+import SwiftSpinner
 
 class LeadoutViewController: UIViewController {
     
@@ -103,6 +104,28 @@ extension LeadoutViewController : UICollectionViewDelegate,UICollectionViewDataS
         cell.championImage.af_setImage(withURL: generateUrl(name: championsData[indexPath.row]["internet_image"].stringValue, placeHolder: "grid-placeholder.png"), placeholderImage: UIImage(named:championsData[indexPath.row]["local_image"].stringValue))
         
         return cell
+    }
+    
+    func fetchSelectedChampionBuild(){
+        SwiftSpinner.show("Forging the champion runes :3", animated: true)
+        SwiftSpinner.setTitleColor(UIColor.white)
+        SwiftSpinner.sharedInstance.innerColor = nil
+        APIManager.instance.download(downloadUrl: "http://elofight.com/build/public/index.php/getGuides/", saveUrl: "LocalData.json", onSuccess: { json in
+            SwiftSpinner.hide({
+                self.performSegue(withIdentifier: "showBuildList", sender: self)
+            })
+            print("json")
+            
+        }, onFailure: { error in
+            print(error)
+            SwiftSpinner.show(duration: 1.0, title: "Failed to get champions data", animated: false)
+        })
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.fetchSelectedChampionBuild()
+        
     }
     
     

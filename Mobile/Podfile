@@ -10,6 +10,6 @@ target 'Forge Wizard' do
         pod 'SwiftyJSON'
         pod 'Alamofire'
     	pod 'AlamofireImage'
-
+	pod 'SwiftSpinner'
 
 end

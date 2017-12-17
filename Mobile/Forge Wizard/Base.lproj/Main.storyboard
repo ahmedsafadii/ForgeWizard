@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="k2U-Sh-Jz2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tLu-Z4-vBn">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -278,7 +278,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ChmpionCollectionViewCell" id="eQX-g6-IbI" customClass="ChmpionCollectionViewCell" customModule="Reforged_Wizard" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ChmpionCollectionViewCell" id="eQX-g6-IbI" customClass="ChmpionCollectionViewCell" customModule="Forge_Wizard" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="55" height="75"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -359,10 +359,69 @@
                         <barButtonItem key="rightBarButtonItem" image="About" id="R0J-ti-FBj"/>
                     </navigationItem>
                     <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <segue destination="His-T4-R1l" kind="show" identifier="showBuildList" id="TNS-Cf-A1l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DyC-ov-Osf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="524" y="-274.81259370314842"/>
+        </scene>
+        <!--Champion Name-->
+        <scene sceneID="2I2-Ui-57f">
+            <objects>
+                <viewController storyboardIdentifier="ChampionsBuildsListViewController" hidesBottomBarWhenPushed="YES" id="His-T4-R1l" customClass="ChampionsBuildsListViewController" customModule="Forge_Wizard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fTB-PN-kRd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="gOO-60-QOO">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="gOO-60-QOO" secondAttribute="trailing" id="fEs-7e-4IQ"/>
+                            <constraint firstItem="gOO-60-QOO" firstAttribute="leading" secondItem="IUs-gS-WVq" secondAttribute="leading" id="jn0-3p-hsN"/>
+                            <constraint firstItem="gOO-60-QOO" firstAttribute="top" secondItem="fTB-PN-kRd" secondAttribute="top" id="qOM-Va-DEy"/>
+                            <constraint firstItem="IUs-gS-WVq" firstAttribute="bottom" secondItem="gOO-60-QOO" secondAttribute="bottom" id="qZP-zV-IBb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IUs-gS-WVq"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Champion Name" id="zB4-2C-AoD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vyh-tV-fyV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1390" y="-275"/>
+        </scene>
+        <!--Download Data View Controller-->
+        <scene sceneID="amD-8M-71a">
+            <objects>
+                <viewController storyboardIdentifier="DownloadDataViewController" id="tLu-Z4-vBn" customClass="DownloadDataViewController" customModule="Forge_Wizard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ACL-Od-zJr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" image="DownloadBg" translatesAutoresizingMaskIntoConstraints="NO" id="ON2-7V-IOV">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ON2-7V-IOV" firstAttribute="trailing" secondItem="Nen-ye-ore" secondAttribute="trailing" id="1i5-QK-Z66"/>
+                            <constraint firstItem="ON2-7V-IOV" firstAttribute="leading" secondItem="Nen-ye-ore" secondAttribute="leading" id="4A6-JX-EsL"/>
+                            <constraint firstItem="ON2-7V-IOV" firstAttribute="top" secondItem="ACL-Od-zJr" secondAttribute="top" id="XQn-eE-oAZ"/>
+                            <constraint firstItem="ON2-7V-IOV" firstAttribute="bottom" secondItem="Nen-ye-ore" secondAttribute="bottom" id="iuf-BG-Xmk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Nen-ye-ore"/>
+                    </view>
+                    <connections>
+                        <segue destination="k2U-Sh-Jz2" kind="show" identifier="showPage" id="YMx-Dx-AKN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f5h-n8-EAa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3370.4000000000001" y="886.50674662668678"/>
         </scene>
         <!--Main Tab Bar View Controller-->
         <scene sceneID="35T-rX-b8X">
@@ -475,6 +534,7 @@
         <image name="ADC" width="24" height="24"/>
         <image name="About" width="27" height="27"/>
         <image name="Background" width="125" height="222"/>
+        <image name="DownloadBg" width="375" height="667"/>
         <image name="FREE" width="25" height="25"/>
         <image name="Jungle" width="24" height="24"/>
         <image name="Loadouts" width="14" height="16"/>

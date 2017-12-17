@@ -26,6 +26,14 @@ func loadJson(fileName: String) -> JSON {
     return dataPath
 }
 
+func delay(seconds: Double, completion: @escaping () -> ()) {
+    let popTime = DispatchTime.now() + Double(Int64( Double(NSEC_PER_SEC) * seconds )) / Double(NSEC_PER_SEC)
+    
+    DispatchQueue.main.asyncAfter(deadline: popTime) {
+        completion()
+    }
+}
+
 
 func generateUrl(name:String,placeHolder:String) -> URL{
     var url:URL!
@@ -35,7 +43,6 @@ func generateUrl(name:String,placeHolder:String) -> URL{
     else{
         url = URL(string: "http://www.elofight.com/riotapi4/champions/" + placeHolder)
     }
-    print("URL IS ",url)
     return url
 }
 
