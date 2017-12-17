@@ -1,0 +1,32 @@
+PODS:
+  - Alamofire (4.6.0)
+  - AlamofireImage (3.3.0):
+    - Alamofire (~> 4.5)
+  - SwiftyJSON (4.0.0)
+  - UIColor_Hex_Swift (3.0.2)
+
+DEPENDENCIES:
+  - Alamofire
+  - AlamofireImage
+  - SwiftyJSON
+  - UIColor_Hex_Swift (from `https://github.com/yeahdongcn/UIColor-Hex-Swift.git`, tag `4.0.0`)
+
+EXTERNAL SOURCES:
+  UIColor_Hex_Swift:
+    :git: https://github.com/yeahdongcn/UIColor-Hex-Swift.git
+    :tag: 4.0.0
+
+CHECKOUT OPTIONS:
+  UIColor_Hex_Swift:
+    :git: https://github.com/yeahdongcn/UIColor-Hex-Swift.git
+    :tag: 4.0.0
+
+SPEC CHECKSUMS:
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  AlamofireImage: 2e784dc5d00f04903a52c1d169181469c805c3df
+  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
+  UIColor_Hex_Swift: 95f718452092a3efc8a827dffd2c04d3237be02d
+
+PODFILE CHECKSUM: 4318420891084b1b1cbd87ad56384bda24c7a9a2
+
+COCOAPODS: 1.4.0.beta.2
