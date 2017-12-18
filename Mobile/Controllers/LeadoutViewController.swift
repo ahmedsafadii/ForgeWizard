@@ -19,6 +19,7 @@ class LeadoutViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideBackButton()
         // Do any additional setup after loading the view.
     }
     
@@ -102,7 +103,12 @@ extension LeadoutViewController : UICollectionViewDelegate,UICollectionViewDataS
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ChmpionCollectionViewCell", for: indexPath) as! ChmpionCollectionViewCell
         cell.championName.text = championsData[indexPath.row]["name"].stringValue
         cell.championImage.af_setImage(withURL: generateUrl(name: championsData[indexPath.row]["internet_image"].stringValue, placeHolder: "grid-placeholder.png"), placeholderImage: UIImage(named:championsData[indexPath.row]["local_image"].stringValue))
-        
+//        if(championsData[indexPath.row]["isFree"].exists()){
+//            cell.isFree.isHidden = false
+//        }
+//        else{
+//            cell.isFree.isHidden = true
+//        }
         return cell
     }
     

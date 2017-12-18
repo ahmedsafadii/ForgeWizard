@@ -12,5 +12,6 @@ class ChmpionCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var championImage: UIImageView!
     @IBOutlet weak var championName: UILabel!
+    @IBOutlet weak var isFree: UIImageView!
     
 }

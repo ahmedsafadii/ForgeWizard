@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Beaufort-Bold.ttf">
+            <string>BeaufortforLOL-Bold</string>
+        </array>
+        <array key="Spiegel-Regular.ttf">
+            <string>Spiegel-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="115" id="KGk-i7-Jjw" customClass="HeaderBuildTableViewCell" customModule="Forge_Wizard" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="115"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="114.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Time to Start Some Trouble" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="MEX-X8-Zr4">
+                        <rect key="frame" x="21" y="12" width="218" height="20.5"/>
+                        <fontDescription key="fontDescription" name="BeaufortforLOL-Bold" family="BeaufortforLOL-Bold" pointSize="16"/>
+                        <color key="textColor" red="1" green="0.91372549020000005" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" text="Target acquisition, chasing, and spell vamp healing.Target acquisition, chasing, and spell vamp healing." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="5wN-cs-HlC">
+                        <rect key="frame" x="21" y="40.5" width="218" height="43.5"/>
+                        <fontDescription key="fontDescription" name="Spiegel-Regular" family="Spiegel" pointSize="12"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4fL-lB-ZCv">
+                        <rect key="frame" x="243" y="4" width="65" height="65"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2sJ-eH-xB3">
+                                <rect key="frame" x="2" y="2" width="61" height="61"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Akali" translatesAutoresizingMaskIntoConstraints="NO" id="c0Q-Dt-D2Z">
+                                        <rect key="frame" x="4" y="4" width="53" height="53"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isCircle" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="c0Q-Dt-D2Z" secondAttribute="trailing" constant="4" id="8Xq-kd-nOR"/>
+                                    <constraint firstItem="c0Q-Dt-D2Z" firstAttribute="leading" secondItem="2sJ-eH-xB3" secondAttribute="leading" constant="4" id="Cfe-jd-DDO"/>
+                                    <constraint firstAttribute="bottom" secondItem="c0Q-Dt-D2Z" secondAttribute="bottom" constant="4" id="SZ9-Z2-6MH"/>
+                                    <constraint firstItem="c0Q-Dt-D2Z" firstAttribute="top" secondItem="2sJ-eH-xB3" secondAttribute="top" constant="4" id="wIN-yD-693"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isCircle" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="1" green="0.91372549020000005" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="65" id="1EA-C0-UJe"/>
+                            <constraint firstItem="2sJ-eH-xB3" firstAttribute="leading" secondItem="4fL-lB-ZCv" secondAttribute="leading" constant="2" id="1td-6h-8IX"/>
+                            <constraint firstAttribute="trailing" secondItem="2sJ-eH-xB3" secondAttribute="trailing" constant="2" id="ACR-6C-i4Q"/>
+                            <constraint firstItem="2sJ-eH-xB3" firstAttribute="top" secondItem="4fL-lB-ZCv" secondAttribute="top" constant="2" id="gOu-N5-Qwn"/>
+                            <constraint firstAttribute="height" constant="65" id="pP9-n6-K27"/>
+                            <constraint firstAttribute="bottom" secondItem="2sJ-eH-xB3" secondAttribute="bottom" constant="2" id="pji-F2-LHY"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isCircle" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="0.5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" red="1" green="0.91372549020000005" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Patch: 7.23" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="DTI-4i-8eO">
+                        <rect key="frame" x="21" y="92" width="49" height="14.5"/>
+                        <fontDescription key="fontDescription" name="Spiegel-Regular" family="Spiegel" pointSize="10"/>
+                        <color key="textColor" red="1" green="0.91372549020000005" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="MEX-X8-Zr4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="3aJ-jL-IvT"/>
+                    <constraint firstAttribute="bottom" secondItem="DTI-4i-8eO" secondAttribute="bottom" constant="8" id="GIa-fd-65b"/>
+                    <constraint firstAttribute="trailing" secondItem="4fL-lB-ZCv" secondAttribute="trailing" constant="12" id="Nyn-nL-Mg9"/>
+                    <constraint firstItem="5wN-cs-HlC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="21" id="SOi-eP-ly3"/>
+                    <constraint firstItem="DTI-4i-8eO" firstAttribute="top" secondItem="5wN-cs-HlC" secondAttribute="bottom" constant="8" id="V3P-cE-fqR"/>
+                    <constraint firstItem="4fL-lB-ZCv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="V5a-89-T6g"/>
+                    <constraint firstItem="MEX-X8-Zr4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="21" id="ZWn-Eq-HsP"/>
+                    <constraint firstItem="5wN-cs-HlC" firstAttribute="top" secondItem="MEX-X8-Zr4" secondAttribute="bottom" constant="8" id="d3b-Gk-9vk"/>
+                    <constraint firstItem="4fL-lB-ZCv" firstAttribute="leading" secondItem="5wN-cs-HlC" secondAttribute="trailing" constant="4" id="ddQ-xb-B6N"/>
+                    <constraint firstItem="DTI-4i-8eO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="21" id="gFg-Ky-Dt4"/>
+                    <constraint firstItem="4fL-lB-ZCv" firstAttribute="leading" secondItem="MEX-X8-Zr4" secondAttribute="trailing" constant="4" id="jHp-P7-muW"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="33" y="-43.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Akali" width="220" height="220"/>
+    </resources>
+</document>

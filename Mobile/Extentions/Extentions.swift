@@ -9,6 +9,7 @@
 
 import Foundation
 import SwiftyJSON
+import UIKit
 
 
 func loadJson(fileName: String) -> JSON {
@@ -47,4 +48,33 @@ func generateUrl(name:String,placeHolder:String) -> URL{
 }
 
 
+extension UIView {
+    func capture() -> UIImage? {
+        var image: UIImage?
+        
+        if #available(iOS 10.0, *) {
+            let format = UIGraphicsImageRendererFormat()
+            format.opaque = isOpaque
+            let renderer = UIGraphicsImageRenderer(size: frame.size, format: format)
+            image = renderer.image { context in
+                drawHierarchy(in: frame, afterScreenUpdates: true)
+            }
+        } else {
+            UIGraphicsBeginImageContextWithOptions(frame.size, isOpaque, UIScreen.main.scale)
+            drawHierarchy(in: frame, afterScreenUpdates: true)
+            image = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+        }
+        
+        return image
+    }
+}
 
+
+
+extension UIViewController{
+    
+    func hideBackButton(){
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+    }
+}

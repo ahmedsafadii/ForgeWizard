@@ -8,6 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		6EA3B3A0861FEA5FA8666C56 /* Pods_Forge_Wizard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B741757DFC39A69818C6657 /* Pods_Forge_Wizard.framework */; };
+		FE4AFD621FE6C54800694EF4 /* VerifyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4AFD611FE6C54800694EF4 /* VerifyTableViewCell.swift */; };
+		FE4AFD641FE6E9B500694EF4 /* ShowChampionRunesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4AFD631FE6E9B500694EF4 /* ShowChampionRunesViewController.swift */; };
+		FE4AFD671FE6F17800694EF4 /* HeaderBuildTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4AFD651FE6F17800694EF4 /* HeaderBuildTableViewCell.swift */; };
+		FE4AFD681FE6F17800694EF4 /* HeaderBuildTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE4AFD661FE6F17800694EF4 /* HeaderBuildTableViewCell.xib */; };
+		FE4AFD6B1FE6FEB900694EF4 /* MainRunesBuildTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4AFD691FE6FEB900694EF4 /* MainRunesBuildTableViewCell.swift */; };
+		FE4AFD6C1FE6FEB900694EF4 /* MainRunesBuildTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE4AFD6A1FE6FEB900694EF4 /* MainRunesBuildTableViewCell.xib */; };
+		FE4AFD6F1FE7213F00694EF4 /* SecondaryRunesBuildsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4AFD6D1FE7213F00694EF4 /* SecondaryRunesBuildsTableViewCell.swift */; };
+		FE4AFD701FE7213F00694EF4 /* SecondaryRunesBuildsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE4AFD6E1FE7213F00694EF4 /* SecondaryRunesBuildsTableViewCell.xib */; };
+		FE6E75AA1FE739BC009D43EA /* RunesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6E75A91FE739BC009D43EA /* RunesViewController.swift */; };
+		FE6E75AC1FE73A10009D43EA /* RuneCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6E75AB1FE73A10009D43EA /* RuneCollectionViewCell.swift */; };
+		FE6E75AF1FE74478009D43EA /* RuneHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6E75AD1FE74478009D43EA /* RuneHeaderTableViewCell.swift */; };
+		FE6E75B01FE74478009D43EA /* RuneHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE6E75AE1FE74478009D43EA /* RuneHeaderTableViewCell.xib */; };
+		FE6E75B31FE74489009D43EA /* RuneBodyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6E75B11FE74489009D43EA /* RuneBodyTableViewCell.swift */; };
+		FE6E75B41FE74489009D43EA /* RuneBodyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE6E75B21FE74489009D43EA /* RuneBodyTableViewCell.xib */; };
 		FEBA3AAB1FE5F27C0083FA11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBA3AAA1FE5F27C0083FA11 /* AppDelegate.swift */; };
 		FEBA3AB01FE5F27C0083FA11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEBA3AAE1FE5F27C0083FA11 /* Main.storyboard */; };
 		FEBA3AB21FE5F27C0083FA11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEBA3AB11FE5F27C0083FA11 /* Assets.xcassets */; };
@@ -16,22 +30,39 @@
 		FEBA3AC41FE5F3DC0083FA11 /* LocalChampions.json in Resources */ = {isa = PBXBuildFile; fileRef = FEBA3AC31FE5F3DC0083FA11 /* LocalChampions.json */; };
 		FEBA3AC61FE5F3EF0083FA11 /* IBDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBA3AC51FE5F3EF0083FA11 /* IBDesignable.swift */; };
 		FEBA3AC81FE5F3FE0083FA11 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBA3AC71FE5F3FE0083FA11 /* Extentions.swift */; };
-		FEBA3AD31FE5F4210083FA11 /* Beaufort-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEBA3AC91FE5F41D0083FA11 /* Beaufort-Bold.ttf */; };
-		FEBA3AD41FE5F4210083FA11 /* Beaufort-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEBA3ACB1FE5F41D0083FA11 /* Beaufort-Italic.ttf */; };
-		FEBA3AD51FE5F4210083FA11 /* Beaufort-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEBA3ACD1FE5F41E0083FA11 /* Beaufort-Regular.ttf */; };
-		FEBA3AD61FE5F4210083FA11 /* Spiegel-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEBA3ACA1FE5F41D0083FA11 /* Spiegel-Italic.ttf */; };
-		FEBA3AD71FE5F4210083FA11 /* Spiegel-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEBA3ACC1FE5F41E0083FA11 /* Spiegel-Regular.ttf */; };
 		FEBA3ADA1FE5F44E0083FA11 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBA3AD91FE5F44E0083FA11 /* MainTabBarViewController.swift */; };
 		FEBA3ADC1FE5F46A0083FA11 /* LeadoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBA3ADB1FE5F46A0083FA11 /* LeadoutViewController.swift */; };
 		FEC60CB51FE68EF700BA3FF7 /* ChampionsBuildsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC60CB41FE68EF700BA3FF7 /* ChampionsBuildsListViewController.swift */; };
 		FEC60CB71FE68F4B00BA3FF7 /* DownloadDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC60CB61FE68F4B00BA3FF7 /* DownloadDataViewController.swift */; };
 		FEC60CBA1FE6986500BA3FF7 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC60CB91FE6986500BA3FF7 /* APIManager.swift */; };
+		FEC60CBE1FE6B63700BA3FF7 /* VerifyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEC60CBC1FE6B63700BA3FF7 /* VerifyTableViewCell.xib */; };
+		FEC60CBF1FE6B7CE00BA3FF7 /* Beaufort-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEBA3AC91FE5F41D0083FA11 /* Beaufort-Bold.ttf */; };
+		FEC60CC01FE6B7CE00BA3FF7 /* Beaufort-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEBA3ACB1FE5F41D0083FA11 /* Beaufort-Italic.ttf */; };
+		FEC60CC11FE6B7CE00BA3FF7 /* Beaufort-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEBA3ACD1FE5F41E0083FA11 /* Beaufort-Regular.ttf */; };
+		FEC60CC21FE6B7CE00BA3FF7 /* Spiegel-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEBA3ACA1FE5F41D0083FA11 /* Spiegel-Italic.ttf */; };
+		FEC60CC31FE6B7CE00BA3FF7 /* Spiegel-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEBA3ACC1FE5F41E0083FA11 /* Spiegel-Regular.ttf */; };
+		FEC60CC61FE6BB0300BA3FF7 /* RuneBuildTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC60CC41FE6BB0300BA3FF7 /* RuneBuildTableViewCell.swift */; };
+		FEC60CC71FE6BB0300BA3FF7 /* RuneBuildTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEC60CC51FE6BB0300BA3FF7 /* RuneBuildTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8B741757DFC39A69818C6657 /* Pods_Forge_Wizard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Forge_Wizard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A16A63AA669CFED4C4FE5DA8 /* Pods-Forge Wizard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Forge Wizard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Forge Wizard/Pods-Forge Wizard.debug.xcconfig"; sourceTree = "<group>"; };
 		E17A148C842D6483A618D31B /* Pods-Forge Wizard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Forge Wizard.release.xcconfig"; path = "Pods/Target Support Files/Pods-Forge Wizard/Pods-Forge Wizard.release.xcconfig"; sourceTree = "<group>"; };
+		FE4AFD611FE6C54800694EF4 /* VerifyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyTableViewCell.swift; sourceTree = "<group>"; };
+		FE4AFD631FE6E9B500694EF4 /* ShowChampionRunesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowChampionRunesViewController.swift; sourceTree = "<group>"; };
+		FE4AFD651FE6F17800694EF4 /* HeaderBuildTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderBuildTableViewCell.swift; sourceTree = "<group>"; };
+		FE4AFD661FE6F17800694EF4 /* HeaderBuildTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderBuildTableViewCell.xib; sourceTree = "<group>"; };
+		FE4AFD691FE6FEB900694EF4 /* MainRunesBuildTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRunesBuildTableViewCell.swift; sourceTree = "<group>"; };
+		FE4AFD6A1FE6FEB900694EF4 /* MainRunesBuildTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainRunesBuildTableViewCell.xib; sourceTree = "<group>"; };
+		FE4AFD6D1FE7213F00694EF4 /* SecondaryRunesBuildsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryRunesBuildsTableViewCell.swift; sourceTree = "<group>"; };
+		FE4AFD6E1FE7213F00694EF4 /* SecondaryRunesBuildsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondaryRunesBuildsTableViewCell.xib; sourceTree = "<group>"; };
+		FE6E75A91FE739BC009D43EA /* RunesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunesViewController.swift; sourceTree = "<group>"; };
+		FE6E75AB1FE73A10009D43EA /* RuneCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuneCollectionViewCell.swift; sourceTree = "<group>"; };
+		FE6E75AD1FE74478009D43EA /* RuneHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuneHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		FE6E75AE1FE74478009D43EA /* RuneHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RuneHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		FE6E75B11FE74489009D43EA /* RuneBodyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuneBodyTableViewCell.swift; sourceTree = "<group>"; };
+		FE6E75B21FE74489009D43EA /* RuneBodyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RuneBodyTableViewCell.xib; sourceTree = "<group>"; };
 		FEBA3AA71FE5F27C0083FA11 /* Forge Wizard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Forge Wizard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEBA3AAA1FE5F27C0083FA11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEBA3AAF1FE5F27C0083FA11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -52,6 +83,9 @@
 		FEC60CB41FE68EF700BA3FF7 /* ChampionsBuildsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionsBuildsListViewController.swift; sourceTree = "<group>"; };
 		FEC60CB61FE68F4B00BA3FF7 /* DownloadDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadDataViewController.swift; sourceTree = "<group>"; };
 		FEC60CB91FE6986500BA3FF7 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		FEC60CBC1FE6B63700BA3FF7 /* VerifyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VerifyTableViewCell.xib; sourceTree = "<group>"; };
+		FEC60CC41FE6BB0300BA3FF7 /* RuneBuildTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuneBuildTableViewCell.swift; sourceTree = "<group>"; };
+		FEC60CC51FE6BB0300BA3FF7 /* RuneBuildTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RuneBuildTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +157,21 @@
 			isa = PBXGroup;
 			children = (
 				FEBA3AC11FE5F3C30083FA11 /* ChmpionCollectionViewCell.swift */,
+				FEC60CBC1FE6B63700BA3FF7 /* VerifyTableViewCell.xib */,
+				FEC60CC41FE6BB0300BA3FF7 /* RuneBuildTableViewCell.swift */,
+				FEC60CC51FE6BB0300BA3FF7 /* RuneBuildTableViewCell.xib */,
+				FE4AFD611FE6C54800694EF4 /* VerifyTableViewCell.swift */,
+				FE4AFD651FE6F17800694EF4 /* HeaderBuildTableViewCell.swift */,
+				FE4AFD661FE6F17800694EF4 /* HeaderBuildTableViewCell.xib */,
+				FE4AFD691FE6FEB900694EF4 /* MainRunesBuildTableViewCell.swift */,
+				FE4AFD6A1FE6FEB900694EF4 /* MainRunesBuildTableViewCell.xib */,
+				FE4AFD6D1FE7213F00694EF4 /* SecondaryRunesBuildsTableViewCell.swift */,
+				FE4AFD6E1FE7213F00694EF4 /* SecondaryRunesBuildsTableViewCell.xib */,
+				FE6E75AB1FE73A10009D43EA /* RuneCollectionViewCell.swift */,
+				FE6E75AD1FE74478009D43EA /* RuneHeaderTableViewCell.swift */,
+				FE6E75AE1FE74478009D43EA /* RuneHeaderTableViewCell.xib */,
+				FE6E75B11FE74489009D43EA /* RuneBodyTableViewCell.swift */,
+				FE6E75B21FE74489009D43EA /* RuneBodyTableViewCell.xib */,
 			);
 			path = CellsNibs;
 			sourceTree = "<group>";
@@ -163,6 +212,8 @@
 				FEBA3ADB1FE5F46A0083FA11 /* LeadoutViewController.swift */,
 				FEC60CB41FE68EF700BA3FF7 /* ChampionsBuildsListViewController.swift */,
 				FEC60CB61FE68F4B00BA3FF7 /* DownloadDataViewController.swift */,
+				FE4AFD631FE6E9B500694EF4 /* ShowChampionRunesViewController.swift */,
+				FE6E75A91FE739BC009D43EA /* RunesViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -238,14 +289,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEBA3AC41FE5F3DC0083FA11 /* LocalChampions.json in Resources */,
+				FE4AFD701FE7213F00694EF4 /* SecondaryRunesBuildsTableViewCell.xib in Resources */,
+				FE4AFD6C1FE6FEB900694EF4 /* MainRunesBuildTableViewCell.xib in Resources */,
 				FEBA3AB51FE5F27C0083FA11 /* LaunchScreen.storyboard in Resources */,
-				FEBA3AD61FE5F4210083FA11 /* Spiegel-Italic.ttf in Resources */,
+				FEC60CC01FE6B7CE00BA3FF7 /* Beaufort-Italic.ttf in Resources */,
+				FE6E75B41FE74489009D43EA /* RuneBodyTableViewCell.xib in Resources */,
+				FEC60CC31FE6B7CE00BA3FF7 /* Spiegel-Regular.ttf in Resources */,
+				FEC60CC71FE6BB0300BA3FF7 /* RuneBuildTableViewCell.xib in Resources */,
+				FEC60CBE1FE6B63700BA3FF7 /* VerifyTableViewCell.xib in Resources */,
+				FE6E75B01FE74478009D43EA /* RuneHeaderTableViewCell.xib in Resources */,
+				FEC60CC21FE6B7CE00BA3FF7 /* Spiegel-Italic.ttf in Resources */,
+				FEC60CBF1FE6B7CE00BA3FF7 /* Beaufort-Bold.ttf in Resources */,
 				FEBA3AB21FE5F27C0083FA11 /* Assets.xcassets in Resources */,
+				FE4AFD681FE6F17800694EF4 /* HeaderBuildTableViewCell.xib in Resources */,
 				FEBA3AB01FE5F27C0083FA11 /* Main.storyboard in Resources */,
-				FEBA3AD41FE5F4210083FA11 /* Beaufort-Italic.ttf in Resources */,
-				FEBA3AD51FE5F4210083FA11 /* Beaufort-Regular.ttf in Resources */,
-				FEBA3AD71FE5F4210083FA11 /* Spiegel-Regular.ttf in Resources */,
-				FEBA3AD31FE5F4210083FA11 /* Beaufort-Bold.ttf in Resources */,
+				FEC60CC11FE6B7CE00BA3FF7 /* Beaufort-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,14 +376,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE6E75AA1FE739BC009D43EA /* RunesViewController.swift in Sources */,
 				FEBA3ADC1FE5F46A0083FA11 /* LeadoutViewController.swift in Sources */,
+				FE6E75AF1FE74478009D43EA /* RuneHeaderTableViewCell.swift in Sources */,
+				FE4AFD6B1FE6FEB900694EF4 /* MainRunesBuildTableViewCell.swift in Sources */,
 				FEC60CBA1FE6986500BA3FF7 /* APIManager.swift in Sources */,
 				FEC60CB51FE68EF700BA3FF7 /* ChampionsBuildsListViewController.swift in Sources */,
 				FEBA3AAB1FE5F27C0083FA11 /* AppDelegate.swift in Sources */,
 				FEBA3AC81FE5F3FE0083FA11 /* Extentions.swift in Sources */,
+				FEC60CC61FE6BB0300BA3FF7 /* RuneBuildTableViewCell.swift in Sources */,
+				FE6E75B31FE74489009D43EA /* RuneBodyTableViewCell.swift in Sources */,
+				FE4AFD671FE6F17800694EF4 /* HeaderBuildTableViewCell.swift in Sources */,
+				FE4AFD621FE6C54800694EF4 /* VerifyTableViewCell.swift in Sources */,
 				FEBA3ADA1FE5F44E0083FA11 /* MainTabBarViewController.swift in Sources */,
+				FE4AFD641FE6E9B500694EF4 /* ShowChampionRunesViewController.swift in Sources */,
 				FEBA3AC61FE5F3EF0083FA11 /* IBDesignable.swift in Sources */,
+				FE4AFD6F1FE7213F00694EF4 /* SecondaryRunesBuildsTableViewCell.swift in Sources */,
 				FEC60CB71FE68F4B00BA3FF7 /* DownloadDataViewController.swift in Sources */,
+				FE6E75AC1FE73A10009D43EA /* RuneCollectionViewCell.swift in Sources */,
 				FEBA3AC21FE5F3C30083FA11 /* ChmpionCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
