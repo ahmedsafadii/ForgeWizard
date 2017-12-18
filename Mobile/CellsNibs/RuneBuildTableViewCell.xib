@@ -211,7 +211,7 @@
                                     <constraint firstAttribute="height" constant="32" id="cpA-pu-c13"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="BeaufortforLOL-Bold" family="BeaufortforLOL-Bold" pointSize="7"/>
-                                <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="titleEdgeInsets" minX="0.0" minY="20" maxX="10" maxY="0.0"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" image="Dislike"/>
@@ -240,7 +240,7 @@
                                     <constraint firstAttribute="width" constant="29" id="uBg-CH-3mb"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="BeaufortforLOL-Bold" family="BeaufortforLOL-Bold" pointSize="7"/>
-                                <color key="tintColor" red="0.0" green="0.56832241164285724" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="titleEdgeInsets" minX="0.0" minY="20" maxX="10" maxY="0.0"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" image="Like"/>

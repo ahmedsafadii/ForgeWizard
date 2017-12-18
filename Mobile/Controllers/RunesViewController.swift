@@ -14,6 +14,9 @@ class RunesViewController: UIViewController {
     var demoData = [JSON]()
     var selectedIndex = 0
     var allowChange = true
+    
+    
+    @IBOutlet weak var RunesTableView: UITableView!
     @IBOutlet weak var SelectRuneCollection: UICollectionView!
     @IBOutlet weak var runeBackGround: UIImageView!
     
@@ -33,12 +36,18 @@ class RunesViewController: UIViewController {
             self.allowChange = true
         })
         animator.startAnimation()
+        
+        RunesTableView.estimatedRowHeight = 85.0
+        RunesTableView.rowHeight = UITableViewAutomaticDimension
+        RunesTableView.tableFooterView = UIView()
+        
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLayout()
-        
+        self.hideBackButton()
         // Do any additional setup after loading the view.
     }
     
@@ -60,6 +69,45 @@ class RunesViewController: UIViewController {
     
 }
 
+
+extension RunesViewController : UITableViewDelegate,UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if(section == 0){
+            return 1
+        }
+        else{
+            return 20
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if(indexPath.section == 0){
+            let cell = Bundle.main.loadNibNamed("RuneHeaderTableViewCell", owner: self, options: nil)?.first as! RuneHeaderTableViewCell
+            
+            return cell
+        }
+        else{
+            let cell = Bundle.main.loadNibNamed("RuneBodyTableViewCell", owner: self, options: nil)?.first as! RuneBodyTableViewCell
+            
+            return cell
+            
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "showSelected", sender: self)
+    }
+    
+}
 
 extension RunesViewController : UICollectionViewDelegate,UICollectionViewDataSource {
     

@@ -28,8 +28,8 @@ class DownloadDataViewController: UIViewController {
     }
     
     @objc func timerFire(_ timer: Timer) {
-//        progress += (timer.timeInterval/5)
-        progress += (timer.timeInterval/1)
+        progress += (timer.timeInterval/5)
+//        progress += (timer.timeInterval/1)
         SwiftSpinner.show(progress: progress, title: "Downloading \n \(Int(progress * 100))%")
         if progress >= 1 {
             timer.invalidate()

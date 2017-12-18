@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="188" id="KGk-i7-Jjw" customClass="SelectedRuneVideoTableViewCell" customModule="Forge_Wizard" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="188"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="187.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DownloadBg" translatesAutoresizingMaskIntoConstraints="NO" id="Uvu-qb-mJC">
+                        <rect key="frame" x="10" y="8" width="300" height="170"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VKJ-ld-chk">
+                        <rect key="frame" x="10" y="8" width="300" height="170"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.54000000000000004" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="170" id="0wJ-P2-3R3"/>
+                        </constraints>
+                        <state key="normal" image="PlayBigVideo"/>
+                        <connections>
+                            <action selector="PlayVideo:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="l22-Ae-XSv"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="Uvu-qb-mJC" firstAttribute="centerY" secondItem="VKJ-ld-chk" secondAttribute="centerY" id="39D-lc-fzC"/>
+                    <constraint firstItem="Uvu-qb-mJC" firstAttribute="centerX" secondItem="VKJ-ld-chk" secondAttribute="centerX" id="7YR-Jz-jo6"/>
+                    <constraint firstItem="VKJ-ld-chk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="ET9-hD-6mo"/>
+                    <constraint firstAttribute="trailing" secondItem="VKJ-ld-chk" secondAttribute="trailing" constant="10" id="GPh-bv-lU9"/>
+                    <constraint firstItem="Uvu-qb-mJC" firstAttribute="height" secondItem="VKJ-ld-chk" secondAttribute="height" id="KwX-2P-STD"/>
+                    <constraint firstItem="Uvu-qb-mJC" firstAttribute="width" secondItem="VKJ-ld-chk" secondAttribute="width" id="T6A-mE-s7e"/>
+                    <constraint firstItem="VKJ-ld-chk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="v2A-YN-kSj"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="playVideo" destination="VKJ-ld-chk" id="ZwT-Zt-qHh"/>
+                <outlet property="videoScreen" destination="Uvu-qb-mJC" id="oqa-C5-zGA"/>
+            </connections>
+            <point key="canvasLocation" x="-113" y="-171"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="DownloadBg" width="375" height="667"/>
+        <image name="PlayBigVideo" width="41" height="41"/>
+    </resources>
+</document>

@@ -10,7 +10,7 @@
 import Foundation
 import SwiftyJSON
 import UIKit
-
+import AVFoundation
 
 func loadJson(fileName: String) -> JSON {
     
@@ -35,6 +35,27 @@ func delay(seconds: Double, completion: @escaping () -> ()) {
     }
 }
 
+
+func getThumbnailFrom(path: URL) -> UIImage? {
+    
+    do {
+        
+        let asset = AVURLAsset(url: path , options: nil)
+        let imgGenerator = AVAssetImageGenerator(asset: asset)
+        imgGenerator.appliesPreferredTrackTransform = true
+        let cgImage = try imgGenerator.copyCGImage(at: CMTimeMake(0, 1), actualTime: nil)
+        let thumbnail = UIImage(cgImage: cgImage)
+        
+        return thumbnail
+        
+    } catch let error {
+        
+        print("*** Error generating thumbnail: \(error.localizedDescription)")
+        return nil
+        
+    }
+    
+}
 
 func generateUrl(name:String,placeHolder:String) -> URL{
     var url:URL!

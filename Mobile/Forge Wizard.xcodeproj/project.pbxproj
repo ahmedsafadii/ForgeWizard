@@ -22,6 +22,17 @@
 		FE6E75B01FE74478009D43EA /* RuneHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE6E75AE1FE74478009D43EA /* RuneHeaderTableViewCell.xib */; };
 		FE6E75B31FE74489009D43EA /* RuneBodyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6E75B11FE74489009D43EA /* RuneBodyTableViewCell.swift */; };
 		FE6E75B41FE74489009D43EA /* RuneBodyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE6E75B21FE74489009D43EA /* RuneBodyTableViewCell.xib */; };
+		FE6E75B61FE7C5E2009D43EA /* SelectedRuneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6E75B51FE7C5E2009D43EA /* SelectedRuneViewController.swift */; };
+		FE6E75BB1FE7CE9D009D43EA /* render_Electrocute.m4v in Resources */ = {isa = PBXBuildFile; fileRef = FE6E75BA1FE7CE9D009D43EA /* render_Electrocute.m4v */; };
+		FE6E75BE1FE7D3D4009D43EA /* SelectedRuneVideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6E75BC1FE7D3D4009D43EA /* SelectedRuneVideoTableViewCell.swift */; };
+		FE6E75BF1FE7D3D4009D43EA /* SelectedRuneVideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE6E75BD1FE7D3D4009D43EA /* SelectedRuneVideoTableViewCell.xib */; };
+		FE6E75C11FE7DA44009D43EA /* render_Electrocute.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = FE6E75C01FE7DA44009D43EA /* render_Electrocute.mp4 */; };
+		FE6E75C41FE7DD3D009D43EA /* SelectedRuneTakesOnTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6E75C21FE7DD3D009D43EA /* SelectedRuneTakesOnTableViewCell.swift */; };
+		FE6E75C51FE7DD3D009D43EA /* SelectedRuneTakesOnTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE6E75C31FE7DD3D009D43EA /* SelectedRuneTakesOnTableViewCell.xib */; };
+		FE6E75CA1FE7DD5E009D43EA /* SelectedRuneChampionsListTableViewCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6E75C81FE7DD5E009D43EA /* SelectedRuneChampionsListTableViewCellTableViewCell.swift */; };
+		FE6E75CB1FE7DD5E009D43EA /* SelectedRuneChampionsListTableViewCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE6E75C91FE7DD5E009D43EA /* SelectedRuneChampionsListTableViewCellTableViewCell.xib */; };
+		FE6E75CE1FE7DEF6009D43EA /* SelectedRuneDescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6E75CC1FE7DEF6009D43EA /* SelectedRuneDescriptionTableViewCell.swift */; };
+		FE6E75CF1FE7DEF6009D43EA /* SelectedRuneDescriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE6E75CD1FE7DEF6009D43EA /* SelectedRuneDescriptionTableViewCell.xib */; };
 		FEBA3AAB1FE5F27C0083FA11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBA3AAA1FE5F27C0083FA11 /* AppDelegate.swift */; };
 		FEBA3AB01FE5F27C0083FA11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEBA3AAE1FE5F27C0083FA11 /* Main.storyboard */; };
 		FEBA3AB21FE5F27C0083FA11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEBA3AB11FE5F27C0083FA11 /* Assets.xcassets */; };
@@ -63,6 +74,17 @@
 		FE6E75AE1FE74478009D43EA /* RuneHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RuneHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		FE6E75B11FE74489009D43EA /* RuneBodyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuneBodyTableViewCell.swift; sourceTree = "<group>"; };
 		FE6E75B21FE74489009D43EA /* RuneBodyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RuneBodyTableViewCell.xib; sourceTree = "<group>"; };
+		FE6E75B51FE7C5E2009D43EA /* SelectedRuneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedRuneViewController.swift; sourceTree = "<group>"; };
+		FE6E75BA1FE7CE9D009D43EA /* render_Electrocute.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = render_Electrocute.m4v; sourceTree = "<group>"; };
+		FE6E75BC1FE7D3D4009D43EA /* SelectedRuneVideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedRuneVideoTableViewCell.swift; sourceTree = "<group>"; };
+		FE6E75BD1FE7D3D4009D43EA /* SelectedRuneVideoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedRuneVideoTableViewCell.xib; sourceTree = "<group>"; };
+		FE6E75C01FE7DA44009D43EA /* render_Electrocute.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = render_Electrocute.mp4; sourceTree = "<group>"; };
+		FE6E75C21FE7DD3D009D43EA /* SelectedRuneTakesOnTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedRuneTakesOnTableViewCell.swift; sourceTree = "<group>"; };
+		FE6E75C31FE7DD3D009D43EA /* SelectedRuneTakesOnTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedRuneTakesOnTableViewCell.xib; sourceTree = "<group>"; };
+		FE6E75C81FE7DD5E009D43EA /* SelectedRuneChampionsListTableViewCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedRuneChampionsListTableViewCellTableViewCell.swift; sourceTree = "<group>"; };
+		FE6E75C91FE7DD5E009D43EA /* SelectedRuneChampionsListTableViewCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedRuneChampionsListTableViewCellTableViewCell.xib; sourceTree = "<group>"; };
+		FE6E75CC1FE7DEF6009D43EA /* SelectedRuneDescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedRuneDescriptionTableViewCell.swift; sourceTree = "<group>"; };
+		FE6E75CD1FE7DEF6009D43EA /* SelectedRuneDescriptionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedRuneDescriptionTableViewCell.xib; sourceTree = "<group>"; };
 		FEBA3AA71FE5F27C0083FA11 /* Forge Wizard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Forge Wizard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEBA3AAA1FE5F27C0083FA11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEBA3AAF1FE5F27C0083FA11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -117,9 +139,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FE6E75B71FE7C82E009D43EA /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+				FE6E75C01FE7DA44009D43EA /* render_Electrocute.mp4 */,
+				FE6E75BA1FE7CE9D009D43EA /* render_Electrocute.m4v */,
+			);
+			path = Videos;
+			sourceTree = "<group>";
+		};
 		FEBA3A9E1FE5F27B0083FA11 = {
 			isa = PBXGroup;
 			children = (
+				FE6E75B71FE7C82E009D43EA /* Videos */,
 				FEC60CB81FE6985600BA3FF7 /* API */,
 				FEBA3AD81FE5F4370083FA11 /* Controllers */,
 				FEBA3AC01FE5F3A50083FA11 /* Fonts */,
@@ -172,6 +204,14 @@
 				FE6E75AE1FE74478009D43EA /* RuneHeaderTableViewCell.xib */,
 				FE6E75B11FE74489009D43EA /* RuneBodyTableViewCell.swift */,
 				FE6E75B21FE74489009D43EA /* RuneBodyTableViewCell.xib */,
+				FE6E75BC1FE7D3D4009D43EA /* SelectedRuneVideoTableViewCell.swift */,
+				FE6E75BD1FE7D3D4009D43EA /* SelectedRuneVideoTableViewCell.xib */,
+				FE6E75C21FE7DD3D009D43EA /* SelectedRuneTakesOnTableViewCell.swift */,
+				FE6E75C31FE7DD3D009D43EA /* SelectedRuneTakesOnTableViewCell.xib */,
+				FE6E75C81FE7DD5E009D43EA /* SelectedRuneChampionsListTableViewCellTableViewCell.swift */,
+				FE6E75C91FE7DD5E009D43EA /* SelectedRuneChampionsListTableViewCellTableViewCell.xib */,
+				FE6E75CC1FE7DEF6009D43EA /* SelectedRuneDescriptionTableViewCell.swift */,
+				FE6E75CD1FE7DEF6009D43EA /* SelectedRuneDescriptionTableViewCell.xib */,
 			);
 			path = CellsNibs;
 			sourceTree = "<group>";
@@ -214,6 +254,7 @@
 				FEC60CB61FE68F4B00BA3FF7 /* DownloadDataViewController.swift */,
 				FE4AFD631FE6E9B500694EF4 /* ShowChampionRunesViewController.swift */,
 				FE6E75A91FE739BC009D43EA /* RunesViewController.swift */,
+				FE6E75B51FE7C5E2009D43EA /* SelectedRuneViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -288,19 +329,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE6E75C51FE7DD3D009D43EA /* SelectedRuneTakesOnTableViewCell.xib in Resources */,
 				FEBA3AC41FE5F3DC0083FA11 /* LocalChampions.json in Resources */,
 				FE4AFD701FE7213F00694EF4 /* SecondaryRunesBuildsTableViewCell.xib in Resources */,
+				FE6E75CF1FE7DEF6009D43EA /* SelectedRuneDescriptionTableViewCell.xib in Resources */,
 				FE4AFD6C1FE6FEB900694EF4 /* MainRunesBuildTableViewCell.xib in Resources */,
 				FEBA3AB51FE5F27C0083FA11 /* LaunchScreen.storyboard in Resources */,
 				FEC60CC01FE6B7CE00BA3FF7 /* Beaufort-Italic.ttf in Resources */,
 				FE6E75B41FE74489009D43EA /* RuneBodyTableViewCell.xib in Resources */,
 				FEC60CC31FE6B7CE00BA3FF7 /* Spiegel-Regular.ttf in Resources */,
+				FE6E75BF1FE7D3D4009D43EA /* SelectedRuneVideoTableViewCell.xib in Resources */,
+				FE6E75CB1FE7DD5E009D43EA /* SelectedRuneChampionsListTableViewCellTableViewCell.xib in Resources */,
 				FEC60CC71FE6BB0300BA3FF7 /* RuneBuildTableViewCell.xib in Resources */,
 				FEC60CBE1FE6B63700BA3FF7 /* VerifyTableViewCell.xib in Resources */,
 				FE6E75B01FE74478009D43EA /* RuneHeaderTableViewCell.xib in Resources */,
 				FEC60CC21FE6B7CE00BA3FF7 /* Spiegel-Italic.ttf in Resources */,
+				FE6E75BB1FE7CE9D009D43EA /* render_Electrocute.m4v in Resources */,
 				FEC60CBF1FE6B7CE00BA3FF7 /* Beaufort-Bold.ttf in Resources */,
 				FEBA3AB21FE5F27C0083FA11 /* Assets.xcassets in Resources */,
+				FE6E75C11FE7DA44009D43EA /* render_Electrocute.mp4 in Resources */,
 				FE4AFD681FE6F17800694EF4 /* HeaderBuildTableViewCell.xib in Resources */,
 				FEBA3AB01FE5F27C0083FA11 /* Main.storyboard in Resources */,
 				FEC60CC11FE6B7CE00BA3FF7 /* Beaufort-Regular.ttf in Resources */,
@@ -382,19 +429,24 @@
 				FE4AFD6B1FE6FEB900694EF4 /* MainRunesBuildTableViewCell.swift in Sources */,
 				FEC60CBA1FE6986500BA3FF7 /* APIManager.swift in Sources */,
 				FEC60CB51FE68EF700BA3FF7 /* ChampionsBuildsListViewController.swift in Sources */,
+				FE6E75B61FE7C5E2009D43EA /* SelectedRuneViewController.swift in Sources */,
 				FEBA3AAB1FE5F27C0083FA11 /* AppDelegate.swift in Sources */,
 				FEBA3AC81FE5F3FE0083FA11 /* Extentions.swift in Sources */,
 				FEC60CC61FE6BB0300BA3FF7 /* RuneBuildTableViewCell.swift in Sources */,
+				FE6E75C41FE7DD3D009D43EA /* SelectedRuneTakesOnTableViewCell.swift in Sources */,
+				FE6E75BE1FE7D3D4009D43EA /* SelectedRuneVideoTableViewCell.swift in Sources */,
 				FE6E75B31FE74489009D43EA /* RuneBodyTableViewCell.swift in Sources */,
 				FE4AFD671FE6F17800694EF4 /* HeaderBuildTableViewCell.swift in Sources */,
 				FE4AFD621FE6C54800694EF4 /* VerifyTableViewCell.swift in Sources */,
 				FEBA3ADA1FE5F44E0083FA11 /* MainTabBarViewController.swift in Sources */,
+				FE6E75CA1FE7DD5E009D43EA /* SelectedRuneChampionsListTableViewCellTableViewCell.swift in Sources */,
 				FE4AFD641FE6E9B500694EF4 /* ShowChampionRunesViewController.swift in Sources */,
 				FEBA3AC61FE5F3EF0083FA11 /* IBDesignable.swift in Sources */,
 				FE4AFD6F1FE7213F00694EF4 /* SecondaryRunesBuildsTableViewCell.swift in Sources */,
 				FEC60CB71FE68F4B00BA3FF7 /* DownloadDataViewController.swift in Sources */,
 				FE6E75AC1FE73A10009D43EA /* RuneCollectionViewCell.swift in Sources */,
 				FEBA3AC21FE5F3C30083FA11 /* ChmpionCollectionViewCell.swift in Sources */,
+				FE6E75CE1FE7DEF6009D43EA /* SelectedRuneDescriptionTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
