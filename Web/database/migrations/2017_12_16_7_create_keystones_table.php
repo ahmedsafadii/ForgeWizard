@@ -23,8 +23,8 @@ class CreateKeystonesTable extends Migration
             $table->longText('stone_long_description');
             $table->longText('stone_short_description');
             $table->longText('stone_taken_on');
-            $table->integer('rune_id')->unsigned();
-            $table->foreign('rune_id')->references('id')->on('runes')->onDelete('cascade');
+            $table->integer('runes_id')->unsigned();
+            $table->foreign('runes_id')->references('id')->on('runes')->onDelete('cascade');
             $table->timestamps();
         });
     }

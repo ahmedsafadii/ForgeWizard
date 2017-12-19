@@ -18,4 +18,5 @@ Route::get('v1/champions/updateFreeRotate',"RiotController@updateFreeRotate");
 Route::post('v1/summoner/verify','RiotController@VerifySummonerAccount');
 
 
-//Local Endpoint
+// Local Endpoint
+Route::get('v1/runes/updateRunes',"RunesController@InstallOrUpdateRunes");
