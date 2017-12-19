@@ -18,5 +18,27 @@ Route::get('v1/champions/updateFreeRotate',"RiotController@updateFreeRotate");
 Route::post('v1/summoner/verify','RiotController@VerifySummonerAccount');
 
 
-// Local Endpoint
+// Runes Endpoint
 Route::get('v1/runes/updateRunes',"RunesController@InstallOrUpdateRunes");
+Route::get('v1/runes/updateLanes',"RunesController@InstallOrUpdateLanes");
+
+
+// Patch Endpoint
+Route::post('v1/patch/addPatch',"PatchController@AddPatch");
+Route::post('v1/patch/addNote',"PatchController@AddNote");
+
+
+// Rune Build Endpoint
+Route::post('v1/build/addBuild',"BuildsController@AddBuild");
+
+
+
+
+
+// TODO
+
+// EditBuild
+// RemoveBuild
+// RateBuild
+// Check summoner verifcation
+// return Data

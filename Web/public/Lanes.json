@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "name": "Middle",
+        "image": "Middle"
+   },
+    {
+        "id": 2,
+        "name": "Top",
+        "image": "Top"
+   },
+    {
+        "id": 3,
+        "name": "Support",
+        "image": "Support"
+   },
+    {
+        "id": 4,
+        "name": "Jungle",
+        "image": "Jungle"
+   },
+    {
+        "id": 5,
+        "name": "AD Carry",
+        "image": "ADC"
+   }
+]

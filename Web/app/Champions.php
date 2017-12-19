@@ -9,5 +9,9 @@ class Champions extends Model
     protected $table = 'champions';
     
     protected $guarded = [];
+
+    public function champions() {
+        return $this->belongsTo('App\Builds');
+    }
     
 }

@@ -8,10 +8,29 @@ use GuzzleHttp\Exception\BadResponseException ;
 use GuzzleHttp\Client;
 use App\Runes;
 use App\Keystones;
-
+use App\Roles;
 class RunesController extends Controller
 {
     
+        public function InstallOrUpdateLanes()
+        {
+            try {
+                $client = new \GuzzleHttp\Client();
+                $response = $client->request('GET', "http://forge.com/Lanes.json",['verify' => false]);
+                $data = json_decode($response->getBody(), true);
+                foreach ($data as $key => $value){
+                    $lane = Roles::firstOrNew(['id' => $value["id"]]);
+                    $lane->name = $value["name"];
+                    $lane->image = $value["image"];
+                    $lane->save(); 
+                }
+                return Controller::filed("Lanes has been updated",$response->getStatusCode());
+
+            }
+            catch (BadResponseException $e) {
+                return Controller::filed($e->getResponse()->getReasonPhrase(), $e->getResponse()->getStatusCode());
+            }
+        }
         
     public function InstallOrUpdateRunes()
         {
@@ -60,7 +79,7 @@ class RunesController extends Controller
                     
                     // here add the keystones
                 }
-                return Controller::filed( "Runes has been updated",$response->getStatusCode());
+                return Controller::filed("Runes has been updated",$response->getStatusCode());
             }
             catch (BadResponseException $e) {
                 return Controller::filed($e->getResponse()->getReasonPhrase(), $e->getResponse()->getStatusCode());

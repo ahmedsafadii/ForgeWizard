@@ -17,8 +17,8 @@ class CreateKeystonesWhyTable extends Migration
             $table->increments('id');
             $table->longText('stone_why');
             
-            $table->integer('build_id')->unsigned();
-            $table->foreign('build_id')->references('id')->on('builds')->onDelete('cascade');
+            $table->integer('builds_id')->unsigned();
+            $table->foreign('builds_id')->references('id')->on('builds')->onDelete('cascade');
             
             $table->integer('keystones_id')->unsigned();
             $table->foreign('keystones_id')->references('id')->on('keystones')->onDelete('cascade');

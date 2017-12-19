@@ -15,5 +15,9 @@ class Runes extends Model
     {
         return $this->hasMany('App\Keystones');
     }
+
+    public function runes() {
+        return $this->belongsTo('App\Builds');
+    }
  
 }
