@@ -29,16 +29,11 @@ Route::post('v1/patch/addNote',"PatchController@AddNote");
 
 
 // Rune Build Endpoint
+Route::get('v1/build/setupData',"BuildsController@setupData");
+Route::post('v1/build/addTopPlayer',"BuildsController@AddTopPlayer");
 Route::post('v1/build/addBuild',"BuildsController@AddBuild");
+Route::post('v1/build/editBuild',"BuildsController@EditBuild");
+Route::post('v1/build/removeBuild',"BuildsController@RemoveBuild");
+Route::post('v1/build/addRate',"BuildsController@AddRate");
 
 
-
-
-
-// TODO
-
-// EditBuild
-// RemoveBuild
-// RateBuild
-// Check summoner verifcation
-// return Data

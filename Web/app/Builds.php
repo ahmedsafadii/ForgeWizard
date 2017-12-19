@@ -39,4 +39,14 @@ class Builds extends Model
     {
         return $this->hasMany('App\Keystones_why');
     }
+
+    public function reviews()
+    {
+        return $this->hasMany('App\Reviews');
+    }
+
+    public function top()
+    {
+        return $this->hasMany('App\Top_Player');
+    }
 }

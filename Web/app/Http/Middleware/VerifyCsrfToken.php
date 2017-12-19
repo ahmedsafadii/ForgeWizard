@@ -12,6 +12,13 @@ class VerifyCsrfToken extends BaseVerifier
      * @var array
      */
     protected $except = [
-        'v1/summoner/verify','v1/patch/addPatch','v1/patch/addNote','v1/build/addBuild'
+        'v1/summoner/verify',
+        'v1/patch/addPatch',
+        'v1/patch/addNote',
+        'v1/build/addBuild',
+        'v1/build/addTopPlayer',
+        'v1/build/editBuild',
+        'v1/build/removeBuild',
+        'v1/build/addRate'
     ];
 }

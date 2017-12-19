@@ -30,6 +30,8 @@ class CreateBuildsTable extends Migration
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->integer('champion_id')->unsigned();
             $table->foreign('champion_id')->references('id')->on('champions')->onDelete('cascade');
+            $table->integer('top_player_id')->unsigned();
+            $table->foreign('top_player_id')->references('id')->on('top_player')->onDelete('cascade');
             $table->timestamps();
         });
     }

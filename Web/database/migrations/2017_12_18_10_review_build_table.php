@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUsersTable extends Migration
+class ReviewBuildTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,15 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('reviews', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('account_id');
-            $table->string('verify');
-            $table->string('summoner_name');
-            $table->string('summoner_region');
-            $table->string('summoner_id');
-            $table->string('summoner_profile_icon');
-            $table->string('summoner_level');
+            $table->longText('rate');
+
+            $table->integer('builds_id')->unsigned();
+            $table->foreign('builds_id')->references('id')->on('builds')->onDelete('cascade');
+
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }

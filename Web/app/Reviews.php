@@ -4,14 +4,14 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Users extends Model
+class Reviews extends Model
 {
 
-    protected $table = 'users';
+    protected $table = 'reviews';
 
     protected $guarded = [];
 
-    public function users() {
+    public function reviews() {
         return $this->belongsTo('App\Builds');
     }
 }

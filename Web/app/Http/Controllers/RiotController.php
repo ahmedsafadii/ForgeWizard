@@ -7,6 +7,7 @@ use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Exception\BadResponseException ;
 use GuzzleHttp\Client;
 use App\Champions;
+use App\Users;
 
 class RiotController extends Controller
 {
@@ -51,15 +52,28 @@ class RiotController extends Controller
                 $client = new \GuzzleHttp\Client();
                 $response = $client->request('GET', "https://euw1.api.riotgames.com/lol/summoner/v3/summoners/by-name/$summonername?api_key=$RIOTAPI",['verify' => false]);
                 $summonerData = json_decode($response->getBody(), true);
-                    try {
-                    $client = new \GuzzleHttp\Client();
-                    $response = $client->request('GET', "https://euw1.api.riotgames.com/lol/platform/v3/third-party-code/by-summoner/{$summonerData["id"]}?api_key=$RIOTAPI",['verify' => false]);
-                    $data = json_decode($response->getBody(), true);
-                       return $data; 
-                    }
-                    catch (BadResponseException $e) {
-                        return Controller::filed($e->getResponse()->getReasonPhrase(), $e->getResponse()->getStatusCode());
-                    }
+                $newUser = Users::firstOrNew(['account_id' => $summonerData["accountId"],'summoner_region' => $summonerregion]);
+                $newUser->verify = false;
+                $newUser->account_id = $summonerData["accountId"];
+                $newUser->summoner_name = $summonerData["name"];
+                $newUser->summoner_region = $summonerregion;
+                $newUser->summoner_id = $summonerData["id"];
+                $newUser->summoner_profile_icon = $summonerData["profileIconId"];
+                $newUser->summoner_level = $summonerData["summonerLevel"];
+                $newUser->save();
+                return Controller::filed( "Player has been added",$response->getStatusCode());
+
+
+                 // when riot activate the code
+//                    try {
+//                    $client = new \GuzzleHttp\Client();
+//                    $response = $client->request('GET', "https://euw1.api.riotgames.com/lol/platform/v3/third-party-code/by-summoner/{$summonerData["id"]}?api_key=$RIOTAPI",['verify' => false]);
+//                    $data = json_decode($response->getBody(), true);
+//                       return $data;
+//                    }
+//                    catch (BadResponseException $e) {
+//                        return Controller::filed($e->getResponse()->getReasonPhrase(), $e->getResponse()->getStatusCode());
+//                    }
             }
             catch (BadResponseException $e) {
                 return Controller::filed($e->getResponse()->getReasonPhrase(), $e->getResponse()->getStatusCode());

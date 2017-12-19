@@ -19,9 +19,14 @@
         "name": "Jungle",
         "image": "Jungle"
    },
-    {
-        "id": 5,
-        "name": "AD Carry",
-        "image": "ADC"
-   }
+  {
+    "id": 5,
+    "name": "AD Carry",
+    "image": "ADC"
+  },
+  {
+    "id": 6,
+    "name": "Free",
+    "image": "Free"
+  }
 ]

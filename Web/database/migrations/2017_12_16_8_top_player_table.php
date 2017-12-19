@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUsersTable extends Migration
+class TopPlayerTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,13 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('top_player', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('account_id');
-            $table->string('verify');
-            $table->string('summoner_name');
-            $table->string('summoner_region');
-            $table->string('summoner_id');
-            $table->string('summoner_profile_icon');
-            $table->string('summoner_level');
+            $table->string('name');
+            $table->string('image');
+
+            $table->integer('role_id')->unsigned();
+            $table->foreign('role_id')->references('id')->on('roles')->onDelete('cascade');
             $table->timestamps();
         });
     }
