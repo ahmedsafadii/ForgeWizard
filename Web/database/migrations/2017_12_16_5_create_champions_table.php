@@ -19,6 +19,7 @@ class CreateChampionsTable extends Migration
             $table->string('champion_key');
             $table->string('champion_name');
             $table->string('champion_title');
+            $table->string('champion_isFree');
             $table->timestamps();
         });
     }

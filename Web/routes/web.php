@@ -11,6 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+// Riot Endpoint
+Route::get('v1/champions/update',"RiotController@InstallOrUpdateChampions");
+Route::get('v1/champions/updateFreeRotate',"RiotController@updateFreeRotate");
+Route::post('v1/summoner/verify','RiotController@VerifySummonerAccount');
+
+
+//Local Endpoint

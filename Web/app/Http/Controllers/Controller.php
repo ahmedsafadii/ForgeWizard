@@ -10,4 +10,10 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+    
+    public static function filed($message,$status_code){
+        $data['status'] =["message"=>$message,"status_code"=>$status_code];
+        return response()->json($data);
+    }
+    
 }
