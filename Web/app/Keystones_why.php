@@ -11,9 +11,14 @@ class Keystones_why extends Model
 
     protected $guarded = [];
 
+    protected $hidden = ['created_at','updated_at','builds_id','keystones_id','id'];
 
 
-    public function why() {
-        return $this->belongsTo('App\Builds');
+    public function build_keystone()
+    {
+        return $this->hasOne('App\Keystones','id','keystones_id');
     }
+
+
+
 }

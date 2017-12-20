@@ -46,6 +46,7 @@ class Controller extends BaseController
 
     public static function getChampionId($champion_key){
         //Check champions before get the ids
+        //WUKONG ISSUE
 //        $champion =  Champions::where('champion_key', $champion_key)->first();
 //        if($champion != null){
 //            return "works - ".$champion["champion_id"]." - ".$champion["champion_name"];
@@ -54,29 +55,36 @@ class Controller extends BaseController
 //            return "error - ".$champion_key;
 //        }
        $champion =  Champions::where('champion_key', $champion_key)->first();
-       return $champion["champion_id"];
+       return intval($champion["id"]);
     }
 
     public static function getRuneId($runeName){
         $rune =  Runes::where('rune_title', $runeName)->first();
-        return $rune["rune_id"];
+        return intval($rune["id"]);
     }
 
     public static function getPatchId($patchName){
         $patch =  Patch::where('patch', $patchName)->first();
-        return $patch["id"];
+        if($patch != null){
+            return intval($patch["id"]);
+        }
+        else{
+            return 1;
+        }
     }
 
     public static function getKeystoneId($keystoneName){
         //Check keystones before get the ids
+        //FUTREU MARKETS ISSUE '
         $keystone =  Keystones::where('stone_title', $keystoneName)->first();
-        if($keystone != null){
-            return "works - ".$keystone["stone_id"];
-        }
-        else{
-            return "error - ".$keystoneName;
-        }
-        return $keystone["stone_id"];
+        return intval($keystone["id"]);
+//        if($keystone != null){
+//            return "works - ".$keystone["stone_id"];
+//        }
+//        else{
+//            return "error - ".$keystoneName;
+//        }
+
     }
 
     

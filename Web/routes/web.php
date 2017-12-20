@@ -30,6 +30,7 @@ Route::post('v1/patch/addNote',"PatchController@AddNote");
 
 // Rune Build Endpoint
 Route::get('v1/build/setupData',"BuildsController@setupData");
+Route::get('v1/build/getData',"BuildsController@getData");
 Route::post('v1/build/addTopPlayer',"BuildsController@AddTopPlayer");
 Route::post('v1/build/addBuild',"BuildsController@AddBuild");
 Route::post('v1/build/editBuild',"BuildsController@EditBuild");

@@ -11,7 +11,4 @@ class Reviews extends Model
 
     protected $guarded = [];
 
-    public function reviews() {
-        return $this->belongsTo('App\Builds');
-    }
 }

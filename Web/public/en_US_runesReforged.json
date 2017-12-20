@@ -931,7 +931,7 @@
                },
                {
                   "id":8321,
-                  "name":"Future\u2019s Market",
+                  "name":"Future's Market",
                   "longDesc":"<p>You can enter debt to buy items. The amount you can borrow increases over time.</p>\n<p>Debt limit: 150 + 5/min<br />\nLending Fee: 50 gold per item</p>\n",
                   "video":"",
                   "taken_on":[

@@ -10,8 +10,13 @@ class Champions extends Model
     
     protected $guarded = [];
 
-    public function champions() {
-        return $this->belongsTo('App\Builds');
+    protected $hidden = ['created_at','updated_at'];
+
+
+    public function builds()
+    {
+        return $this->hasMany('App\Builds','champion_id','id');
     }
-    
+
+
 }
