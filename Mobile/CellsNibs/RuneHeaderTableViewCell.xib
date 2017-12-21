@@ -13,9 +13,6 @@
         <array key="Beaufort-Bold.ttf">
             <string>BeaufortforLOL-Bold</string>
         </array>
-        <array key="Beaufort-Regular.ttf">
-            <string>BeaufortforLOL-Regular</string>
-        </array>
         <array key="Spiegel-Regular.ttf">
             <string>Spiegel-Regular</string>
         </array>
@@ -37,14 +34,14 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="247" verticalHuggingPriority="247" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EC5-v4-CSQ">
-                        <rect key="frame" x="4" y="36.5" width="312" height="18"/>
+                        <rect key="frame" x="4" y="36.5" width="312" height="17"/>
                         <string key="text">+11 Attack Damage or +18 Ability Power, adaptive+11 Attack Damage or +18 Ability Power, adaptive+11 Attack Damage or +18 Ability Power, adaptive</string>
-                        <fontDescription key="fontDescription" name="Spiegel-Regular" family="Spiegel" pointSize="11"/>
+                        <fontDescription key="fontDescription" name="Spiegel-Regular" family="Spiegel" pointSize="13"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UB2-TK-Huc">
-                        <rect key="frame" x="123.5" y="66.5" width="73" height="1"/>
+                        <rect key="frame" x="123.5" y="65.5" width="73" height="1"/>
                         <color key="backgroundColor" red="1" green="0.9137254901960784" blue="0.62745098039215685" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="73" id="Fyk-SE-ufo"/>
@@ -52,8 +49,8 @@
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" text="SELECT ONE OF THE FOLLOWING KEYSTONES" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eoa-Sq-Jt7">
-                        <rect key="frame" x="4" y="75.5" width="312" height="13"/>
-                        <fontDescription key="fontDescription" name="BeaufortforLOL-Regular" family="BeaufortforLOL-Regular" pointSize="10"/>
+                        <rect key="frame" x="4" y="74.5" width="312" height="14"/>
+                        <fontDescription key="fontDescription" name="BeaufortforLOL-Bold" family="BeaufortforLOL-Bold" pointSize="11"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -86,6 +83,10 @@
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="runeDescription" destination="EC5-v4-CSQ" id="JDy-2m-rDy"/>
+                <outlet property="runeTitle" destination="82B-7D-7iN" id="HxA-hH-Ycr"/>
+            </connections>
             <point key="canvasLocation" x="3" y="46"/>
         </tableViewCell>
     </objects>

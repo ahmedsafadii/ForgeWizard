@@ -27,9 +27,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font: UIFont(name: "Spiegel-Regular", size: 11)!], for: .normal)
 
         
+        // detect first start
+        
+        if(UserDefaults.isFirstLaunch()){
+            let currentTime = Int(Date().timeIntervalSince1970)
+            UserDefaults.standard.set(currentTime, forKey: "updateTimer")
+            print ("first launch")
+        }
+        else{
+            print ("Not first launch")
+        }
         
         return true
     }
+    
+    func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+
+    }
+    
+    
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

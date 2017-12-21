@@ -13,9 +13,6 @@
         <array key="Beaufort-Bold.ttf">
             <string>BeaufortforLOL-Bold</string>
         </array>
-        <array key="Spiegel-Regular.ttf">
-            <string>Spiegel-Regular</string>
-        </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -27,7 +24,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="66.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Leblanc" translatesAutoresizingMaskIntoConstraints="NO" id="Cw5-Ek-K0j">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grid-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Cw5-Ek-K0j">
                         <rect key="frame" x="8" y="8" width="50" height="50"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="50" id="047-J1-Lzn"/>
@@ -44,36 +41,31 @@
                         </userDefinedRuntimeAttributes>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" text="Lee Sin" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x56-Td-azj">
-                        <rect key="frame" x="66" y="15" width="246" height="18"/>
+                        <rect key="frame" x="66" y="24" width="246" height="18"/>
                         <fontDescription key="fontDescription" name="BeaufortforLOL-Bold" family="BeaufortforLOL-Bold" pointSize="14"/>
                         <color key="textColor" red="0.99607843139999996" green="0.90980392160000001" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="247" verticalHuggingPriority="247" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" text="Middle" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dca-0z-PbI">
-                        <rect key="frame" x="66" y="37" width="246" height="13.5"/>
-                        <fontDescription key="fontDescription" name="Spiegel-Regular" family="Spiegel" pointSize="11"/>
-                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="Cw5-Ek-K0j" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="7I3-lB-5Ur"/>
-                    <constraint firstItem="Dca-0z-PbI" firstAttribute="leading" secondItem="Cw5-Ek-K0j" secondAttribute="trailing" constant="8" id="7te-gb-yS3"/>
-                    <constraint firstItem="Dca-0z-PbI" firstAttribute="top" secondItem="x56-Td-azj" secondAttribute="bottom" constant="4" id="Hva-Jy-9Fj"/>
                     <constraint firstItem="Cw5-Ek-K0j" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="NGu-AT-Ox5"/>
-                    <constraint firstAttribute="trailing" secondItem="Dca-0z-PbI" secondAttribute="trailing" constant="8" id="P6Z-B8-pl8"/>
                     <constraint firstAttribute="trailing" secondItem="x56-Td-azj" secondAttribute="trailing" constant="8" id="ZCD-v6-oC2"/>
-                    <constraint firstItem="x56-Td-azj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="hlA-if-a2e"/>
+                    <constraint firstItem="x56-Td-azj" firstAttribute="centerY" secondItem="Cw5-Ek-K0j" secondAttribute="centerY" id="aUm-FD-h1P"/>
                     <constraint firstItem="x56-Td-azj" firstAttribute="leading" secondItem="Cw5-Ek-K0j" secondAttribute="trailing" constant="8" id="mQm-QI-vG7"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="championImage" destination="Cw5-Ek-K0j" id="lNV-7D-nT4"/>
+                <outlet property="chmpionName" destination="x56-Td-azj" id="KzP-Ag-Sjz"/>
+            </connections>
             <point key="canvasLocation" x="0.0" y="13"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="Leblanc" width="220" height="220"/>
+        <image name="grid-placeholder" width="150" height="150"/>
     </resources>
 </document>

@@ -14,12 +14,36 @@ class RuneBuildTableViewCell: UITableViewCell {
     @IBOutlet weak var lane: UILabel!
     @IBOutlet weak var runeTitle: UILabel!
     @IBOutlet weak var runeDescription: UILabel!
+    @IBOutlet weak var proPlayer: UIImageView!
+    @IBOutlet weak var proSubtitle: UILabel!
+    @IBOutlet weak var patch: UILabel!
+    @IBOutlet weak var laneImage: UIImageView!
+    @IBOutlet weak var Like: UILabel!
+    @IBOutlet weak var Dislike: UILabel!
+    @IBOutlet weak var hideView: UIView!
     
+    @IBOutlet weak var main_rune: UIImageView!
+    @IBOutlet weak var second_rune: UIImageView!
+    
+    @IBOutlet weak var proName: UILabel!
+    
+    @IBOutlet weak var likeButton: UIButton!
+    @IBOutlet weak var dislikeButton: UIButton!
+    
+    // future feature
+    
+    func hideLikeDislike(){
+        Like.isHidden = true
+        Dislike.isHidden = true
+        likeButton.isHidden = true
+        dislikeButton.isHidden = true
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         runeTitle.sizeToFit()
         runeDescription.sizeToFit()
+        hideLikeDislike()
         // Initialization code
     }
 

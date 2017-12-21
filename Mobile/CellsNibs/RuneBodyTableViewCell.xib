@@ -80,7 +80,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="247" verticalHuggingPriority="247" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" text="Hitting a champion with 3 separate attacks or abilities in 2s deals bonus adaptive damage." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QxR-kH-0j4">
-                        <rect key="frame" x="97" y="49.5" width="185" height="33.5"/>
+                        <rect key="frame" x="97" y="49.5" width="185" height="16"/>
                         <fontDescription key="fontDescription" name="Spiegel-Regular" family="Spiegel" pointSize="11"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -94,7 +94,7 @@
                     <constraint firstAttribute="trailing" secondItem="SgF-UW-uSY" secondAttribute="trailing" constant="16" id="2Au-Nd-kns"/>
                     <constraint firstItem="SgF-UW-uSY" firstAttribute="leading" secondItem="QxR-kH-0j4" secondAttribute="trailing" constant="4" id="5ar-f5-jvG"/>
                     <constraint firstItem="bCV-KI-GKQ" firstAttribute="leading" secondItem="25z-Yg-Lvz" secondAttribute="trailing" constant="16" id="Aav-Ab-gu0"/>
-                    <constraint firstAttribute="bottom" secondItem="QxR-kH-0j4" secondAttribute="bottom" constant="8" id="Cos-u1-eRt"/>
+                    <constraint firstAttribute="bottom" secondItem="QxR-kH-0j4" secondAttribute="bottom" constant="25" id="Cos-u1-eRt"/>
                     <constraint firstItem="25z-Yg-Lvz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="UEL-55-A2D"/>
                     <constraint firstItem="SgF-UW-uSY" firstAttribute="centerY" secondItem="bCV-KI-GKQ" secondAttribute="centerY" id="UtA-7P-ZFP"/>
                     <constraint firstItem="bCV-KI-GKQ" firstAttribute="centerY" secondItem="xp3-OJ-aCm" secondAttribute="centerY" constant="-12" id="a3i-dm-fiy"/>
@@ -106,6 +106,14 @@
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="runeDescription" destination="QxR-kH-0j4" id="tf9-uT-8nu"/>
+                <outlet property="runeImage" destination="xp3-OJ-aCm" id="UxT-kw-N3i"/>
+                <outlet property="runeName" destination="bCV-KI-GKQ" id="851-Nb-cMR"/>
+                <outlet property="runeVideo" destination="SgF-UW-uSY" id="Rgm-Sa-b6X"/>
+                <outletCollection property="viewColors" destination="j6t-ux-rAe" collectionClass="NSMutableArray" id="82g-aF-XMg"/>
+                <outletCollection property="viewColors" destination="25z-Yg-Lvz" collectionClass="NSMutableArray" id="kGG-jK-BIh"/>
+            </connections>
             <point key="canvasLocation" x="34" y="77.5"/>
         </tableViewCell>
     </objects>

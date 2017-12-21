@@ -9,6 +9,7 @@
 import UIKit
 import SwiftSpinner
 import Alamofire
+import SwiftyJSON
 
 class DownloadDataViewController: UIViewController {
     
@@ -17,7 +18,8 @@ class DownloadDataViewController: UIViewController {
         SwiftSpinner.setTitleColor(UIColor.white)
         SwiftSpinner.sharedInstance.innerColor = nil
         SwiftSpinner.show(progress: progress, title: "Downloading \n 0%")
-        APIManager.instance.download(downloadUrl: "http://elofight.com/build/public/index.php/getGuides/", saveUrl: "LocalData.json", onSuccess: { json in
+        APIManager.instance.download(saveUrl: "LocalData.json", onSuccess: { json in
+            Global.shared.ChampionsData = JSON(json)
             Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(self.timerFire), userInfo: nil, repeats: true)
         }, onFailure: { error in
             print(error)
@@ -28,8 +30,7 @@ class DownloadDataViewController: UIViewController {
     }
     
     @objc func timerFire(_ timer: Timer) {
-        progress += (timer.timeInterval/5)
-//        progress += (timer.timeInterval/1)
+        progress += (timer.timeInterval/2)
         SwiftSpinner.show(progress: progress, title: "Downloading \n \(Int(progress * 100))%")
         if progress >= 1 {
             timer.invalidate()
@@ -42,9 +43,19 @@ class DownloadDataViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        delay(seconds: 0.1, completion: {
-            self.DownloadDataFromInternet()
-        })
+        if(Global.shared.updateAppData(TimeByMin: 1)){
+            delay(seconds: 0.1, completion: {
+//                self.DownloadDataFromInternet()
+                self.performSegue(withIdentifier: "showPage", sender: self)
+            })
+        }
+        else{
+            delay(seconds: 0.1, completion: {
+                self.performSegue(withIdentifier: "showPage", sender: self)
+            })
+            print("nop")
+        }
+//
     }
     
     override func didReceiveMemoryWarning() {

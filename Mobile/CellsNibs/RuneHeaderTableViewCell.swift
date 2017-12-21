@@ -10,6 +10,10 @@ import UIKit
 
 class RuneHeaderTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var runeTitle: UILabel!
+    
+    @IBOutlet weak var runeDescription: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

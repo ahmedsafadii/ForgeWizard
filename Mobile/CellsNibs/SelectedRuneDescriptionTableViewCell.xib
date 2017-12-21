@@ -103,6 +103,13 @@
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="runeDescription" destination="Rq5-Xh-iK6" id="x1g-We-vdI"/>
+                <outlet property="runeImage" destination="7kJ-Ca-X4b" id="Rcc-aW-sfz"/>
+                <outlet property="runeName" destination="2dn-EH-qFT" id="oUu-7T-WgE"/>
+                <outletCollection property="viewColors" destination="iW6-Ia-ZJl" collectionClass="NSMutableArray" id="KaB-2S-jWn"/>
+                <outletCollection property="viewColors" destination="HpD-lm-Hpi" collectionClass="NSMutableArray" id="h7p-Js-oHC"/>
+            </connections>
             <point key="canvasLocation" x="-66" y="-240"/>
         </tableViewCell>
     </objects>

@@ -10,6 +10,17 @@ import UIKit
 
 class RuneBodyTableViewCell: UITableViewCell {
 
+    @IBOutlet var viewColors: [UIView]!
+    
+    
+    @IBOutlet weak var runeImage: UIImageView!
+    
+    @IBOutlet weak var runeName: UILabel!
+    
+    @IBOutlet weak var runeDescription: UILabel!
+    
+    @IBOutlet weak var runeVideo: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

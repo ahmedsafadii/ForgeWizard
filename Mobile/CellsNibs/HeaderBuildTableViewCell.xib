@@ -113,6 +113,13 @@
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="championDescription" destination="5wN-cs-HlC" id="6Dp-XB-mf1"/>
+                <outlet property="championImage" destination="c0Q-Dt-D2Z" id="e2y-q3-69n"/>
+                <outlet property="championPatch" destination="DTI-4i-8eO" id="wxy-dp-3ui"/>
+                <outlet property="championTitle" destination="MEX-X8-Zr4" id="aU8-Hg-c9T"/>
+                <outlet property="hideView" destination="4fL-lB-ZCv" id="C3W-wg-udO"/>
+            </connections>
             <point key="canvasLocation" x="33" y="-43.5"/>
         </tableViewCell>
     </objects>

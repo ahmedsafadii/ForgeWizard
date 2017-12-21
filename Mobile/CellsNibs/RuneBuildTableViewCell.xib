@@ -172,6 +172,20 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="8112" translatesAutoresizingMaskIntoConstraints="NO" id="Iud-am-tt4">
+                                        <rect key="frame" x="155" y="47.5" width="35" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="35" id="MtH-Ut-RTq"/>
+                                            <constraint firstAttribute="height" constant="35" id="Wjv-qN-wX3"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="8000" translatesAutoresizingMaskIntoConstraints="NO" id="DMP-Zx-fEF">
+                                        <rect key="frame" x="187" y="56" width="18" height="18"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="18" id="9l8-n0-doN"/>
+                                            <constraint firstAttribute="height" constant="18" id="udq-dg-7c4"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.64000000000000001" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -182,14 +196,18 @@
                                     <constraint firstItem="4zj-nZ-tXl" firstAttribute="top" secondItem="vJc-ue-zfq" secondAttribute="bottom" constant="4" id="3cA-O7-vBN"/>
                                     <constraint firstItem="Bte-iX-bGU" firstAttribute="centerY" secondItem="bQ0-ln-2n2" secondAttribute="centerY" id="7sd-D1-Vpe"/>
                                     <constraint firstItem="vJc-ue-zfq" firstAttribute="centerX" secondItem="9EA-7k-klZ" secondAttribute="centerX" id="EBo-t4-Ier"/>
+                                    <constraint firstItem="Iud-am-tt4" firstAttribute="leading" secondItem="vJc-ue-zfq" secondAttribute="trailing" constant="-18" id="LAY-tb-1Iv"/>
                                     <constraint firstItem="2hu-O4-is7" firstAttribute="top" secondItem="9EA-7k-klZ" secondAttribute="top" constant="9" id="NSo-Kd-51U"/>
                                     <constraint firstItem="bQ0-ln-2n2" firstAttribute="centerY" secondItem="FrC-wB-dBo" secondAttribute="centerY" constant="-5" id="OxO-eV-D7E"/>
                                     <constraint firstItem="I2h-OD-3Ui" firstAttribute="leading" secondItem="9EA-7k-klZ" secondAttribute="leading" id="PKy-xt-xLV"/>
+                                    <constraint firstItem="DMP-Zx-fEF" firstAttribute="centerY" secondItem="Iud-am-tt4" secondAttribute="centerY" id="X4G-zM-gXY"/>
                                     <constraint firstItem="1SS-2V-0ZN" firstAttribute="top" secondItem="4zj-nZ-tXl" secondAttribute="bottom" constant="4" id="XIw-xq-AsT"/>
                                     <constraint firstItem="U0P-fA-Pe5" firstAttribute="top" secondItem="bQ0-ln-2n2" secondAttribute="bottom" constant="1" id="Y6y-p7-SMB"/>
                                     <constraint firstItem="bQ0-ln-2n2" firstAttribute="leading" secondItem="FrC-wB-dBo" secondAttribute="trailing" constant="6" id="dea-uI-b0M"/>
                                     <constraint firstItem="1SS-2V-0ZN" firstAttribute="leading" secondItem="9EA-7k-klZ" secondAttribute="leading" id="gsL-nw-MJE"/>
+                                    <constraint firstItem="Iud-am-tt4" firstAttribute="centerY" secondItem="sym-qO-8z5" secondAttribute="centerY" id="iGB-zj-Am8"/>
                                     <constraint firstAttribute="trailing" secondItem="1SS-2V-0ZN" secondAttribute="trailing" id="iJk-g7-s5q"/>
+                                    <constraint firstItem="DMP-Zx-fEF" firstAttribute="leading" secondItem="Iud-am-tt4" secondAttribute="trailing" constant="-3" id="n0O-7u-sOo"/>
                                     <constraint firstAttribute="trailing" secondItem="Bte-iX-bGU" secondAttribute="trailing" constant="12" id="ofu-8o-WiF"/>
                                     <constraint firstItem="U0P-fA-Pe5" firstAttribute="leading" secondItem="2hu-O4-is7" secondAttribute="trailing" constant="4" id="x8U-hP-uAK"/>
                                     <constraint firstAttribute="trailing" secondItem="I2h-OD-3Ui" secondAttribute="trailing" id="xH6-zB-Kmi"/>
@@ -295,15 +313,29 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="Dislike" destination="PDv-Cz-MGc" id="Zhh-Ui-tvk"/>
+                <outlet property="Like" destination="R1b-we-B6k" id="yhC-Yi-DPs"/>
+                <outlet property="dislikeButton" destination="AtX-vQ-T6I" id="xon-rb-uez"/>
+                <outlet property="hideView" destination="2hu-O4-is7" id="Phl-DN-x7h"/>
                 <outlet property="lane" destination="4zj-nZ-tXl" id="7X7-p7-Wqj"/>
+                <outlet property="laneImage" destination="27J-jc-tdn" id="VF3-8k-5RD"/>
+                <outlet property="likeButton" destination="10i-fu-RBf" id="poL-pX-wIl"/>
+                <outlet property="main_rune" destination="Iud-am-tt4" id="elW-LH-etQ"/>
+                <outlet property="patch" destination="Bte-iX-bGU" id="OpR-Cc-VDj"/>
+                <outlet property="proName" destination="bQ0-ln-2n2" id="Yzk-ZQ-brs"/>
+                <outlet property="proPlayer" destination="Hsr-BQ-B4g" id="C99-t4-fzg"/>
+                <outlet property="proSubtitle" destination="U0P-fA-Pe5" id="CfB-WQ-nyV"/>
                 <outlet property="runeBackground" destination="Jbf-6a-wrr" id="neC-T0-Jca"/>
                 <outlet property="runeDescription" destination="I2h-OD-3Ui" id="RDg-yi-76z"/>
                 <outlet property="runeTitle" destination="1SS-2V-0ZN" id="yfr-HR-MBP"/>
+                <outlet property="second_rune" destination="DMP-Zx-fEF" id="G6D-Gx-97f"/>
             </connections>
-            <point key="canvasLocation" x="88" y="-58"/>
+            <point key="canvasLocation" x="86" y="-98"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="8000" width="85" height="85"/>
+        <image name="8112" width="256" height="256"/>
         <image name="Akali" width="220" height="220"/>
         <image name="Dislike" width="11" height="12"/>
         <image name="Like" width="11" height="11"/>

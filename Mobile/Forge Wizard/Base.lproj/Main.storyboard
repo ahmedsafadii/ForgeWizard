@@ -33,7 +33,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="Lqu-If-a13">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="path-construct-resolve" translatesAutoresizingMaskIntoConstraints="NO" id="0MD-P0-eVy">
+                            <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="path-construct-precision" translatesAutoresizingMaskIntoConstraints="NO" id="0MD-P0-eVy">
                                 <rect key="frame" x="0.0" y="151" width="375" height="516"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MiW-ON-1ys">
@@ -266,21 +266,89 @@
             </objects>
             <point key="canvasLocation" x="524" y="1117"/>
         </scene>
-        <!--View Controller-->
+        <!--Patch Changes-->
         <scene sceneID="U8C-uf-nA3">
             <objects>
-                <viewController id="fei-oW-dMc" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PatchChangesViewController" id="fei-oW-dMc" customClass="PatchChangesViewController" customModule="Forge_Wizard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2mg-aY-9Xp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="patchbg" translatesAutoresizingMaskIntoConstraints="NO" id="gSK-GG-rTd" customClass="patchbg">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="EVo-Fe-dLi">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="fei-oW-dMc" id="b7n-iZ-CFO"/>
+                                    <outlet property="delegate" destination="fei-oW-dMc" id="SL4-yZ-sPk"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="EVo-Fe-dLi" firstAttribute="top" secondItem="5s0-cC-QcH" secondAttribute="top" id="2Lr-rw-WWJ"/>
+                            <constraint firstItem="EVo-Fe-dLi" firstAttribute="bottom" secondItem="5s0-cC-QcH" secondAttribute="bottom" id="NZW-23-CQI"/>
+                            <constraint firstItem="gSK-GG-rTd" firstAttribute="trailing" secondItem="5s0-cC-QcH" secondAttribute="trailing" id="Vp7-je-vXL"/>
+                            <constraint firstItem="gSK-GG-rTd" firstAttribute="top" secondItem="2mg-aY-9Xp" secondAttribute="top" id="Zb6-XB-E0G"/>
+                            <constraint firstItem="EVo-Fe-dLi" firstAttribute="leading" secondItem="5s0-cC-QcH" secondAttribute="leading" id="a8O-Sw-YDb"/>
+                            <constraint firstItem="EVo-Fe-dLi" firstAttribute="trailing" secondItem="5s0-cC-QcH" secondAttribute="trailing" id="fYY-ag-I5R"/>
+                            <constraint firstAttribute="bottom" secondItem="gSK-GG-rTd" secondAttribute="bottom" id="gAc-Yn-aSw"/>
+                            <constraint firstItem="gSK-GG-rTd" firstAttribute="leading" secondItem="5s0-cC-QcH" secondAttribute="leading" id="v5j-jS-DWC"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="5s0-cC-QcH"/>
                     </view>
-                    <navigationItem key="navigationItem" id="GdQ-Iu-3o3"/>
+                    <navigationItem key="navigationItem" title="Patch Changes" id="GdQ-Iu-3o3"/>
+                    <connections>
+                        <outlet property="PatchTableView" destination="EVo-Fe-dLi" id="Geq-BS-KrF"/>
+                        <segue destination="FoA-ng-zC4" kind="show" identifier="showPatch" id="nPZ-dW-9hh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="evH-Om-mhY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="530.39999999999998" y="1803.1484257871066"/>
+        </scene>
+        <!--Selected Patch View Controller-->
+        <scene sceneID="hLI-vF-OOv">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="FoA-ng-zC4" customClass="SelectedPatchViewController" customModule="Forge_Wizard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ns6-Td-Vsy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="patchbg" translatesAutoresizingMaskIntoConstraints="NO" id="hnd-AD-Ghz" customClass="patchbg">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="6f6-4V-o13">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="FoA-ng-zC4" id="jGv-Ua-PIm"/>
+                                    <outlet property="delegate" destination="FoA-ng-zC4" id="fOT-3r-eSQ"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hnd-AD-Ghz" firstAttribute="leading" secondItem="ns6-Td-Vsy" secondAttribute="leading" id="IRW-DD-Wp3"/>
+                            <constraint firstItem="OQZ-yP-4ko" firstAttribute="bottom" secondItem="6f6-4V-o13" secondAttribute="bottom" id="Io8-Ec-thm"/>
+                            <constraint firstItem="hnd-AD-Ghz" firstAttribute="top" secondItem="ns6-Td-Vsy" secondAttribute="top" id="Kfd-OZ-khd"/>
+                            <constraint firstAttribute="bottom" secondItem="hnd-AD-Ghz" secondAttribute="bottom" id="Lwx-0f-wG8"/>
+                            <constraint firstItem="6f6-4V-o13" firstAttribute="leading" secondItem="OQZ-yP-4ko" secondAttribute="leading" id="MZy-o8-YmF"/>
+                            <constraint firstItem="OQZ-yP-4ko" firstAttribute="trailing" secondItem="hnd-AD-Ghz" secondAttribute="trailing" id="Ofu-qf-J9z"/>
+                            <constraint firstItem="6f6-4V-o13" firstAttribute="top" secondItem="OQZ-yP-4ko" secondAttribute="top" id="Zp0-zI-9Os"/>
+                            <constraint firstItem="6f6-4V-o13" firstAttribute="trailing" secondItem="OQZ-yP-4ko" secondAttribute="trailing" id="cwp-UP-7ro"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OQZ-yP-4ko"/>
+                    </view>
+                    <connections>
+                        <outlet property="PatchTableView" destination="6f6-4V-o13" id="WFh-v6-uHp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mga-j8-6qD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1389.5999999999999" y="1801.3493253373315"/>
         </scene>
         <!--Loadouts-->
         <scene sceneID="d4D-2U-au0">
@@ -704,6 +772,8 @@
                     <navigationItem key="navigationItem" id="zB4-2C-AoD"/>
                     <connections>
                         <outlet property="ChampionsRunes" destination="UTO-Tn-Nwj" id="FlR-sb-ra2"/>
+                        <outlet property="championImage" destination="TdA-FB-AcI" id="yvz-sE-djG"/>
+                        <outlet property="championTitle" destination="gT9-jo-Nwk" id="fWU-TI-dhE"/>
                         <segue destination="iLv-aN-rPY" kind="show" identifier="showBuild" id="wOx-Pt-yNm"/>
                     </connections>
                 </viewController>
@@ -766,7 +836,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zmt-AW-oHa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2073" y="-276"/>
+            <point key="canvasLocation" x="2378" y="-276"/>
         </scene>
         <!--Download Data View Controller-->
         <scene sceneID="amD-8M-71a">
@@ -861,11 +931,11 @@
             </objects>
             <point key="canvasLocation" x="-508" y="390"/>
         </scene>
-        <!--Quiz-->
+        <!--Forge Rune-->
         <scene sceneID="SLJ-vq-UQy">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RZt-IC-IoL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Quiz" image="Quiz" id="g95-su-N0P">
+                    <tabBarItem key="tabBarItem" title="Forge Rune" image="Quiz" id="g95-su-N0P">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-4"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -926,6 +996,8 @@
         <image name="Top" width="24" height="24"/>
         <image name="grid-placeholder" width="150" height="150"/>
         <image name="isFree" width="15" height="15"/>
+        <image name="patchbg" width="375" height="667"/>
+        <image name="path-construct-precision" width="700" height="720"/>
         <image name="path-construct-resolve" width="700" height="720"/>
         <image name="ring" width="211" height="246"/>
         <image name="vfx-s" width="211" height="246"/>

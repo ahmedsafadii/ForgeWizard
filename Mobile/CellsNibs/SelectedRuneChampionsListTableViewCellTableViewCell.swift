@@ -10,6 +10,10 @@ import UIKit
 
 class SelectedRuneChampionsListTableViewCellTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var championImage: UIImageView!
+    
+    @IBOutlet weak var chmpionName: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

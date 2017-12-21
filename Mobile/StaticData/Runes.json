@@ -1,0 +1,587 @@
+ [
+  {
+  "rune_id":"8000",
+  "rune_title":"Precision",
+  "rune_image":"8000",
+  "rune_sub_title":"AUTO ATTACKS",
+  "rune_description":"+18% Attack Speed",
+  "keystones":[
+               {
+               "stone_id":"8005",
+               "stone_title":"Press the Attack",
+               "isKey":1,
+               "stone_video":"http:\/\/d181w3hxxigzvh.cloudfront.net\/wp-content\/uploads\/2017\/09\/render_PTA.mp4",
+               "stone_long_description":"<p>Hitting an enemy champion with 3 consecutive basic attacks will deal 30 - 120 bonus adaptive damage (based on level) and makes them vulnerable, increasing the damage they take by 12% from all sources for 6s.<\/p>\n",
+               "stone_short_description":"3 attack burst | Teammates deal bonus damage to target.",
+               "stone_taken_on":"Irelia|Fiora|Ezreal|Draven|Lucian|Ashe"
+               },
+               {
+               "stone_id":"8008",
+               "stone_title":"Lethal Tempo",
+               "isKey":1,
+               "stone_video":"http:\/\/d181w3hxxigzvh.cloudfront.net\/wp-content\/uploads\/2017\/09\/render_LethalTempo.mp4",
+               "stone_long_description":"<p>1.5s after damaging a champion gain 30 - 80% Attack Speed (based on level) for 3s. Attacking a champion extends the effect to 6s.<\/p>\n<p>Cooldown: 6s<\/p>\n<p>Lethal Tempo allows you to temporarily exceed the attack speed limit.<\/p>\n",
+               "stone_short_description":"Tons of attack speed | Exceeds Attack Speed limit.",
+               "stone_taken_on":"Jinx|Twitch|Xayah|Azir|Kayle|Kog'Maw"
+               },
+               {
+               "stone_id":"8021",
+               "stone_title":"Fleet Footwork",
+               "isKey":1,
+               "stone_video":"http:\/\/d181w3hxxigzvh.cloudfront.net\/wp-content\/uploads\/2017\/09\/render_FleetFootwork.mp4",
+               "stone_long_description":"<p>Attacking a moving builds Energy stacks. At 100 stacks, your next attack is Energized.<\/p>\n<p>Energized attacks heal you for 3 - 60 (+0.30 bonus AD, +0.40 AP) and grant 30% increased Movement Speed for 1s.<\/p>\n<p>Healing is 60% as effective when used on a minion.<br \/>\nIf the attack that activates Fleet Footwork is a critical hit, Fleet Footwork's healing is increased by 40% of your critical damage modifier<\/p>\n",
+               "stone_short_description":"Lane sustain | Engage Movement. Think old Warlords.",
+               "stone_taken_on":"Caitlyn|Ashe|Jhin|Sivir|Corki|Vayne"
+               },
+               {
+               "stone_id":"9101",
+               "stone_title":"Overheal",
+               "isKey":0,
+               "stone_video":"",
+               "stone_long_description":"<p>Excess healing on you becomes a shield, for up to 10% of your total health + 10.<\/p>\n<p>Shield is built up from 40% of excess healing from self, or 300% of excess healing from allies.<\/p>\n",
+               "stone_short_description":"Excess incoming heals become a shield (includes lifesteal etc.)",
+               "stone_taken_on":"Draven|Jhin|Lucian|Kalista|Sivir|Renekton"
+               },
+               {
+               "stone_id":"9111",
+               "stone_title":"Triumph",
+               "isKey":0,
+               "stone_video":"",
+               "stone_long_description":"<p>Takedowns restore 12% of your missing health and grant an additional 25 gold.<\/p>\n",
+               "stone_short_description":"Kills \/ Assists restore health and give 25 gold. Think old Dangerous Game.",
+               "stone_taken_on":"Xin Zhao|Draven|Cho'Gath|Corki|Ezreal|Kha'Zix"
+               },
+               {
+               "stone_id":"8009",
+               "stone_title":"Presence of Mind",
+               "isKey":0,
+               "stone_video":"",
+               "stone_long_description":"<p>For 7s after gaining a level or takedown the mana you spend on abilities is fully restored.<\/p>\n",
+               "stone_short_description":"Level ups \/ Kills \/ Assists give free mana for 5 seconds.",
+               "stone_taken_on":"Jayce|Azir|Cassiopeia|Aurelion Sol|Karthus"
+               },
+               {
+               "stone_id":"9104",
+               "stone_title":"Legend: Alacrity",
+               "isKey":0,
+               "stone_video":"",
+               "stone_long_description":"<p>Gain 3% Attack Speed plus an additional 1.5% for every <em>Legend<\/em> stack (max 10 stacks).<\/p>\n<p>Earn progress toward <em>Legend<\/em> stacks for every champion takedown, epic monster takedown, large monster kill, and minion kill.<\/p>\n",
+               "stone_short_description":"Attack Speed stacks from CS \/ Kills \/ Assists",
+               "stone_taken_on":"Shaco|Kog'Maw|Xayah|Graves|Kayle|Udyr"
+               },
+               {
+               "stone_id":"9105",
+               "stone_title":"Legend: Tenacity",
+               "isKey":0,
+               "stone_video":"",
+               "stone_long_description":"<p>Gain 5% tenacity plus an additional 1.5% for every <em>Legend<\/em> stack (max 10 stacks).<\/p>\n<p>Earn progress toward <em>Legend<\/em> stacks for every champion takedown, epic monster takedown, large monster kill, and minion kill.<\/p>\n",
+               "stone_short_description":"Tenacity stacks from CS \/ Kills \/ Assists",
+               "stone_taken_on":"Warwick|Corki|Renekton|Kindred|Poppy|Camille"
+               },
+               {
+               "stone_id":"9103",
+               "stone_title":"Legend: Bloodline",
+               "isKey":0,
+               "stone_video":"",
+               "stone_long_description":"<p>Gain 0.8% life steal for every <em>Legend<\/em> stack (max 10 stacks).<\/p>\n<p>Earn progress toward <em>Legend<\/em> stacks for every champion takedown, epic monster takedown, large monster kill, and minion kill.<\/p>\n",
+               "stone_short_description":"Life Steal stacks from CS \/ Kills \/ Assists",
+               "stone_taken_on":"Lucian|Fiora|Kalista|Ezreal|Varus|Draven"
+               },
+               {
+               "stone_id":"8014",
+               "stone_title":"Coup De Grace",
+               "isKey":0,
+               "stone_video":"",
+               "stone_long_description":"<p>Deal 9% more damage to champions who have less than 40% health.<\/p>\n<p>Additionally, takedowns on champions grant an <span>adaptive<\/span> bonus of 9 Attack Damage or 15 Ability Power for 10s.<\/p>\n",
+               "stone_short_description":"Execute damage | Kills \/ Assists grant temporary AP\/AD",
+               "stone_taken_on":"Ashe|Gnar|Shaco|Yorick|Master Yi|Karthus"
+               },
+               {
+               "stone_id":"8017",
+               "stone_title":"Cut Down",
+               "isKey":0,
+               "stone_video":"",
+               "stone_long_description":"<p>Deal 4% more damage to champions with 150 more max health than you, increasing to 10% at 2000 more max health.<\/p>\n",
+               "stone_short_description":"Tank killer",
+               "stone_taken_on":"Twitch|Yasuo|Sivir|Jayce|Camille|Ashe"
+               },
+               {
+               "stone_id":"8299",
+               "stone_title":"Last Stand",
+               "isKey":0,
+               "stone_video":"",
+               "stone_long_description":"<p>Deal 5 - 12% increased damage to champions while you are below 60% health, maximum damage gained at 30% health.<\/p>\n",
+               "stone_short_description":"Extra damage when low health.",
+               "stone_taken_on":"Tryndamere|Ezreal"
+               }
+               ]
+  },
+  {
+  "rune_id":"8100",
+  "rune_title":"Domination",
+  "rune_image":"8100",
+  "rune_sub_title":"BURST DAMAGE",
+  "rune_description":"+11 Attack Damage or +18 Ability Power, adaptive",
+  "keystones":[
+               {
+               "stone_id":"8112",
+               "stone_title":"Electrocute",
+               "isKey":1,
+               "stone_video":"http:\/\/d181w3hxxigzvh.cloudfront.net\/wp-content\/uploads\/2017\/09\/render_Electrocute.mp4",
+               "stone_long_description":"<p>Hitting a champion with 3 <strong>separate<\/strong> attacks or abilities in 2s deals bonus <span>adaptive damage<\/span>.<\/p>\n<p>Damage: 40-220 (+0.50 Bonus AD, +0.30 AP) damage.<\/p>\n<p>Cooldown: 50-25s<\/p>\n",
+               "stone_short_description":"3 attacks \/ abilities burst | Think old Thunderlords.",
+               "stone_taken_on":"Zoe|Lee Sin|Syndra|Veigar|LeBlanc|Shaco"
+               },
+               {
+               "stone_id":"8124",
+               "stone_title":"Predator",
+               "isKey":1,
+               "stone_video":"http:\/\/d181w3hxxigzvh.cloudfront.net\/wp-content\/uploads\/2017\/09\/render_Predator.mp4",
+               "stone_long_description":"<p>Enchants your boots with the active effect 'Predator.'<\/p>\n<p>Channel for 1.5s out of combat to gain 45% Movement Speed for 15s. Damaging attacks or abilities end this effect, dealing 60 - 140 (+0.4 bonus AD)(+0.25 AP) bonus <span>adaptive damage<\/span>.<\/p>\n<p>Cooldown: 150 - 100s. Starts the game on cooldown and goes on cooldown if interrupted while channeling.<\/p>\n",
+               "stone_short_description":"Movement speed active on boots | Increased engage damage.",
+               "stone_taken_on":"Hecarim|Olaf|Quinn"
+               },
+               {
+               "stone_id":"8128",
+               "stone_title":"Dark Harvest",
+               "isKey":1,
+               "stone_video":"http:\/\/d181w3hxxigzvh.cloudfront.net\/wp-content\/uploads\/2017\/09\/render_DarkHarvest.mp4",
+               "stone_long_description":"<p>Champions, large minions, and large monsters drop soul essence on death. Collecting a soul to become Soul Charged. Your next attack on a champion or structure consumes Soul Charged to deal bonus <span>adaptive damage<\/span>.<\/p>\n<p>Soul Charged lasts 20s, increased to 300s after collecting 150 soul essence.<\/p>\n<p>Bonus damage: 40 - 80 (+0.25 bonus AD) (+0.2 AP) + soul essence collected.<\/p>\n<p>Champion souls - 6 soul essence.<br \/>\nMonster souls - 2 soul essence.<br \/>\nMinion souls - 4 soul essence.<\/p>\n",
+               "stone_short_description":"Nearby dying large minions \/ monsters \/ champions grants burst damage.",
+               "stone_taken_on":"Nocturne|Kayn|Kha'Zix|Kayn|Darius"
+               },
+               {
+               "stone_id":"8126",
+               "stone_title":"Cheap Shot",
+               "isKey":0,
+               "stone_video":"",
+               "stone_long_description":"<p>Damaging champions with impaired movement or actions deals 12 - 30 bonus true damage (based on level).<\/p>\n<p>Cooldown: 4s<br \/>\nApplies to damage occurring after the impairment.<\/p>\n",
+               "stone_short_description":"Bonus true damage to impaired (slowed etc.) champions.",
+               "stone_taken_on":"Syndra|Leona|Azir|Ashe|Rammus|Vel'Koz"
+               },
+               {
+               "stone_id":"8139",
+               "stone_title":"Taste of Blood",
+               "isKey":0,
+               "stone_video":"",
+               "stone_long_description":"<p>Heal when you damage an enemy champion.<\/p>\n<p>Healing: 18 - 35 (+0.20 bonus AD, +0.1 AP) health (based on level).<\/p>\n<p>Cooldown: 20s<\/p>\n",
+               "stone_short_description":"Heal when you damage champions.",
+               "stone_taken_on":"Vladimir|Sivir|Varus|Draven"
+               },
+               {
+               "stone_id":"8143",
+               "stone_title":"Sudden Impact",
+               "isKey":0,
+               "stone_video":"",
+               "stone_long_description":"<p>After exiting stealth or using a dash, leap, blink, or teleport, damage a champion to gain 10 Lethality and 8 Magic Penetration for 5s.<\/p>\n<p>Cooldown: 4s<\/p>\n",
+               "stone_short_description":"Gain magic pen \/ lethality when using a gap closer or stealth.",
+               "stone_taken_on":"Ekko|Lucian|Ahri|Quinn|Irelia|Elise"
+               },
+               {
+               "stone_id":"8136",
+               "stone_title":"Zombie Ward",
+               "isKey":0,
+               "stone_video":"",
+               "stone_long_description":"<p>After killing an enemy ward, a friendly Zombie Ward is raised in its place. Additionally, when your wards expire, they resurrect as Zombie Wards.<\/p>\n<p>Zombie Wards are visible, last for 180s, and don't count towards your ward limit.<\/p>\n",
+               "stone_short_description":"Wards you place \/ kill spawn a visible ward when they die.",
+               "stone_taken_on":"Lulu|Riven|Zoe|Zyra|Hecarim|Vel'Koz"
+               },
+               {
+               "stone_id":"8120",
+               "stone_title":"Ghost Poro",
+               "isKey":0,
+               "stone_video":"",
+               "stone_long_description":"<p>Enter a brush to summon a poro after a brief channel. The poro will stay behind to give you vision until you summon a new one.<\/p>\n<p>If an enemy enters a brush with a poro in it, they scare it away, putting this effect on a 3s cooldown.<\/p>\n<p>Poro channel is interrupted if you enter combat with a champion.<\/p>\n",
+               "stone_short_description":"Entering a brush leaves temporary vision behind.",
+               "stone_taken_on":"Ashe|Kalista|Yasuo|Twitch|Tryndamere|Kog'Maw"
+               },
+               {
+               "stone_id":"8138",
+               "stone_title":"Eyeball Collection",
+               "isKey":0,
+               "stone_video":"",
+               "stone_long_description":"<p>Collect eyeballs for champion and ward takedowns. Gain an adaptive bonus of 0.6 Attack Damage or 1 Ability Power, per eyeball collected.<\/p>\n<p>Upon completing your collection at 20 eyeballs, gain an adaptive bonus of 6 Attack Damage, or 10 Ability Power.<\/p>\n<p>Collect 2 eyeballs per champion takedown, 1 eyeball per ward takedown or assist.<\/p>\n",
+               "stone_short_description":"Kills \/ Assists on champions and wards grants AP or AD.",
+               "stone_taken_on":"Lee Sin|Katarina|Kayn|Nocturne|Darius|JarvanIV"
+               },
+               {
+               "stone_id":"8135",
+               "stone_title":"Ravenous Hunter",
+               "isKey":0,
+               "stone_video":"",
+               "stone_long_description":"<p>Heal for a percentage of the damage dealt by your abilities.<\/p>\n<p>Healing: 2.5% + 2.5% per <em>Bounty Hunter<\/em> stack.<\/p>\n<p>Earn a <em>Bounty Hunter<\/em> stack the first time you get a takedown on each enemy champion.<\/p>\n<p><em>AoE:<\/em> Healing reduced to one third on AoE abilities.<\/p>\n",
+               "stone_short_description":"Spell Vamp stacks from unique kills \/ assists.",
+               "stone_taken_on":"Ekko|Swain|Brand|Graves|LeBlanc|Dr. Mundo"
+               },
+               {
+               "stone_id":"8134",
+               "stone_title":"Ingenious Hunter",
+               "isKey":0,
+               "stone_video":"",
+               "stone_long_description":"<p>Gain 10% <strong>Active Item CDR<\/strong> plus an additional 6% per <em>Bounty Hunter<\/em> stack (includes Trinkets).<\/p>\n<p>Earn a <em>Bounty Hunter<\/em> stack the first time you get a takedown on each enemy champion.<\/p>\n",
+               "stone_short_description":"Item & Trinket CDR stacks from unique kills \/ assists.",
+               "stone_taken_on":"Fizz|Olaf|Alistar|Taric|Kled|Kha'Zix"
+               },
+               {
+               "stone_id":"8105",
+               "stone_title":"Relentless Hunter",
+               "isKey":0,
+               "stone_video":"",
+               "stone_long_description":"<p>Gain 8 out of combat <strong>Movement Speed<\/strong> plus 8 per <em>Bounty Hunter<\/em> stack.<\/p>\n<p>Earn a <em>Bounty Hunter<\/em> stack the first time you get a takedown on each enemy champion.<\/p>\n",
+               "stone_short_description":"Out of Combat Move Speed stacks from unique kills \/ assists.",
+               "stone_taken_on":"Blitzcrank|Hecarim|Leona|Diana|Aatrox|Zed"
+               }
+               ]
+  },
+  {
+  "rune_id":"8200",
+  "rune_title":"Sorcery",
+  "rune_image":"8200",
+  "rune_sub_title":"EMPOWERED ABILITIES",
+  "rune_description":"+15 attack damage or +25 ability power, adaptive",
+  "keystones":[
+               {
+               "stone_id":"8214",
+               "stone_title":"Summon Aery",
+               "isKey":1,
+               "stone_video":"http:\/\/d181w3hxxigzvh.cloudfront.net\/wp-content\/uploads\/2017\/09\/render_SummonAery.mp4",
+               "stone_long_description":"<p>Your attacks and abilities send Aery to a target, damaging enemies or shielding allies.<\/p>\n<p>Damage: 15 - 40 based on level (+0.10 AP and +0.15 bonus AD)<br \/>\nShield: 30 - 80 based on level (+0.25 AP and +0.4 bonus AD)<\/p>\n<p>Aery cannot be sent out to again until she returns to you.<\/p>\n",
+               "stone_short_description":"Attacks\/abilities summon Aery to damage enemies \/ shield allies.",
+               "stone_taken_on":"Orianna|Zyra|Viktor|Sona|Karma|Mordekaiser"
+               },
+               {
+               "stone_id":"8229",
+               "stone_title":"Arcane Comet",
+               "isKey":1,
+               "stone_video":"http:\/\/d181w3hxxigzvh.cloudfront.net\/wp-content\/uploads\/2017\/09\/render_Comet.mp4",
+               "stone_long_description":"<p>Damaging a champion with an ability hurls a comet at their location, or, if Arcane Comet is on cooldown, reduces it\u2019s remaining cooldown.<\/p>\n<p><span>Adaptive damage<\/span>: 30 - 100 based on level (+0.20 AP and +0.35 bonus AD)<\/p>\n<p>Cooldown: 20 - 8s<\/p>\n<p>Cooldown Reduction:<br \/>\n- Single Target: 20%<br \/>\n- Area of Effect: 10%<br \/>\n- Damage Over Time: 5%<\/p>\n",
+               "stone_short_description":"Hitting spells hurls a comet at enemies.",
+               "stone_taken_on":"Karthus|Morgana|Ahri|Malzahar|Swain|Miss Fortune"
+               },
+               {
+               "stone_id":"8230",
+               "stone_title":"Phase Rush",
+               "isKey":1,
+               "stone_video":"http:\/\/d181w3hxxigzvh.cloudfront.net\/wp-content\/uploads\/2017\/09\/render_PhaseRush.mp4",
+               "stone_long_description":"<p>Hitting an enemy champion with 3 attacks or separate abilities within 3s grants 10 - 40% Movement Speed based on level.<\/p>\n<p>Duration: 3s<br \/>\nCooldown: 15s<br \/>\nAdditionally, gain 75% Slow Resistance or the duration.<\/p>\n",
+               "stone_short_description":"3 attacks or abilities grants speed boost | Think old Stormraider's.",
+               "stone_taken_on":"Nasus|Vladimir|Cassiopeia|Darius|Aurelion Sol|Ryze"
+               },
+               {
+               "stone_id":"8224",
+               "stone_title":"Nullifying Orb",
+               "isKey":0,
+               "stone_video":"",
+               "stone_long_description":"<p>Upon taking magic damage that would reduce Health below 30%, grants a shield that absorbs 40 - 120 magic damage based on level (+0.10 AP and +0.15 bonus AD) for 4 seconds.<\/p>\n<p>Cooldown: 60s<\/p>\n",
+               "stone_short_description":"Grants a magic shield when taken to low health by magic damage.",
+               "stone_taken_on":"Fizz|Corki|Diana|Viktor|Aurelion Sol|Quinn"
+               },
+               {
+               "stone_id":"8226",
+               "stone_title":"Manaflow Band",
+               "isKey":0,
+               "stone_video":"",
+               "stone_long_description":"<p>Every 75 seconds, your next ability used has its mana or energy cost refunded, and restores 10% of your missing mana or energy.<\/p>\n",
+               "stone_short_description":"Free spell cast every 60s and mana sustain.",
+               "stone_taken_on":"Cassiopeia|Lux|Orianna|Ziggs|Ryze|Taliyah"
+               },
+               {
+               "stone_id":"8243",
+               "stone_title":"The Ultimate Hat",
+               "isKey":0,
+               "stone_video":"",
+               "stone_long_description":"<p>Your ultimate's cooldown is reduced by 5%. This number is increased by 2% each time your ultimate goes on cooldown. Stacks up to 5 times.<\/p>\n",
+               "stone_short_description":"Scaling ultimate cooldown reduction.",
+               "stone_taken_on":"Karma|Malzahar|Heimerdinger|Rumble|Nocturne|Lulu"
+               },
+               {
+               "stone_id":"8210",
+               "stone_title":"Transcendence",
+               "isKey":0,
+               "stone_video":"",
+               "stone_long_description":"<p>Gain 10% CDR when you reach level 10.<\/p>\n<p>Each percent of CDR exceeding the CDR limit is converted to an <span>adaptive<\/span> bonus of 1.2 Attack Damage or 2 Ability Power.<\/p>\n",
+               "stone_short_description":"Free 10% CDR at level 10 | Excess CDR becomes AP or AD.",
+               "stone_taken_on":"Nasus|Lux|Galio|LeBlanc|Azir|Annie"
+               },
+               {
+               "stone_id":"8234",
+               "stone_title":"Celerity",
+               "isKey":0,
+               "stone_video":"",
+               "stone_long_description":"<p>Gain 3% increased Movement Speed and add 8% of your Bonus Movement Speed to your AP or AD (based on level), Adaptive.<\/p>\n",
+               "stone_short_description":"Move speed | Bonus move speed grants AP or AD.",
+               "stone_taken_on":"Teemo|Hecarim|Darius|Varus|Caitlyn|Mordekaiser"
+               },
+               {
+               "stone_id":"8233",
+               "stone_title":"Absolute Focus",
+               "isKey":0,
+               "stone_video":"",
+               "stone_long_description":"<p>While above 70% health, gain an <span>adaptive<\/span> bonus of up to 24 Attack Damage or 40 Ability Power (based on level).<\/p>\n",
+               "stone_short_description":"When above 70% health, gain extra AP or AD.",
+               "stone_taken_on":"Swain|Vel'Koz|Zyra|Syndra|Karthus|Brand"
+               },
+               {
+               "stone_id":"8237",
+               "stone_title":"Scorch",
+               "isKey":0,
+               "stone_video":"",
+               "stone_long_description":"<p>Your next ability hit sets champions on fire dealing 30 - 60 bonus magic damage based on level after 1s.<\/p>\n<p>Cooldown: 20s<\/p>\n",
+               "stone_short_description":"Extra Poke damage from abilities.",
+               "stone_taken_on":"Xerath|Ahri|Sion|Sion|Nami|Jhin"
+               },
+               {
+               "stone_id":"8232",
+               "stone_title":"Waterwalking",
+               "isKey":0,
+               "stone_video":"",
+               "stone_long_description":"<p>Gain 25 Movement Speed and an <span>adaptive<\/span> bonus of up to 18 Attack Damage or 30 Ability Power (based on level) when in the river.<\/p>\n",
+               "stone_short_description":"Gain MS and AP or AD, when in the river.",
+               "stone_taken_on":"Hecarim|Aurelion Sol|Udyr|Rek'Sai|Elise|Nidalee"
+               },
+               {
+               "stone_id":"8236",
+               "stone_title":"Gathering Storm",
+               "isKey":0,
+               "stone_video":"",
+               "stone_long_description":"<p>Every 10 min. gain AP or AD, <strong>Adaptive<\/strong>.<\/p>\n<p><em>10 min<\/em>: + 8 AP or 5 AD<br \/>\n<em>20 min<\/em>: + 24 AP or 14 AD<br \/>\n<em>30 min<\/em>: + 48 AP or 29 AD<br \/>\n<em>40 min<\/em>: + 80 AP or 48 AD<br \/>\n<em>50 min<\/em>: + 120 AP or 72 AD<br \/>\n<em>60 min<\/em>: + 168 AP or 101 AD<br \/>\netc...<\/p>\n",
+               "stone_short_description":"Every 10 minutes gain stacking AP or AD.",
+               "stone_taken_on":"Vel'Koz|Cassiopeia|Xayah|Veigar|Azir|Miss Fortune"
+               }
+               ]
+  },
+  {
+  "rune_id":"8400",
+  "rune_title":"Resolve",
+  "rune_image":"8400",
+  "rune_sub_title":"DURABILITY",
+  "rune_description":"+130 Health",
+  "keystones":[
+               {
+               "stone_id":"8437",
+               "stone_title":"Grasp of the Undying",
+               "isKey":1,
+               "stone_video":"http:\/\/d181w3hxxigzvh.cloudfront.net\/wp-content\/uploads\/2017\/09\/render_Grasp.mp4",
+               "stone_long_description":"<p>Every 4s in combat, your next basic attack on a champion will:<\/p>\n<ul>\n<li>Deal bonus damage equal to 4% of your max health<\/li>\n<li>Heal you for 2% of your max health<\/li>\n<li>Permanently increase your health by 5<\/li>\n<\/ul>\n<p><em>Ranged Champions:<\/em> Damage and healing are halved and gain 2 permanent health instead.<\/p>\n",
+               "stone_short_description":"Bonus damage \/ heal based on max health. Permanent max health.",
+               "stone_taken_on":"Cho'Gath|Trundle|Shen|Tahm Kench|Yorick|Malphite"
+               },
+               {
+               "stone_id":"8439",
+               "stone_title":"Aftershock",
+               "isKey":1,
+               "stone_video":"http:\/\/d181w3hxxigzvh.cloudfront.net\/wp-content\/uploads\/2017\/09\/render_Aftershock.mp4",
+               "stone_long_description":"<p>After immobilizing an enemy champion, increase your current Armor and Magic Resist by 10 + 30% for 2.5s. Then, after 2.5s deal magic damage to nearby enemies.<\/p>\n<p>Damage: 40-140 (+3.5% your maximum health)<br \/>\nCooldown: 20s<\/p>\n",
+               "stone_short_description":"Immobilizations grant Armor \/ MR and casts explosion based on health.",
+               "stone_taken_on":"Rakan|Blitzcrank|Maokai|Galio|Ornn|Sejuani"
+               },
+               {
+               "stone_id":"8465",
+               "stone_title":"Guardian",
+               "isKey":1,
+               "stone_video":"http:\/\/d181w3hxxigzvh.cloudfront.net\/wp-content\/uploads\/2017\/09\/render_Guardian.mp4",
+               "stone_long_description":"<p><em>Guard<\/em> allies within 175 units of you, and <em>Guard<\/em> allies you target with spells for 2.5s. While <em>Guarding<\/em>, if you or the ally would take damage, both of you gain a shield and are hasted for 1.5s.<\/p>\n<p>Cooldown: 45s<br \/>\nShield Strength: 60 - 150 (+0.20 AP) (+10% bonus health).<br \/>\nHaste: 20% increased Movement Speed<\/p>\n",
+               "stone_short_description":"Haste and shield allies you are near or cast a spell on.",
+               "stone_taken_on":"Taric|Tahm Kench|Braum|Dr. Mundo"
+               },
+               {
+               "stone_id":"8242",
+               "stone_title":"Unflinching",
+               "isKey":0,
+               "stone_video":"",
+               "stone_long_description":"<p>Increase your Tenacity and Slow Resistance by 10% for each Summoner Spell on cooldown. After casting a Summoner Spell, gain 15% additional Tenacity and Slow Resistance for 10s.<\/p>\n",
+               "stone_short_description":"Tenacity and slow resist based on summoner skill cooldown\/usage.",
+               "stone_taken_on":"Skarner|Warwick|Amumu|Singed|Zac|Tahm Kench"
+               },
+               {
+               "stone_id":"8446",
+               "stone_title":"Demolish",
+               "isKey":0,
+               "stone_video":"",
+               "stone_long_description":"<p>Charge up a powerful attack against a tower over 4s, when within 600 range of it. The charged attack deals 125 (+30% of your max health) bonus physical damage.<\/p>\n<p>Cooldown: 45s<\/p>\n",
+               "stone_short_description":"Tower burst damage based on max health.",
+               "stone_taken_on":"Yorick|Dr. Mundo|Gnar|Trundle|Shen|Sion"
+               },
+               {
+               "stone_id":"8463",
+               "stone_title":"Font of Life",
+               "isKey":0,
+               "stone_video":"",
+               "stone_long_description":"<p>Impairing the movement of an enemy champion marks them for 4s.<\/p>\n<p>Ally champions who attack marked enemies heal for 5 + 1% of your max health.<\/p>\n",
+               "stone_short_description":"Allies heal when attacking enemies you impair | Think old Stoneborne Pact.",
+               "stone_taken_on":"Nautilus|Alistar|Maokai|Soraka|Tahm Kench|Thresh"
+               },
+               {
+               "stone_id":"8430",
+               "stone_title":"Iron Skin",
+               "isKey":0,
+               "stone_video":"",
+               "stone_long_description":"<p>Gain 5 Armor. Whenever you heal for at least 20 health or from a consumable's effect, increase your Armor by 5% for 3 seconds.<\/p>\n",
+               "stone_short_description":"+5 Armor | Healing increase Armor temporarily.",
+               "stone_taken_on":"Trundle|Yasuo|Taric|Thresh|Singed|Amumu"
+               },
+               {
+               "stone_id":"8435",
+               "stone_title":"Mirror Shell",
+               "isKey":0,
+               "stone_video":"",
+               "stone_long_description":"<p>Gain 6 Magic Resist. Whenever you heal for at least 20 health or from a consumable's effect, increase your Magic Resist by 5% for 3 seconds.<\/p>\n",
+               "stone_short_description":"+5 MR | Healing increase MR temporarily.",
+               "stone_taken_on":"Galio|Galio"
+               },
+               {
+               "stone_id":"8429",
+               "stone_title":"Conditioning",
+               "isKey":0,
+               "stone_video":"",
+               "stone_long_description":"<p>After 10 min gain +8 Armor and +8 Magic Resist and increase your total Armor and Magic Resist by 5%.<\/p>\n",
+               "stone_short_description":"After 10 minutes gain Armor and MR.",
+               "stone_taken_on":"Gragas|Ivern|Malphite|Warwick|Yorick|Sion"
+               },
+               {
+               "stone_id":"8451",
+               "stone_title":"Overgrowth",
+               "isKey":0,
+               "stone_video":"",
+               "stone_long_description":"<p>Every 8 monsters or enemy minions that die near you permanently increases your max health by 0.2%.<\/p>\n<p>Range: 1400 units<\/p>\n",
+               "stone_short_description":"Minions that die nearby give max health.",
+               "stone_taken_on":"Tahm Kench|Dr. Mundo|Sion|Vi|Malphite|Blitzcrank"
+               },
+               {
+               "stone_id":"8453",
+               "stone_title":"Revitalize",
+               "isKey":0,
+               "stone_video":"",
+               "stone_long_description":"<p>Heals and shields are 5% stronger and increased by an additional 10% on targets below 40% health.  <\/p>\n<p>*Include heals and shields cast on yourself*<\/p>\n",
+               "stone_short_description":"Stronger heals and shields.",
+               "stone_taken_on":"Rakan|Trundle|Ornn|Darius|Yasuo|Kayn"
+               },
+               {
+               "stone_id":"8444",
+               "stone_title":"Second Wind",
+               "isKey":0,
+               "stone_video":"",
+               "stone_long_description":"<p>After taking damage from an enemy champion heal for 4%  of your missing health over 10 seconds.<\/p>\n",
+               "stone_short_description":"Getting hit restores missing health over time.",
+               "stone_taken_on":"Sion|Yorick|Thresh|Poppy|Leona|Galio"
+               }
+               ]
+  },
+  {
+  "rune_id":"8300",
+  "rune_title":"Inspiration",
+  "rune_image":"8300",
+  "rune_sub_title":"DURABILITY",
+  "rune_description":"Inspiration + Resolve: +20% Potion and Elixir Duration +145 Health\nInspiration + Domination: +20% Potion and Elixir Duration +16 Attack Damage or +27 Ability Power,adaptive\nInspiration + Sorcery: +20% Potion and Elixir Duration +16 Attack Damage or +27 Ability Power, adaptive\nInspiration + Precision: +20% Potion and Elixir Duration +20% Attack Speed",
+  "keystones":[
+               {
+               "stone_id":"8326",
+               "stone_title":"Unsealed Spellbook",
+               "isKey":1,
+               "stone_video":"http:\/\/d181w3hxxigzvh.cloudfront.net\/wp-content\/uploads\/2017\/09\/render_Spellbook.mp4",
+               "stone_long_description":"<p>Gain a Summoner Shard at 2 minutes and another every 6 min after (max 2 shards).<\/p>\n<p>While near the shop, you can exchange 1 Summoner Shard to replace a Summoner Spell with a different one.<\/p>\n<p>Additionally, your Summoner Spell cooldowns are reduced by 25%.<\/p>\n<p><strong>Smite:<\/strong> Buying Smite won't grant access to Smite items<br \/>\nYou cannot have two of the same Summoner Spell<\/p>\n",
+               "stone_short_description":"Swap summoner spells in game. 25% Summoner CDR.",
+               "stone_taken_on":"Vladimir|Kennen|Skarner|Zilean|Singed|Malzahar"
+               },
+               {
+               "stone_id":"8351",
+               "stone_title":"Glacial Augment",
+               "isKey":1,
+               "stone_video":"http:\/\/d181w3hxxigzvh.cloudfront.net\/wp-content\/uploads\/2017\/09\/render_GlacialAugment.mp4",
+               "stone_long_description":"<p>Basic attacking a champion slows them for 2s. The slow increases in strength over its duration.<\/p>\n<ul>\n<li><em>Ranged attacks<\/em> slow by up to 20%-40%  <\/li>\n<li><em>Melee attacks<\/em> slow by up to 40%-50%<\/li>\n<\/ul>\n<p>Slowing a champion with active items shoots a freeze ray through them, freezing the nearby ground for 5s, slowing all units inside by 50%<\/p>\n<p>Cooldown: 7-4s second per-unit cooldown<\/p>\n",
+               "stone_short_description":"Slow enemies on hit. Active slows cast AoE slow.",
+               "stone_taken_on":"Gnar|Ekko|Teemo"
+               },
+               {
+               "stone_id":"8359",
+               "stone_title":"Kleptomancy",
+               "isKey":1,
+               "stone_video":"http:\/\/d181w3hxxigzvh.cloudfront.net\/wp-content\/uploads\/2017\/09\/render_Klepto.mp4",
+               "stone_long_description":"<p>After using an ability, your next attack on a champion grants bonus gold. There's a chance you'll also gain a consumable.<\/p>\n",
+               "stone_short_description":"Attacks after spells on champions grant gold and consumables | Procs like Sheen.",
+               "stone_taken_on":"Gangplank|Gangplank|Ezreal|Sona|Illaoi"
+               },
+               {
+               "stone_id":"8306",
+               "stone_title":"Hextech Flashtraption",
+               "isKey":0,
+               "stone_video":"",
+               "stone_long_description":"<p>While Flash is on cooldown it is replaced by Hexflash.<\/p>\n<p>Hexflash: Channel for 2.5 seconds to blink to a new location.<\/p>\n<p>Cooldown: 20 seconds. Goes on a 10 second cooldown when you enter champion combat.<\/p>\n",
+               "stone_short_description":"Gain a channel flash while flash is on cooldown.",
+               "stone_taken_on":"Gragas|Skarner"
+               },
+               {
+               "stone_id":"8345",
+               "stone_title":"Biscuit Delivery",
+               "isKey":0,
+               "stone_video":"",
+               "stone_long_description":"<p>Biscuit Delivery: Gain a Total Biscuit of Everlasting will every 3 minutes, until 12 minutes.<\/p>\n<p>Biscuits restore 15% of your missing health and mana and increase your mana cap by 40 mana permanently.<\/p>\n<p>Champions without mana restore 20%  missing energy instead.<\/p>\n",
+               "stone_short_description":"Periodically gain a biscuit with strong Health\/Mana regen.",
+               "stone_taken_on":"Viktor|Lissandra|Ziggs|Ornn|Teemo|Tahm Kench"
+               },
+               {
+               "stone_id":"8313",
+               "stone_title":"Perfect Timing",
+               "isKey":0,
+               "stone_video":"",
+               "stone_long_description":"<p>Start the game with a Commencing Stopwatch that transforms into a Stopwatch after 6 min. Stopwatch has a one time use Stasis active.<\/p>\n<p>Reduces the cooldown of Zhonyas Hourglass, Guardian Angel, and Gargoyle's Stoneplate by 15%.<\/p>\n",
+               "stone_short_description":"After 6 minutes gain a one-time use Zhonya\u2019s active.",
+               "stone_taken_on":"Orianna|Ekko|Zilean|Gangplank|Ryze|Maokai"
+               },
+               {
+               "stone_id":"8304",
+               "stone_title":"Magical Footwear",
+               "isKey":0,
+               "stone_video":"",
+               "stone_long_description":"<p>You get Slightly Magical Boots at 10 min, but you cannot buy boots before then. For each takedown you acquire the boots 30s sooner.<\/p>\n",
+               "stone_short_description":"Free boots at 10 minutes.",
+               "stone_taken_on":"Malzahar|Ahri|Karma|Vladimir|Tristana|Maokai"
+               },
+               {
+               "stone_id":"8321",
+               "stone_title":"Future's Market",
+               "isKey":0,
+               "stone_video":"",
+               "stone_long_description":"<p>You can enter debt to buy items. The amount you can borrow increases over time.<\/p>\n<p>Debt limit: 150 + 5\/min<br \/>\nLending Fee: 50 gold per item<\/p>\n",
+               "stone_short_description":"Enter debt to buy items early.",
+               "stone_taken_on":"Viktor|Kennen|Lissandra|Gangplank|Akali|Thresh"
+               },
+               {
+               "stone_id":"8316",
+               "stone_title":"Minion Dematerializer",
+               "isKey":0,
+               "stone_video":"",
+               "stone_long_description":"<p>Start the game with 6 Minion Dematerializers that kill and absorb lane minions instantly. Minion Dematerializers are on cooldown for the first 155s of the game.<\/p>\n<p>Absorbing a minion increases your damage by +4% against that type of minion permanently, and an extra +1% for each additional minion of that type absorbed.<\/p>\n",
+               "stone_short_description":"Kill 6 minions for free and gain bonus minion damage.",
+               "stone_taken_on":"Zilean|Ekko"
+               },
+               {
+               "stone_id":"8347",
+               "stone_title":"Cosmic Insight",
+               "isKey":0,
+               "stone_video":"",
+               "stone_long_description":"<p>+5% CDR<br \/>\n+5% Max CDR<br \/>\n+5% Summoner Spell CDR<br \/>\n+5% Item CDR<\/p>\n",
+               "stone_short_description":"5% CDR for spells, Summoners, Items, and max CDR. ",
+               "stone_taken_on":"Ziggs|Gragas|Lux|Orianna|Anivia|Kassadin"
+               },
+               {
+               "stone_id":"8410",
+               "stone_title":"Approach Velocity",
+               "isKey":0,
+               "stone_video":"",
+               "stone_long_description":"<p>Gain 10% Movement Speed towards nearby allies that are movement impaired or enemies that you impair.<\/p>\n<p>Range: 1000<\/p>\n",
+               "stone_short_description":"Movement speed towards impaired allies \/ enemies.",
+               "stone_taken_on":"Teemo|Tahm Kench|Gnar"
+               },
+               {
+               "stone_id":"8339",
+               "stone_title":"Celestial Body",
+               "isKey":0,
+               "stone_video":"",
+               "stone_long_description":"<p>+100 Health permanently<br \/>\n-10% damage to champions and monsters until 10 mins.<\/p>\n",
+               "stone_short_description":"+100 health | Less damage until 10 minutes.",
+               "stone_taken_on":"Illaoi|Braum|Singed|Nautilus"
+               }
+               ]
+  }
+  ]

@@ -7,10 +7,17 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class ShowChampionRunesViewController: UIViewController {
 
     @IBOutlet weak var ChampionRunes: UITableView!
+    
+    func setupLayout(){
+        ChampionRunes.estimatedRowHeight = 85.0
+        ChampionRunes.rowHeight = UITableViewAutomaticDimension
+        ChampionRunes.tableFooterView = UIView()        
+    }
     
     @IBAction func shareView(_ sender: UIBarButtonItem) {
         if let screen = self.view.capture() {
@@ -31,9 +38,7 @@ class ShowChampionRunesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ChampionRunes.estimatedRowHeight = 85.0
-        ChampionRunes.rowHeight = UITableViewAutomaticDimension
-        ChampionRunes.tableFooterView = UIView()
+        setupLayout()
         // Do any additional setup after loading the view.
     }
 
