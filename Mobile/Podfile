@@ -6,6 +6,9 @@ target 'Forge Wizard' do
   use_frameworks!
 
   # Pods for Forge Wizard
+
+	pod 'AAPickerView', '~> 0.1.2'
+	pod 'IQKeyboardManagerSwift'
 	pod 'UIColor_Hex_Swift', :git => 'https://github.com/yeahdongcn/UIColor-Hex-Swift.git', :tag => '4.0.0'
         pod 'SwiftyJSON'
         pod 'Alamofire'

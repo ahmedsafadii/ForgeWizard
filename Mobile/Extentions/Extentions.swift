@@ -138,6 +138,7 @@ func getThumbnailFrom(path: URL) -> UIImage? {
     
 }
 
+
 extension String {
     func stripExtension(_ extensionSeperator: Character = ".") -> String {
         let selfReversed = self.reversed()
@@ -185,6 +186,12 @@ extension UIView {
 
 extension UIViewController{
     
+    func showAlert(title:String,message:String,ok:String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: ok, style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+
     func hideBackButton(){
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }

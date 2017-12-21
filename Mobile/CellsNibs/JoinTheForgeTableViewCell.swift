@@ -7,11 +7,22 @@
 //
 
 import UIKit
+import AAPickerView
 
 class JoinTheForgeTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var summonerRegion: AAPickerView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        let regions = ["EUW","EUNE"]
+        summonerRegion.pickerType = .StringPicker
+        summonerRegion.stringPickerData = regions
+        summonerRegion.stringDidChange = { index in
+            print("selectedString ", regions[index])
+        }
+        
         // Initialization code
     }
 
