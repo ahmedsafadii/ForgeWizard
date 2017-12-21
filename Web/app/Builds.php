@@ -8,35 +8,44 @@ class Builds extends Model
 {
     protected $table = 'builds';
 
+    protected $with=['player','user','lane','patch','rune_main','rune_secondary'];
+
+    protected $hidden = ['created_at','top_player_id','champion_id','user_id','role_id','patch_id','rune_main_id','rune_secondary_id'];
+
     protected $guarded = [];
 
-    public function users()
-    {
-        return $this->hasMany('App\Users');
+    public function builds() {
+        return $this->belongsTo('App\Champions');
     }
 
-    public function roles()
+    public function player()
     {
-        return $this->hasMany('App\Roles');
+        return $this->hasOne('App\Top_Player','id','top_player_id');
     }
 
-    public function patchs()
+    public function user()
     {
-        return $this->hasMany('App\Runes');
+        return $this->hasOne('App\Users','id','user_id');
     }
 
-    public function runes()
+    public function lane()
     {
-        return $this->hasMany('App\Runes');
+        return $this->hasOne('App\Roles','id','role_id');
     }
 
-    public function champions()
+    public function patch()
     {
-        return $this->hasMany('App\Champions');
+        return $this->hasOne('App\Patch','id','patch_id');
     }
 
-    public function why()
+    public function rune_main()
     {
-        return $this->hasMany('App\Keystones_why');
+        return $this->hasOne('App\Runes','id','rune_main_id');
     }
+
+    public function rune_secondary()
+    {
+        return $this->hasOne('App\Runes','id','rune_secondary_id');
+    }
+
 }
