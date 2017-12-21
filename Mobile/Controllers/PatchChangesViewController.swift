@@ -18,7 +18,6 @@ class PatchChangesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(patchData)
         PatchTableView.estimatedRowHeight = 85.0
         PatchTableView.rowHeight = UITableViewAutomaticDimension
         PatchTableView.tableFooterView = UIView()
@@ -32,7 +31,6 @@ class PatchChangesViewController: UIViewController {
             }
             Global.shared.RunesColors.append(RuneData)
         }
-        print(Global.shared.RunesColors)
         
     }
 

@@ -12,6 +12,7 @@ class ForgeRunesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideBackButton()
 
         // Do any additional setup after loading the view.
     }

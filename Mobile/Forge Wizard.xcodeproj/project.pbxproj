@@ -59,7 +59,8 @@
 		FE9823621FEB31350070C343 /* render_FleetFootwork.m4v in Resources */ = {isa = PBXBuildFile; fileRef = FE9823531FEB31330070C343 /* render_FleetFootwork.m4v */; };
 		FE9823631FEB31350070C343 /* render_LethalTempo.m4v in Resources */ = {isa = PBXBuildFile; fileRef = FE9823541FEB31350070C343 /* render_LethalTempo.m4v */; };
 		FE9823661FEB34B10070C343 /* ForgeRunesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9823641FEB34B10070C343 /* ForgeRunesViewController.swift */; };
-		FE9823671FEB34B10070C343 /* ForgeRunesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE9823651FEB34B10070C343 /* ForgeRunesViewController.xib */; };
+		FE98236A1FEB379C0070C343 /* JoinTheForgeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9823681FEB379C0070C343 /* JoinTheForgeTableViewCell.swift */; };
+		FE98236B1FEB379C0070C343 /* JoinTheForgeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE9823691FEB379C0070C343 /* JoinTheForgeTableViewCell.xib */; };
 		FEBA3AAB1FE5F27C0083FA11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBA3AAA1FE5F27C0083FA11 /* AppDelegate.swift */; };
 		FEBA3AB01FE5F27C0083FA11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEBA3AAE1FE5F27C0083FA11 /* Main.storyboard */; };
 		FEBA3AB21FE5F27C0083FA11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEBA3AB11FE5F27C0083FA11 /* Assets.xcassets */; };
@@ -138,7 +139,8 @@
 		FE9823531FEB31330070C343 /* render_FleetFootwork.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = render_FleetFootwork.m4v; sourceTree = "<group>"; };
 		FE9823541FEB31350070C343 /* render_LethalTempo.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = render_LethalTempo.m4v; sourceTree = "<group>"; };
 		FE9823641FEB34B10070C343 /* ForgeRunesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgeRunesViewController.swift; sourceTree = "<group>"; };
-		FE9823651FEB34B10070C343 /* ForgeRunesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgeRunesViewController.xib; sourceTree = "<group>"; };
+		FE9823681FEB379C0070C343 /* JoinTheForgeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinTheForgeTableViewCell.swift; sourceTree = "<group>"; };
+		FE9823691FEB379C0070C343 /* JoinTheForgeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JoinTheForgeTableViewCell.xib; sourceTree = "<group>"; };
 		FEBA3AA71FE5F27C0083FA11 /* Forge Wizard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Forge Wizard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEBA3AAA1FE5F27C0083FA11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEBA3AAF1FE5F27C0083FA11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -287,6 +289,8 @@
 				FE98233D1FEB21500070C343 /* GetPreviusPatchTableViewCell.xib */,
 				FE9823421FEB28400070C343 /* NoteChangeTableViewCell.swift */,
 				FE9823431FEB28400070C343 /* NoteChangeTableViewCell.xib */,
+				FE9823681FEB379C0070C343 /* JoinTheForgeTableViewCell.swift */,
+				FE9823691FEB379C0070C343 /* JoinTheForgeTableViewCell.xib */,
 			);
 			path = CellsNibs;
 			sourceTree = "<group>";
@@ -337,7 +341,6 @@
 				FE9823341FEB1D650070C343 /* PatchChangesViewController.swift */,
 				FE9823401FEB25050070C343 /* SelectedPatchViewController.swift */,
 				FE9823641FEB34B10070C343 /* ForgeRunesViewController.swift */,
-				FE9823651FEB34B10070C343 /* ForgeRunesViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -426,6 +429,7 @@
 				FE6E75CF1FE7DEF6009D43EA /* SelectedRuneDescriptionTableViewCell.xib in Resources */,
 				FE4AFD6C1FE6FEB900694EF4 /* MainRunesBuildTableViewCell.xib in Resources */,
 				FE98233B1FEB1F3E0070C343 /* GetHeaderPatchTableViewCell.xib in Resources */,
+				FE98236B1FEB379C0070C343 /* JoinTheForgeTableViewCell.xib in Resources */,
 				FE9823591FEB31350070C343 /* render_Grasp.m4v in Resources */,
 				FEBA3AB51FE5F27C0083FA11 /* LaunchScreen.storyboard in Resources */,
 				FEC60CC01FE6B7CE00BA3FF7 /* Beaufort-Italic.ttf in Resources */,
@@ -433,7 +437,6 @@
 				FE98235D1FEB31350070C343 /* render_Aftershock.m4v in Resources */,
 				FE6E75B41FE74489009D43EA /* RuneBodyTableViewCell.xib in Resources */,
 				FE9823571FEB31350070C343 /* render_DarkHarvest.m4v in Resources */,
-				FE9823671FEB34B10070C343 /* ForgeRunesViewController.xib in Resources */,
 				FEC60CC31FE6B7CE00BA3FF7 /* Spiegel-Regular.ttf in Resources */,
 				FE9823581FEB31350070C343 /* render_PhaseRush.m4v in Resources */,
 				FE6E75BF1FE7D3D4009D43EA /* SelectedRuneVideoTableViewCell.xib in Resources */,
@@ -542,6 +545,7 @@
 				FEC60CB51FE68EF700BA3FF7 /* ChampionsBuildsListViewController.swift in Sources */,
 				FE6E75B61FE7C5E2009D43EA /* SelectedRuneViewController.swift in Sources */,
 				FEBA3AAB1FE5F27C0083FA11 /* AppDelegate.swift in Sources */,
+				FE98236A1FEB379C0070C343 /* JoinTheForgeTableViewCell.swift in Sources */,
 				FEBA3AC81FE5F3FE0083FA11 /* Extentions.swift in Sources */,
 				FEC60CC61FE6BB0300BA3FF7 /* RuneBuildTableViewCell.swift in Sources */,
 				FE6E75C41FE7DD3D009D43EA /* SelectedRuneTakesOnTableViewCell.swift in Sources */,
