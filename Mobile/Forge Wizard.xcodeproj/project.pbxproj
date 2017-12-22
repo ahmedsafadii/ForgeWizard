@@ -23,22 +23,53 @@
 		FE6E75B31FE74489009D43EA /* RuneBodyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6E75B11FE74489009D43EA /* RuneBodyTableViewCell.swift */; };
 		FE6E75B41FE74489009D43EA /* RuneBodyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE6E75B21FE74489009D43EA /* RuneBodyTableViewCell.xib */; };
 		FE6E75B61FE7C5E2009D43EA /* SelectedRuneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6E75B51FE7C5E2009D43EA /* SelectedRuneViewController.swift */; };
-		FE6E75BB1FE7CE9D009D43EA /* render_Electrocute.m4v in Resources */ = {isa = PBXBuildFile; fileRef = FE6E75BA1FE7CE9D009D43EA /* render_Electrocute.m4v */; };
 		FE6E75BE1FE7D3D4009D43EA /* SelectedRuneVideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6E75BC1FE7D3D4009D43EA /* SelectedRuneVideoTableViewCell.swift */; };
 		FE6E75BF1FE7D3D4009D43EA /* SelectedRuneVideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE6E75BD1FE7D3D4009D43EA /* SelectedRuneVideoTableViewCell.xib */; };
-		FE6E75C11FE7DA44009D43EA /* render_Electrocute.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = FE6E75C01FE7DA44009D43EA /* render_Electrocute.mp4 */; };
 		FE6E75C41FE7DD3D009D43EA /* SelectedRuneTakesOnTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6E75C21FE7DD3D009D43EA /* SelectedRuneTakesOnTableViewCell.swift */; };
 		FE6E75C51FE7DD3D009D43EA /* SelectedRuneTakesOnTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE6E75C31FE7DD3D009D43EA /* SelectedRuneTakesOnTableViewCell.xib */; };
 		FE6E75CA1FE7DD5E009D43EA /* SelectedRuneChampionsListTableViewCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6E75C81FE7DD5E009D43EA /* SelectedRuneChampionsListTableViewCellTableViewCell.swift */; };
 		FE6E75CB1FE7DD5E009D43EA /* SelectedRuneChampionsListTableViewCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE6E75C91FE7DD5E009D43EA /* SelectedRuneChampionsListTableViewCellTableViewCell.xib */; };
 		FE6E75CE1FE7DEF6009D43EA /* SelectedRuneDescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6E75CC1FE7DEF6009D43EA /* SelectedRuneDescriptionTableViewCell.swift */; };
 		FE6E75CF1FE7DEF6009D43EA /* SelectedRuneDescriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE6E75CD1FE7DEF6009D43EA /* SelectedRuneDescriptionTableViewCell.xib */; };
+		FE7063CF1FEBC3B00060458D /* AddNewBuildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7063CE1FEBC3B00060458D /* AddNewBuildViewController.swift */; };
+		FE7063D11FEC30FE0060458D /* Test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE7063D01FEC30FE0060458D /* Test.storyboard */; };
+		FE98232F1FEAFA6E0070C343 /* LocalChampions.json in Resources */ = {isa = PBXBuildFile; fileRef = FE98232E1FEAFA6E0070C343 /* LocalChampions.json */; };
+		FE9823311FEB062E0070C343 /* TimeAgo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9823301FEB062D0070C343 /* TimeAgo.swift */; };
+		FE9823331FEB0BB80070C343 /* Runes.json in Resources */ = {isa = PBXBuildFile; fileRef = FE9823321FEB0BB80070C343 /* Runes.json */; };
+		FE9823351FEB1D650070C343 /* PatchChangesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9823341FEB1D650070C343 /* PatchChangesViewController.swift */; };
+		FE9823371FEB1EAA0070C343 /* getPatches.json in Resources */ = {isa = PBXBuildFile; fileRef = FE9823361FEB1EAA0070C343 /* getPatches.json */; };
+		FE98233A1FEB1F3E0070C343 /* GetHeaderPatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9823381FEB1F3E0070C343 /* GetHeaderPatchTableViewCell.swift */; };
+		FE98233B1FEB1F3E0070C343 /* GetHeaderPatchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE9823391FEB1F3E0070C343 /* GetHeaderPatchTableViewCell.xib */; };
+		FE98233E1FEB21500070C343 /* GetPreviusPatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE98233C1FEB21500070C343 /* GetPreviusPatchTableViewCell.swift */; };
+		FE98233F1FEB21500070C343 /* GetPreviusPatchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE98233D1FEB21500070C343 /* GetPreviusPatchTableViewCell.xib */; };
+		FE9823411FEB25050070C343 /* SelectedPatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9823401FEB25050070C343 /* SelectedPatchViewController.swift */; };
+		FE9823441FEB28400070C343 /* NoteChangeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9823421FEB28400070C343 /* NoteChangeTableViewCell.swift */; };
+		FE9823451FEB28400070C343 /* NoteChangeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE9823431FEB28400070C343 /* NoteChangeTableViewCell.xib */; };
+		FE9823551FEB31350070C343 /* render_Spellbook.m4v in Resources */ = {isa = PBXBuildFile; fileRef = FE9823461FEB31140070C343 /* render_Spellbook.m4v */; };
+		FE9823561FEB31350070C343 /* render_Predator.m4v in Resources */ = {isa = PBXBuildFile; fileRef = FE9823471FEB31160070C343 /* render_Predator.m4v */; };
+		FE9823571FEB31350070C343 /* render_DarkHarvest.m4v in Resources */ = {isa = PBXBuildFile; fileRef = FE9823481FEB31190070C343 /* render_DarkHarvest.m4v */; };
+		FE9823581FEB31350070C343 /* render_PhaseRush.m4v in Resources */ = {isa = PBXBuildFile; fileRef = FE9823491FEB311B0070C343 /* render_PhaseRush.m4v */; };
+		FE9823591FEB31350070C343 /* render_Grasp.m4v in Resources */ = {isa = PBXBuildFile; fileRef = FE98234A1FEB311E0070C343 /* render_Grasp.m4v */; };
+		FE98235A1FEB31350070C343 /* render_PTA.m4v in Resources */ = {isa = PBXBuildFile; fileRef = FE98234B1FEB31200070C343 /* render_PTA.m4v */; };
+		FE98235B1FEB31350070C343 /* render_GlacialAugment.m4v in Resources */ = {isa = PBXBuildFile; fileRef = FE98234C1FEB31220070C343 /* render_GlacialAugment.m4v */; };
+		FE98235C1FEB31350070C343 /* render_Klepto.m4v in Resources */ = {isa = PBXBuildFile; fileRef = FE98234D1FEB31250070C343 /* render_Klepto.m4v */; };
+		FE98235D1FEB31350070C343 /* render_Aftershock.m4v in Resources */ = {isa = PBXBuildFile; fileRef = FE98234E1FEB31270070C343 /* render_Aftershock.m4v */; };
+		FE98235E1FEB31350070C343 /* render_Comet.m4v in Resources */ = {isa = PBXBuildFile; fileRef = FE98234F1FEB31290070C343 /* render_Comet.m4v */; };
+		FE98235F1FEB31350070C343 /* render_Electrocute.m4v in Resources */ = {isa = PBXBuildFile; fileRef = FE9823501FEB312C0070C343 /* render_Electrocute.m4v */; };
+		FE9823601FEB31350070C343 /* render_Guardian.m4v in Resources */ = {isa = PBXBuildFile; fileRef = FE9823511FEB312E0070C343 /* render_Guardian.m4v */; };
+		FE9823611FEB31350070C343 /* render_SummonAery.m4v in Resources */ = {isa = PBXBuildFile; fileRef = FE9823521FEB31300070C343 /* render_SummonAery.m4v */; };
+		FE9823621FEB31350070C343 /* render_FleetFootwork.m4v in Resources */ = {isa = PBXBuildFile; fileRef = FE9823531FEB31330070C343 /* render_FleetFootwork.m4v */; };
+		FE9823631FEB31350070C343 /* render_LethalTempo.m4v in Resources */ = {isa = PBXBuildFile; fileRef = FE9823541FEB31350070C343 /* render_LethalTempo.m4v */; };
+		FE9823661FEB34B10070C343 /* ForgeRunesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9823641FEB34B10070C343 /* ForgeRunesViewController.swift */; };
+		FE98236A1FEB379C0070C343 /* JoinTheForgeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9823681FEB379C0070C343 /* JoinTheForgeTableViewCell.swift */; };
+		FE98236B1FEB379C0070C343 /* JoinTheForgeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE9823691FEB379C0070C343 /* JoinTheForgeTableViewCell.xib */; };
+		FE98236E1FEB44EB0070C343 /* SummonerLoginTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE98236C1FEB44EB0070C343 /* SummonerLoginTableViewCell.swift */; };
+		FE98236F1FEB44EB0070C343 /* SummonerLoginTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE98236D1FEB44EB0070C343 /* SummonerLoginTableViewCell.xib */; };
 		FEBA3AAB1FE5F27C0083FA11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBA3AAA1FE5F27C0083FA11 /* AppDelegate.swift */; };
 		FEBA3AB01FE5F27C0083FA11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEBA3AAE1FE5F27C0083FA11 /* Main.storyboard */; };
 		FEBA3AB21FE5F27C0083FA11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEBA3AB11FE5F27C0083FA11 /* Assets.xcassets */; };
 		FEBA3AB51FE5F27C0083FA11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEBA3AB31FE5F27C0083FA11 /* LaunchScreen.storyboard */; };
 		FEBA3AC21FE5F3C30083FA11 /* ChmpionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBA3AC11FE5F3C30083FA11 /* ChmpionCollectionViewCell.swift */; };
-		FEBA3AC41FE5F3DC0083FA11 /* LocalChampions.json in Resources */ = {isa = PBXBuildFile; fileRef = FEBA3AC31FE5F3DC0083FA11 /* LocalChampions.json */; };
 		FEBA3AC61FE5F3EF0083FA11 /* IBDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBA3AC51FE5F3EF0083FA11 /* IBDesignable.swift */; };
 		FEBA3AC81FE5F3FE0083FA11 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBA3AC71FE5F3FE0083FA11 /* Extentions.swift */; };
 		FEBA3ADA1FE5F44E0083FA11 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBA3AD91FE5F44E0083FA11 /* MainTabBarViewController.swift */; };
@@ -54,6 +85,7 @@
 		FEC60CC31FE6B7CE00BA3FF7 /* Spiegel-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEBA3ACC1FE5F41E0083FA11 /* Spiegel-Regular.ttf */; };
 		FEC60CC61FE6BB0300BA3FF7 /* RuneBuildTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC60CC41FE6BB0300BA3FF7 /* RuneBuildTableViewCell.swift */; };
 		FEC60CC71FE6BB0300BA3FF7 /* RuneBuildTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEC60CC51FE6BB0300BA3FF7 /* RuneBuildTableViewCell.xib */; };
+		FEE4D51E1FE941270088247A /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE4D51D1FE941270088247A /* Global.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,16 +107,48 @@
 		FE6E75B11FE74489009D43EA /* RuneBodyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuneBodyTableViewCell.swift; sourceTree = "<group>"; };
 		FE6E75B21FE74489009D43EA /* RuneBodyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RuneBodyTableViewCell.xib; sourceTree = "<group>"; };
 		FE6E75B51FE7C5E2009D43EA /* SelectedRuneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedRuneViewController.swift; sourceTree = "<group>"; };
-		FE6E75BA1FE7CE9D009D43EA /* render_Electrocute.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = render_Electrocute.m4v; sourceTree = "<group>"; };
 		FE6E75BC1FE7D3D4009D43EA /* SelectedRuneVideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedRuneVideoTableViewCell.swift; sourceTree = "<group>"; };
 		FE6E75BD1FE7D3D4009D43EA /* SelectedRuneVideoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedRuneVideoTableViewCell.xib; sourceTree = "<group>"; };
-		FE6E75C01FE7DA44009D43EA /* render_Electrocute.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = render_Electrocute.mp4; sourceTree = "<group>"; };
 		FE6E75C21FE7DD3D009D43EA /* SelectedRuneTakesOnTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedRuneTakesOnTableViewCell.swift; sourceTree = "<group>"; };
 		FE6E75C31FE7DD3D009D43EA /* SelectedRuneTakesOnTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedRuneTakesOnTableViewCell.xib; sourceTree = "<group>"; };
 		FE6E75C81FE7DD5E009D43EA /* SelectedRuneChampionsListTableViewCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedRuneChampionsListTableViewCellTableViewCell.swift; sourceTree = "<group>"; };
 		FE6E75C91FE7DD5E009D43EA /* SelectedRuneChampionsListTableViewCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedRuneChampionsListTableViewCellTableViewCell.xib; sourceTree = "<group>"; };
 		FE6E75CC1FE7DEF6009D43EA /* SelectedRuneDescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedRuneDescriptionTableViewCell.swift; sourceTree = "<group>"; };
 		FE6E75CD1FE7DEF6009D43EA /* SelectedRuneDescriptionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedRuneDescriptionTableViewCell.xib; sourceTree = "<group>"; };
+		FE7063CE1FEBC3B00060458D /* AddNewBuildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewBuildViewController.swift; sourceTree = "<group>"; };
+		FE7063D01FEC30FE0060458D /* Test.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Test.storyboard; sourceTree = "<group>"; };
+		FE98232E1FEAFA6E0070C343 /* LocalChampions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LocalChampions.json; sourceTree = "<group>"; };
+		FE9823301FEB062D0070C343 /* TimeAgo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeAgo.swift; sourceTree = "<group>"; };
+		FE9823321FEB0BB80070C343 /* Runes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Runes.json; sourceTree = "<group>"; };
+		FE9823341FEB1D650070C343 /* PatchChangesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatchChangesViewController.swift; sourceTree = "<group>"; };
+		FE9823361FEB1EAA0070C343 /* getPatches.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getPatches.json; sourceTree = "<group>"; };
+		FE9823381FEB1F3E0070C343 /* GetHeaderPatchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHeaderPatchTableViewCell.swift; sourceTree = "<group>"; };
+		FE9823391FEB1F3E0070C343 /* GetHeaderPatchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GetHeaderPatchTableViewCell.xib; sourceTree = "<group>"; };
+		FE98233C1FEB21500070C343 /* GetPreviusPatchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPreviusPatchTableViewCell.swift; sourceTree = "<group>"; };
+		FE98233D1FEB21500070C343 /* GetPreviusPatchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GetPreviusPatchTableViewCell.xib; sourceTree = "<group>"; };
+		FE9823401FEB25050070C343 /* SelectedPatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedPatchViewController.swift; sourceTree = "<group>"; };
+		FE9823421FEB28400070C343 /* NoteChangeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteChangeTableViewCell.swift; sourceTree = "<group>"; };
+		FE9823431FEB28400070C343 /* NoteChangeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteChangeTableViewCell.xib; sourceTree = "<group>"; };
+		FE9823461FEB31140070C343 /* render_Spellbook.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = render_Spellbook.m4v; sourceTree = "<group>"; };
+		FE9823471FEB31160070C343 /* render_Predator.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = render_Predator.m4v; sourceTree = "<group>"; };
+		FE9823481FEB31190070C343 /* render_DarkHarvest.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = render_DarkHarvest.m4v; sourceTree = "<group>"; };
+		FE9823491FEB311B0070C343 /* render_PhaseRush.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = render_PhaseRush.m4v; sourceTree = "<group>"; };
+		FE98234A1FEB311E0070C343 /* render_Grasp.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = render_Grasp.m4v; sourceTree = "<group>"; };
+		FE98234B1FEB31200070C343 /* render_PTA.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = render_PTA.m4v; sourceTree = "<group>"; };
+		FE98234C1FEB31220070C343 /* render_GlacialAugment.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = render_GlacialAugment.m4v; sourceTree = "<group>"; };
+		FE98234D1FEB31250070C343 /* render_Klepto.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = render_Klepto.m4v; sourceTree = "<group>"; };
+		FE98234E1FEB31270070C343 /* render_Aftershock.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = render_Aftershock.m4v; sourceTree = "<group>"; };
+		FE98234F1FEB31290070C343 /* render_Comet.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = render_Comet.m4v; sourceTree = "<group>"; };
+		FE9823501FEB312C0070C343 /* render_Electrocute.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = render_Electrocute.m4v; sourceTree = "<group>"; };
+		FE9823511FEB312E0070C343 /* render_Guardian.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = render_Guardian.m4v; sourceTree = "<group>"; };
+		FE9823521FEB31300070C343 /* render_SummonAery.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = render_SummonAery.m4v; sourceTree = "<group>"; };
+		FE9823531FEB31330070C343 /* render_FleetFootwork.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = render_FleetFootwork.m4v; sourceTree = "<group>"; };
+		FE9823541FEB31350070C343 /* render_LethalTempo.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = render_LethalTempo.m4v; sourceTree = "<group>"; };
+		FE9823641FEB34B10070C343 /* ForgeRunesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgeRunesViewController.swift; sourceTree = "<group>"; };
+		FE9823681FEB379C0070C343 /* JoinTheForgeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinTheForgeTableViewCell.swift; sourceTree = "<group>"; };
+		FE9823691FEB379C0070C343 /* JoinTheForgeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JoinTheForgeTableViewCell.xib; sourceTree = "<group>"; };
+		FE98236C1FEB44EB0070C343 /* SummonerLoginTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummonerLoginTableViewCell.swift; sourceTree = "<group>"; };
+		FE98236D1FEB44EB0070C343 /* SummonerLoginTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SummonerLoginTableViewCell.xib; sourceTree = "<group>"; };
 		FEBA3AA71FE5F27C0083FA11 /* Forge Wizard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Forge Wizard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEBA3AAA1FE5F27C0083FA11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEBA3AAF1FE5F27C0083FA11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -92,7 +156,6 @@
 		FEBA3AB41FE5F27C0083FA11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FEBA3AB61FE5F27C0083FA11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FEBA3AC11FE5F3C30083FA11 /* ChmpionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChmpionCollectionViewCell.swift; sourceTree = "<group>"; };
-		FEBA3AC31FE5F3DC0083FA11 /* LocalChampions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LocalChampions.json; sourceTree = "<group>"; };
 		FEBA3AC51FE5F3EF0083FA11 /* IBDesignable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBDesignable.swift; sourceTree = "<group>"; };
 		FEBA3AC71FE5F3FE0083FA11 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		FEBA3AC91FE5F41D0083FA11 /* Beaufort-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Beaufort-Bold.ttf"; sourceTree = "<group>"; };
@@ -108,6 +171,8 @@
 		FEC60CBC1FE6B63700BA3FF7 /* VerifyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VerifyTableViewCell.xib; sourceTree = "<group>"; };
 		FEC60CC41FE6BB0300BA3FF7 /* RuneBuildTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuneBuildTableViewCell.swift; sourceTree = "<group>"; };
 		FEC60CC51FE6BB0300BA3FF7 /* RuneBuildTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RuneBuildTableViewCell.xib; sourceTree = "<group>"; };
+		FEE4D51D1FE941270088247A /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		FEE4D51F1FE9433E0088247A /* Forge Wizard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Forge Wizard.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,8 +207,21 @@
 		FE6E75B71FE7C82E009D43EA /* Videos */ = {
 			isa = PBXGroup;
 			children = (
-				FE6E75C01FE7DA44009D43EA /* render_Electrocute.mp4 */,
-				FE6E75BA1FE7CE9D009D43EA /* render_Electrocute.m4v */,
+				FE98234E1FEB31270070C343 /* render_Aftershock.m4v */,
+				FE98234F1FEB31290070C343 /* render_Comet.m4v */,
+				FE9823481FEB31190070C343 /* render_DarkHarvest.m4v */,
+				FE9823501FEB312C0070C343 /* render_Electrocute.m4v */,
+				FE9823531FEB31330070C343 /* render_FleetFootwork.m4v */,
+				FE98234C1FEB31220070C343 /* render_GlacialAugment.m4v */,
+				FE98234A1FEB311E0070C343 /* render_Grasp.m4v */,
+				FE9823511FEB312E0070C343 /* render_Guardian.m4v */,
+				FE98234D1FEB31250070C343 /* render_Klepto.m4v */,
+				FE9823541FEB31350070C343 /* render_LethalTempo.m4v */,
+				FE9823491FEB311B0070C343 /* render_PhaseRush.m4v */,
+				FE9823471FEB31160070C343 /* render_Predator.m4v */,
+				FE98234B1FEB31200070C343 /* render_PTA.m4v */,
+				FE9823461FEB31140070C343 /* render_Spellbook.m4v */,
+				FE9823521FEB31300070C343 /* render_SummonAery.m4v */,
 			);
 			path = Videos;
 			sourceTree = "<group>";
@@ -176,6 +254,7 @@
 		FEBA3AA91FE5F27C0083FA11 /* Forge Wizard */ = {
 			isa = PBXGroup;
 			children = (
+				FEE4D51F1FE9433E0088247A /* Forge Wizard.entitlements */,
 				FEBA3AAA1FE5F27C0083FA11 /* AppDelegate.swift */,
 				FEBA3AAE1FE5F27C0083FA11 /* Main.storyboard */,
 				FEBA3AB11FE5F27C0083FA11 /* Assets.xcassets */,
@@ -212,6 +291,16 @@
 				FE6E75C91FE7DD5E009D43EA /* SelectedRuneChampionsListTableViewCellTableViewCell.xib */,
 				FE6E75CC1FE7DEF6009D43EA /* SelectedRuneDescriptionTableViewCell.swift */,
 				FE6E75CD1FE7DEF6009D43EA /* SelectedRuneDescriptionTableViewCell.xib */,
+				FE9823381FEB1F3E0070C343 /* GetHeaderPatchTableViewCell.swift */,
+				FE9823391FEB1F3E0070C343 /* GetHeaderPatchTableViewCell.xib */,
+				FE98233C1FEB21500070C343 /* GetPreviusPatchTableViewCell.swift */,
+				FE98233D1FEB21500070C343 /* GetPreviusPatchTableViewCell.xib */,
+				FE9823421FEB28400070C343 /* NoteChangeTableViewCell.swift */,
+				FE9823431FEB28400070C343 /* NoteChangeTableViewCell.xib */,
+				FE9823681FEB379C0070C343 /* JoinTheForgeTableViewCell.swift */,
+				FE9823691FEB379C0070C343 /* JoinTheForgeTableViewCell.xib */,
+				FE98236C1FEB44EB0070C343 /* SummonerLoginTableViewCell.swift */,
+				FE98236D1FEB44EB0070C343 /* SummonerLoginTableViewCell.xib */,
 			);
 			path = CellsNibs;
 			sourceTree = "<group>";
@@ -219,7 +308,9 @@
 		FEBA3ABD1FE5F3940083FA11 /* StaticData */ = {
 			isa = PBXGroup;
 			children = (
-				FEBA3AC31FE5F3DC0083FA11 /* LocalChampions.json */,
+				FE9823361FEB1EAA0070C343 /* getPatches.json */,
+				FE9823321FEB0BB80070C343 /* Runes.json */,
+				FE98232E1FEAFA6E0070C343 /* LocalChampions.json */,
 			);
 			path = StaticData;
 			sourceTree = "<group>";
@@ -227,8 +318,10 @@
 		FEBA3ABF1FE5F39F0083FA11 /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
+				FE9823301FEB062D0070C343 /* TimeAgo.swift */,
 				FEBA3AC51FE5F3EF0083FA11 /* IBDesignable.swift */,
 				FEBA3AC71FE5F3FE0083FA11 /* Extentions.swift */,
+				FEE4D51D1FE941270088247A /* Global.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -255,6 +348,11 @@
 				FE4AFD631FE6E9B500694EF4 /* ShowChampionRunesViewController.swift */,
 				FE6E75A91FE739BC009D43EA /* RunesViewController.swift */,
 				FE6E75B51FE7C5E2009D43EA /* SelectedRuneViewController.swift */,
+				FE9823341FEB1D650070C343 /* PatchChangesViewController.swift */,
+				FE9823401FEB25050070C343 /* SelectedPatchViewController.swift */,
+				FE9823641FEB34B10070C343 /* ForgeRunesViewController.swift */,
+				FE7063CE1FEBC3B00060458D /* AddNewBuildViewController.swift */,
+				FE7063D01FEC30FE0060458D /* Test.storyboard */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -303,6 +401,14 @@
 					FEBA3AA61FE5F27C0083FA11 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -330,27 +436,48 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE6E75C51FE7DD3D009D43EA /* SelectedRuneTakesOnTableViewCell.xib in Resources */,
-				FEBA3AC41FE5F3DC0083FA11 /* LocalChampions.json in Resources */,
+				FE98235E1FEB31350070C343 /* render_Comet.m4v in Resources */,
 				FE4AFD701FE7213F00694EF4 /* SecondaryRunesBuildsTableViewCell.xib in Resources */,
 				FE6E75CF1FE7DEF6009D43EA /* SelectedRuneDescriptionTableViewCell.xib in Resources */,
 				FE4AFD6C1FE6FEB900694EF4 /* MainRunesBuildTableViewCell.xib in Resources */,
+				FE98233B1FEB1F3E0070C343 /* GetHeaderPatchTableViewCell.xib in Resources */,
+				FE98236B1FEB379C0070C343 /* JoinTheForgeTableViewCell.xib in Resources */,
+				FE9823591FEB31350070C343 /* render_Grasp.m4v in Resources */,
 				FEBA3AB51FE5F27C0083FA11 /* LaunchScreen.storyboard in Resources */,
 				FEC60CC01FE6B7CE00BA3FF7 /* Beaufort-Italic.ttf in Resources */,
+				FE98232F1FEAFA6E0070C343 /* LocalChampions.json in Resources */,
+				FE98235D1FEB31350070C343 /* render_Aftershock.m4v in Resources */,
 				FE6E75B41FE74489009D43EA /* RuneBodyTableViewCell.xib in Resources */,
+				FE9823571FEB31350070C343 /* render_DarkHarvest.m4v in Resources */,
 				FEC60CC31FE6B7CE00BA3FF7 /* Spiegel-Regular.ttf in Resources */,
+				FE9823581FEB31350070C343 /* render_PhaseRush.m4v in Resources */,
 				FE6E75BF1FE7D3D4009D43EA /* SelectedRuneVideoTableViewCell.xib in Resources */,
+				FE9823451FEB28400070C343 /* NoteChangeTableViewCell.xib in Resources */,
 				FE6E75CB1FE7DD5E009D43EA /* SelectedRuneChampionsListTableViewCellTableViewCell.xib in Resources */,
+				FE9823551FEB31350070C343 /* render_Spellbook.m4v in Resources */,
+				FE9823561FEB31350070C343 /* render_Predator.m4v in Resources */,
 				FEC60CC71FE6BB0300BA3FF7 /* RuneBuildTableViewCell.xib in Resources */,
+				FE9823621FEB31350070C343 /* render_FleetFootwork.m4v in Resources */,
 				FEC60CBE1FE6B63700BA3FF7 /* VerifyTableViewCell.xib in Resources */,
+				FE9823331FEB0BB80070C343 /* Runes.json in Resources */,
+				FE7063D11FEC30FE0060458D /* Test.storyboard in Resources */,
+				FE9823611FEB31350070C343 /* render_SummonAery.m4v in Resources */,
 				FE6E75B01FE74478009D43EA /* RuneHeaderTableViewCell.xib in Resources */,
 				FEC60CC21FE6B7CE00BA3FF7 /* Spiegel-Italic.ttf in Resources */,
-				FE6E75BB1FE7CE9D009D43EA /* render_Electrocute.m4v in Resources */,
 				FEC60CBF1FE6B7CE00BA3FF7 /* Beaufort-Bold.ttf in Resources */,
 				FEBA3AB21FE5F27C0083FA11 /* Assets.xcassets in Resources */,
-				FE6E75C11FE7DA44009D43EA /* render_Electrocute.mp4 in Resources */,
 				FE4AFD681FE6F17800694EF4 /* HeaderBuildTableViewCell.xib in Resources */,
+				FE98233F1FEB21500070C343 /* GetPreviusPatchTableViewCell.xib in Resources */,
+				FE9823601FEB31350070C343 /* render_Guardian.m4v in Resources */,
+				FE98235F1FEB31350070C343 /* render_Electrocute.m4v in Resources */,
+				FE9823631FEB31350070C343 /* render_LethalTempo.m4v in Resources */,
+				FE98235C1FEB31350070C343 /* render_Klepto.m4v in Resources */,
+				FE98235B1FEB31350070C343 /* render_GlacialAugment.m4v in Resources */,
 				FEBA3AB01FE5F27C0083FA11 /* Main.storyboard in Resources */,
+				FE98235A1FEB31350070C343 /* render_PTA.m4v in Resources */,
 				FEC60CC11FE6B7CE00BA3FF7 /* Beaufort-Regular.ttf in Resources */,
+				FE9823371FEB1EAA0070C343 /* getPatches.json in Resources */,
+				FE98236F1FEB44EB0070C343 /* SummonerLoginTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,16 +491,20 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Forge Wizard/Pods-Forge Wizard-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AAPickerView/AAPickerView.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftSpinner/SwiftSpinner.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/UIColor_Hex_Swift/UIColor_Hex_Swift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AAPickerView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSpinner.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIColor_Hex_Swift.framework",
@@ -428,9 +559,11 @@
 				FE6E75AF1FE74478009D43EA /* RuneHeaderTableViewCell.swift in Sources */,
 				FE4AFD6B1FE6FEB900694EF4 /* MainRunesBuildTableViewCell.swift in Sources */,
 				FEC60CBA1FE6986500BA3FF7 /* APIManager.swift in Sources */,
+				FE9823441FEB28400070C343 /* NoteChangeTableViewCell.swift in Sources */,
 				FEC60CB51FE68EF700BA3FF7 /* ChampionsBuildsListViewController.swift in Sources */,
 				FE6E75B61FE7C5E2009D43EA /* SelectedRuneViewController.swift in Sources */,
 				FEBA3AAB1FE5F27C0083FA11 /* AppDelegate.swift in Sources */,
+				FE98236A1FEB379C0070C343 /* JoinTheForgeTableViewCell.swift in Sources */,
 				FEBA3AC81FE5F3FE0083FA11 /* Extentions.swift in Sources */,
 				FEC60CC61FE6BB0300BA3FF7 /* RuneBuildTableViewCell.swift in Sources */,
 				FE6E75C41FE7DD3D009D43EA /* SelectedRuneTakesOnTableViewCell.swift in Sources */,
@@ -441,11 +574,20 @@
 				FEBA3ADA1FE5F44E0083FA11 /* MainTabBarViewController.swift in Sources */,
 				FE6E75CA1FE7DD5E009D43EA /* SelectedRuneChampionsListTableViewCellTableViewCell.swift in Sources */,
 				FE4AFD641FE6E9B500694EF4 /* ShowChampionRunesViewController.swift in Sources */,
+				FE9823351FEB1D650070C343 /* PatchChangesViewController.swift in Sources */,
+				FEE4D51E1FE941270088247A /* Global.swift in Sources */,
+				FE98233A1FEB1F3E0070C343 /* GetHeaderPatchTableViewCell.swift in Sources */,
 				FEBA3AC61FE5F3EF0083FA11 /* IBDesignable.swift in Sources */,
 				FE4AFD6F1FE7213F00694EF4 /* SecondaryRunesBuildsTableViewCell.swift in Sources */,
+				FE9823661FEB34B10070C343 /* ForgeRunesViewController.swift in Sources */,
+				FE98236E1FEB44EB0070C343 /* SummonerLoginTableViewCell.swift in Sources */,
+				FE7063CF1FEBC3B00060458D /* AddNewBuildViewController.swift in Sources */,
 				FEC60CB71FE68F4B00BA3FF7 /* DownloadDataViewController.swift in Sources */,
+				FE9823411FEB25050070C343 /* SelectedPatchViewController.swift in Sources */,
+				FE9823311FEB062E0070C343 /* TimeAgo.swift in Sources */,
 				FE6E75AC1FE73A10009D43EA /* RuneCollectionViewCell.swift in Sources */,
 				FEBA3AC21FE5F3C30083FA11 /* ChmpionCollectionViewCell.swift in Sources */,
+				FE98233E1FEB21500070C343 /* GetPreviusPatchTableViewCell.swift in Sources */,
 				FE6E75CE1FE7DEF6009D43EA /* SelectedRuneDescriptionTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

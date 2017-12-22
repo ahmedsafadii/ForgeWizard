@@ -29,7 +29,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b0H-u0-qjV">
-                        <rect key="frame" x="51" y="76" width="3" height="248.5"/>
+                        <rect key="frame" x="51" y="76" width="3" height="238.5"/>
                         <color key="backgroundColor" red="0.37254901960784315" green="0.70196078431372544" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="3" id="2D6-7d-jeB"/>
@@ -50,25 +50,25 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="RESOLVE" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KKF-kD-Yku">
-                        <rect key="frame" x="98" y="26" width="214" height="16"/>
+                        <rect key="frame" x="98" y="16" width="214" height="16"/>
                         <fontDescription key="fontDescription" name="BeaufortforLOL-Bold" family="BeaufortforLOL-Bold" pointSize="12"/>
                         <color key="textColor" red="0.37254901960784315" green="0.70196078431372544" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" text="Durability and crowd control" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="KRw-xn-Iz3">
-                        <rect key="frame" x="98" y="50" width="214" height="11"/>
+                        <rect key="frame" x="98" y="40" width="214" height="11"/>
                         <fontDescription key="fontDescription" name="Spiegel-Regular" family="Spiegel" pointSize="9"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="RESOLVE" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nve-RX-em2">
-                        <rect key="frame" x="98" y="121" width="214" height="16"/>
+                        <rect key="frame" x="98" y="111" width="214" height="16"/>
                         <fontDescription key="fontDescription" name="BeaufortforLOL-Bold" family="BeaufortforLOL-Bold" pointSize="12"/>
                         <color key="textColor" red="0.37254901960784315" green="0.70196078431372544" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F1V-Xd-uVA">
-                        <rect key="frame" x="98" y="145" width="218" height="86.5"/>
+                        <rect key="frame" x="98" y="135" width="218" height="86.5"/>
                         <string key="text">Guard allies within 175 units of you, and Guard allies you target with spells for 2.5s. While Guarding, if you or the ally would take damage, both of you gain a shield and are hasted for 1.5s.
 Cooldown: 45s
 Shield Strength: 60 - 150 (+0.20 AP) (+10% bonus health).
@@ -78,7 +78,7 @@ Haste: 20% increased Movement Speed</string>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="8410" translatesAutoresizingMaskIntoConstraints="NO" id="7oO-tZ-PoU">
-                        <rect key="frame" x="30.5" y="121" width="44" height="44"/>
+                        <rect key="frame" x="30.5" y="111" width="44" height="44"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="44" id="ZdC-g4-hro"/>
                             <constraint firstAttribute="height" constant="44" id="cdU-TO-BhD"/>
@@ -94,13 +94,13 @@ Haste: 20% increased Movement Speed</string>
                         </userDefinedRuntimeAttributes>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="247" verticalHuggingPriority="247" text="RESOLVE" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wEX-mN-u1J">
-                        <rect key="frame" x="97.5" y="327" width="214.5" height="15.5"/>
+                        <rect key="frame" x="97.5" y="317" width="214.5" height="15.5"/>
                         <fontDescription key="fontDescription" name="BeaufortforLOL-Bold" family="BeaufortforLOL-Bold" pointSize="12"/>
                         <color key="textColor" red="0.37254901960784315" green="0.70196078431372544" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="246" verticalHuggingPriority="246" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mvE-Dc-RTy">
-                        <rect key="frame" x="97.5" y="350.5" width="202.5" height="86.5"/>
+                        <rect key="frame" x="97.5" y="340.5" width="202.5" height="86.5"/>
                         <string key="text">Guard allies within 175 units of you, and Guard allies you target with spells for 2.5s. While Guarding, if you or the ally would take damage, both of you gain a shield and are hasted for 1.5s.
 Cooldown: 45s
 Shield Strength: 60 - 150 (+0.20 AP) (+10% bonus health).
@@ -110,7 +110,7 @@ Haste: 20% increased Movement Speed</string>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="8345" translatesAutoresizingMaskIntoConstraints="NO" id="fDV-zl-6nm">
-                        <rect key="frame" x="30.5" y="324.5" width="44" height="44"/>
+                        <rect key="frame" x="30.5" y="314.5" width="44" height="44"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="44" id="fbM-HL-xPV"/>
                             <constraint firstAttribute="height" constant="44" id="fjQ-WY-yNh"/>
@@ -126,12 +126,12 @@ Haste: 20% increased Movement Speed</string>
                         </userDefinedRuntimeAttributes>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iyo-yF-FsP">
-                        <rect key="frame" x="98" y="239.5" width="35" height="16"/>
+                        <rect key="frame" x="98" y="229.5" width="35" height="16"/>
                         <color key="backgroundColor" red="0.37254901960784315" green="0.70196078431372544" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
                         <fontDescription key="fontDescription" name="Spiegel-Regular" family="Spiegel" pointSize="10"/>
                         <inset key="contentEdgeInsets" minX="8" minY="2" maxX="8" maxY="2"/>
                         <state key="normal" title="Why">
-                            <color key="titleColor" red="0.13725490196078433" green="0.27058823529411763" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </state>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -140,19 +140,19 @@ Haste: 20% increased Movement Speed</string>
                         </userDefinedRuntimeAttributes>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="248" verticalHuggingPriority="248" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dlG-B0-Llf">
-                        <rect key="frame" x="98" y="263.5" width="218" height="43.5"/>
+                        <rect key="frame" x="98" y="253.5" width="218" height="43.5"/>
                         <string key="text">Guardian on Tahm allows him to eat a teammate that is about to take damage, shield, and gain the bonus Movement Speed to allow him to run away and re-position to spit them out.</string>
                         <fontDescription key="fontDescription" name="Spiegel-Regular" family="Spiegel" pointSize="9"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y7T-hK-mW6">
-                        <rect key="frame" x="98" y="445" width="35" height="16"/>
+                        <rect key="frame" x="98" y="435" width="35" height="16"/>
                         <color key="backgroundColor" red="0.37254901960784315" green="0.70196078431372544" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
                         <fontDescription key="fontDescription" name="Spiegel-Regular" family="Spiegel" pointSize="10"/>
                         <inset key="contentEdgeInsets" minX="8" minY="2" maxX="8" maxY="2"/>
                         <state key="normal" title="Why">
-                            <color key="titleColor" red="0.13725490196078433" green="0.27058823529411763" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </state>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -161,7 +161,7 @@ Haste: 20% increased Movement Speed</string>
                         </userDefinedRuntimeAttributes>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="245" verticalHuggingPriority="245" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ywq-rp-Z6n">
-                        <rect key="frame" x="98" y="469" width="218" height="44.5"/>
+                        <rect key="frame" x="98" y="459" width="218" height="54.5"/>
                         <string key="text">Guardian on Tahm allows him to eat a teammate that is about to take damage, shield, and gain the bonus Movement Speed to allow him to run away and re-position to spit them out.</string>
                         <fontDescription key="fontDescription" name="Spiegel-Regular" family="Spiegel" pointSize="9"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -191,7 +191,7 @@ Haste: 20% increased Movement Speed</string>
                     <constraint firstItem="Ywq-rp-Z6n" firstAttribute="leading" secondItem="b0H-u0-qjV" secondAttribute="trailing" constant="44" id="Tiu-Bh-Uvf"/>
                     <constraint firstItem="l7o-te-5m1" firstAttribute="centerX" secondItem="t64-UG-7aD" secondAttribute="centerX" id="TpK-Cb-QN2"/>
                     <constraint firstItem="t64-UG-7aD" firstAttribute="top" secondItem="Elt-iR-eeh" secondAttribute="top" constant="8" id="XUO-Jv-0NE"/>
-                    <constraint firstItem="KKF-kD-Yku" firstAttribute="top" secondItem="Elt-iR-eeh" secondAttribute="top" constant="26" id="YaQ-r3-8qn"/>
+                    <constraint firstItem="KKF-kD-Yku" firstAttribute="top" secondItem="Elt-iR-eeh" secondAttribute="top" constant="16" id="YaQ-r3-8qn"/>
                     <constraint firstItem="7oO-tZ-PoU" firstAttribute="centerY" secondItem="Nve-RX-em2" secondAttribute="centerY" constant="14" id="ZCG-Q4-YkH"/>
                     <constraint firstAttribute="trailing" secondItem="F1V-Xd-uVA" secondAttribute="trailing" constant="4" id="a3s-OM-6gu"/>
                     <constraint firstAttribute="bottom" secondItem="Ywq-rp-Z6n" secondAttribute="bottom" constant="20" id="eXc-WE-RMt"/>
@@ -214,6 +214,23 @@ Haste: 20% increased Movement Speed</string>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="zzA-ld-ZA2"/>
+            <connections>
+                <outlet property="mainDescription" destination="KRw-xn-Iz3" id="JIs-pR-unc"/>
+                <outlet property="main_border" destination="t64-UG-7aD" id="fBi-Nx-82Q"/>
+                <outlet property="main_rune" destination="l7o-te-5m1" id="Mbw-1d-Ya2"/>
+                <outlet property="main_title" destination="KKF-kD-Yku" id="Esd-9g-B58"/>
+                <outlet property="main_v_view" destination="b0H-u0-qjV" id="zgd-mI-jfd"/>
+                <outletCollection property="main_images" destination="7oO-tZ-PoU" collectionClass="NSMutableArray" id="3R3-ZF-89S"/>
+                <outletCollection property="main_images" destination="fDV-zl-6nm" collectionClass="NSMutableArray" id="DSi-vN-tbN"/>
+                <outletCollection property="main_titles" destination="Nve-RX-em2" collectionClass="NSMutableArray" id="zqp-w7-JND"/>
+                <outletCollection property="main_titles" destination="wEX-mN-u1J" collectionClass="NSMutableArray" id="mHj-3C-JUu"/>
+                <outletCollection property="main_description" destination="F1V-Xd-uVA" collectionClass="NSMutableArray" id="D24-NU-Ty0"/>
+                <outletCollection property="main_description" destination="mvE-Dc-RTy" collectionClass="NSMutableArray" id="w19-8X-oab"/>
+                <outletCollection property="why_description" destination="dlG-B0-Llf" collectionClass="NSMutableArray" id="7qJ-d9-7XT"/>
+                <outletCollection property="why_description" destination="Ywq-rp-Z6n" collectionClass="NSMutableArray" id="17G-ke-btV"/>
+                <outletCollection property="why_style" destination="Iyo-yF-FsP" collectionClass="NSMutableArray" id="jW8-8F-huT"/>
+                <outletCollection property="why_style" destination="y7T-hK-mW6" collectionClass="NSMutableArray" id="wYc-IA-hFZ"/>
+            </connections>
             <point key="canvasLocation" x="-174" y="29"/>
         </tableViewCell>
     </objects>

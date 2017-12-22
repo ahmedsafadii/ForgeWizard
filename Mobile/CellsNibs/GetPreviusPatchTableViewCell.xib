@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Beaufort-Bold.ttf">
+            <string>BeaufortforLOL-Bold</string>
+        </array>
+        <array key="Spiegel-Regular.ttf">
+            <string>Spiegel-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="103" id="KGk-i7-Jjw" customClass="GetPreviusPatchTableViewCell" customModule="Forge_Wizard" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="103"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="102.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" text="PATCH 7.24" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDV-mc-3qY">
+                        <rect key="frame" x="16" y="14" width="288" height="29.5"/>
+                        <fontDescription key="fontDescription" name="BeaufortforLOL-Bold" family="BeaufortforLOL-Bold" pointSize="23"/>
+                        <color key="textColor" red="0.99607843139999996" green="0.90980392160000001" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="247" verticalHuggingPriority="247" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" text="December 14, 2017" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uyB-6F-ma7">
+                        <rect key="frame" x="16" y="51" width="288" height="33"/>
+                        <fontDescription key="fontDescription" name="Spiegel-Regular" family="Spiegel" pointSize="11"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowGo" translatesAutoresizingMaskIntoConstraints="NO" id="KXS-G7-nOg">
+                        <rect key="frame" x="284" y="22" width="20" height="13"/>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="uyB-6F-ma7" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="04k-aj-8Pv"/>
+                    <constraint firstItem="aDV-mc-3qY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="3eh-p5-ypB"/>
+                    <constraint firstItem="uyB-6F-ma7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Byb-cW-BfR"/>
+                    <constraint firstItem="uyB-6F-ma7" firstAttribute="top" secondItem="aDV-mc-3qY" secondAttribute="bottom" constant="8" id="CcC-g8-cuE"/>
+                    <constraint firstItem="aDV-mc-3qY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="RoB-rx-BCj"/>
+                    <constraint firstItem="KXS-G7-nOg" firstAttribute="centerY" secondItem="aDV-mc-3qY" secondAttribute="centerY" id="Wnq-My-K5A"/>
+                    <constraint firstItem="aDV-mc-3qY" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="aNX-wY-B2V"/>
+                    <constraint firstItem="uyB-6F-ma7" firstAttribute="top" secondItem="aDV-mc-3qY" secondAttribute="bottom" constant="8" id="dDi-tV-yhG"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="uyB-6F-ma7" secondAttribute="bottom" constant="8" id="lgQ-PC-HUA"/>
+                    <constraint firstItem="KXS-G7-nOg" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="wUu-N0-V4U"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="patchDate" destination="uyB-6F-ma7" id="XmR-Zm-DTE"/>
+                <outlet property="patchTitle" destination="aDV-mc-3qY" id="9tF-u4-9rA"/>
+            </connections>
+            <point key="canvasLocation" x="69" y="115.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="arrowGo" width="20" height="13"/>
+    </resources>
+</document>

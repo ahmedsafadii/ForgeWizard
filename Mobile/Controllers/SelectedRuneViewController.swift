@@ -8,12 +8,16 @@
 
 import UIKit
 import AVKit
+import SwiftyJSON
 
 class SelectedRuneViewController: UIViewController,VideoPlayerButtonDelegate {
     
+    var keystone:JSON!
+    var championArray = [String]()
     
     func didPressButton(button: UIButton) {
-        playVideo(videName: "render_Electrocute")
+        let videoName = (keystone["stone_video"].stringValue as NSString).lastPathComponent.stripExtension()
+        playVideo(videName: videoName)
     }
     
     private func playVideo(videName:String) {
@@ -32,7 +36,12 @@ class SelectedRuneViewController: UIViewController,VideoPlayerButtonDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        keystone = Global.shared.SelectedRune
+        for i in 0...keystone["stone_taken_on"].stringValue.components(separatedBy: "|").count - 1{
+            championArray.append(keystone["stone_taken_on"].stringValue.components(separatedBy: "|")[i])
+        }
+        
     }
     
     
@@ -40,30 +49,27 @@ class SelectedRuneViewController: UIViewController,VideoPlayerButtonDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 
 extension SelectedRuneViewController : UITableViewDelegate,UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
+        
         return 4
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if(section == 3){
-            return 5
+            return championArray.count
+        }
+        else if (section == 0){
+            if(keystone["isKey"].boolValue){
+                return 1
+            }
+            else{
+                return 0
+            }
         }
         else{
             return 1
@@ -75,12 +81,23 @@ extension SelectedRuneViewController : UITableViewDelegate,UITableViewDataSource
         if(indexPath.section == 0){
             let cell = Bundle.main.loadNibNamed("SelectedRuneVideoTableViewCell", owner: self, options: nil)?.first as! SelectedRuneVideoTableViewCell
             cell.delegate = self
-            cell.videoScreen.image = getThumbnailFrom(path: URL(fileURLWithPath: Bundle.main.path(forResource: "render_Electrocute", ofType:"m4v")!))
+            cell.playVideo.tag = indexPath.row
+            let videoName = (keystone["stone_video"].stringValue as NSString).lastPathComponent.stripExtension()
+            cell.videoScreen.image = getThumbnailFrom(path: URL(fileURLWithPath: Bundle.main.path(forResource: videoName, ofType:"m4v")!))
             return cell
         }
         else if (indexPath.section == 1){
             let cell = Bundle.main.loadNibNamed("SelectedRuneDescriptionTableViewCell", owner: self, options: nil)?.first as! SelectedRuneDescriptionTableViewCell
-
+            
+            cell.runeImage.image = UIImage(named:keystone["stone_id"].stringValue)
+            cell.runeDescription.text = keystone["stone_long_description"].stringValue.htmlToString
+            cell.runeName.text = keystone["stone_title"].stringValue
+            cell.runeName.textColor = UIColor(Global.shared.SelectedRuneStyle["color"].stringValue)
+            cell.viewColors[0].borderColor = UIColor(Global.shared.SelectedRuneStyle["color"].stringValue)
+            cell.viewColors[1].borderColor = UIColor(Global.shared.SelectedRuneStyle["color"].stringValue)
+            
+            
+            //SelectedRuneStyle
             return cell
         }
         else if (indexPath.section == 2){
@@ -90,7 +107,8 @@ extension SelectedRuneViewController : UITableViewDelegate,UITableViewDataSource
         }
         else{
             let cell = Bundle.main.loadNibNamed("SelectedRuneChampionsListTableViewCellTableViewCell", owner: self, options: nil)?.first as! SelectedRuneChampionsListTableViewCellTableViewCell
-            
+            cell.chmpionName.text = championArray[indexPath.row]
+            cell.championImage.image = UIImage(named:championArray[indexPath.row].replacingOccurrences(of: "'", with: "").capitalized.replacingOccurrences(of: " ", with: ""))
             return cell
         }
     }

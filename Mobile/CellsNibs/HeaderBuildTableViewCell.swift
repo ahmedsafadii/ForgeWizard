@@ -7,11 +7,39 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class HeaderBuildTableViewCell: UITableViewCell {
 
+    var buildData:JSON!
+    @IBOutlet weak var championImage: UIImageView!
+    
+    @IBOutlet weak var championTitle: UILabel!
+    
+    @IBOutlet weak var hideView: UIView!
+    
+    @IBOutlet weak var championDescription: UILabel!
+    
+    @IBOutlet weak var championPatch: UILabel!
+    
+    
+    func setupDate(){
+        championTitle.text = buildData["title"].stringValue
+        championPatch.text = buildData["patch"]["title"].stringValue
+        championDescription.text = buildData["description"].stringValue
+        
+        if(buildData["player"]["name"].stringValue == "Free"){
+            hideView.isHidden = true
+        }
+        else{
+            championImage.af_setImage(withURL: generateUrl(name: buildData["player"]["image"].stringValue, placeHolder: "grid-placeholder.png", type: "pro"), placeholderImage: UIImage(named:"grid-placeholder.png"))
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        buildData = Global.shared.SelectedBuild
+        setupDate()
         // Initialization code
     }
 

@@ -1,14 +1,18 @@
 PODS:
+  - AAPickerView (0.1.2)
   - Alamofire (4.6.0)
   - AlamofireImage (3.3.0):
     - Alamofire (~> 4.5)
+  - IQKeyboardManagerSwift (5.0.7)
   - SwiftSpinner (1.5.0)
   - SwiftyJSON (4.0.0)
   - UIColor_Hex_Swift (3.0.2)
 
 DEPENDENCIES:
+  - AAPickerView (~> 0.1.2)
   - Alamofire
   - AlamofireImage
+  - IQKeyboardManagerSwift
   - SwiftSpinner
   - SwiftyJSON
   - UIColor_Hex_Swift (from `https://github.com/yeahdongcn/UIColor-Hex-Swift.git`, tag `4.0.0`)
@@ -24,12 +28,14 @@ CHECKOUT OPTIONS:
     :tag: 4.0.0
 
 SPEC CHECKSUMS:
+  AAPickerView: 6a22bdff279b5e21ca51b4e6fe015599b20a81ad
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
   AlamofireImage: 2e784dc5d00f04903a52c1d169181469c805c3df
+  IQKeyboardManagerSwift: 30fb3a61de1af53a95e02b80fb54ed0a19d5ede5
   SwiftSpinner: 4c058c7a1d6b444dd2e1d70988ead40783097133
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
   UIColor_Hex_Swift: 95f718452092a3efc8a827dffd2c04d3237be02d
 
-PODFILE CHECKSUM: ff89d7e16c2337a5e358484cff51fadaa474c1e8
+PODFILE CHECKSUM: 241af9140099529358e43cfe2b1bd0c8fde0af1b
 
 COCOAPODS: 1.4.0.beta.2

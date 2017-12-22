@@ -1,0 +1,216 @@
+ [
+  {
+  "patch":"7.24B",
+  "title":"Patch 7.24B",
+  "description":"Micro-patch 7.24b is the last patch of 2017 and with it comes a few minor nerfs to the Sorcery Path including its bonus stats, Manaflow Band, and Scorch to keep them in line with other rune trees. More info on these nerfs after the jump",
+  "patch_date":"December 14, 2017",
+  "notes":[
+           {
+           "id":18,
+           "title":"SORCERY PATH BONUSES",
+           "description":"SORCERY + ANY SECONDARY: 15 attack damage or 25 ability power, adaptive \u21d2 12 attack damage or 20 ability power, adaptive \n INSPIRATION + SORCERY: 16 attack damage or 27 ability power, adaptive \u21d2 13 attack damage or 22 ability power, adaptive",
+           "type":"nerf",
+           "rune_id":"8200",
+           "patch_id":3,
+           "created_at":"2017-12-19 04:34:33",
+           "updated_at":"2017-12-19 04:34:33"
+           },
+           {
+           "id":19,
+           "title":"MANAFLOW BAND",
+           "description":"Cooldown increased: 60 seconds \u21d2 75 seconds",
+           "type":"nerf",
+           "rune_id":"8226",
+           "patch_id":3,
+           "created_at":"2017-12-19 04:35:59",
+           "updated_at":"2017-12-19 04:35:59"
+           },
+           {
+           "id":20,
+           "title":"SCORCH",
+           "description":"Damage decreased: 30-60 (at levels 1-18) \u21d2 20-60 (at levels 1-18)",
+           "type":"nerf",
+           "rune_id":"8237",
+           "patch_id":3,
+           "created_at":"2017-12-19 04:36:24",
+           "updated_at":"2017-12-19 04:36:24"
+           }
+           ]
+  },
+  {
+  "patch":"7.24",
+  "title":"Patch 7.24",
+  "description":"Patch 7.24 is the first major balance pass at the new rune system and touches a number of of runes throughout including buffs to <strong>Fleet Feetwork and Phase Rush, nerfs to Press the Attack and Triumph<\/strong> and many more.",
+  "patch_date":"December 6, 2017",
+  "notes":[
+           {
+           "id":5,
+           "title":"PRESS THE ATTACK",
+           "description":"Bonus damage now applied after 3rd attack instead of at the same time.",
+           "type":"nerf",
+           "rune_id":"8005",
+           "patch_id":2,
+           "created_at":"2017-12-19 04:31:01",
+           "updated_at":"2017-12-19 04:31:01"
+           },
+           {
+           "id":6,
+           "title":"LETHAL TEMPO",
+           "description":"Cooldown lowered: 10 seconds \u21d2 6 seconds",
+           "type":"buff",
+           "rune_id":"8008",
+           "patch_id":2,
+           "created_at":"2017-12-19 04:31:03",
+           "updated_at":"2017-12-19 04:31:03"
+           },
+           {
+           "id":7,
+           "title":"FLEET FOOTWORK",
+           "description":"Base heal increased: 5-50 \u21d2 3-60 \n AD ratio increased increased: 10% Bonus AD \u21d2 30% Bonus AD \n AP ratio increased increased: 20% \u21d2 40% \n *NEW* crit mulitplier: If you crit, Footwork\u2019s healing is increased by 40% of your critical damage modifier",
+           "type":"buff",
+           "rune_id":"8021",
+           "patch_id":2,
+           "created_at":"2017-12-19 04:31:04",
+           "updated_at":"2017-12-19 04:31:04"
+           },
+           {
+           "id":8,
+           "title":"OVERHEAL",
+           "description":"Self generation increased: 30% of healing \u21d2 40% of healing",
+           "type":"buff",
+           "rune_id":"9101",
+           "patch_id":2,
+           "created_at":"2017-12-19 04:31:06",
+           "updated_at":"2017-12-19 04:31:06"
+           },
+           {
+           "id":9,
+           "title":"TRIUMPH",
+           "description":"Heal decreased: 15% \u21d2 12%",
+           "type":"nerf",
+           "rune_id":"9111",
+           "patch_id":2,
+           "created_at":"2017-12-19 04:31:08",
+           "updated_at":"2017-12-19 04:31:08"
+           },
+           {
+           "id":10,
+           "title":"PRESENCE OF MIND",
+           "description":"Duration increased: 5 seconds \u21d2 7 seconds",
+           "type":"buff",
+           "rune_id":"8009",
+           "patch_id":2,
+           "created_at":"2017-12-19 04:31:10",
+           "updated_at":"2017-12-19 04:31:10"
+           },
+           {
+           "id":11,
+           "title":"COUP DE GRACE",
+           "description":"Damage nerfed: 10% \u21d2 9%",
+           "type":"nerf",
+           "rune_id":"8014",
+           "patch_id":2,
+           "created_at":"2017-12-19 04:31:12",
+           "updated_at":"2017-12-19 04:31:12"
+           },
+           {
+           "id":12,
+           "title":"EYEBALL COLLECTION",
+           "description":"Stacks per assist reduced: 2 \u21d2 1",
+           "type":"nerf",
+           "rune_id":"8138",
+           "patch_id":2,
+           "created_at":"2017-12-19 04:31:14",
+           "updated_at":"2017-12-19 04:31:14"
+           },
+           {
+           "id":13,
+           "title":"PHASE RUSH",
+           "description":"Slow resist: Now also grants slow resist to ranged champions",
+           "type":"buff",
+           "rune_id":"8230",
+           "patch_id":2,
+           "created_at":"2017-12-19 04:31:15",
+           "updated_at":"2017-12-19 04:31:15"
+           },
+           {
+           "id":14,
+           "title":"CELERITY",
+           "description":"Movement Speed reduced: 4% \u21d2 3%",
+           "type":"nerf",
+           "rune_id":"8234",
+           "patch_id":2,
+           "created_at":"2017-12-19 04:31:17",
+           "updated_at":"2017-12-19 04:31:17"
+           },
+           {
+           "id":15,
+           "title":"MIRROR SHELL",
+           "description":"MR increased: 5 \u21d2 6",
+           "type":"buff",
+           "rune_id":"8435",
+           "patch_id":2,
+           "created_at":"2017-12-19 04:31:18",
+           "updated_at":"2017-12-19 04:31:18"
+           },
+           {
+           "id":16,
+           "title":"REVITALIZE",
+           "description":"Now also increases shields and heals that are cast on the user of Revitalize",
+           "type":"buff",
+           "rune_id":"8453",
+           "patch_id":2,
+           "created_at":"2017-12-19 04:31:20",
+           "updated_at":"2017-12-19 04:31:20"
+           },
+           {
+           "id":17,
+           "title":"KLEPTOMANCY",
+           "description":"No longer increases attack range by 25",
+           "type":"nerf",
+           "rune_id":"8359",
+           "patch_id":2,
+           "created_at":"2017-12-19 04:32:22",
+           "updated_at":"2017-12-19 04:32:22"
+           }
+           ]
+  },
+  {
+  "patch":"7.23",
+  "title":"Patch 7.23",
+  "description":"The first balance patch of the pre-season brings a much needed <strong>damage nerf to Summon Aery<\/strong>. The damage was just too high for how reliable it is. We also see a bit of a <strong>cooldown buff to Predator<\/strong> to hopefully bring it in line with the other Domination Keystones. Check out the exact numbers after the jump",
+  "patch_date":"November 21, 2017",
+  "notes":[
+           {
+           "id":1,
+           "title":"ZOMBIE WARD",
+           "description":"Killing a Zombie Ward now grants one gold",
+           "type":"adjust",
+           "rune_id":"8136",
+           "patch_id":1,
+           "created_at":"2017-12-19 04:07:08",
+           "updated_at":"2017-12-19 04:07:08"
+           },
+           {
+           "id":2,
+           "title":"PREDATOR",
+           "description":"Cooldown decreased: 180-120 seconds (at levels 1-18) \u21d2 150-100 seconds (at levels 1-18)",
+           "type":"buff",
+           "rune_id":"8124",
+           "patch_id":1,
+           "created_at":"2017-12-19 04:14:32",
+           "updated_at":"2017-12-19 04:14:32"
+           },
+           {
+           "id":3,
+           "title":"SUMMON AERY",
+           "description":"Damage lowered: 20-60 (at levels 1-18) \u21d2 15-40 (at levels 1-18) \n Aery now deals the correct adaptive damage",
+           "type":"buff",
+           "rune_id":"8214",
+           "patch_id":1,
+           "created_at":"2017-12-19 04:15:59",
+           "updated_at":"2017-12-19 04:15:59"
+           }
+           ]
+  }
+  ]
