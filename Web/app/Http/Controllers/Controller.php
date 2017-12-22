@@ -22,6 +22,47 @@ class Controller extends BaseController
         return response()->json($data);
     }
 
+    public static function regionDetect($region){
+        $lowerLane = strtolower($region);
+        if($lowerLane == "br"){
+            return "br1";
+        }
+        else if($lowerLane == "eune"){
+            return "eun1";
+        }
+        else if($lowerLane == "euw"){
+            return "euw1";
+        }
+        else if($lowerLane == "jp"){
+            return "jp1";
+        }
+        else if($lowerLane == "kr"){
+            return "kr";
+        }
+        else if($lowerLane == "lan"){
+            return "la1";
+        }
+        else if($lowerLane == "las"){
+            return "la2";
+        }
+        else if($lowerLane == "na"){
+            return "na1";
+        }
+        else if($lowerLane == "oce"){
+            return "oc1";
+        }
+        else if($lowerLane == "tr"){
+            return "tr1";
+        }
+        else if($lowerLane == "ru"){
+            return "ru";
+        }
+        else {
+            return "pbe1";
+        }
+    }
+
+
     public static function laneDetected($lane){
         $lowerLane = strtolower($lane);
         if($lowerLane == "middle"){

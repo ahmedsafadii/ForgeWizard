@@ -8,9 +8,10 @@ class Builds extends Model
 {
     protected $table = 'builds';
 
-    protected $with=['player','user','lane','patch','rune_main','rune_secondary'];
+    protected $with = ['player','user','lane','patch','rune_main','rune_secondary','champions'];
 
-    protected $hidden = ['created_at','top_player_id','champion_id','user_id','role_id','patch_id','rune_main_id','rune_secondary_id'];
+
+    protected $hidden = ['created_at','top_player_id','user_id','role_id','patch_id','rune_main_id','rune_secondary_id'];
 
     protected $guarded = [];
 
@@ -36,6 +37,11 @@ class Builds extends Model
     public function patch()
     {
         return $this->hasOne('App\Patch','id','patch_id');
+    }
+
+    public function champions()
+    {
+        return $this->hasOne('App\Champions','id','champion_id');
     }
 
     public function rune_main()

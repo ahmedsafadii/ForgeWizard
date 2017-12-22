@@ -9,6 +9,8 @@ use GuzzleHttp\Client;
 use App\Runes;
 use App\Keystones;
 use App\Roles;
+
+
 class RunesController extends Controller
 {
     
@@ -31,7 +33,12 @@ class RunesController extends Controller
                 return Controller::filed($e->getResponse()->getReasonPhrase(), $e->getResponse()->getStatusCode());
             }
         }
-        
+
+    public function getRunes(){
+        $runes = Runes::with('keystones')->get();
+        return response()->json($runes);
+    }
+
     public function InstallOrUpdateRunes()
         {
             try {
@@ -43,10 +50,9 @@ class RunesController extends Controller
                     $rune->rune_title = $value["name"];
                     $rune->rune_image = $value["image"];
                     $rune->rune_sub_title = $value["rune_sub_title"];
-                    $rune->rune_description = json_encode($value["rune_description"], true);
+                    $rune->rune_description = $value["rune_description"];
                     $rune->save(); 
                     $rune = Runes::firstOrNew(['rune_id' => $value["id"]]);
-                    
                     foreach ($data[$key]["slots"] as $key => $value){
                         if($key == 0){
                         // main key
@@ -58,7 +64,7 @@ class RunesController extends Controller
                                 $keystoneMajor->stone_video = $value["video"];
                                 $keystoneMajor->stone_long_description = $value["longDesc"];
                                 $keystoneMajor->stone_short_description = $value["shortDesc"];
-                                $keystoneMajor->stone_taken_on = json_encode($value["taken_on"], true);
+                                $keystoneMajor->stone_taken_on = implode("|",$value["taken_on"]);
                                 $rune->keystones()->save($keystoneMajor);
                         }
                         }
@@ -71,7 +77,7 @@ class RunesController extends Controller
                                 $keystoneMajor->stone_video = $value["video"];
                                 $keystoneMajor->stone_long_description = $value["longDesc"];
                                 $keystoneMajor->stone_short_description = $value["shortDesc"];
-                                $keystoneMajor->stone_taken_on = json_encode($value["taken_on"], true);
+                                $keystoneMajor->stone_taken_on = implode("|",$value["taken_on"]);
                                 $rune->keystones()->save($keystoneMajor);
                         }
                         }
