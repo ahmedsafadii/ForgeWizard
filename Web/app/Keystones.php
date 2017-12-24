@@ -8,7 +8,7 @@ class Keystones extends Model
 {
     protected $table = 'keystones';
 
-    protected $hidden = ['created_at','updated_at','id','stone_image','runes_id'];
+    protected $hidden = ['created_at','updated_at','stone_image','runes_id'];
 
     protected $guarded = [];
 

@@ -8,7 +8,7 @@ use GuzzleHttp\Exception\BadResponseException ;
 use GuzzleHttp\Client;
 use App\Champions;
 use App\Users;
-
+use App\Builds;
 class RiotController extends Controller
 {
     
@@ -48,6 +48,8 @@ class RiotController extends Controller
         $input = $request->input();
         $summonername = mb_strtolower(str_replace(' ', '', $input['name']));
         $summonerregion = Controller::regionDetect(mb_strtolower(str_replace(' ', '', $input['region'])));
+        $code = Controller::regionDetect(mb_strtolower(str_replace(' ', '', $input['code'])));
+
             try {
                 $client = new \GuzzleHttp\Client();
                 $response = $client->request('GET', "https://$summonerregion.api.riotgames.com/lol/summoner/v3/summoners/by-name/$summonername?api_key=$RIOTAPI",['verify' => false]);
@@ -61,7 +63,12 @@ class RiotController extends Controller
                 $newUser->summoner_profile_icon = $summonerData["profileIconId"];
                 $newUser->summoner_level = $summonerData["summonerLevel"];
                 $newUser->save();
-                return response()->json($newUser);
+                $userBuilds = Builds::where('user_id', $newUser->id)->orderBy('id', 'DESC')->get();
+
+
+                $summoner["verify"] = true;
+                $summoner["summoner"] = $newUser;
+                return response()->json($summoner);
 
 //                return Controller::filed( "Player has been added",$response->getStatusCode());
 
