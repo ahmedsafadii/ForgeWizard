@@ -8,8 +8,16 @@
 
 import UIKit
 
+
+
 class RuneBuildTableViewCell: UITableViewCell {
 
+    var delegate: buttonDidClickedDelegate?
+
+    @IBAction func removeBuild(_ sender: UIButton) {
+        self.delegate?.removeBuild!(buildId: sender.tag)
+    }
+    
     @IBOutlet weak var runeBackground: UIImageView!
     @IBOutlet weak var lane: UILabel!
     @IBOutlet weak var runeTitle: UILabel!
@@ -39,6 +47,7 @@ class RuneBuildTableViewCell: UITableViewCell {
         dislikeButton.isHidden = true
     }
     
+
     override func awakeFromNib() {
         super.awakeFromNib()
         runeTitle.sizeToFit()

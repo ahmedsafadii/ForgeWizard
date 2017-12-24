@@ -22,9 +22,43 @@ class APIManager {
     static let postNewUser = "summoner/verify"
     static let getBuildById = "build/getBuilds/user/"
     static let createBuild = "build/addBuild/"
+    static let getTools = "build/getTools/"
+    static let removeBuild = "build/removeBuild/"
 
     
     public static let instance = APIManager()
+    
+    
+    func removeBuild(userId:Int,buildId:Int,onSuccess: @escaping(JSON) -> Void,onFailure: @escaping(Error) -> Void){
+        
+        let requestUrl : String = baseURL + APIManager.removeBuild
+        let parameters = ["build_id":buildId,"user_id":userId]
+        Alamofire.request(requestUrl, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
+            switch response.result {
+            case .success:
+                onSuccess(JSON(response.result.value!))
+            case .failure(let error):
+                onFailure(error)
+            }
+        }
+        
+    }
+    
+    
+    func getAddBuildTools(onSuccess: @escaping(JSON) -> Void,onFailure: @escaping(Error) -> Void){
+        
+        let requestUrl : String = baseURL + APIManager.getTools
+        Alamofire.request(requestUrl, method: .get, parameters: nil, encoding: JSONEncoding.default).responseJSON { response in
+            switch response.result {
+            case .success:
+                onSuccess(JSON(response.result.value!))
+            case .failure(let error):
+                onFailure(error)
+            }
+        }
+        
+    }
+    
     
     
     

@@ -57,7 +57,8 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <outlet property="delegate" destination="3fI-Hi-Qm8" id="5b2-Ni-fRb"/>
+                                            <action selector="searchForRunes:" destination="gXy-0m-W6w" eventType="editingChanged" id="Eom-a4-Qm6"/>
+                                            <outlet property="delegate" destination="gXy-0m-W6w" id="xHr-CB-eTR"/>
                                         </connections>
                                     </textField>
                                 </subviews>
@@ -197,6 +198,8 @@
                         <outlet property="RunesTableView" destination="iQq-Gc-d1c" id="jbf-vN-jIj"/>
                         <outlet property="SelectRuneCollection" destination="Iyc-10-icN" id="nYj-ws-60F"/>
                         <outlet property="runeBackGround" destination="0MD-P0-eVy" id="Dq7-Qy-0fF"/>
+                        <outlet property="runeTableView" destination="iQq-Gc-d1c" id="W8r-1S-VdU"/>
+                        <outlet property="searchRune" destination="moP-6i-kb2" id="O1g-dV-NSi"/>
                         <segue destination="xUu-R7-kVv" kind="show" identifier="showSelected" id="JVN-FQ-5XH"/>
                     </connections>
                 </viewController>
@@ -245,6 +248,9 @@
                         <viewLayoutGuide key="safeArea" id="3nx-oN-D2g"/>
                     </view>
                     <navigationItem key="navigationItem" id="Nij-4C-nrB"/>
+                    <connections>
+                        <outlet property="backgroundImage" destination="3bF-Az-Du0" id="Htk-sE-SJu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KCt-CB-S8F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -301,7 +307,7 @@
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="geS-6Z-OQ5">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <action selector="addBuild:" destination="eQN-aI-jrX" id="P1s-bD-6w3"/>
+                                <action selector="addNewRunes:" destination="eQN-aI-jrX" id="dn0-7Q-y3j"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -311,7 +317,7 @@
                         <outlet property="errorMessage" destination="Twy-TA-hEU" id="ElX-Yd-h9e"/>
                         <outlet property="errorView" destination="DaJ-rm-3QW" id="Hfv-T5-bAT"/>
                         <outlet property="logoutIcon" destination="Ac3-9O-FGx" id="0fP-JG-s1X"/>
-                        <segue destination="CXA-Sk-lsf" kind="show" identifier="addBuild" id="cty-YO-B2s"/>
+                        <segue destination="CXA-Sk-lsf" kind="show" identifier="addBuild" id="U36-bc-efh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fSs-Td-6cn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -335,7 +341,7 @@
                     <viewLayoutGuide key="safeArea" id="TGs-K3-8cL"/>
                 </view>
             </objects>
-            <point key="canvasLocation" x="521" y="1403"/>
+            <point key="canvasLocation" x="521" y="1396"/>
         </scene>
         <!--Patch Changes-->
         <scene sceneID="U8C-uf-nA3">
@@ -466,6 +472,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <action selector="searchChampionName:" destination="3fI-Hi-Qm8" eventType="editingChanged" id="8dM-jM-pwu"/>
                                             <outlet property="delegate" destination="3fI-Hi-Qm8" id="jLH-Zc-noR"/>
                                         </connections>
                                     </textField>
@@ -740,10 +747,29 @@
                         <barButtonItem key="rightBarButtonItem" image="About" id="R0J-ti-FBj"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="championNameSrarch" destination="rT2-Xf-eTz" id="ZeT-Aq-sQf"/>
+                        <outlet property="championsCollection" destination="wUW-Gl-vq5" id="6Tv-nZ-35i"/>
+                        <outlet property="loadingView" destination="zsY-er-AN7" id="LYF-Ug-COC"/>
                         <segue destination="His-T4-R1l" kind="show" identifier="showBuildList" id="TNS-Cf-A1l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DyC-ov-Osf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="zsY-er-AN7">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="sCZ-RP-nUg">
+                            <rect key="frame" x="102" y="46" width="37" height="37"/>
+                            <color key="color" red="0.83921568629999999" green="0.7725490196" blue="0.60392156860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </activityIndicatorView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="sCZ-RP-nUg" firstAttribute="centerX" secondItem="zsY-er-AN7" secondAttribute="centerX" id="NbB-2c-Wzg"/>
+                        <constraint firstItem="sCZ-RP-nUg" firstAttribute="centerY" secondItem="zsY-er-AN7" secondAttribute="centerY" id="OV6-36-l2D"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="1dK-T7-uQp"/>
+                </view>
             </objects>
             <point key="canvasLocation" x="524" y="-274.81259370314842"/>
         </scene>
@@ -857,6 +883,7 @@
                         <outlet property="ChampionsRunes" destination="UTO-Tn-Nwj" id="FlR-sb-ra2"/>
                         <outlet property="championImage" destination="TdA-FB-AcI" id="yvz-sE-djG"/>
                         <outlet property="championTitle" destination="gT9-jo-Nwk" id="fWU-TI-dhE"/>
+                        <outlet property="noRunes" destination="SYr-7a-7c5" id="8Hn-t2-Ogc"/>
                         <segue destination="iLv-aN-rPY" kind="show" identifier="showBuild" id="wOx-Pt-yNm"/>
                     </connections>
                 </viewController>

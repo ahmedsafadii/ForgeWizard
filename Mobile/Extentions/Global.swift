@@ -20,6 +20,8 @@ class Global {
     var SelectedRuneStyle:JSON!
     var SelectedPatch:JSON!
     var RuneData:JSON!
+    var Tools:JSON!
+    var forceUpdate = true
     var RunesColors = [[String]]()
     var summonerData:JSON!
     func updateAppData(TimeByMin:Int) -> Bool{
@@ -49,6 +51,19 @@ class Global {
                    ["name":"Russia","key":"ru"],
                    ["name":"Turkey","key":"tr"],
                    ["name":"Japan","key":"jp"]]
+    
+    let regionsData = JSON([
+        "br1":["name":"Brazil"],
+        "euw1":["name":"Europe West"],
+        "eun1":["name":"Europe Nordic & East"],
+        "jp1":["name":"Japan"],
+        "la1":["name":"Latin America North"],
+        "la2":["name":"Latin America South"],
+        "na1":["name":"North America"],
+        "oc1":["name":"Oceania"],
+        "tr1":["name":"Turkey"],
+        "ru":["name":"Russia"]
+    ])
     
     
     

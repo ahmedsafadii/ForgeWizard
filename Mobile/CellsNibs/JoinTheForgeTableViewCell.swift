@@ -9,9 +9,11 @@
 import UIKit
 import AAPickerView
 
-protocol buttonDidClickedDelegate {
+@objc protocol buttonDidClickedDelegate {
     
-    func buttonClicked(summonerName:String,code:String,sumonerRegion:Int)
+    @objc optional func buttonClicked(summonerName:String,code:String,sumonerRegion:Int)
+    
+    @objc optional func removeBuild(buildId:Int)
 }
 
 
@@ -29,7 +31,7 @@ class JoinTheForgeTableViewCell: UITableViewCell {
     var regionIndex = -1
     
     @IBAction func register(_ sender: UIButton) {
-        self.delegate?.buttonClicked(summonerName: summonerName.text ?? "", code: summonerCode.text ?? "", sumonerRegion: regionIndex)
+        self.delegate?.buttonClicked!(summonerName: summonerName.text ?? "", code: summonerCode.text ?? "", sumonerRegion: regionIndex)
 
     }
     

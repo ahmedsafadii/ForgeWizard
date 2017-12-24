@@ -10,14 +10,14 @@ import Foundation
 import UIKit
 
 
-func stringToDate(str: String) -> String{
-    let dateFormatter = DateFormatter()
-    dateFormatter.dateFormat = "yy-MM-dd HH:mm:ss.zzzzzz"
-    dateFormatter.timeZone = TimeZone(identifier:"GMT")
-    let date = dateFormatter.date(from: str)
-    
-    return timeAgoSince(date!)
-}
+//func stringToDate(str: String) -> String{
+//    let dateFormatter = DateFormatter()
+//    dateFormatter.dateFormat = "yy-MM-dd HH:mm:ss.zzzzzz"
+//    dateFormatter.timeZone = TimeZone(identifier:"GMT")
+//    let date = dateFormatter.date(from: str)
+//    
+//    return timeAgoSince(date!)
+//}
 
 
 func timeAgoSince(_ date: Date) -> String {

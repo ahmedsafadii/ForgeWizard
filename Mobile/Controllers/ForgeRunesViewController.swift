@@ -12,6 +12,19 @@ import SwiftyJSON
 
 class ForgeRunesViewController: UIViewController,buttonDidClickedDelegate {
     
+
+    func removeBuild(buildId: Int) {
+        SwiftSpinner.show("Remove in progress")
+        print(Global.shared.summonerData["summoner"]["id"].intValue)
+        print(buildId)
+        APIManager.instance.removeBuild(userId: Global.shared.summonerData["summoner"]["id"].intValue, buildId: buildId, onSuccess: { json in
+            self.checkLoginView()
+        }, onFailure: { error in
+            SwiftSpinner.hide()
+            self.showAlert(title: "", message: error.localizedDescription, ok: "Ok")
+        })
+    }
+    
     @IBOutlet var errorView: UIView!
     @IBOutlet weak var errorMessage: UILabel!
     
@@ -19,9 +32,21 @@ class ForgeRunesViewController: UIViewController,buttonDidClickedDelegate {
     @IBAction func updateMyRunes(_ sender: UIBarButtonItem) {
         
         checkLoginView()
-        print(builds)
         
     }
+    @IBAction func addNewRunes(_ sender: UIBarButtonItem) {
+        SwiftSpinner.show("Fetching the tools ...")
+        APIManager.instance.getAddBuildTools(onSuccess: { json in
+            SwiftSpinner.hide()
+            Global.shared.Tools = json
+            self.performSegue(withIdentifier: "addBuild", sender: self)
+        }, onFailure: { error in
+            SwiftSpinner.hide()
+            self.showAlert(title: "", message: error.localizedDescription, ok: "Ok")
+        })
+    }
+    
+    
     
     @IBAction func logOut(_ sender: UIBarButtonItem) {
         SwiftSpinner.show(duration: 1.0, title: "Logging out")
@@ -47,10 +72,10 @@ class ForgeRunesViewController: UIViewController,buttonDidClickedDelegate {
                 }
                 else{
                     self.SummonerTableView.backgroundView = nil
-                    
                 }
                 self.builds = json
                 self.SummonerTableView.reloadData()
+                Global.shared.forceUpdate = false
                 SwiftSpinner.hide()
             }, onFailure: { error in
                 self.errorMessage.text = error.localizedDescription
@@ -119,10 +144,17 @@ class ForgeRunesViewController: UIViewController,buttonDidClickedDelegate {
     }
     
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        if(Global.shared.forceUpdate){
+            self.checkLoginView()
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideBackButton()
-        self.checkLoginView()
         // Do any additional setup after loading the view.
     }
     
@@ -183,9 +215,9 @@ extension ForgeRunesViewController : UITableViewDelegate,UITableViewDataSource {
         else{
             if(indexPath.section == 0){
                 let cell = Bundle.main.loadNibNamed("SummonerLoginTableViewCell", owner: self, options: nil)?.first as! SummonerLoginTableViewCell
-                
+                print("http://ddragon.leagueoflegends.com/cdn/" + Global.shared.summonerData["summoner"]["summoner_profile_icon"].stringValue)
                 cell.summonerName.text = Global.shared.summonerData["summoner"]["summoner_name"].stringValue
-                cell.summonerIcon.af_setImage(withURL: URL(string:"http://ddragon.leagueoflegends.com/cdn/7.24.2/img/profileicon/" + Global.shared.summonerData["summoner"]["summoner_profile_icon"].stringValue + ".png")!, placeholderImage: UIImage(named:"grid-placeholder"))
+                cell.summonerIcon.af_setImage(withURL: URL(string:"http://ddragon.leagueoflegends.com/cdn/" + Global.shared.summonerData["summoner"]["summoner_profile_icon"].stringValue)!, placeholderImage: UIImage(named:"grid-placeholder"))
                 
                 return cell
                 
@@ -193,10 +225,12 @@ extension ForgeRunesViewController : UITableViewDelegate,UITableViewDataSource {
             else{
                 let cell = Bundle.main.loadNibNamed("RuneBuildTableViewCell", owner: self, options: nil)?.first as! RuneBuildTableViewCell
                 cell.dislikeButton.isHidden = false
+                cell.dislikeButton.tag = builds[indexPath.row]["builds"][0]["id"].intValue
+                cell.delegate = self
                 cell.dislikeButton.setImage(UIImage(named:"remove"), for: .normal)
                 cell.runeTitle.text = builds[indexPath.row]["builds"][0]["title"].stringValue
                 cell.proName.text = builds[indexPath.row]["name"].stringValue
-                cell.proSubtitle.text = stringToDate(str: builds[indexPath.row]["builds"][0]["updated_at"]["date"].stringValue)
+                cell.proSubtitle.text = builds[indexPath.row]["builds"][0]["updated_at"].stringValue
                 cell.proPlayer.af_setImage(withURL: generateUrl(name: builds[indexPath.row]["key"].stringValue, placeHolder: "grid-placeholder.png", type: "champions", extention: "jpg"), placeholderImage: UIImage(named:builds[indexPath.row]["key"].stringValue))
                 cell.runeDescription.text = builds[indexPath.row]["builds"][0]["description"].stringValue
                 cell.patch.text = builds[indexPath.row]["builds"][0]["patch"]["patch"].stringValue

@@ -15,7 +15,45 @@ class RunesViewController: UIViewController {
     var selectedIndex = 0
     var allowChange = true
     
-    let championsData = pathToJson(fileName: "Runes.json")
+    @IBOutlet weak var runeTableView: UITableView!
+    
+    let runesData = pathToJson(fileName: "Runes.json")
+    
+    var filterChampionsData = [JSON]()
+    
+    @IBOutlet weak var searchRune: UITextField!
+    
+    
+    func filterByRune(){
+        self.searchRune.text = ""
+        self.filterChampionsData = [JSON]()
+        for (_,subJson) in runesData[selectedIndex]["keystones"]{
+            filterChampionsData.append(subJson)
+        }
+        self.runeTableView.reloadData()
+    }
+    
+    @IBAction func searchForRunes(_ sender: UITextField) {
+        
+        print("test")
+        let runeNmae = sender.text?.lowercased()
+        self.filterChampionsData = [JSON]()
+        if(runeNmae == ""){
+           self.filterChampionsData = runesData[selectedIndex]["keystones"].arrayValue
+        }
+        else{
+            for (_, subJson) in runesData[selectedIndex]["keystones"]{
+                if subJson["stone_title"].stringValue.lowercased().range(of:runeNmae!) != nil {
+                    filterChampionsData.append(subJson)
+                }
+            }
+        }
+
+        
+        runeTableView.reloadData()
+        
+        
+    }
     
     
     @IBOutlet weak var RunesTableView: UITableView!
@@ -49,6 +87,7 @@ class RunesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        filterByRune()
         setupLayout()
         self.hideBackButton()
         // Do any additional setup after loading the view.
@@ -84,7 +123,7 @@ extension RunesViewController : UITableViewDelegate,UITableViewDataSource {
             return 1
         }
         else{
-            return championsData[selectedIndex]["keystones"].count
+            return filterChampionsData.count
         }
     }
     
@@ -92,20 +131,20 @@ extension RunesViewController : UITableViewDelegate,UITableViewDataSource {
         if(indexPath.section == 0){
             let cell = Bundle.main.loadNibNamed("RuneHeaderTableViewCell", owner: self, options: nil)?.first as! RuneHeaderTableViewCell
             cell.runeTitle.textColor = UIColor(demoData[selectedIndex]["color"].stringValue)
-            cell.runeTitle.text = championsData[selectedIndex]["rune_title"].stringValue  + " + any secondary"
-            cell.runeDescription.text = championsData[selectedIndex]["rune_description"].stringValue
+            cell.runeTitle.text = runesData[selectedIndex]["rune_title"].stringValue  + " + any secondary"
+            cell.runeDescription.text = runesData[selectedIndex]["rune_description"].stringValue
             return cell
         }
         else{
             let cell = Bundle.main.loadNibNamed("RuneBodyTableViewCell", owner: self, options: nil)?.first as! RuneBodyTableViewCell
             
-            cell.runeName.text = championsData[selectedIndex]["keystones"][indexPath.row]["stone_title"].stringValue
+            cell.runeName.text = filterChampionsData[indexPath.row]["stone_title"].stringValue
             cell.viewColors[0].borderColor = UIColor(demoData[selectedIndex]["color"].stringValue)
             cell.viewColors[1].borderColor = UIColor(demoData[selectedIndex]["color"].stringValue)
             cell.runeName.textColor = UIColor(demoData[selectedIndex]["color"].stringValue)
-            cell.runeDescription.text = championsData[selectedIndex]["keystones"][indexPath.row]["stone_short_description"].stringValue
-            cell.runeImage.image = UIImage(named:championsData[selectedIndex]["keystones"][indexPath.row]["stone_id"].stringValue)
-            if(championsData[selectedIndex]["keystones"][indexPath.row]["isKey"].boolValue){
+            cell.runeDescription.text = filterChampionsData[indexPath.row]["stone_short_description"].stringValue
+            cell.runeImage.image = UIImage(named:filterChampionsData[indexPath.row]["stone_id"].stringValue)
+            if(filterChampionsData[indexPath.row]["isKey"].boolValue){
                 cell.runeVideo.isHidden = false
             }
             else{
@@ -121,9 +160,12 @@ extension RunesViewController : UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        Global.shared.SelectedRune = championsData[selectedIndex]["keystones"][indexPath.row]
-        Global.shared.SelectedRuneStyle = demoData[selectedIndex]
-        self.performSegue(withIdentifier: "showSelected", sender: self)
+        if(indexPath.section == 1){
+            Global.shared.SelectedRune = filterChampionsData[indexPath.row]
+            Global.shared.SelectedRuneStyle = demoData[selectedIndex]
+            self.performSegue(withIdentifier: "showSelected", sender: self)
+        }
+
     }
     
 }
@@ -183,6 +225,7 @@ extension RunesViewController : UICollectionViewDelegate,UICollectionViewDataSou
                 animator.startAnimation()
             }
         }
+        filterByRune()
     }
     
     

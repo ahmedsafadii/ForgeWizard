@@ -33,14 +33,16 @@ class SelectedRuneViewController: UIViewController,VideoPlayerButtonDelegate {
         }
     }
     
+    @IBOutlet weak var backgroundImage: UIImageView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         keystone = Global.shared.SelectedRune
         for i in 0...keystone["stone_taken_on"].stringValue.components(separatedBy: "|").count - 1{
             championArray.append(keystone["stone_taken_on"].stringValue.components(separatedBy: "|")[i])
         }
+        backgroundImage.image = UIImage(named:Global.shared.SelectedRuneStyle["bg"].stringValue)
         
     }
     

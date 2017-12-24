@@ -13,8 +13,13 @@ import AlamofireImage
 import SwiftSpinner
 import Reachability
 
-class LeadoutViewController: UIViewController {
+class LeadoutViewController: UIViewController,UITextFieldDelegate {
     
+    @IBOutlet weak var championsCollection: UICollectionView!
+    
+    @IBOutlet var loadingView: UIView!
+    
+    @IBOutlet weak var championNameSrarch: UITextField!
     
     @IBAction func updateAgain(_ sender: UIBarButtonItem) {
 
@@ -38,70 +43,270 @@ class LeadoutViewController: UIViewController {
     
     
     let championsData = pathToJson(fileName: "LocalData.json")
+    var championsDataFilter = [JSON]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideBackButton()
+        filterByLane()
         // Do any additional setup after loading the view.
     }
     
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    var filterArray = [false,false,false,false,false,false]
+    var enableSelect = true
+    func filterByLane(){
+        enableSelect = false
+        self.championsDataFilter = [JSON]()
+        self.championsCollection.reloadData()
+        self.championsCollection.backgroundView = loadingView
+        let globalQueue = DispatchQueue.global()
+        globalQueue.async {
+            let orderChamp = self.championsData.arrayValue.sorted { $0["name"].stringValue < $1["name"].stringValue }
+            if(self.filterArray.contains(true)){
+                if(self.filterArray[0]){
+                    for(_,subJson) in JSON(orderChamp) {
+                        for(_,subbJ) in subJson["validBuild"]{
+                            if(subbJ["lane"]["name"].stringValue == "Top"){
+                                if self.championsDataFilter.index(where: { $0["name"].stringValue == subJson["name"].stringValue}) != nil {
+                                    print(subJson["name"],"DUBlicate")
+                                }
+                                else {
+                                    self.championsDataFilter.append(subJson)
+                                }
+                            }
+                        }
+                        for(_,subbJ) in subJson["usersBuild"]{
+                            if(subbJ["lane"]["name"].stringValue == "Top"){
+                                if self.championsDataFilter.index(where: { $0["name"].stringValue == subJson["name"].stringValue}) != nil {
+                                    print(subJson["name"],"DUBlicate")
+                                }
+                                else {
+                                    self.championsDataFilter.append(subJson)
+                                }
+                            }
+                        }
+                    }
+                }
+                if(self.filterArray[1]){
+                    for(_,subJson) in JSON(orderChamp) {
+                        for(_,subbJ) in subJson["validBuild"]{
+                            if(subbJ["lane"]["name"].stringValue == "Jungle"){
+                                if self.championsDataFilter.index(where: { $0["name"].stringValue == subJson["name"].stringValue}) != nil {
+                                    print(subJson["name"],"DUBlicate")
+                                }
+                                else {
+                                    self.championsDataFilter.append(subJson)
+                                }
+                            }
+                        }
+                        for(_,subbJ) in subJson["usersBuild"]{
+                            if(subbJ["lane"]["name"].stringValue == "Jungle"){
+                                if self.championsDataFilter.index(where: { $0["name"].stringValue == subJson["name"].stringValue}) != nil {
+                                    print(subJson["name"],"DUBlicate")
+                                }
+                                else {
+                                    self.championsDataFilter.append(subJson)
+                                }
+                            }
+                        }
+                    }
+                }
+                if(self.filterArray[2]){
+                    for(_,subJson) in JSON(orderChamp) {
+                        for(_,subbJ) in subJson["validBuild"]{
+                            if(subbJ["lane"]["name"].stringValue == "Middle"){
+                                if self.championsDataFilter.index(where: { $0["name"].stringValue == subJson["name"].stringValue}) != nil {
+                                    print(subJson["name"],"DUBlicate")
+                                }
+                                else {
+                                    self.championsDataFilter.append(subJson)
+                                }
+                            }
+                        }
+                        for(_,subbJ) in subJson["usersBuild"]{
+                            if(subbJ["lane"]["name"].stringValue == "Middle"){
+                                if self.championsDataFilter.index(where: { $0["name"].stringValue == subJson["name"].stringValue}) != nil {
+                                    print(subJson["name"],"DUBlicate")
+                                }
+                                else {
+                                    self.championsDataFilter.append(subJson)
+                                }
+                            }
+                        }
+                    }
+                }
+                if(self.filterArray[3]){
+                    for(_,subJson) in JSON(orderChamp) {
+                        for(_,subbJ) in subJson["validBuild"]{
+                            if(subbJ["lane"]["name"].stringValue == "AD Carry"){
+                                if self.championsDataFilter.index(where: { $0["name"].stringValue == subJson["name"].stringValue}) != nil {
+                                    print(subJson["name"],"DUBlicate")
+                                }
+                                else {
+                                    self.championsDataFilter.append(subJson)
+                                }
+                            }
+                        }
+                        for(_,subbJ) in subJson["usersBuild"]{
+                            if(subbJ["lane"]["name"].stringValue == "AD Carry"){
+                                if self.championsDataFilter.index(where: { $0["name"].stringValue == subJson["name"].stringValue}) != nil {
+                                    print(subJson["name"],"DUBlicate")
+                                }
+                                else {
+                                    self.championsDataFilter.append(subJson)
+                                }
+                            }
+                        }
+                    }
+                }
+                if(self.filterArray[4]){
+                    for(_,subJson) in JSON(orderChamp) {
+                        for(_,subbJ) in subJson["validBuild"]{
+                            if(subbJ["lane"]["name"].stringValue == "Support"){
+                                if self.championsDataFilter.index(where: { $0["name"].stringValue == subJson["name"].stringValue}) != nil {
+                                    print(subJson["name"],"DUBlicate")
+                                }
+                                else {
+                                    self.championsDataFilter.append(subJson)
+                                }
+                            }
+                        }
+                        for(_,subbJ) in subJson["usersBuild"]{
+                            if(subbJ["lane"]["name"].stringValue == "Support"){
+                                if self.championsDataFilter.index(where: { $0["name"].stringValue == subJson["name"].stringValue}) != nil {
+                                    print(subJson["name"],"DUBlicate")
+                                }
+                                else {
+                                    self.championsDataFilter.append(subJson)
+                                }
+                            }
+                        }
+                    }
+                }
+                if(self.filterArray[5]){
+                    for(_,subJson) in JSON(orderChamp) {
+                        if(subJson["isFree"].boolValue){
+                            if self.championsDataFilter.index(where: { $0["name"].stringValue == subJson["name"].stringValue}) != nil {
+                                print(subJson["name"],"DUBlicate")
+                            }
+                            else {
+                                self.championsDataFilter.append(subJson)
+                            }
+                        }
+                    }
+                }
+            }
+            else{
+                for(_,subJson) in JSON(orderChamp) {
+                    self.championsDataFilter.append(subJson)
+                }
+            }
+            DispatchQueue.main.async {
+                self.copychampionsDataFilter = self.championsDataFilter
+                self.championsCollection.backgroundView = nil
+                self.championsCollection.reloadData()
+                self.enableSelect = true
+            }
+            }
+    }
     
     @IBAction func filterAction(_ sender: UIButton) {
-        
+        if(enableSelect){
         if(sender.tag == 0){
             if(sender.backgroundColor == UIColor("#013750")){
                 sender.backgroundColor = UIColor.clear
+                filterArray[0] = false
             }
             else{
                 sender.backgroundColor = UIColor("#013750")
+                filterArray[0] = true
             }
         }
         else if(sender.tag == 1){
             if(sender.backgroundColor == UIColor("#013750")){
                 sender.backgroundColor = UIColor.clear
+                filterArray[1] = false
             }
             else{
                 sender.backgroundColor = UIColor("#013750")
+                filterArray[1] = true
             }
         }
         else if(sender.tag == 2){
             if(sender.backgroundColor == UIColor("#013750")){
                 sender.backgroundColor = UIColor.clear
+                filterArray[2] = false
             }
             else{
                 sender.backgroundColor = UIColor("#013750")
+                filterArray[2] = true
             }
         }
         else if(sender.tag == 3){
             if(sender.backgroundColor == UIColor("#013750")){
                 sender.backgroundColor = UIColor.clear
+                filterArray[3] = false
             }
             else{
                 sender.backgroundColor = UIColor("#013750")
+                filterArray[3] = true
             }
         }
         else if(sender.tag == 4){
             if(sender.backgroundColor == UIColor("#013750")){
                 sender.backgroundColor = UIColor.clear
+                filterArray[4] = false
             }
             else{
                 sender.backgroundColor = UIColor("#013750")
+                filterArray[4] = true
             }
         }
         else if(sender.tag == 5){
             if(sender.backgroundColor == UIColor("#013750")){
                 sender.backgroundColor = UIColor.clear
+                filterArray[5] = false
             }
             else{
                 sender.backgroundColor = UIColor("#013750")
+                filterArray[5] = true
             }
         }
+        championNameSrarch.text = ""
+        filterByLane()
+        }
     }
+    
+    
+    var copychampionsDataFilter = [JSON]()
+    
+    @IBAction func searchChampionName(_ sender: UITextField) {
+        
+        let championSelect = sender.text?.lowercased()
+        
+        if (championSelect == ""){
+            self.championsDataFilter = self.copychampionsDataFilter
+        }
+        else{
+            self.championsDataFilter = [JSON]()
+            for (_, subJson) in JSON(copychampionsDataFilter){
+                if subJson["name"].stringValue.lowercased().range(of:championSelect!) != nil {
+                    championsDataFilter.append(subJson)
+                }
+            }
+        }
+        
+        championsCollection.reloadData()
+        
+        
+    }
+    
 }
 
 extension LeadoutViewController : UISearchBarDelegate {
@@ -118,14 +323,14 @@ extension LeadoutViewController : UICollectionViewDelegate,UICollectionViewDataS
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return championsData.count
+        return championsDataFilter.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ChmpionCollectionViewCell", for: indexPath) as! ChmpionCollectionViewCell
-        cell.championName.text = championsData[indexPath.row]["name"].stringValue
-        cell.championImage.af_setImage(withURL: generateUrl(name: championsData[indexPath.row]["key"].stringValue, placeHolder: "grid-placeholder.png", type: "champions", extention: "jpg"), placeholderImage: UIImage(named:championsData[indexPath.row]["key"].stringValue))
-        if(championsData[indexPath.row]["isFree"].boolValue){
+        cell.championName.text = championsDataFilter[indexPath.row]["name"].stringValue
+        cell.championImage.af_setImage(withURL: generateUrl(name: championsDataFilter[indexPath.row]["key"].stringValue, placeHolder: "grid-placeholder.png", type: "champions", extention: "jpg"), placeholderImage: UIImage(named:championsDataFilter[indexPath.row]["key"].stringValue))
+        if(championsDataFilter[indexPath.row]["isFree"].boolValue){
             cell.isFree.isHidden = false
         }
         else{
@@ -138,14 +343,15 @@ extension LeadoutViewController : UICollectionViewDelegate,UICollectionViewDataS
         SwiftSpinner.show("Fetching champion runes", animated: true)
         SwiftSpinner.setTitleColor(UIColor.white)
         SwiftSpinner.sharedInstance.innerColor = nil
-        APIManager.instance.getChampionData(id: championsData[indexPath.row]["id"].stringValue, onSuccess: { json in
-            Global.shared.SelectedChampionBuild = self.championsData[indexPath.row]
+        APIManager.instance.getChampionData(id: championsDataFilter[indexPath.row]["id"].stringValue, onSuccess: { json in
+            Global.shared.SelectedChampionBuild = json[0]
             SwiftSpinner.hide({
                 self.performSegue(withIdentifier: "showBuildList", sender: self)
             })
         }, onFailure: { error in
+            print(error)
             SwiftSpinner.hide()
-            Global.shared.SelectedChampionBuild = self.championsData[indexPath.row]
+            Global.shared.SelectedChampionBuild = self.championsDataFilter[indexPath.row]
             self.performSegue(withIdentifier: "showBuildList", sender: self)
         })
     }

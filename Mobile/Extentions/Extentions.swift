@@ -169,7 +169,6 @@ func generateUrl(name:String,placeHolder:String,type:String,extention:String) ->
     var url:URL!
     if(name != ""){
         url = URL(string: "http://elofight.com/riotapi4/" + type + "/" + name + "." + extention)
-        print(url)
     }
     else{
         url = URL(string: "http://elofight.com/riotapi4/" + type + "/" + placeHolder + "." + extention)
