@@ -60,7 +60,7 @@ class RiotController extends Controller
                 $newUser->summoner_name = $summonerData["name"];
                 $newUser->summoner_region = $summonerregion;
                 $newUser->summoner_id = $summonerData["id"];
-                $newUser->summoner_profile_icon = $summonerData["profileIconId"];
+                $newUser->summoner_profile_icon = "7.24.2/img/profileicon/".$summonerData["profileIconId"].".png";
                 $newUser->summoner_level = $summonerData["summonerLevel"];
                 $newUser->save();
                 $userBuilds = Builds::where('user_id', $newUser->id)->orderBy('id', 'DESC')->get();

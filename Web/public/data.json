@@ -1,4 +1,419 @@
 {
+   "Shyvana":[
+      {
+         "title":"Dance in Their Ashes",
+         "description":"Rapid jungle clear and neutral objective control.",
+         "patch":"7.24",
+         "primary":"Precision",
+         "primary_d":"Improved attacks and sustained damage",
+         "secondry":"Sorcery",
+         "secondry_d":"",
+         "primary_data":[
+            {
+               "name":"Press the Attack",
+               "why":"Shyvana is a fantastic user of Press the Attack thanks to her ability to instantly proc it with an Auto->[Q] reset. The instant exposure allows Shyvana to duel and shred champions effectively.",
+               "description":"Attacking a champion 3 times will expose them, dealing bonus damage and causing them to take more damage from all sources for 6 seconds."
+            },
+            {
+               "name":"Triumph",
+               "why":"Triumph on Shyvana allows you to dive into the back line, absorb the brunt of the damage for your team, and heal for a ton from any kills or assists to keep fighting.",
+               "description":"Takedowns restore health and grant bonus gold."
+            },
+            {
+               "name":"Legend: Alacrity",
+               "why":"More Attack Speed means a faster/healthier jungle clear and more dueling potential in early skirmishes.",
+               "description":"Takedowns on enemies grant permanent Attack Speed."
+            },
+            {
+               "name":"Coup De Grace",
+               "why":"Coup De Grace is the go-to tune for reliable damage in fights where you're able to get to the back-line and shred the enemy squishy champions.",
+               "description":"Deal 5% more damage to low health champions. Gain AD/AP after kills or assists."
+            }
+         ],
+         "secondary_data":[
+            {
+               "name":"Celerity",
+               "why":"Celerity on Shyvana help you to overcome her biggest pitfall of being kited. The extra bit of Movement Speed synergizes well with Shyv's [W] and especially well with Waterwalking when skirmishing in the river.",
+               "description":"+18% Attack Speed"
+            },
+            {
+               "name":"Waterwalking",
+               "why":"Waterwalking on Shyvana further empowers her desire to power farm the jungle and clear the entire map.",
+               "description":"+18% Attack Speed"
+            }
+         ],
+         "top_player":"",
+         "position":"Jungle"
+      },
+      {
+         "title":"They Should Run Now",
+         "description":"Back-line dive threat.",
+         "patch":"7.22",
+         "primary":"Precision",
+         "primary_d":"Improved attacks and sustained damage",
+         "secondry":"Resolve",
+         "secondry_d":"",
+         "primary_data":[
+            {
+               "name":"Press the Attack",
+               "why":"Shyvana is a fantastic user of Press the Attack thanks to her ability to instantly proc it with an Auto->[Q] reset. The instant exposure allows Shyvana to duel and shred champions effectively.",
+               "description":"Attacking a champion 3 times will expose them, dealing bonus damage and causing them to take more damage from all sources for 6 seconds."
+            },
+            {
+               "name":"Triumph",
+               "why":"Triumph on Shyvana allows you to dive into the back line, absorb the brunt of the damage for your team, and heal for a ton from any kills or assists to keep fighting.",
+               "description":"Takedowns restore health and grant bonus gold."
+            },
+            {
+               "name":"Legend: Alacrity",
+               "why":"More Attack Speed means a faster/healthier jungle clear and more dueling potential in early skirmishes.",
+               "description":"Takedowns on enemies grant permanent Attack Speed."
+            },
+            {
+               "name":"Coup De Grace",
+               "why":"Coup De Grace is the go-to tune for reliable damage in fights where you're able to get to the back-line and shred the enemy squishy champions.",
+               "description":"Deal 5% more damage to low health champions. Gain AD/AP after kills or assists."
+            }
+         ],
+         "secondary_data":[
+            {
+               "name":"Iron Skin",
+               "why":"The early bonus Armor from Iron Skin allows you to come out of your first few jungle clear incredibly healthy and ready to fight at any moment. the bonus Armor secondary also synergizes well with Shyv's passive.",
+               "description":"+18% Attack Speed"
+            },
+            {
+               "name":"Unflinching",
+               "why":"Unflinching allows you to dive onto enemy champions with [R] while Smiting them and sticking to them thanks to the Slow Resist/Tenacity so you are able to ramp up your damage and kill anyone you set your sights on.",
+               "description":"+18% Attack Speed"
+            }
+         ],
+         "top_player":"",
+         "position":"Jungle"
+      }
+   ],
+   "Riven":[
+      {
+         "title":"Sacrifices Must be Made",
+         "description":"Lane pressure with maximum Summoner Cooldown use.",
+         "patch":"7.24",
+         "primary":"Inspiration",
+         "primary_d":"Creative tools and rule bending",
+         "secondry":"Domination",
+         "secondry_d":"",
+         "primary_data":[
+            {
+               "name":"Unsealed Spellbook",
+               "why":"Spellbook on Riven allows you to keep up heavy lane kill pressure at all times with super short Flash and Ignite cooldowns combined with Lucidity Boots and Cosmic Insight.",
+               "description":"Get Summoner Shards and exchange them at the shop to change your Summoner Spells during game."
+            },
+            {
+               "name":"Perfect Timing",
+               "why":"The stasis active allows you to make out-plays and suvive a close tower dive to snowball your lead. After using the Stopwatch, sell it for a bit of bonus Gold. ",
+               "description":"Gain a free stopwatch. Stopwatch has a one time use Stasis active."
+            },
+            {
+               "name":"Magical Footwear",
+               "why":"Magical Footwear allows you to save that extra bit of gold to invest in more mid-game damage and a quicker completion of Boots of Lucidity.",
+               "description":"You get free boots at 10 min. but you cannot buy boots before then. These boots give additional MS. For each takedown you acquire the boots 30s sooner."
+            },
+            {
+               "name":"Cosmic Insight",
+               "why":"Riven's mana-less kit means that CDR is one of her absolute most important stats. The extra bit of Summoner CDR also means more Flash and Ignite pressure.",
+               "description":"+5% CDR\n+5% Max CDR\n+5% Summoner Spell CDR\n+5% Item CDR"
+            }
+         ],
+         "secondary_data":[
+            {
+               "name":"Sudden Impact",
+               "why":"Riven is one of the biggest abusers of Sudden Impact, with each use of [Q] and [E] refreshing the buff resulting in an almost permanent bonus Lethality buff.",
+               "description":"+20% Potion and Elixir Duration\n+27 Ability Power or +16 Attack Damage, Adaptive"
+            },
+            {
+               "name":"Zombie Ward",
+               "why":"Zombie Ward is a fantastic all-around rune choice thats to its reliability in being able to provide extremely extended amounts of lane safety.",
+               "description":"+20% Potion and Elixir Duration\n+27 Ability Power or +16 Attack Damage, Adaptive"
+            }
+         ],
+         "top_player":"",
+         "position":"Top"
+      },
+      {
+         "title":"No More Hesitation",
+         "description":"Massive bust damage and pseudo-assassination.",
+         "patch":"7.23",
+         "primary":"Domination",
+         "primary_d":"Burst damage and target access",
+         "secondry":"Precision",
+         "secondry_d":"",
+         "primary_data":[
+            {
+               "name":"Electrocute",
+               "why":"Electrocute is the go-to keystone on Riven when looking to do massive burst damage in a short period of time. Her skillset allows her to quickly proc the damage in any trade with [Q]->[W]->Auto.",
+               "description":"Hitting a champion with 3 separate attacks or abilities in 2s deals bonus adaptive damage."
+            },
+            {
+               "name":"Sudden Impact",
+               "why":"Riven may be one of the biggest abusers of Sudden Impact. All 3 parts of her [Q] and [E] proc the effect.",
+               "description":"Gain a burst of Lethality and Magic Penetration after using a dash, leap, blink, teleport, or on leaving stealth."
+            },
+            {
+               "name":"Zombie Ward",
+               "why":"Zombie Ward is a fantastic all-around rune choice on any champion thanks to it's incredibly reliable and effective addition of vision.",
+               "description":"After killing an enemy ward, a friendly Zombie Ward is raised in its place."
+            },
+            {
+               "name":"Ravenous Hunter",
+               "why":"The bonus healing Ravenous Hunter grants minimizes risk when looking to take aggressive trades and all-ins.",
+               "description":"Heal for a percentage of damage dealt with your abilities. Increases with each unique takedown."
+            }
+         ],
+         "secondary_data":[
+            {
+               "name":"Triumph",
+               "why":"Triumph allows you to dive towers or the back-line with an all-in combo and the ability to get out alive afterward, thanks to the massive heal.",
+               "description":"+18 Ability Power or +11 Attack Damage, Adaptive"
+            },
+            {
+               "name":"Coup De Grace",
+               "why":"Coup De Grace is the ultimate rune for champions that are looking to execute squishy targets. The bonus damage is easily accessible on a high damage kit such as Riven's.",
+               "description":"+18 Ability Power or +11 Attack Damage, Adaptive"
+            }
+         ],
+         "top_player":"Darshan",
+         "position":"Top"
+      }
+   ],
+   "Camille":[
+      {
+         "title":"I Make the Rules",
+         "description":"Short lane trades and empowered sustain.",
+         "patch":"7.24",
+         "primary":"Sorcery",
+         "primary_d":"Empowered abilities and resource manipulation",
+         "secondry":"Resolve",
+         "secondry_d":"",
+         "primary_data":[
+            {
+               "name":"Arcane Comet",
+               "why":"Arcane Comet on Camille is a non-obvious but strong keystone choice for Camille thanks to the high hitrate from the strong slow of [W] and the stun from [E].",
+               "description":"Hitting a champion with spells hurls a comet that deals adaptive damage at them. Landing more spells reduces Arcane Comet's cooldown."
+            },
+            {
+               "name":"Manaflow Band",
+               "why":"Manaflow Band on Camille allows you to repeatedly take trades in lane and out-sustain your opponent thanks to the large heal from [W].",
+               "description":"Periodically your next ability used has its mana or energy cost refunded and restores some of your missing mana or energy."
+            },
+            {
+               "name":"Celerity",
+               "why":"Celerity on Camille allows you to more accurately postiing your [W] mid-cast, chase down fleeing opponents, and gain a small bit of bonus AD while under the Movement Speed effect of Phage.",
+               "description":"Gain 4% extra MS. Gain extra AP or AD, based on your bonus MS, Adaptive."
+            },
+            {
+               "name":"Scorch",
+               "why":"Scorch is the go-to lane harass rune for getting an early lead in damage so you can keep your opponent in kill-range.",
+               "description":"Your first ability hit every 20s burns champions."
+            }
+         ],
+         "secondary_data":[
+            {
+               "name":"Iron Skin",
+               "why":"Iron Skin on Camille allows you to take lane trades early and often thanks to the reduced damage from minions at level 1. Combined with Camille's passive you should win most trades early when played well.",
+               "description":"+20 Ability Power or +12 Attack Damage, Adaptive"
+            },
+            {
+               "name":"Second Wind",
+               "why":"Second Wind allows you to further enable your early laning trades and synergizes extremely well in lane with Iron Skin. Paired with a Doran's Shield you should be able to sustain heavy amount of poke and harass damage.",
+               "description":"+20 Ability Power or +12 Attack Damage, Adaptive"
+            }
+         ],
+         "top_player":"Khan",
+         "position":"Top"
+      },
+      {
+         "title":"Neutralized the Target",
+         "description":"Lane dueling and sustain.",
+         "patch":"7.22",
+         "primary":"Precision",
+         "primary_d":"Improved attacks and sustained damage",
+         "secondry":"Resolve",
+         "secondry_d":"",
+         "primary_data":[
+            {
+               "name":"Press the Attack",
+               "why":"Thanks to multiple auto-attack resets on [Q] Camille can easily proc Press the Attack for great dueling damage.",
+               "description":"Attacking a champion 3 times will expose them, dealing bonus damage and causing them to take more damage from all sources for 6 seconds."
+            },
+            {
+               "name":"Overheal",
+               "why":"Camille has a number of means of building herself an over-shield via Doran's Blade, [W] on champions, and Titantic Hydra, allowing her to enter duels with a health lead.",
+               "description":"Excess healing on you becomes a shield."
+            },
+            {
+               "name":"Legend: Tenacity",
+               "why":"Camille's primary means of losing a duel is typically getting CCed so she can't return damage. Any additional Tenacity improves her dueling that much more.",
+               "description":"Takedowns on enemies grant permanent Tenacity."
+            },
+            {
+               "name":"Cut Down",
+               "why":"Cut Down is the ultimate go-to for shredding big beefy tanks with a ton of health.",
+               "description":"Deal more damage to champion with more maximum health than you."
+            }
+         ],
+         "secondary_data":[
+            {
+               "name":"Iron Skin",
+               "why":"Iron Skin is a great early-game option for trading in lane and winning fights against heavy AD comps.",
+               "description":"+18% Attack Speed"
+            },
+            {
+               "name":"Revitalize",
+               "why":"Revitalize is a great laning rune when you're looking to trade often and come out healthy, winning the attrition war.",
+               "description":"+18% Attack Speed"
+            }
+         ],
+         "top_player":"",
+         "position":"Top"
+      }
+   ],
+   "Nunu":[
+      {
+         "title":"Don\u2019t Make the Yeti Angry",
+         "description":"Neutral objective control and teamfight utility.",
+         "patch":"7.24",
+         "primary":"Resolve",
+         "primary_d":"Durability and crowd control",
+         "secondry":"Sorcery",
+         "secondry_d":"",
+         "primary_data":[
+            {
+               "name":"Guardian",
+               "why":"Guardian on Nunu allows you to massively empower a teammate in skirmishes and teamfights when you cast [W] on them.",
+               "description":"Guard allies you cast spells on and those that are very nearby. If you or a guarded ally would take damage, you're both hasted and granted a shield."
+            },
+            {
+               "name":"Font of Life",
+               "why":"Font of Life allows you to provide considerable healing to teammates in teamfights where you're able to slow multiple targets at the same time with [E] and [R].",
+               "description":"Cooldown: 45s"
+            },
+            {
+               "name":"Conditioning",
+               "why":"Conditioning allows you scale incredibly well into the mid game combined with Locket to make you a massive front-line tank.",
+               "description":"Impairing the movement of an enemy champion marks them. Your allies heal when attacking champion's you've marked."
+            },
+            {
+               "name":"Revitalize",
+               "why":"Revitalize on Nunu empowers both the healing of your [Q] as well as the shielding of Guardian, Locket, and healing of Font of Life on teammates.",
+               "description":"After 10 minutes gain 8 Armor and 8 Magic Resist and increase your total Armor and Magic Resist by 5%."
+            }
+         ],
+         "secondary_data":[
+            {
+               "name":"Celerity",
+               "why":"Celerity on Nunu provides a bit of Movement Speed for a faster jungle clear, as well as a bit of extra AP while [W] is on so you can chase down and finish off slowed targets.",
+               "description":"+130 Health"
+            },
+            {
+               "name":"Waterwalking",
+               "why":"Waterwalking on Nunu further enables you to control the river and take neutral objectives (Herald/Dragon )early and often.",
+               "description":"+130 Health"
+            }
+         ],
+         "top_player":"",
+         "position":"Jungle"
+      }
+   ],
+   "Caitlyn":[
+      {
+         "title":"Time for a Shakedown",
+         "description":"Reliable skirmish sustain and lane safety.",
+         "patch":"7.24",
+         "primary":"Precision",
+         "primary_d":"Improved attacks and sustained damage",
+         "secondry":"Domination",
+         "secondry_d":"",
+         "primary_data":[
+            {
+               "name":"Fleet Footwork",
+               "why":"Fleet Footwork on Caitlyn empowers your ability to take trades early and often in the laning phase thanks to your improved sustain. The extra burst of Movement Speed can also help you position to get in range for the headshot proc on the enemy.",
+               "description":"Attacking and moving builds energy stacks. At 100 stacks, your next attack heals you and grants increased MS."
+            },
+            {
+               "name":"Triumph",
+               "why":"Triumph is Dangerous Game on steroids, allowing you to push your limits in fights and reset. Oh and bonus kill gold is nice too.",
+               "description":"Takedowns restore health and grant bonus gold."
+            },
+            {
+               "name":"Legend: Alacrity",
+               "why":"More Attack Speed from Alacrity means more headshots and more damage. It also allows you to potentially itemize into a non Attack Speed item (BT or Guardian Angel)  a bit earlier than you otherwise would.",
+               "description":"Takedowns on enemies grant permanent Attack Speed."
+            },
+            {
+               "name":"Coup De Grace",
+               "why":"Headshots paired with the execute damage of Coup De Grace offers you a lot of burst to finish off your target and move on.",
+               "description":"Deal 5% more damage to low health champions. Gain AD/AP after kills or assists."
+            }
+         ],
+         "secondary_data":[
+            {
+               "name":"Taste of Blood",
+               "why":"Taste of Blood on Caitlyn is a fantastic lane sustain rune thank to your ability to easily proc with with a long range Auto Attack or Trap headshot.",
+               "description":"+18% Attack Speed"
+            },
+            {
+               "name":"Zombie Ward",
+               "why":"Zombie Ward is an all-around great rune choice for every champion in the game thanks to its ability to reliably provide vision for extended periods of time.",
+               "description":"+18% Attack Speed"
+            }
+         ],
+         "top_player":"Sneaky",
+         "position":"Bottom"
+      },
+      {
+         "title":"All About Them Headshots",
+         "description":"Sustain and late game scaling.",
+         "patch":"7.24",
+         "primary":"Precision",
+         "primary_d":"Improved attacks and sustained damage",
+         "secondry":"Sorcery",
+         "secondry_d":"",
+         "primary_data":[
+            {
+               "name":"Fleet Footwork",
+               "why":"Fleet Footwork on Caitlyn empowers your ability to take trades early and often in the laning phase thanks to your improved sustain. The extra burst of Movement Speed can also help you position to get in range for the headshot proc on the enemy.",
+               "description":"Attacking and moving builds energy stacks. At 100 stacks, your next attack heals you and grants increased MS."
+            },
+            {
+               "name":"Triumph",
+               "why":"Triumph is Dangerous Game on steroids, allowing you to push your limits in fights and reset. Oh and bonus kill gold is nice too.",
+               "description":"Takedowns restore health and grant bonus gold."
+            },
+            {
+               "name":"Legend: Bloodline",
+               "why":"Bloodline further empowers your ability to take lane trades and out sustain your enemy laner thanks to Fleet Footwork and Bloodline's extra bit of healing.",
+               "description":"Takedowns on enemies grant permanent Lifesteal."
+            },
+            {
+               "name":"Coup De Grace",
+               "why":"Headshots paired with the execute damage of Coup De Grace offers you a lot of burst to finish off your target and move on.",
+               "description":"Deal 5% more damage to low health champions. Gain AD/AP after kills or assists."
+            }
+         ],
+         "secondary_data":[
+            {
+               "name":"Celerity",
+               "why":"Celerity's bonus Movement Speed helps you to position in teamfights for optimal damage output and skill-shot dodging. Celerity also synergizes well with Zeal items providing you a little extra bit of Attack Damage.",
+               "description":"+18% Attack Speed"
+            },
+            {
+               "name":"Gathering Storm",
+               "why":"Gathering Storm is your late game insurance policy for damage. If you fall behind, try stalling out the game by denying their tower siege with your Traps. The longer the game goes the better shot you have of coming back with Gathering Storm.",
+               "description":"+18% Attack Speed"
+            }
+         ],
+         "top_player":"",
+         "position":"Bottom"
+      }
+   ],
    "Azir":[
       {
          "title":"They Have Overstepped",
@@ -1477,53 +1892,6 @@
          ],
          "top_player":"Crown",
          "position":"Middle"
-      }
-   ],
-   "Shyvana":[
-      {
-         "title":"They Should Run Now",
-         "description":"Back-line dive threat.",
-         "patch":"7.22",
-         "primary":"Precision",
-         "primary_d":"Improved attacks and sustained damage",
-         "secondry":"Resolve",
-         "secondry_d":"",
-         "primary_data":[
-            {
-               "name":"Press the Attack",
-               "why":"Shyvana is a fantastic user of Press the Attack thanks to her ability to instantly proc it with an Auto->[Q] reset. The instant exposure allows Shyvana to duel and shred champions effectively.",
-               "description":"Attacking a champion 3 times will expose them, dealing bonus damage and causing them to take more damage from all sources for 6 seconds."
-            },
-            {
-               "name":"Triumph",
-               "why":"Triumph on Shyvana allows you to dive into the back line, absorb the brunt of the damage for your team, and heal for a ton from any kills or assists to keep fighting.",
-               "description":"Takedowns restore health and grant bonus gold."
-            },
-            {
-               "name":"Legend: Alacrity",
-               "why":"More Attack Speed means a faster/healthier jungle clear and more dueling potential in early skirmishes.",
-               "description":"Takedowns on enemies grant permanent Attack Speed."
-            },
-            {
-               "name":"Coup De Grace",
-               "why":"Coup De Grace is the go-to tune for reliable damage in fights where you're able to get to the back-line and shred the enemy squishy champions.",
-               "description":"Deal 5% more damage to low health champions. Gain AD/AP after kills or assists."
-            }
-         ],
-         "secondary_data":[
-            {
-               "name":"Iron Skin",
-               "why":"The early bonus Armor from Iron Skin allows you to come out of your first few jungle clear incredibly healthy and ready to fight at any moment. the bonus Armor secondary also synergizes well with Shyv's passive.",
-               "description":"+18% Attack Speed"
-            },
-            {
-               "name":"Unflinching",
-               "why":"Unflinching allows you to dive onto enemy champions with [R] while Smiting them and sticking to them thanks to the Slow Resist/Tenacity so you are able to ramp up your damage and kill anyone you set your sights on.",
-               "description":"+18% Attack Speed"
-            }
-         ],
-         "top_player":"",
-         "position":"Jungle"
       }
    ],
    "Swain":[
@@ -3155,53 +3523,6 @@
          "position":"Bottom"
       }
    ],
-   "Riven":[
-      {
-         "title":"No More Hesitation",
-         "description":"Massive bust damage and pseudo-assassination.",
-         "patch":"7.23",
-         "primary":"Domination",
-         "primary_d":"Burst damage and target access",
-         "secondry":"Precision",
-         "secondry_d":"",
-         "primary_data":[
-            {
-               "name":"Electrocute",
-               "why":"Electrocute is the go-to keystone on Riven when looking to do massive burst damage in a short period of time. Her skillset allows her to quickly proc the damage in any trade with [Q]->[W]->Auto.",
-               "description":"Hitting a champion with 3 separate attacks or abilities in 2s deals bonus adaptive damage."
-            },
-            {
-               "name":"Sudden Impact",
-               "why":"Riven may be one of the biggest abusers of Sudden Impact. All 3 parts of her [Q] and [E] proc the effect.",
-               "description":"Gain a burst of Lethality and Magic Penetration after using a dash, leap, blink, teleport, or on leaving stealth."
-            },
-            {
-               "name":"Zombie Ward",
-               "why":"Zombie Ward is a fantastic all-around rune choice on any champion thanks to it's incredibly reliable and effective addition of vision.",
-               "description":"After killing an enemy ward, a friendly Zombie Ward is raised in its place."
-            },
-            {
-               "name":"Ravenous Hunter",
-               "why":"The bonus healing Ravenous Hunter grants minimizes risk when looking to take aggressive trades and all-ins.",
-               "description":"Heal for a percentage of damage dealt with your abilities. Increases with each unique takedown."
-            }
-         ],
-         "secondary_data":[
-            {
-               "name":"Triumph",
-               "why":"Triumph allows you to dive towers or the back-line with an all-in combo and the ability to get out alive afterward, thanks to the massive heal.",
-               "description":"+18 Ability Power or +11 Attack Damage, Adaptive"
-            },
-            {
-               "name":"Coup De Grace",
-               "why":"Coup De Grace is the ultimate rune for champions that are looking to execute squishy targets. The bonus damage is easily accessible on a high damage kit such as Riven's.",
-               "description":"+18 Ability Power or +11 Attack Damage, Adaptive"
-            }
-         ],
-         "top_player":"Darshan",
-         "position":"Top"
-      }
-   ],
    "Nidalee":[
       {
          "title":"On the Prowl",
@@ -3859,8 +4180,8 @@
    "Amumu":[
       {
          "title":"Don\u2019t Throw a Tantrum",
-         "description":"Tank engage and scaling damage.",
-         "patch":"7.22",
+         "description":"Tank engage and teamfight utility.",
+         "patch":"7.24",
          "primary":"Resolve",
          "primary_d":"Durability and crowd control",
          "secondry":"Sorcery",
@@ -3877,20 +4198,20 @@
                "description":"Increase your Tenacity and Slow Resistance for each summoner spell on cooldown. Immediately after casting a Summoner Spell, gain a larger burst of Tenacity and Slow Resistance for a moderate duration."
             },
             {
-               "name":"Iron Skin",
-               "why":"The flat Armor from Iron Skin pays off big in your early jungle clears, keeping you healthy for ganks. The secondary bonus also synergizes well with your itemization.",
-               "description":"Gain 5 Armor. Whenever you heal for at least 20 health or from a consumable's effect, increase your Armor by 5% for 3 seconds."
+               "name":"Conditioning",
+               "why":"Conditioning on Amumu allows you to scale into the mid game as a massive tank alongside Aftershock and Overgrowth.",
+               "description":"After 10 minutes gain 8 Armor and 8 Magic Resist and increase your total Armor and Magic Resist by 5%."
             },
             {
-               "name":"Second Wind",
-               "why":"Second Wind is a great mid fight sustain rune and the heath regenerate pair very well with Aftershock's bonus resists making you incredibly resilient early in fights.",
-               "description":"Restore health over time based on your missing health."
+               "name":"Overgrowth",
+               "why":"Overgrowth is likely the best rune in this slot primary due to Amumu's fast clear speeds and lack of major value from the other 2 options.",
+               "description":"Every 8 monsters or enemy minions that die near you permanently increases your max health by 0.2%."
             }
          ],
          "secondary_data":[
             {
-               "name":"Gathering Storm",
-               "why":"Gathering Storm is an overall solid rune choice on Amumu as it allows you still build full tank and rely on this as your sole source of offensive power in late games.",
+               "name":"Transcendence",
+               "why":"Transcendence is a great rune choice on Amumu as he likes to build all of the CDR tanks items, allowing him to go over cap and still make great use of the extra AP gained.",
                "description":"+130 Health"
             },
             {
@@ -4140,7 +4461,7 @@
       {
          "title":"Always on the Run",
          "description":"Roaming and map pressure with [R].",
-         "patch":"7.22",
+         "patch":"7.24",
          "primary":"Sorcery",
          "primary_d":"Empowered abilities and resource manipulation",
          "secondry":"Domination",
@@ -4162,9 +4483,9 @@
                "description":"Gain 4% extra MS. Gain extra AP or AD, based on your bonus MS, Adaptive."
             },
             {
-               "name":"Gathering Storm",
-               "why":"Gathering Storm is just an all-around great rune for late-game damage insurance.",
-               "description":"Gain increasing amounts of AD or AP, Adaptive over the course of the game."
+               "name":"Scorch",
+               "why":"Scorch is the go-to rune for lane harassment and early game pressure. A few procs of scorch in lane and you'll be primed to set up a kill with your jungler.",
+               "description":"Your first ability hit every 20s burns champions."
             }
          ],
          "secondary_data":[
@@ -4174,8 +4495,8 @@
                "description":"+20 Ability Power or +12 Attack Damage, Adaptive"
             },
             {
-               "name":"Zombie Ward",
-               "why":"Zombie Ward helps keep you safe in the early to mid game proving a lot of extra value for every trinket ward you place, especially when warding the sides of mid.",
+               "name":"Cheap Shot",
+               "why":"Twisted Fate is able to make use of Cheap Shot relatively easily thanks to the Stun/Slow of [W]. After landing a Gold or Red card, immediately throw out your [W] for an extra bit of true damage.",
                "description":"+20 Ability Power or +12 Attack Damage, Adaptive"
             }
          ],
@@ -5350,53 +5671,6 @@
                "name":"Future's Market",
                "why":"Future's Market lets you hit your Liandries + Void Staff power-spike earlier than you would otherwise be able to. Look for a big teamfight as soon as you make use of your debt purchase.",
                "description":"+20 Ability Power or +12 Attack Damage, Adaptive"
-            }
-         ],
-         "top_player":"",
-         "position":"Top"
-      }
-   ],
-   "Camille":[
-      {
-         "title":"Neutralized the Target",
-         "description":"Lane dueling and sustain.",
-         "patch":"7.22",
-         "primary":"Precision",
-         "primary_d":"Improved attacks and sustained damage",
-         "secondry":"Resolve",
-         "secondry_d":"",
-         "primary_data":[
-            {
-               "name":"Press the Attack",
-               "why":"Thanks to multiple auto-attack resets on [Q] Camille can easily proc Press the Attack for great dueling damage.",
-               "description":"Attacking a champion 3 times will expose them, dealing bonus damage and causing them to take more damage from all sources for 6 seconds."
-            },
-            {
-               "name":"Overheal",
-               "why":"Camille has a number of means of building herself an over-shield via Doran's Blade, [W] on champions, and Titantic Hydra, allowing her to enter duels with a health lead.",
-               "description":"Excess healing on you becomes a shield."
-            },
-            {
-               "name":"Legend: Tenacity",
-               "why":"Camille's primary means of losing a duel is typically getting CCed so she can't return damage. Any additional Tenacity improves her dueling that much more.",
-               "description":"Takedowns on enemies grant permanent Tenacity."
-            },
-            {
-               "name":"Cut Down",
-               "why":"Cut Down is the ultimate go-to for shredding big beefy tanks with a ton of health.",
-               "description":"Deal more damage to champion with more maximum health than you."
-            }
-         ],
-         "secondary_data":[
-            {
-               "name":"Iron Skin",
-               "why":"Iron Skin is a great early-game option for trading in lane and winning fights against heavy AD comps.",
-               "description":"+18% Attack Speed"
-            },
-            {
-               "name":"Revitalize",
-               "why":"Revitalize is a great laning rune when you're looking to trade often and come out healthy, winning the attrition war.",
-               "description":"+18% Attack Speed"
             }
          ],
          "top_player":"",
@@ -6995,7 +7269,7 @@
       {
          "title":"Playfully Trick \u2018Em",
          "description":"Balance of damage and utility.",
-         "patch":"7.22",
+         "patch":"7.24",
          "primary":"Domination",
          "primary_d":"Burst damage and target access",
          "secondry":"Sorcery",
@@ -7034,7 +7308,7 @@
                "description":"+18 Ability Power or +11 Attack Damage, Adaptive"
             }
          ],
-         "top_player":"",
+         "top_player":"PawN",
          "position":"Middle"
       }
    ],
@@ -7641,53 +7915,6 @@
          ],
          "top_player":"",
          "position":"Top"
-      }
-   ],
-   "Caitlyn":[
-      {
-         "title":"All About Them Headshots",
-         "description":"Lane harass, trades, and sustain with late game damage.",
-         "patch":"7.24",
-         "primary":"Precision",
-         "primary_d":"Improved attacks and sustained damage",
-         "secondry":"Sorcery",
-         "secondry_d":"",
-         "primary_data":[
-            {
-               "name":"Fleet Footwork",
-               "why":"Fleet Footwork on Caitlyn empowers your ability to take trades early and often in the laning phase thanks to your improved sustain. The extra burst of Movement Speed can also help you position to get in range for the headshot proc on the enemy.",
-               "description":"Attacking and moving builds energy stacks. At 100 stacks, your next attack heals you and grants increased MS."
-            },
-            {
-               "name":"Triumph",
-               "why":"Triumph is Dangerous Game on steroids, allowing you to push your limits in fights and reset. Oh and bonus kill gold is nice too.",
-               "description":"Takedowns restore health and grant bonus gold."
-            },
-            {
-               "name":"Legend: Bloodline",
-               "why":"Bloodline further empowers your ability to take lane trades and out sustain your enemy laner thanks to Fleet Footwork and Bloodline's extra bit of healing.",
-               "description":"Takedowns on enemies grant permanent Lifesteal."
-            },
-            {
-               "name":"Coup De Grace",
-               "why":"Headshots paired with the execute damage of Coup De Grace offers you a lot of burst to finish off your target and move on.",
-               "description":"Deal 5% more damage to low health champions. Gain AD/AP after kills or assists."
-            }
-         ],
-         "secondary_data":[
-            {
-               "name":"Celerity",
-               "why":"Celerity's bonus Movement Speed helps you to position in teamfights for optimal damage output and skill-shot dodging. Celerity also synergizes well with Zeal items providing you a little extra bit of Attack Damage.",
-               "description":"+18% Attack Speed"
-            },
-            {
-               "name":"Gathering Storm",
-               "why":"Gathering Storm is your late game insurance policy for damage. If you fall behind, try stalling out the game by denying their tower siege with your Traps. The longer the game goes the better shot you have of coming back with Gathering Storm.",
-               "description":"+18% Attack Speed"
-            }
-         ],
-         "top_player":"",
-         "position":"Bottom"
       }
    ],
    "Sejuani":[
