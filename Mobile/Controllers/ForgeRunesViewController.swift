@@ -120,9 +120,16 @@ class ForgeRunesViewController: UIViewController,buttonDidClickedDelegate {
                     }
                 }
                 else{
-                    UserDefaultsData().setObject(value: json,key: "summonerData")
-                    Global.shared.summonerData = UserDefaultsData().getObject(key: "summonerData")
-                    self.checkLoginView()
+                    if(json["verify"].boolValue){
+                        UserDefaultsData().setObject(value: json,key: "summonerData")
+                        Global.shared.summonerData = UserDefaultsData().getObject(key: "summonerData")
+                        self.checkLoginView()
+                    }
+                    else{
+                        SwiftSpinner.hide()
+                        self.showAlert(title: "", message: "Make sure you type the code in league client", ok: "Ok")
+                    }
+
                 }
             }, onFailure: { error in
                 print(error)
