@@ -46,11 +46,11 @@ class RiotController extends Controller
     public function VerifySummonerAccount(Request $request){
         $RIOTAPI = env('RIOT_API');
         $input = $request->input();
-        $summonername = mb_strtolower(str_replace(' ', '', $input['summonerName']));
-        $summonerregion = mb_strtolower(str_replace(' ', '', $input['summonerRegion']));
+        $summonername = mb_strtolower(str_replace(' ', '', $input['name']));
+        $summonerregion = Controller::regionDetect(mb_strtolower(str_replace(' ', '', $input['region'])));
             try {
                 $client = new \GuzzleHttp\Client();
-                $response = $client->request('GET', "https://euw1.api.riotgames.com/lol/summoner/v3/summoners/by-name/$summonername?api_key=$RIOTAPI",['verify' => false]);
+                $response = $client->request('GET', "https://$summonerregion.api.riotgames.com/lol/summoner/v3/summoners/by-name/$summonername?api_key=$RIOTAPI",['verify' => false]);
                 $summonerData = json_decode($response->getBody(), true);
                 $newUser = Users::firstOrNew(['account_id' => $summonerData["accountId"],'summoner_region' => $summonerregion]);
                 $newUser->verify = false;
@@ -61,7 +61,9 @@ class RiotController extends Controller
                 $newUser->summoner_profile_icon = $summonerData["profileIconId"];
                 $newUser->summoner_level = $summonerData["summonerLevel"];
                 $newUser->save();
-                return Controller::filed( "Player has been added",$response->getStatusCode());
+                return response()->json($newUser);
+
+//                return Controller::filed( "Player has been added",$response->getStatusCode());
 
 
                  // when riot activate the code

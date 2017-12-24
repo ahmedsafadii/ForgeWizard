@@ -18,5 +18,9 @@ class Champions extends Model
         return $this->hasMany('App\Builds','champion_id','id');
     }
 
+    public function champions() {
+        return $this->belongsTo('App\Builds');
+    }
+
 
 }

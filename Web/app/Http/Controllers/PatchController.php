@@ -13,6 +13,12 @@ class PatchController extends Controller
 {
 
 
+    public function getPatches(){
+        $patch = Patch::with('notes')->orderBy('id', 'DESC')->get();
+        return response()->json($patch);
+    }
+
+
     public function AddPatch(Request $request)
     {
         $input = $request->input();

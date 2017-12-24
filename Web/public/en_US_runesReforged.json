@@ -4,9 +4,7 @@
       "name":"Precision",
       "image":"8000",
       "rune_sub_title":"AUTO ATTACKS",
-      "rune_description":[
-         "+18% Attack Speed"
-      ],
+      "rune_description":"+18% Attack Speed",
       "slots":[
          {
             "runes":[
@@ -14,7 +12,7 @@
                   "id":8005,
                   "name":"Press the Attack",
                   "longDesc":"<p>Hitting an enemy champion with 3 consecutive basic attacks will deal 30 - 120 bonus adaptive damage (based on level) and makes them vulnerable, increasing the damage they take by 12% from all sources for 6s.</p>\n",
-                  "video":"http://d181w3hxxigzvh.cloudfront.net/wp-content/uploads/2017/09/render_PTA.mp4",
+                  "video":"render_PTA.mp4",
                   "taken_on":[
                      "Irelia",
                      "Fiora",
@@ -29,7 +27,7 @@
                   "id":8008,
                   "name":"Lethal Tempo",
                   "longDesc":"<p>1.5s after damaging a champion gain 30 - 80% Attack Speed (based on level) for 3s. Attacking a champion extends the effect to 6s.</p>\n<p>Cooldown: 6s</p>\n<p>Lethal Tempo allows you to temporarily exceed the attack speed limit.</p>\n",
-                  "video":"http://d181w3hxxigzvh.cloudfront.net/wp-content/uploads/2017/09/render_LethalTempo.mp4",
+                  "video":"render_LethalTempo.mp4",
                   "taken_on":[
                      "Jinx",
                      "Twitch",
@@ -44,7 +42,7 @@
                   "id":8021,
                   "name":"Fleet Footwork",
                   "longDesc":"<p>Attacking a moving builds Energy stacks. At 100 stacks, your next attack is Energized.</p>\n<p>Energized attacks heal you for 3 - 60 (+0.30 bonus AD, +0.40 AP) and grant 30% increased Movement Speed for 1s.</p>\n<p>Healing is 60% as effective when used on a minion.<br />\nIf the attack that activates Fleet Footwork is a critical hit, Fleet Footwork's healing is increased by 40% of your critical damage modifier</p>\n",
-                  "video":"http://d181w3hxxigzvh.cloudfront.net/wp-content/uploads/2017/09/render_FleetFootwork.mp4",
+                  "video":"render_FleetFootwork.mp4",
                   "taken_on":[
                      "Caitlyn",
                      "Ashe",
@@ -206,9 +204,7 @@
       "name":"Domination",
       "image":"8100",
       "rune_sub_title":"BURST DAMAGE",
-      "rune_description":[
-         "+11 Attack Damage or +18 Ability Power, adaptive"
-      ],
+      "rune_description": "+11 Attack Damage or +18 Ability Power, adaptive",
       "slots":[
          {
             "runes":[
@@ -216,7 +212,7 @@
                   "id":8112,
                   "name":"Electrocute",
                   "longDesc":"<p>Hitting a champion with 3 <strong>separate</strong> attacks or abilities in 2s deals bonus <span>adaptive damage</span>.</p>\n<p>Damage: 40-220 (+0.50 Bonus AD, +0.30 AP) damage.</p>\n<p>Cooldown: 50-25s</p>\n",
-                  "video":"http://d181w3hxxigzvh.cloudfront.net/wp-content/uploads/2017/09/render_Electrocute.mp4",
+                  "video":"render_Electrocute.mp4",
                   "taken_on":[
                      "Zoe",
                      "Lee Sin",
@@ -231,7 +227,7 @@
                   "id":8124,
                   "name":"Predator",
                   "longDesc":"<p>Enchants your boots with the active effect 'Predator.'</p>\n<p>Channel for 1.5s out of combat to gain 45% Movement Speed for 15s. Damaging attacks or abilities end this effect, dealing 60 - 140 (+0.4 bonus AD)(+0.25 AP) bonus <span>adaptive damage</span>.</p>\n<p>Cooldown: 150 - 100s. Starts the game on cooldown and goes on cooldown if interrupted while channeling.</p>\n",
-                  "video":"http://d181w3hxxigzvh.cloudfront.net/wp-content/uploads/2017/09/render_Predator.mp4",
+                  "video":"render_Predator.mp4",
                   "taken_on":[
                      "Hecarim",
                      "Olaf",
@@ -243,7 +239,7 @@
                   "id":8128,
                   "name":"Dark Harvest",
                   "longDesc":"<p>Champions, large minions, and large monsters drop soul essence on death. Collecting a soul to become Soul Charged. Your next attack on a champion or structure consumes Soul Charged to deal bonus <span>adaptive damage</span>.</p>\n<p>Soul Charged lasts 20s, increased to 300s after collecting 150 soul essence.</p>\n<p>Bonus damage: 40 - 80 (+0.25 bonus AD) (+0.2 AP) + soul essence collected.</p>\n<p>Champion souls - 6 soul essence.<br />\nMonster souls - 2 soul essence.<br />\nMinion souls - 4 soul essence.</p>\n",
-                  "video":"http://d181w3hxxigzvh.cloudfront.net/wp-content/uploads/2017/09/render_DarkHarvest.mp4",
+                  "video":"render_DarkHarvest.mp4",
                   "taken_on":[
                      "Nocturne",
                      "Kayn",
@@ -407,9 +403,7 @@
       "name":"Sorcery",
       "image":"8200",
       "rune_sub_title":"EMPOWERED ABILITIES",
-      "rune_description":[
-         "+15 attack damage or +25 ability power, adaptive"
-      ],
+      "rune_description": "+15 attack damage or +25 ability power, adaptive",
       "slots":[
          {
             "runes":[
@@ -417,7 +411,7 @@
                   "id":8214,
                   "name":"Summon Aery",
                   "longDesc":"<p>Your attacks and abilities send Aery to a target, damaging enemies or shielding allies.</p>\n<p>Damage: 15 - 40 based on level (+0.10 AP and +0.15 bonus AD)<br />\nShield: 30 - 80 based on level (+0.25 AP and +0.4 bonus AD)</p>\n<p>Aery cannot be sent out to again until she returns to you.</p>\n",
-                  "video":"http://d181w3hxxigzvh.cloudfront.net/wp-content/uploads/2017/09/render_SummonAery.mp4",
+                  "video":"render_SummonAery.mp4",
                   "taken_on":[
                      "Orianna",
                      "Zyra",
@@ -432,7 +426,7 @@
                   "id":8229,
                   "name":"Arcane Comet",
                   "longDesc":"<p>Damaging a champion with an ability hurls a comet at their location, or, if Arcane Comet is on cooldown, reduces it\u2019s remaining cooldown.</p>\n<p><span>Adaptive damage</span>: 30 - 100 based on level (+0.20 AP and +0.35 bonus AD)</p>\n<p>Cooldown: 20 - 8s</p>\n<p>Cooldown Reduction:<br />\n- Single Target: 20%<br />\n- Area of Effect: 10%<br />\n- Damage Over Time: 5%</p>\n",
-                  "video":"http://d181w3hxxigzvh.cloudfront.net/wp-content/uploads/2017/09/render_Comet.mp4",
+                  "video":"render_Comet.mp4",
                   "taken_on":[
                      "Karthus",
                      "Morgana",
@@ -447,7 +441,7 @@
                   "id":8230,
                   "name":"Phase Rush",
                   "longDesc":"<p>Hitting an enemy champion with 3 attacks or separate abilities within 3s grants 10 - 40% Movement Speed based on level.</p>\n<p>Duration: 3s<br />\nCooldown: 15s<br />\nAdditionally, gain 75% Slow Resistance or the duration.</p>\n",
-                  "video":"http://d181w3hxxigzvh.cloudfront.net/wp-content/uploads/2017/09/render_PhaseRush.mp4",
+                  "video":"render_PhaseRush.mp4",
                   "taken_on":[
                      "Nasus",
                      "Vladimir",
@@ -614,9 +608,7 @@
       "name":"Resolve",
       "image":"8400",
       "rune_sub_title":"DURABILITY",
-      "rune_description":[
-         "+130 Health"
-      ],
+      "rune_description":"+130 Health",
       "slots":[
          {
             "runes":[
@@ -624,7 +616,7 @@
                   "id":8437,
                   "name":"Grasp of the Undying",
                   "longDesc":"<p>Every 4s in combat, your next basic attack on a champion will:</p>\n<ul>\n<li>Deal bonus damage equal to 4% of your max health</li>\n<li>Heal you for 2% of your max health</li>\n<li>Permanently increase your health by 5</li>\n</ul>\n<p><em>Ranged Champions:</em> Damage and healing are halved and gain 2 permanent health instead.</p>\n",
-                  "video":"http://d181w3hxxigzvh.cloudfront.net/wp-content/uploads/2017/09/render_Grasp.mp4",
+                  "video":"render_Grasp.mp4",
                   "taken_on":[
                      "Cho'Gath",
                      "Trundle",
@@ -639,7 +631,7 @@
                   "id":8439,
                   "name":"Aftershock",
                   "longDesc":"<p>After immobilizing an enemy champion, increase your current Armor and Magic Resist by 10 + 30% for 2.5s. Then, after 2.5s deal magic damage to nearby enemies.</p>\n<p>Damage: 40-140 (+3.5% your maximum health)<br />\nCooldown: 20s</p>\n",
-                  "video":"http://d181w3hxxigzvh.cloudfront.net/wp-content/uploads/2017/09/render_Aftershock.mp4",
+                  "video":"render_Aftershock.mp4",
                   "taken_on":[
                      "Rakan",
                      "Blitzcrank",
@@ -654,7 +646,7 @@
                   "id":8465,
                   "name":"Guardian",
                   "longDesc":"<p><em>Guard</em> allies within 175 units of you, and <em>Guard</em> allies you target with spells for 2.5s. While <em>Guarding</em>, if you or the ally would take damage, both of you gain a shield and are hasted for 1.5s.</p>\n<p>Cooldown: 45s<br />\nShield Strength: 60 - 150 (+0.20 AP) (+10% bonus health).<br />\nHaste: 20% increased Movement Speed</p>\n",
-                  "video":"http://d181w3hxxigzvh.cloudfront.net/wp-content/uploads/2017/09/render_Guardian.mp4",
+                  "video":"render_Guardian.mp4",
                   "taken_on":[
                      "Taric",
                      "Tahm Kench",
@@ -815,12 +807,7 @@
       "name":"Inspiration",
       "image":"8300",
       "rune_sub_title":"DURABILITY",
-      "rune_description":[
-         "Inspiration + Resolve: +20% Potion and Elixir Duration +145 Health",
-         "Inspiration + Domination: +20% Potion and Elixir Duration +16 Attack Damage or +27 Ability Power, adaptive",
-         "Inspiration + Sorcery: +20% Potion and Elixir Duration +16 Attack Damage or +27 Ability Power, adaptive",
-         "Inspiration + Precision: +20% Potion and Elixir Duration +20% Attack Speed"
-      ],
+      "rune_description":"Inspiration + Resolve: +20% Potion and Elixir Duration +145 Health\nInspiration + Domination: +20% Potion and Elixir Duration +16 Attack Damage or +27 Ability Power,adaptive\nInspiration + Sorcery: +20% Potion and Elixir Duration +16 Attack Damage or +27 Ability Power, adaptive\nInspiration + Precision: +20% Potion and Elixir Duration +20% Attack Speed",
       "slots":[
          {
             "runes":[
@@ -828,7 +815,7 @@
                   "id":8351,
                   "name":"Glacial Augment",
                   "longDesc":"<p>Basic attacking a champion slows them for 2s. The slow increases in strength over its duration.</p>\n<ul>\n<li><em>Ranged attacks</em> slow by up to 20%-40%  </li>\n<li><em>Melee attacks</em> slow by up to 40%-50%</li>\n</ul>\n<p>Slowing a champion with active items shoots a freeze ray through them, freezing the nearby ground for 5s, slowing all units inside by 50%</p>\n<p>Cooldown: 7-4s second per-unit cooldown</p>\n",
-                  "video":"http://d181w3hxxigzvh.cloudfront.net/wp-content/uploads/2017/09/render_GlacialAugment.mp4",
+                  "video":"render_GlacialAugment.mp4",
                   "taken_on":[
                      "Gnar",
                      "Ekko",
@@ -840,7 +827,7 @@
                   "id":8326,
                   "name":"Unsealed Spellbook",
                   "longDesc":"<p>Gain a Summoner Shard at 2 minutes and another every 6 min after (max 2 shards).</p>\n<p>While near the shop, you can exchange 1 Summoner Shard to replace a Summoner Spell with a different one.</p>\n<p>Additionally, your Summoner Spell cooldowns are reduced by 25%.</p>\n<p><strong>Smite:</strong> Buying Smite won't grant access to Smite items<br />\nYou cannot have two of the same Summoner Spell</p>\n",
-                  "video":"http://d181w3hxxigzvh.cloudfront.net/wp-content/uploads/2017/09/render_Spellbook.mp4",
+                  "video":"render_Spellbook.mp4",
                   "taken_on":[
                      "Vladimir",
                      "Kennen",
@@ -855,7 +842,7 @@
                   "id":8359,
                   "name":"Kleptomancy",
                   "longDesc":"<p>After using an ability, your next attack on a champion grants bonus gold. There's a chance you'll also gain a consumable.</p>\n",
-                  "video":"http://d181w3hxxigzvh.cloudfront.net/wp-content/uploads/2017/09/render_Klepto.mp4",
+                  "video":"render_Klepto.mp4",
                   "taken_on":[
                      "Gangplank",
                      "Gangplank",

@@ -8,7 +8,6 @@ class Patch extends Model
 {
     protected $table = 'patch';
     protected $hidden = ['id','created_at','updated_at'];
-
     protected $guarded = [];
 
 

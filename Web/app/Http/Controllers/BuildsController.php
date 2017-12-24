@@ -97,7 +97,7 @@ class BuildsController extends Controller
                 }
             }
 
-           return Controller::filed( "Verifying Runes has been updated",$response->getStatusCode());
+            return Controller::filed( "Verifying Runes has been updated",$response->getStatusCode());
 
         } catch (BadResponseException $e) {
             return Controller::filed($e->getResponse()->getReasonPhrase(), $e->getResponse()->getStatusCode());
@@ -105,19 +105,81 @@ class BuildsController extends Controller
 
     }
 
+    public function getDataByUserId($id){
+        $userBuilds = Builds::where('user_id', $id)->orderBy('id', 'DESC')->get(); //Champions::with(['builds' => function($q) use ($id){ $q->where('user_id',$id); }])->orderBy('id', 'DESC')->get();
+        foreach ($userBuilds as $key => $value){
+            $championData[$key]["id"] = intval($value["champions"]["champion_id"]);
+            $championData[$key]["name"] = $value["champions"]["champion_name"];
+            $championData[$key]["key"] = $value["champions"]["champion_key"];
+            $championData[$key]["title"] = $value["champions"]["champion_title"];
+            $championData[$key]["isFree"] = intval($value["champions"]["champion_isFree"]);
+            $championData[$key]["builds"] = [];
+            $championData[$key]["builds"][0]["id"] = intval($value["id"]);
+            $championData[$key]["builds"][0]["title"] = $value["title"];
+            $championData[$key]["builds"][0]["description"] = $value["description"];
+            $championData[$key]["builds"][0]["updated_at"] = $value["updated_at"];
+            $keystones = json_decode($value["keystones"],true);
+            $main_runes = Keystones_why::where('builds_id', '=', $value["id"])->whereIn('keystones_id', $keystones["primary_data"])->with('build_keystone')->get();
+            $secondary_data = Keystones_why::where('builds_id', '=', $value["id"])->whereIn('keystones_id', $keystones["secondary_data"])->with('build_keystone')->get();
+            $championData[$key]["builds"][0]["primary_data"] = $main_runes;
+            $championData[$key]["builds"][0]["secondary_data"] = $secondary_data;
+            $championData[$key]["builds"][0]["rune_main"] = $value["rune_main"];
+            $championData[$key]["builds"][0]["rune_secondary"] = $value["rune_secondary"];
+            $championData[$key]["builds"][0]["patch"] = $value["patch"];
+            $championData[$key]["builds"][0]["lane"] = $value["lane"];
+            $championData[$key]["builds"][0]["user"] = $value["user"];
+            $championData[$key]["builds"][0]["player"] = $value["player"];
+        }
+        return response()->json($championData);
+    }
+
+    public function getDataByChampionId($championId){
+        
+        $champions = Champions::with('builds')->orderBy('id', 'DESC')->find($championId);
+        $championData[0]["id"] = intval($champions["champion_id"]);
+        $championData[0]["name"] = $champions["champion_name"];
+        $championData[0]["key"] = $champions["champion_key"];
+        $championData[0]["name"] = $champions["champion_name"];
+        $championData[0]["title"] = $champions["champion_title"];
+        $championData[0]["isFree"] = intval($champions["champion_isFree"]);
+        foreach ($champions["builds"] as $k => $v) {
+            $championData[0]["builds"][$k]["id"] = intval($v["id"]);
+            $championData[0]["builds"][$k]["title"] = $v["title"];
+            $championData[0]["builds"][$k]["description"] = $v["description"];
+            $championData[0]["builds"][$k]["updated_at"] = $v["updated_at"];
+            $keystones = json_decode($v["keystones"],true);
+            $main_runes = Keystones_why::where('builds_id', '=', $v["id"])->whereIn('keystones_id', $keystones["primary_data"])->with('build_keystone')->get();
+            $secondary_data = Keystones_why::where('builds_id', '=', $v["id"])->whereIn('keystones_id', $keystones["secondary_data"])->with('build_keystone')->get();
+            $championData[0]["builds"][$k]["primary_data"] = $main_runes;
+            $championData[0]["builds"][$k]["secondary_data"] = $secondary_data;
+            $championData[0]["builds"][$k]["rune_main"] = $v["rune_main"];
+            $championData[0]["builds"][$k]["rune_secondary"] = $v["rune_secondary"];
+            $championData[0]["builds"][$k]["patch"] = $v["patch"];
+            $championData[0]["builds"][$k]["lane"] = $v["lane"];
+            $championData[0]["builds"][$k]["user"] = $v["user"];
+            $championData[0]["builds"][$k]["player"] = $v["player"];
+        }
+        return response()->json($championData);
+    }
+
     public function getData(){
-        $champions = Champions::with('builds')->get();
+
+        $champions = Champions::with('builds')->orderBy('id', 'DESC')->get();;
+
         foreach ($champions as $key => $value){
+
             $championData[$key]["id"] = intval($value["champion_id"]);
             $championData[$key]["name"] = $value["champion_name"];
             $championData[$key]["key"] = $value["champion_key"];
             $championData[$key]["name"] = $value["champion_name"];
             $championData[$key]["title"] = $value["champion_title"];
             $championData[$key]["isFree"] = intval($value["champion_isFree"]);
+            $counter = 0;
             foreach ($value["builds"] as $k => $v) {
                 $championData[$key]["builds"][$k]["id"] = intval($v["id"]);
                 $championData[$key]["builds"][$k]["title"] = $v["title"];
                 $championData[$key]["builds"][$k]["description"] = $v["description"];
+                $championData[$key]["builds"][$k]["updated_at"] = $v["updated_at"];
                 $keystones = json_decode($v["keystones"],true);
                 $main_runes = Keystones_why::where('builds_id', '=', $v["id"])->whereIn('keystones_id', $keystones["primary_data"])->with('build_keystone')->get();
                 $secondary_data = Keystones_why::where('builds_id', '=', $v["id"])->whereIn('keystones_id', $keystones["secondary_data"])->with('build_keystone')->get();
@@ -129,36 +191,14 @@ class BuildsController extends Controller
                 $championData[$key]["builds"][$k]["lane"] = $v["lane"];
                 $championData[$key]["builds"][$k]["user"] = $v["user"];
                 $championData[$key]["builds"][$k]["player"] = $v["player"];
+                $counter += 1;
+                if($counter >= 5){
+                    break;
+                }
             }
         }
+
         return response()->json($championData);
-
-//        foreach ($valuex["primary_data"] as $key => $value) {
-//            array_push($main_keystones,Controller::getKeystoneId($value["name"]));
-//        }
-//        foreach ($valuex["secondary_data"] as $key => $value) {
-//            array_push($secondary_keystones,Controller::getKeystoneId($value["name"]));
-//        }
-//        $keystones = array();
-//        $keystones["primary_data"] = $main_keystones;
-//        $keystones["secondary_data"] = $secondary_keystones;
-//
-//
-
-
-
-
-//        $champions = Patch::with('notes')->get();
-//        return response()->json($champions);
-//        $leaderboard = Leaderboard::limit(100)->orderBy('cgPoints', 'desc')->get();
-//        if (count($leaderboard) == 0) {
-//            $statusCodeArray =  array('status' => array('message'=>'No Summoner Added Yet','status_code'=>407));
-//            return response()->json($statusCodeArray);
-//        }
-
-
-        $information = array('cgInfo' => $newLeader,'riotInfo' => $ranked["champions"],'riotInfo');
-        return response()->json($information);
     }
 
     public function AddBuild(Request $request)
@@ -189,60 +229,19 @@ class BuildsController extends Controller
             $build->champion_id = $champion_id;
             $build->top_player_id = $top_player_id;
             $build->save();
+            $whyArray = json_decode($stone_why,true);
 
-            $newWhy = new Keystones_why;
-            $newWhy->builds_id = $build->id;
-            $newWhy->keystones_id = 3;
-            $newWhy->stone_why = "Azir is a champion who rapidly casts abilities thanks to his auto-attack nature with [W]. Because of this he is able to repeatedly cast Comets with relatively high hit-rate thanks to the slow on his [Q]";
-            $newWhy->save();
-
+            foreach($whyArray as $key => $value){
+                $newWhy = new Keystones_why;
+                $newWhy->builds_id = $build->id;
+                $newWhy->keystones_id = $value["keystones_id"];
+                $newWhy->stone_why =  $value["why"];
+                $newWhy->save();
+            }
             return Controller::filed("Build has been added successfully", 200);
         } catch (BadResponseException $e) {
             return Controller::filed($e->getResponse()->getReasonPhrase(), $e->getResponse()->getStatusCode());
         }
-    }
-
-    public function EditBuild(Request $request)
-    {
-        $input = $request->input();
-        $build_id = $input['build_id'];
-        $user_id = $input['user_id'];
-        $title = $input['title'];
-        $description = $input['desc'];
-        $keystones = $input['keystones'];
-        $rune_secondary_id = $input['rune_secondary_id'];
-        $rune_main_id = $input['rune_main_id'];
-        $patch_id = $input['patch_id'];
-        $role_id = $input['role_id'];
-        $champion_id = $input['champion_id'];
-        $top_player_id = $input['top_player_id'];
-        $stone_why = $input['stone_why'];
-
-        try {
-            $build = Builds::firstOrNew(['id' => $build_id, 'userId' => $user_id]);
-            $build->title = (string)$title;
-            $build->user_id = $user_id;
-            $build->description = (string)$description;
-            $build->keystones = (string)$keystones;
-            $build->rune_secondary_id = $rune_secondary_id;
-            $build->rune_main_id = $rune_main_id;
-            $build->patch_id = $patch_id;
-            $build->role_id = $role_id;
-            $build->champion_id = $champion_id;
-            $build->top_player_id = $top_player_id;
-            $build->save();
-
-            $newWhy = new Keystones_why;
-            $newWhy->builds_id = $build->id;
-            $newWhy->keystones_id = 3;
-            $newWhy->stone_why = "Azir is a champion who rapidly casts abilities thanks to his auto-attack nature with [W]. Because of this he is able to repeatedly cast Comets with relatively high hit-rate thanks to the slow on his [Q]";
-            $newWhy->save();
-
-            return Controller::filed("Build has been edited successfully", 200);
-        } catch (BadResponseException $e) {
-            return Controller::filed($e->getResponse()->getReasonPhrase(), $e->getResponse()->getStatusCode());
-        }
-
     }
 
     public function removeBuild(Request $request)
