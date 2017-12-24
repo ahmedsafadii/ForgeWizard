@@ -21,6 +21,13 @@ use App\Keystones;
 class BuildsController extends Controller
 {
 
+    public function getTools(){
+        $data = array();
+        $data["champions"] = Champions::orderBy('champion_name', 'asc')->get();
+        $data["lanes"] = Roles::get();
+        $data["patches"] = Patch::orderBy('id', 'desc')->get();
+        return response()->json($data);
+    }
 
     public function setupData()
     {
@@ -72,7 +79,7 @@ class BuildsController extends Controller
                     $newUser->summoner_profile_icon = "";
                     $newUser->summoner_level = "";
                     $newUser->save();
-                    $build = new Builds;
+                    $build = Builds::firstOrNew(['title' => (string)$title]);
                     $build->title = (string)$title;
                     $build->user_id = $newUser->id;
                     $build->description = (string)$description;
@@ -166,35 +173,57 @@ class BuildsController extends Controller
     public function getData(){
 
         $champions = Champions::with('builds')->orderBy('id', 'DESC')->get();;
-
         foreach ($champions as $key => $value){
-
             $championData[$key]["id"] = intval($value["champion_id"]);
             $championData[$key]["name"] = $value["champion_name"];
             $championData[$key]["key"] = $value["champion_key"];
             $championData[$key]["name"] = $value["champion_name"];
             $championData[$key]["title"] = $value["champion_title"];
             $championData[$key]["isFree"] = intval($value["champion_isFree"]);
-            $counter = 0;
+            $freeCounter = 0;
+            $validCounter = 0;
+            $championData[$key]["validBuild"] = array();
+            $championData[$key]["usersBuild"] = array();
             foreach ($value["builds"] as $k => $v) {
-                $championData[$key]["builds"][$k]["id"] = intval($v["id"]);
-                $championData[$key]["builds"][$k]["title"] = $v["title"];
-                $championData[$key]["builds"][$k]["description"] = $v["description"];
-                $championData[$key]["builds"][$k]["updated_at"] = $v["updated_at"];
-                $keystones = json_decode($v["keystones"],true);
-                $main_runes = Keystones_why::where('builds_id', '=', $v["id"])->whereIn('keystones_id', $keystones["primary_data"])->with('build_keystone')->get();
-                $secondary_data = Keystones_why::where('builds_id', '=', $v["id"])->whereIn('keystones_id', $keystones["secondary_data"])->with('build_keystone')->get();
-                $championData[$key]["builds"][$k]["primary_data"] = $main_runes;
-                $championData[$key]["builds"][$k]["secondary_data"] = $secondary_data;
-                $championData[$key]["builds"][$k]["rune_main"] = $v["rune_main"];
-                $championData[$key]["builds"][$k]["rune_secondary"] = $v["rune_secondary"];
-                $championData[$key]["builds"][$k]["patch"] = $v["patch"];
-                $championData[$key]["builds"][$k]["lane"] = $v["lane"];
-                $championData[$key]["builds"][$k]["user"] = $v["user"];
-                $championData[$key]["builds"][$k]["player"] = $v["player"];
-                $counter += 1;
-                if($counter >= 5){
-                    break;
+                if ($v["user"]["summoner_name"] == "Runeforge.gg") {
+                    if ($validCounter <= 5) {
+                        $championData[$key]["validBuild"][$k]["id"] = intval($v["id"]);
+                        $championData[$key]["validBuild"][$k]["title"] = $v["title"];
+                        $championData[$key]["validBuild"][$k]["description"] = $v["description"];
+                        $championData[$key]["validBuild"][$k]["updated_at"] = $v["updated_at"];
+                        $keystones = json_decode($v["keystones"], true);
+                        $main_runes = Keystones_why::where('builds_id', '=', $v["id"])->whereIn('keystones_id', $keystones["primary_data"])->with('build_keystone')->get();
+                        $secondary_data = Keystones_why::where('builds_id', '=', $v["id"])->whereIn('keystones_id', $keystones["secondary_data"])->with('build_keystone')->get();
+                        $championData[$key]["validBuild"][$k]["primary_data"] = $main_runes;
+                        $championData[$key]["validBuild"][$k]["secondary_data"] = $secondary_data;
+                        $championData[$key]["validBuild"][$k]["rune_main"] = $v["rune_main"];
+                        $championData[$key]["validBuild"][$k]["rune_secondary"] = $v["rune_secondary"];
+                        $championData[$key]["validBuild"][$k]["patch"] = $v["patch"];
+                        $championData[$key]["validBuild"][$k]["lane"] = $v["lane"];
+                        $championData[$key]["validBuild"][$k]["user"] = $v["user"];
+                        $championData[$key]["validBuild"][$k]["player"] = $v["player"];
+                        $validCounter += 1;
+                    }
+                }
+                else{
+                    if ($freeCounter <= 5) {
+                        $championData[$key]["usersBuild"][$k]["id"] = intval($v["id"]);
+                        $championData[$key]["usersBuild"][$k]["title"] = $v["title"];
+                        $championData[$key]["usersBuild"][$k]["description"] = $v["description"];
+                        $championData[$key]["usersBuild"][$k]["updated_at"] = $v["updated_at"];
+                        $keystones = json_decode($v["keystones"], true);
+                        $main_runes = Keystones_why::where('builds_id', '=', $v["id"])->whereIn('keystones_id', $keystones["primary_data"])->with('build_keystone')->get();
+                        $secondary_data = Keystones_why::where('builds_id', '=', $v["id"])->whereIn('keystones_id', $keystones["secondary_data"])->with('build_keystone')->get();
+                        $championData[$key]["usersBuild"][$k]["primary_data"] = $main_runes;
+                        $championData[$key]["usersBuild"][$k]["secondary_data"] = $secondary_data;
+                        $championData[$key]["usersBuild"][$k]["rune_main"] = $v["rune_main"];
+                        $championData[$key]["usersBuild"][$k]["rune_secondary"] = $v["rune_secondary"];
+                        $championData[$key]["usersBuild"][$k]["patch"] = $v["patch"];
+                        $championData[$key]["usersBuild"][$k]["lane"] = $v["lane"];
+                        $championData[$key]["usersBuild"][$k]["user"] = $v["user"];
+                        $championData[$key]["usersBuild"][$k]["player"] = $v["player"];
+                        $freeCounter += 1;
+                    }
                 }
             }
         }
@@ -239,6 +268,7 @@ class BuildsController extends Controller
                 $newWhy->stone_why =  $value["why"];
                 $newWhy->save();
             }
+
             return Controller::filed("Build has been added successfully", 200);
         } catch (BadResponseException $e) {
             return Controller::filed($e->getResponse()->getReasonPhrase(), $e->getResponse()->getStatusCode());

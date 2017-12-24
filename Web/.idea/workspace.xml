@@ -14,31 +14,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <file leaf-file-name="BuildsController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/BuildsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="31" lean-forward="false" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+            <state relative-caret-position="442">
+              <caret line="42" column="27" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="338" selection-end-column="0" />
               <folding>
-                <element signature="e#7#389#0#PHP" expanded="true" />
+                <element signature="e#40#68#0#PHP" expanded="true" />
+                <element signature="e#5171#7235#0#PHP" expanded="false" />
+                <element signature="e#7241#9164#0#PHP" expanded="false" />
+                <element signature="e#16465#17111#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BuildsController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/BuildsController.php">
+      <file leaf-file-name="data.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/data.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="237" column="49" lean-forward="false" selection-start-line="237" selection-start-column="46" selection-end-line="237" selection-end-column="49" />
-              <folding>
-                <element signature="e#40#68#0#PHP" expanded="true" />
-                <element signature="e#407#4842#0#PHP" expanded="false" />
-                <element signature="e#450#4835#0#PHP" expanded="false" />
-                <element signature="e#12863#13423#0#PHP" expanded="false" />
-                <element signature="e#13429#14137#0#PHP" expanded="false" />
-                <element signature="e#14143#14789#0#PHP" expanded="false" />
-              </folding>
+            <state relative-caret-position="203">
+              <caret line="2058" column="38" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="8152" selection-end-column="1" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -47,10 +43,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>title</find>
-      <find>whies</find>
-      <find>user_id</find>
-      <find>stone_why</find>
       <find>JARVE</find>
       <find>khaz</find>
       <find>chog</find>
@@ -76,7 +68,15 @@
       <find>.mp4</find>
       <find>$championData$championData</find>
       <find>where</find>
+      <find>marke</find>
+      <find>\u2019</find>
+      <find>futr</find>
+      <find>wukong</find>
+      <find>setupData</find>
     </findStrings>
+    <replaceStrings>
+      <replace>'</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -92,7 +92,6 @@
         <option value="$PROJECT_DIR$/database/migrations/2017_12_16_2_create_users_table.php" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" />
         <option value="$PROJECT_DIR$/public/Lanes.json" />
-        <option value="$PROJECT_DIR$/public/data.json" />
         <option value="$PROJECT_DIR$/app/Reviews.php" />
         <option value="$PROJECT_DIR$/app/Notes.php" />
         <option value="$PROJECT_DIR$/database/migrations/2017_12_16_9_create_builds_table.php" />
@@ -100,19 +99,20 @@
         <option value="$PROJECT_DIR$/app/Keystones.php" />
         <option value="$PROJECT_DIR$/app/Keystones_why.php" />
         <option value="$PROJECT_DIR$/app/Top_Player.php" />
-        <option value="$PROJECT_DIR$/app/Roles.php" />
         <option value="$PROJECT_DIR$/app/Users.php" />
         <option value="$PROJECT_DIR$/app/Runes.php" />
         <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/RunesController.php" />
-        <option value="$PROJECT_DIR$/app/Patch.php" />
         <option value="$PROJECT_DIR$/public/en_US_runesReforged.json" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/PatchController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Controller.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/RiotController.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Champions.php" />
         <option value="$PROJECT_DIR$/app/Builds.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/app/Roles.php" />
+        <option value="$PROJECT_DIR$/app/Patch.php" />
+        <option value="$PROJECT_DIR$/public/data.json" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/BuildsController.php" />
       </list>
     </option>
@@ -218,6 +218,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -246,13 +248,6 @@
             <path>
               <item name="Web" type="b2602c69:ProjectViewProjectNode" />
               <item name="Web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Middleware" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Web" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -269,8 +264,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -311,34 +304,34 @@
       <workItem from="1513800081834" duration="4568000" />
       <workItem from="1513899624006" duration="10647000" />
       <workItem from="1514064730675" duration="5355000" />
+      <workItem from="1514128612772" duration="3355000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59744000" />
+    <option name="totallyTimeSpent" value="63099000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32921812" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32921812" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -380,11 +373,9 @@
           <caret line="42" column="38" lean-forward="true" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
           <folding>
             <element signature="e#40#68#0#PHP" expanded="true" />
-            <element signature="e#407#4842#0#PHP" expanded="false" />
-            <element signature="e#450#4835#0#PHP" expanded="false" />
-            <element signature="e#12863#13423#0#PHP" expanded="false" />
-            <element signature="e#13429#14137#0#PHP" expanded="false" />
-            <element signature="e#14143#14789#0#PHP" expanded="false" />
+            <element signature="e#5171#7235#0#PHP" expanded="false" />
+            <element signature="e#7241#9164#0#PHP" expanded="false" />
+            <element signature="e#16465#17111#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -441,13 +432,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="29" column="18" lean-forward="false" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/data.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="4902" column="19" lean-forward="false" selection-start-line="4902" selection-start-column="16" selection-end-line="4902" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -508,13 +492,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/championsDemoData.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="511">
-          <caret line="0" column="15696" lean-forward="false" selection-start-line="0" selection-start-column="15694" selection-end-line="0" selection-end-column="15696" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2017_12_16_8_top_player_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -566,14 +543,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Roles.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="42" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Keystones_why.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -605,21 +574,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Patch.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/en_US_runesReforged.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="214" column="49" lean-forward="false" selection-start-line="214" selection-start-column="45" selection-end-line="214" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Runes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -633,17 +587,7 @@
         <state relative-caret-position="125">
           <caret line="24" column="39" lean-forward="false" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="39" />
           <folding>
-            <element signature="e#40#85#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/RunesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="38" column="20" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding>
-            <element signature="e#40#68#0#PHP" expanded="false" />
+            <element signature="e#40#85#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -661,7 +605,7 @@
         <state relative-caret-position="68">
           <caret line="45" column="36" lean-forward="false" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
           <folding>
-            <element signature="e#40#68#0#PHP" expanded="true" />
+            <element signature="e#40#68#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -682,10 +626,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/RunesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1343">
+          <caret line="85" column="31" lean-forward="false" selection-start-line="85" selection-start-column="31" selection-end-line="85" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Patch.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Roles.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="25" lean-forward="false" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/en_US_runesReforged.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="194" column="20" lean-forward="true" selection-start-line="194" selection-start-column="20" selection-end-line="194" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/championsDemoData.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="0" column="13048" lean-forward="true" selection-start-line="0" selection-start-column="13048" selection-end-line="0" selection-end-column="13048" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="31" lean-forward="false" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+        <state relative-caret-position="201">
+          <caret line="29" column="35" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
           <folding>
             <element signature="e#7#389#0#PHP" expanded="true" />
           </folding>
@@ -694,16 +678,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/BuildsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="237" column="49" lean-forward="false" selection-start-line="237" selection-start-column="46" selection-end-line="237" selection-end-column="49" />
+        <state relative-caret-position="442">
+          <caret line="42" column="27" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="338" selection-end-column="0" />
           <folding>
             <element signature="e#40#68#0#PHP" expanded="true" />
-            <element signature="e#407#4842#0#PHP" expanded="false" />
-            <element signature="e#450#4835#0#PHP" expanded="false" />
-            <element signature="e#12863#13423#0#PHP" expanded="false" />
-            <element signature="e#13429#14137#0#PHP" expanded="false" />
-            <element signature="e#14143#14789#0#PHP" expanded="false" />
+            <element signature="e#5171#7235#0#PHP" expanded="false" />
+            <element signature="e#7241#9164#0#PHP" expanded="false" />
+            <element signature="e#16465#17111#0#PHP" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/data.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="2058" column="38" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="8152" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>

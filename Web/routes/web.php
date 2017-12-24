@@ -31,6 +31,8 @@ Route::get('v1/patch/getPatches',"PatchController@getPatches");
 
 
 // Rune Build Endpoint
+Route::get('v1/build/getTools',"BuildsController@getTools");
+
 Route::get('v1/build/setupData',"BuildsController@setupData");
 Route::post('v1/build/addTopPlayer',"BuildsController@AddTopPlayer");
 Route::get('v1/build/getBuilds',"BuildsController@getData");
