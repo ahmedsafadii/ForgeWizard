@@ -106,7 +106,8 @@ class BuildsController extends Controller
     }
 
     public function getDataByUserId($id){
-        $userBuilds = Builds::where('user_id', $id)->orderBy('id', 'DESC')->get(); //Champions::with(['builds' => function($q) use ($id){ $q->where('user_id',$id); }])->orderBy('id', 'DESC')->get();
+        $userBuilds = Builds::where('user_id', $id)->orderBy('id', 'DESC')->get();
+        $championData = array();
         foreach ($userBuilds as $key => $value){
             $championData[$key]["id"] = intval($value["champions"]["champion_id"]);
             $championData[$key]["name"] = $value["champions"]["champion_name"];
@@ -201,7 +202,8 @@ class BuildsController extends Controller
         return response()->json($championData);
     }
 
-    public function AddBuild(Request $request)
+
+ public function AddBuild(Request $request)
     {
         $input = $request->input();
         $userId = $input['userId'];
@@ -215,7 +217,6 @@ class BuildsController extends Controller
         $champion_id = $input['champion_id'];
         $top_player_id = $input['top_player_id'];
         $stone_why = $input['stone_why'];
-
         try {
             $build = new Builds;
             $build->title = (string)$title;

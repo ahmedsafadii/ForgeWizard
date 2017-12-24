@@ -8,7 +8,7 @@ class Users extends Model
 {
 
     protected $table = 'users';
-    protected $hidden = ['created_at','updated_at','id','account_id','verify','summoner_id'];
+    protected $hidden = ['created_at','updated_at','account_id','verify','summoner_id'];
 
     protected $guarded = [];
 

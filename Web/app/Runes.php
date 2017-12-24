@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Runes extends Model
 {
     protected $table = 'runes';
-    protected $hidden = ['created_at','updated_at','role_id','id'];
+    protected $hidden = ['created_at','updated_at','role_id'];
 
     protected $guarded = [];
 

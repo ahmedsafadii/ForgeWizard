@@ -11,7 +11,7 @@ class Keystones_why extends Model
 
     protected $guarded = [];
 
-    protected $hidden = ['created_at','updated_at','builds_id','keystones_id','id'];
+    protected $hidden = ['created_at','updated_at','builds_id','keystones_id'];
 
 
     public function build_keystone()
