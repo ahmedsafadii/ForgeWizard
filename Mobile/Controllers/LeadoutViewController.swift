@@ -11,11 +11,33 @@ import UIKit
 import SwiftyJSON
 import AlamofireImage
 import SwiftSpinner
+import Reachability
 
 class LeadoutViewController: UIViewController {
     
     
-    let championsData = loadJson(fileName: "LocalChampions")
+    @IBAction func updateAgain(_ sender: UIBarButtonItem) {
+
+        let reachability = Reachability()
+        
+        switch reachability?.connection {
+        case .wifi?:
+            UserDefaults.standard.set(0, forKey: "updateTimer")
+            self.dismiss(animated: true, completion: nil)
+        case .cellular?:
+            UserDefaults.standard.set(0, forKey: "updateTimer")
+            self.dismiss(animated: true, completion: nil)
+        case .some(.none):
+            self.dismiss(animated: true, completion: nil)
+        case .none:
+            self.dismiss(animated: true, completion: nil)
+        }
+        
+    }
+    
+    
+    
+    let championsData = pathToJson(fileName: "LocalData.json")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -102,7 +124,7 @@ extension LeadoutViewController : UICollectionViewDelegate,UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ChmpionCollectionViewCell", for: indexPath) as! ChmpionCollectionViewCell
         cell.championName.text = championsData[indexPath.row]["name"].stringValue
-        cell.championImage.af_setImage(withURL: generateUrl(name: championsData[indexPath.row]["key"].stringValue, placeHolder: "grid-placeholder.png", type: "champions"), placeholderImage: UIImage(named:championsData[indexPath.row]["key"].stringValue))
+        cell.championImage.af_setImage(withURL: generateUrl(name: championsData[indexPath.row]["key"].stringValue, placeHolder: "grid-placeholder.png", type: "champions", extention: "jpg"), placeholderImage: UIImage(named:championsData[indexPath.row]["key"].stringValue))
         if(championsData[indexPath.row]["isFree"].boolValue){
             cell.isFree.isHidden = false
         }
@@ -112,27 +134,20 @@ extension LeadoutViewController : UICollectionViewDelegate,UICollectionViewDataS
         return cell
     }
     
-//    func fetchSelectedChampionBuild(){
-//        SwiftSpinner.show("Forging the champion runes :3", animated: true)
-//        SwiftSpinner.setTitleColor(UIColor.white)
-//        SwiftSpinner.sharedInstance.innerColor = nil
-//        APIManager.instance.download(saveUrl: "LocalData.json", onSuccess: { json in
-//            SwiftSpinner.hide({
-//                self.performSegue(withIdentifier: "showBuildList", sender: self)
-//            })
-//            print("json")
-//
-//        }, onFailure: { error in
-//            print(error)
-//            SwiftSpinner.show(duration: 1.0, title: "Failed to get champions data", animated: false)
-//        })
-//    }
-    
-    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        Global.shared.SelectedChampionBuild = championsData[indexPath.row]
-//        self.fetchSelectedChampionBuild()
-        self.performSegue(withIdentifier: "showBuildList", sender: self)
+        SwiftSpinner.show("Fetching champion runes", animated: true)
+        SwiftSpinner.setTitleColor(UIColor.white)
+        SwiftSpinner.sharedInstance.innerColor = nil
+        APIManager.instance.getChampionData(id: championsData[indexPath.row]["id"].stringValue, onSuccess: { json in
+            Global.shared.SelectedChampionBuild = self.championsData[indexPath.row]
+            SwiftSpinner.hide({
+                self.performSegue(withIdentifier: "showBuildList", sender: self)
+            })
+        }, onFailure: { error in
+            SwiftSpinner.hide()
+            Global.shared.SelectedChampionBuild = self.championsData[indexPath.row]
+            self.performSegue(withIdentifier: "showBuildList", sender: self)
+        })
     }
     
     

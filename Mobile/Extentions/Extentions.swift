@@ -27,6 +27,23 @@ func loadJson(fileName: String) -> JSON {
     return dataPath
 }
 
+func randomString(length: Int) -> String {
+    
+    let letters : NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+    let len = UInt32(letters.length)
+    
+    var randomString = ""
+    
+    for _ in 0 ..< length {
+        let rand = arc4random_uniform(len)
+        var nextChar = letters.character(at: Int(rand))
+        randomString += NSString(characters: &nextChar, length: 1) as String
+    }
+    
+    return randomString
+}
+
+
 func delay(seconds: Double, completion: @escaping () -> ()) {
     let popTime = DispatchTime.now() + Double(Int64( Double(NSEC_PER_SEC) * seconds )) / Double(NSEC_PER_SEC)
     
@@ -148,16 +165,59 @@ extension String {
 }
 
 
-func generateUrl(name:String,placeHolder:String,type:String) -> URL{
+func generateUrl(name:String,placeHolder:String,type:String,extention:String) -> URL{
     var url:URL!
     if(name != ""){
-        url = URL(string: "http://www.elofight.com/riotapi4/" + type + "/" + name + ".png")
+        url = URL(string: "http://elofight.com/riotapi4/" + type + "/" + name + "." + extention)
+        print(url)
     }
     else{
-        url = URL(string: "http://www.elofight.com/riotapi4/" + type + "/" + placeHolder + ".png")
+        url = URL(string: "http://elofight.com/riotapi4/" + type + "/" + placeHolder + "." + extention)
     }
     return url
 }
+
+
+func pathToJson(fileName:String) -> JSON {
+    
+    let dir = try? FileManager.default.url(for: .documentDirectory,
+                                           in: .userDomainMask, appropriateFor: nil, create: true)
+    var dataPath = JSON([])
+    
+    if let fileURL = dir?.appendingPathComponent(fileName){
+        do {
+            let data = try Data(contentsOf: URL(fileURLWithPath: fileURL.path), options: .mappedIfSafe)
+            dataPath = JSON(data)
+        } catch {
+            dataPath = JSON([])
+            print("Failed reading from URL: \(fileURL), Error: " + error.localizedDescription)
+        }
+        print("Read from the file: \(fileName)")
+    }
+    return dataPath
+    
+}
+
+func fileExist(fileName:String) -> Bool{
+    let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
+    print(path)
+    let url = NSURL(fileURLWithPath: path)
+    if let pathComponent = url.appendingPathComponent(fileName) {
+        let filePath = pathComponent.path
+        let fileManager = FileManager.default
+        if fileManager.fileExists(atPath: filePath) {
+            return true
+        } else {
+            return false
+        }
+    } else {
+        return false
+    }
+}
+
+
+
+
 
 
 extension UIView {

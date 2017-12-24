@@ -184,7 +184,7 @@
                             <constraint firstAttribute="height" constant="58" id="Sxb-6Y-WhA"/>
                         </constraints>
                     </imageView>
-                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWC-i4-AgS">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWC-i4-AgS">
                         <rect key="frame" x="20" y="555" width="280" height="39"/>
                         <color key="backgroundColor" red="0.19215686269999999" green="0.19215686269999999" blue="0.19215686269999999" alpha="0.56999999999999995" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -201,6 +201,9 @@
                                 <color key="value" red="1" green="0.91372549020000005" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="register:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="iOQ-DA-bs1"/>
+                        </connections>
                     </button>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -233,6 +236,8 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="summonerCode" destination="UEj-Ao-TTc" id="xWL-r4-tQU"/>
+                <outlet property="summonerName" destination="7eC-FY-w1W" id="ga6-MD-T7j"/>
                 <outlet property="summonerRegion" destination="X1q-Rm-2k0" id="1w7-cl-JxD"/>
             </connections>
             <point key="canvasLocation" x="-77" y="102.5"/>

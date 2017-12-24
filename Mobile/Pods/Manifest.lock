@@ -4,6 +4,7 @@ PODS:
   - AlamofireImage (3.3.0):
     - Alamofire (~> 4.5)
   - IQKeyboardManagerSwift (5.0.7)
+  - ReachabilitySwift (4.1.0)
   - SwiftSpinner (1.5.0)
   - SwiftyJSON (4.0.0)
   - UIColor_Hex_Swift (3.0.2)
@@ -13,6 +14,7 @@ DEPENDENCIES:
   - Alamofire
   - AlamofireImage
   - IQKeyboardManagerSwift
+  - ReachabilitySwift
   - SwiftSpinner
   - SwiftyJSON
   - UIColor_Hex_Swift (from `https://github.com/yeahdongcn/UIColor-Hex-Swift.git`, tag `4.0.0`)
@@ -32,10 +34,11 @@ SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
   AlamofireImage: 2e784dc5d00f04903a52c1d169181469c805c3df
   IQKeyboardManagerSwift: 30fb3a61de1af53a95e02b80fb54ed0a19d5ede5
+  ReachabilitySwift: 6849231cd4e06559f3b9ef4a97a0a0f96d41e09f
   SwiftSpinner: 4c058c7a1d6b444dd2e1d70988ead40783097133
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
   UIColor_Hex_Swift: 95f718452092a3efc8a827dffd2c04d3237be02d
 
-PODFILE CHECKSUM: 241af9140099529358e43cfe2b1bd0c8fde0af1b
+PODFILE CHECKSUM: 842ac561d0201f45a97b20c4454f19bc37ac0957
 
 COCOAPODS: 1.4.0.beta.2

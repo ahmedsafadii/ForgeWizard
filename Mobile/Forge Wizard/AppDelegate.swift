@@ -21,8 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
         UINavigationBar.appearance().shadowImage = UIImage()
         UINavigationBar.appearance().tintColor = UIColor.white
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         UINavigationBar.appearance().backgroundColor = UIColor.clear
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "Spiegel-Regular", size: 17)!,NSAttributedStringKey.foregroundColor: UIColor.white]
         UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font: UIFont(name: "Spiegel-Regular", size: 17)!], for: UIControlState.normal)
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font: UIFont(name: "Spiegel-Regular", size: 11)!], for: .normal)
@@ -31,9 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // detect first start
         
         if(UserDefaults.isFirstLaunch()){
-            let currentTime = Int(Date().timeIntervalSince1970)
-            UserDefaults.standard.set(currentTime, forKey: "updateTimer")
-            print ("first launch")
+            UserDefaults.standard.set(0, forKey: "updateTimer")
         }
         else{
             print ("Not first launch")
@@ -45,11 +43,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
-    
-    func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-
-    }
-    
     
 
     func applicationWillResignActive(_ application: UIApplication) {

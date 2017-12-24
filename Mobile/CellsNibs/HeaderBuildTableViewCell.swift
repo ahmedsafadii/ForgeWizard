@@ -32,7 +32,7 @@ class HeaderBuildTableViewCell: UITableViewCell {
             hideView.isHidden = true
         }
         else{
-            championImage.af_setImage(withURL: generateUrl(name: buildData["player"]["image"].stringValue, placeHolder: "grid-placeholder.png", type: "pro"), placeholderImage: UIImage(named:"grid-placeholder.png"))
+            championImage.af_setImage(withURL: generateUrl(name: buildData["player"]["image"].stringValue, placeHolder: "grid-placeholder.png", type: "pro", extention: "png"), placeholderImage: UIImage(named:"grid-placeholder.png"))
         }
     }
     

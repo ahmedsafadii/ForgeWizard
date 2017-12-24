@@ -21,7 +21,7 @@ class ChampionsBuildsListViewController: UIViewController {
     func setupLayout(){
         championData = Global.shared.SelectedChampionBuild
         championTitle.text = championData["name"].stringValue
-        championImage.af_setImage(withURL: generateUrl(name: championData["key"].stringValue, placeHolder: "grid-placeholder.png", type: "champions"), placeholderImage: UIImage(named:championData["key"].stringValue))
+        championImage.af_setImage(withURL: generateUrl(name: championData["key"].stringValue, placeHolder: "grid-placeholder.png", type: "champions", extention: "jpg"), placeholderImage: UIImage(named:championData["key"].stringValue))
 
     }
     
@@ -102,7 +102,7 @@ extension ChampionsBuildsListViewController : UITableViewDelegate,UITableViewDat
             else{
                 cell.proName.text = championData["builds"][indexPath.row]["player"]["name"].stringValue
                 cell.proSubtitle.text = stringToDate(str: championData["builds"][indexPath.row]["updated_at"]["date"].stringValue)
-                cell.proPlayer.af_setImage(withURL: generateUrl(name: championData["builds"][indexPath.row]["player"]["image"].stringValue, placeHolder: "grid-placeholder.png", type: "pro"), placeholderImage: UIImage(named:"grid-placeholder.png"))
+                cell.proPlayer.af_setImage(withURL: generateUrl(name: championData["builds"][indexPath.row]["player"]["image"].stringValue, placeHolder: "grid-placeholder.png", type: "pro", extention: "png"), placeholderImage: UIImage(named:"grid-placeholder.png"))
             }
             cell.Dislike.text = "0"
             cell.Like.text = "1"

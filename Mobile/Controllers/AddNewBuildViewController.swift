@@ -8,9 +8,139 @@
 
 import UIKit
 import SwiftyJSON
+import AAPickerView
 
-class AddNewBuildViewController: UIViewController {
+class AddNewBuildViewController: UIViewController,UITextViewDelegate {
 
+    
+    @IBOutlet weak var runeTitle: UITextField!
+    
+    @IBOutlet weak var runeDescription: UITextField!
+    
+    @IBOutlet weak var champions: AAPickerView!
+    
+    @IBOutlet weak var roles: AAPickerView!
+    
+    @IBOutlet weak var patchs: AAPickerView!
+    
+    var a_userId:Int?
+    var a_title:String?
+    var a_desc:String?
+    var a_stone_why = [["keystones_id":0, "why":""],["keystones_id":0, "why":""],["keystones_id":0, "why":""],["keystones_id":0, "why":""],["keystones_id":0, "why":""],["keystones_id":0, "why":""]]
+    var a_top_player_id:Int?
+    var a_champion_id:Int?
+    var a_role_id:Int?
+    var a_patch_id:Int?
+    var a_rune_main_id:Int?
+    var a_rune_secondary_id:Int?
+    var a_keystones = ["primary_data":[0,0,0,0],"secondary_data":[0,0]]
+
+    
+    
+    
+    
+    @IBAction func addNewRunes(_ sender: UIButton) {
+        
+        var isStoneWhy = true
+        var isKeystone = true
+        let parseData = JSON(a_stone_why)
+        print(parseData)
+        a_keystones = ["primary_data":[parseData[0]["keystones_id"].intValue,parseData[1]["keystones_id"].intValue,parseData[2]["keystones_id"].intValue,parseData[3]["keystones_id"].intValue],"secondary_data":[parseData[4]["keystones_id"].intValue,parseData[5]["keystones_id"].intValue]]
+        for i in 0...a_stone_why.count - 1{
+            isStoneWhy = true
+            if(a_stone_why[i]["keystones_id"] as? Int == 0){
+                isStoneWhy = false
+                break;
+            }
+        }
+        for (_,js) in JSON(a_keystones)["primary_data"]{
+            isKeystone = true
+            if(js.intValue == 0){
+                isKeystone = false
+                break
+            }
+        }
+        for (_,js) in JSON(a_keystones)["secondary_data"]{
+            isKeystone = true
+            if(js.intValue == 0){
+                isKeystone = false
+                break
+            }
+        }
+        
+
+        if(runeTitle.text == "" || runeDescription.text == "" || champions.text == "" || roles.text == "" || patchs.text == "" || isStoneWhy == false || isKeystone == false){
+            self.showAlert(title: "", message: "All field are required", ok: "Ok")
+        }
+        else{
+            
+            //        let xx = String(describing: JSON())
+            //        let parameters = ["userId":3,"title":"Test title","desc":"Test Description","keystones":"","rune_secondary_id":2,"rune_main_id":3,"patch_id":2,"role_id":1,"champion_id":80,"top_player_id":2,"stone_why":xx] as [String : Any]
+            //
+            
+            APIManager.instance.createNewBuild(title: "", desc: "", stone_why: "", top_player_id: 0, champion_id: 0, role_id: 0, patch_id: 0, rune_main_id: 0, rune_secondary_id: 0, keystones: "", userId: 0, onSuccess: { json in
+                
+                print(json)
+                
+            }, onFailure: { error in
+                self.showAlert(title: "", message: error.localizedDescription, ok: "Ok")
+                
+            })
+
+        }
+
+    }
+    
+    
+    
+    func setupTextfield() {
+        
+        
+        var championsData = [String]()
+        
+        let rolesData = ["Middle","Top","Support","Jungle","AD Carry"]
+        
+        //patchArray
+        
+        let defaults = UserDefaults.standard
+        let patchArray = defaults.stringArray(forKey: "patches") ?? [String]()
+        
+        let champ = pathToJson(fileName: "LocalData.json").arrayValue
+        let orderChamp = champ.sorted { $0["name"].stringValue < $1["name"].stringValue }
+        
+        for(_,subJson) in JSON(orderChamp) {
+            championsData.append(subJson["name"].stringValue)
+        }
+        
+        champions.pickerType = .StringPicker
+        champions.stringPickerData = championsData
+        champions.stringDidChange = { index in
+            print(JSON(orderChamp)[index]["id"].stringValue)
+        }
+        
+        roles.pickerType = .StringPicker
+        roles.stringPickerData = rolesData
+        roles.stringDidChange = { index in
+            print(rolesData[index])
+        }
+        
+        patchs.pickerType = .StringPicker
+        patchs.stringPickerData = patchArray.reversed()
+        patchs.stringDidChange = { index in
+            print(patchArray[index])
+        }
+        
+        
+        
+    }
+    
+    
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if(textView.text == "Why?"){
+            textView.text = ""
+        }
+    }
     
     @IBOutlet weak var m_r_subtitle: UILabel!
     @IBOutlet weak var m_r_title: UILabel!
@@ -23,7 +153,7 @@ class AddNewBuildViewController: UIViewController {
     var selectedMainRune = 0
     var selectedSecondaryRune = 0
     var demoData = [JSON]()
-    let RunesData = loadJson(fileName: "Runes")
+    let RunesData = pathToJson(fileName: "Runes.json")
     
     func changeMainRune(rune:Int){
         
@@ -56,7 +186,7 @@ class AddNewBuildViewController: UIViewController {
         m_r_1_why.isHidden = true
         m_1_stack.isHidden = false
         m_1_textView.isHidden = true
-        m_1_textView.text = "Why did you pick this rune ?"
+        m_1_textView.text = "Why?"
         m_r_1_image.setImage(UIImage(named:"grid-placeholder"), for: .normal)
         m_r_1_image.borderWidth = 2
         m_r_1_image.borderColor = UIColor(demoData[rune]["color"].stringValue)
@@ -74,7 +204,7 @@ class AddNewBuildViewController: UIViewController {
         m_r_2_why.isHidden = true
         m_2_stack.isHidden = false
         m_2_textView.isHidden = true
-        m_2_textView.text = "Why did you pick this rune ?"
+        m_2_textView.text = "Why?"
         m_r_2_image.setImage(UIImage(named:"grid-placeholder"), for: .normal)
         m_r_2_image.borderWidth = 2
         m_r_2_image.borderColor = UIColor(demoData[rune]["color"].stringValue)
@@ -91,7 +221,7 @@ class AddNewBuildViewController: UIViewController {
         m_r_3_why.isHidden = true
         m_3_stack.isHidden = false
         m_3_textView.isHidden = true
-        m_3_textView.text = "Why did you pick this rune ?"
+        m_3_textView.text = "Why?"
         m_r_3_image.setImage(UIImage(named:"grid-placeholder"), for: .normal)
         m_r_3_image.borderWidth = 2
         m_r_3_image.borderColor = UIColor(demoData[rune]["color"].stringValue)
@@ -108,7 +238,7 @@ class AddNewBuildViewController: UIViewController {
         m_r_4_why.isHidden = true
         m_4_stack.isHidden = false
         m_4_textView.isHidden = true
-        m_4_textView.text = "Why did you pick this rune ?"
+        m_4_textView.text = "Why?"
         m_r_4_image.setImage(UIImage(named:"grid-placeholder"), for: .normal)
         m_r_4_image.borderWidth = 2
         m_r_4_image.borderColor = UIColor(demoData[rune]["color"].stringValue)
@@ -173,6 +303,7 @@ class AddNewBuildViewController: UIViewController {
             m_r_1_title.textColor = UIColor(demoData[selectedMainRune]["color"].stringValue)
             m_r_1_title.text = RunesData[selectedMainRune]["keystones"][0]["stone_title"].stringValue
             m_r_1_image.tag = 63
+            a_stone_why[0] = ["keystones_id":RunesData[selectedMainRune]["keystones"][0]["id"].intValue, "why":m_1_textView.text ?? ""]
         }
         else if(sender.tag == 61){
             m_r_1_image.setImage(UIImage(named:RunesData[selectedMainRune]["keystones"][1]["stone_id"].stringValue), for: .normal)
@@ -185,6 +316,8 @@ class AddNewBuildViewController: UIViewController {
             m_r_1_title.textColor = UIColor(demoData[selectedMainRune]["color"].stringValue)
             m_r_1_title.text = RunesData[selectedMainRune]["keystones"][1]["stone_title"].stringValue
             m_r_1_image.tag = 63
+            a_stone_why[0] = ["keystones_id":RunesData[selectedMainRune]["keystones"][1]["id"].intValue, "why":m_1_textView.text ?? ""]
+
         }
         else if(sender.tag == 62){
             m_r_1_image.setImage(UIImage(named:RunesData[selectedMainRune]["keystones"][2]["stone_id"].stringValue), for: .normal)
@@ -197,6 +330,7 @@ class AddNewBuildViewController: UIViewController {
             m_r_1_title.textColor = UIColor(demoData[selectedMainRune]["color"].stringValue)
             m_r_1_title.text = RunesData[selectedMainRune]["keystones"][2]["stone_title"].stringValue
             m_r_1_image.tag = 63
+            a_stone_why[0] = ["keystones_id":RunesData[selectedMainRune]["keystones"][2]["id"].intValue, "why":m_1_textView.text ?? ""]
         }
         else{
             if(sender.tag == 63){
@@ -242,6 +376,7 @@ class AddNewBuildViewController: UIViewController {
             m_r_2_title.textColor = UIColor(demoData[selectedMainRune]["color"].stringValue)
             m_r_2_title.text = RunesData[selectedMainRune]["keystones"][3]["stone_title"].stringValue
             m_r_2_image.tag = 68
+            a_stone_why[1] = ["keystones_id":RunesData[selectedMainRune]["keystones"][3]["id"].intValue, "why":m_2_textView.text ?? ""]
         }
         else if(sender.tag == 66){
             m_r_2_image.setImage(UIImage(named:RunesData[selectedMainRune]["keystones"][4]["stone_id"].stringValue), for: .normal)
@@ -254,6 +389,8 @@ class AddNewBuildViewController: UIViewController {
             m_r_2_title.textColor = UIColor(demoData[selectedMainRune]["color"].stringValue)
             m_r_2_title.text = RunesData[selectedMainRune]["keystones"][4]["stone_title"].stringValue
             m_r_2_image.tag = 68
+            a_stone_why[1] = ["keystones_id":RunesData[selectedMainRune]["keystones"][4]["id"].intValue, "why":m_2_textView.text ?? ""]
+
         }
         else if(sender.tag == 67){
             m_r_2_image.setImage(UIImage(named:RunesData[selectedMainRune]["keystones"][5]["stone_id"].stringValue), for: .normal)
@@ -266,6 +403,8 @@ class AddNewBuildViewController: UIViewController {
             m_r_2_title.textColor = UIColor(demoData[selectedMainRune]["color"].stringValue)
             m_r_2_title.text = RunesData[selectedMainRune]["keystones"][5]["stone_title"].stringValue
             m_r_2_image.tag = 68
+            a_stone_why[1] = ["keystones_id":RunesData[selectedMainRune]["keystones"][5]["id"].intValue, "why":m_2_textView.text ?? ""]
+
         }
         else{
             if(sender.tag == 68){
@@ -312,6 +451,8 @@ class AddNewBuildViewController: UIViewController {
             m_r_3_title.textColor = UIColor(demoData[selectedMainRune]["color"].stringValue)
             m_r_3_title.text = RunesData[selectedMainRune]["keystones"][6]["stone_title"].stringValue
             m_r_3_image.tag = 73
+            a_stone_why[2] = ["keystones_id":RunesData[selectedMainRune]["keystones"][6]["id"].intValue, "why":m_3_textView.text ?? ""]
+
         }
         else if(sender.tag == 71){
             m_r_3_image.setImage(UIImage(named:RunesData[selectedMainRune]["keystones"][7]["stone_id"].stringValue), for: .normal)
@@ -324,6 +465,8 @@ class AddNewBuildViewController: UIViewController {
             m_r_3_title.textColor = UIColor(demoData[selectedMainRune]["color"].stringValue)
             m_r_3_title.text = RunesData[selectedMainRune]["keystones"][7]["stone_title"].stringValue
             m_r_3_image.tag = 73
+            a_stone_why[2] = ["keystones_id":RunesData[selectedMainRune]["keystones"][7]["id"].intValue, "why":m_3_textView.text ?? ""]
+
         }
         else if(sender.tag == 72){
             m_r_3_image.setImage(UIImage(named:RunesData[selectedMainRune]["keystones"][8]["stone_id"].stringValue), for: .normal)
@@ -336,6 +479,7 @@ class AddNewBuildViewController: UIViewController {
             m_r_3_title.textColor = UIColor(demoData[selectedMainRune]["color"].stringValue)
             m_r_3_title.text = RunesData[selectedMainRune]["keystones"][8]["stone_title"].stringValue
             m_r_3_image.tag = 73
+            a_stone_why[2] = ["keystones_id":RunesData[selectedMainRune]["keystones"][8]["id"].intValue, "why":m_3_textView.text ?? ""]
         }
         else{
             if(sender.tag == 73){
@@ -380,6 +524,7 @@ class AddNewBuildViewController: UIViewController {
             m_r_4_title.textColor = UIColor(demoData[selectedMainRune]["color"].stringValue)
             m_r_4_title.text = RunesData[selectedMainRune]["keystones"][9]["stone_title"].stringValue
             m_r_4_image.tag = 78
+            a_stone_why[3] = ["keystones_id":RunesData[selectedMainRune]["keystones"][9]["id"].intValue, "why":m_4_textView.text ?? ""]
         }
         else if(sender.tag == 76){
             m_r_4_image.setImage(UIImage(named:RunesData[selectedMainRune]["keystones"][10]["stone_id"].stringValue), for: .normal)
@@ -392,6 +537,7 @@ class AddNewBuildViewController: UIViewController {
             m_r_4_title.textColor = UIColor(demoData[selectedMainRune]["color"].stringValue)
             m_r_4_title.text = RunesData[selectedMainRune]["keystones"][10]["stone_title"].stringValue
             m_r_4_image.tag = 78
+            a_stone_why[3] = ["keystones_id":RunesData[selectedMainRune]["keystones"][10]["id"].intValue, "why":m_4_textView.text ?? ""]
         }
         else if(sender.tag == 77){
             m_r_4_image.setImage(UIImage(named:RunesData[selectedMainRune]["keystones"][11]["stone_id"].stringValue), for: .normal)
@@ -404,6 +550,7 @@ class AddNewBuildViewController: UIViewController {
             m_r_4_title.textColor = UIColor(demoData[selectedMainRune]["color"].stringValue)
             m_r_4_title.text = RunesData[selectedMainRune]["keystones"][11]["stone_title"].stringValue
             m_r_4_image.tag = 78
+            a_stone_why[3] = ["keystones_id":RunesData[selectedMainRune]["keystones"][11]["id"].intValue, "why":m_4_textView.text ?? ""]
         }
         else{
             if(sender.tag == 78){
@@ -527,7 +674,7 @@ class AddNewBuildViewController: UIViewController {
     @IBAction func changeLevelSOneRune(_ sender: UIButton) {
         
         if(sender.tag == 75){
-            s_r_1_image.setImage(UIImage(named:RunesData[selectedSecondaryRune]["keystones"][0]["stone_id"].stringValue), for: .normal)
+            s_r_1_image.setImage(UIImage(named:RunesData[selectedSecondaryRune]["keystones"][3]["stone_id"].stringValue), for: .normal)
             s_r_1_image.borderWidth = 2
             s_1_stack.isHidden = true
             s_r_1_why.isHidden = false
@@ -535,11 +682,13 @@ class AddNewBuildViewController: UIViewController {
             s_1_textView.isHidden = false
             s_r_1_why.backgroundColor = UIColor(demoData[selectedSecondaryRune]["color"].stringValue)
             s_r_1_title.textColor = UIColor(demoData[selectedSecondaryRune]["color"].stringValue)
-            s_r_1_title.text = RunesData[selectedSecondaryRune]["keystones"][0]["stone_title"].stringValue
+            s_r_1_title.text = RunesData[selectedSecondaryRune]["keystones"][3]["stone_title"].stringValue
             s_r_1_image.tag = 78
+            a_stone_why[4] = ["keystones_id":RunesData[selectedSecondaryRune]["keystones"][3]["id"].intValue, "why":s_1_textView.text ?? ""]
+
         }
         else if(sender.tag == 76){
-            s_r_1_image.setImage(UIImage(named:RunesData[selectedSecondaryRune]["keystones"][1]["stone_id"].stringValue), for: .normal)
+            s_r_1_image.setImage(UIImage(named:RunesData[selectedSecondaryRune]["keystones"][4]["stone_id"].stringValue), for: .normal)
             s_r_1_image.borderWidth = 2
             s_1_stack.isHidden = true
             s_r_1_why.isHidden = false
@@ -547,11 +696,12 @@ class AddNewBuildViewController: UIViewController {
             s_1_textView.isHidden = false
             s_r_1_why.backgroundColor = UIColor(demoData[selectedSecondaryRune]["color"].stringValue)
             s_r_1_title.textColor = UIColor(demoData[selectedSecondaryRune]["color"].stringValue)
-            s_r_1_title.text = RunesData[selectedSecondaryRune]["keystones"][1]["stone_title"].stringValue
+            s_r_1_title.text = RunesData[selectedSecondaryRune]["keystones"][4]["stone_title"].stringValue
             s_r_1_image.tag = 78
+            a_stone_why[4] = ["keystones_id":RunesData[selectedSecondaryRune]["keystones"][4]["id"].intValue, "why":s_1_textView.text ?? ""]
         }
         else if(sender.tag == 77){
-            s_r_1_image.setImage(UIImage(named:RunesData[selectedSecondaryRune]["keystones"][2]["stone_id"].stringValue), for: .normal)
+            s_r_1_image.setImage(UIImage(named:RunesData[selectedSecondaryRune]["keystones"][5]["stone_id"].stringValue), for: .normal)
             s_r_1_image.borderWidth = 2
             s_1_stack.isHidden = true
             s_r_1_why.isHidden = false
@@ -559,8 +709,35 @@ class AddNewBuildViewController: UIViewController {
             s_1_textView.isHidden = false
             s_r_1_why.backgroundColor = UIColor(demoData[selectedSecondaryRune]["color"].stringValue)
             s_r_1_title.textColor = UIColor(demoData[selectedSecondaryRune]["color"].stringValue)
-            s_r_1_title.text = RunesData[selectedSecondaryRune]["keystones"][2]["stone_title"].stringValue
+            s_r_1_title.text = RunesData[selectedSecondaryRune]["keystones"][5]["stone_title"].stringValue
             s_r_1_image.tag = 78
+            a_stone_why[4] = ["keystones_id":RunesData[selectedSecondaryRune]["keystones"][5]["id"].intValue, "why":s_1_textView.text ?? ""]
+        }
+        else if(sender.tag == 110){
+            s_r_1_image.setImage(UIImage(named:RunesData[selectedSecondaryRune]["keystones"][6]["stone_id"].stringValue), for: .normal)
+            s_r_1_image.borderWidth = 2
+            s_1_stack.isHidden = true
+            s_r_1_why.isHidden = false
+            s_r_1_title.isHidden = false
+            s_1_textView.isHidden = false
+            s_r_1_why.backgroundColor = UIColor(demoData[selectedSecondaryRune]["color"].stringValue)
+            s_r_1_title.textColor = UIColor(demoData[selectedSecondaryRune]["color"].stringValue)
+            s_r_1_title.text = RunesData[selectedSecondaryRune]["keystones"][6]["stone_title"].stringValue
+            s_r_1_image.tag = 78
+            a_stone_why[4] = ["keystones_id":RunesData[selectedSecondaryRune]["keystones"][6]["id"].intValue, "why":s_1_textView.text ?? ""]
+        }
+        else if(sender.tag == 111){
+            s_r_1_image.setImage(UIImage(named:RunesData[selectedSecondaryRune]["keystones"][7]["stone_id"].stringValue), for: .normal)
+            s_r_1_image.borderWidth = 2
+            s_1_stack.isHidden = true
+            s_r_1_why.isHidden = false
+            s_r_1_title.isHidden = false
+            s_1_textView.isHidden = false
+            s_r_1_why.backgroundColor = UIColor(demoData[selectedSecondaryRune]["color"].stringValue)
+            s_r_1_title.textColor = UIColor(demoData[selectedSecondaryRune]["color"].stringValue)
+            s_r_1_title.text = RunesData[selectedSecondaryRune]["keystones"][7]["stone_title"].stringValue
+            s_r_1_image.tag = 78
+            a_stone_why[4] = ["keystones_id":RunesData[selectedSecondaryRune]["keystones"][7]["id"].intValue, "why":s_1_textView.text ?? ""]
         }
         else{
             if(sender.tag == 78){
@@ -594,7 +771,7 @@ class AddNewBuildViewController: UIViewController {
     @IBAction func changeLevelSTwoRune(_ sender: UIButton) {
         
         if(sender.tag == 75){
-            s_r_2_image.setImage(UIImage(named:RunesData[selectedSecondaryRune]["keystones"][3]["stone_id"].stringValue), for: .normal)
+            s_r_2_image.setImage(UIImage(named:RunesData[selectedSecondaryRune]["keystones"][8]["stone_id"].stringValue), for: .normal)
             s_r_2_image.borderWidth = 2
             s_2_stack.isHidden = true
             s_r_2_why.isHidden = false
@@ -602,11 +779,12 @@ class AddNewBuildViewController: UIViewController {
             s_2_textView.isHidden = false
             s_r_2_why.backgroundColor = UIColor(demoData[selectedSecondaryRune]["color"].stringValue)
             s_r_2_title.textColor = UIColor(demoData[selectedSecondaryRune]["color"].stringValue)
-            s_r_2_title.text = RunesData[selectedSecondaryRune]["keystones"][3]["stone_title"].stringValue
+            s_r_2_title.text = RunesData[selectedSecondaryRune]["keystones"][8]["stone_title"].stringValue
             s_r_2_image.tag = 78
+            a_stone_why[5] = ["keystones_id":RunesData[selectedSecondaryRune]["keystones"][8]["id"].intValue, "why":s_2_textView.text ?? ""]
         }
         else if(sender.tag == 76){
-            s_r_2_image.setImage(UIImage(named:RunesData[selectedSecondaryRune]["keystones"][4]["stone_id"].stringValue), for: .normal)
+            s_r_2_image.setImage(UIImage(named:RunesData[selectedSecondaryRune]["keystones"][9]["stone_id"].stringValue), for: .normal)
             s_r_2_image.borderWidth = 2
             s_2_stack.isHidden = true
             s_r_2_why.isHidden = false
@@ -614,11 +792,12 @@ class AddNewBuildViewController: UIViewController {
             s_2_textView.isHidden = false
             s_r_2_why.backgroundColor = UIColor(demoData[selectedSecondaryRune]["color"].stringValue)
             s_r_2_title.textColor = UIColor(demoData[selectedSecondaryRune]["color"].stringValue)
-            s_r_2_title.text = RunesData[selectedSecondaryRune]["keystones"][4]["stone_title"].stringValue
+            s_r_2_title.text = RunesData[selectedSecondaryRune]["keystones"][9]["stone_title"].stringValue
             s_r_2_image.tag = 78
+            a_stone_why[5] = ["keystones_id":RunesData[selectedSecondaryRune]["keystones"][9]["id"].intValue, "why":s_2_textView.text ?? ""]
         }
         else if(sender.tag == 77){
-            s_r_2_image.setImage(UIImage(named:RunesData[selectedSecondaryRune]["keystones"][5]["stone_id"].stringValue), for: .normal)
+            s_r_2_image.setImage(UIImage(named:RunesData[selectedSecondaryRune]["keystones"][10]["stone_id"].stringValue), for: .normal)
             s_r_2_image.borderWidth = 2
             s_2_stack.isHidden = true
             s_r_2_why.isHidden = false
@@ -626,8 +805,22 @@ class AddNewBuildViewController: UIViewController {
             s_2_textView.isHidden = false
             s_r_2_why.backgroundColor = UIColor(demoData[selectedSecondaryRune]["color"].stringValue)
             s_r_2_title.textColor = UIColor(demoData[selectedSecondaryRune]["color"].stringValue)
-            s_r_2_title.text = RunesData[selectedSecondaryRune]["keystones"][5]["stone_title"].stringValue
+            s_r_2_title.text = RunesData[selectedSecondaryRune]["keystones"][10]["stone_title"].stringValue
             s_r_2_image.tag = 78
+            a_stone_why[5] = ["keystones_id":RunesData[selectedSecondaryRune]["keystones"][10]["id"].intValue, "why":s_2_textView.text ?? ""]
+        }
+        else if(sender.tag == 121){
+            s_r_2_image.setImage(UIImage(named:RunesData[selectedSecondaryRune]["keystones"][11]["stone_id"].stringValue), for: .normal)
+            s_r_2_image.borderWidth = 2
+            s_2_stack.isHidden = true
+            s_r_2_why.isHidden = false
+            s_r_2_title.isHidden = false
+            s_2_textView.isHidden = false
+            s_r_2_why.backgroundColor = UIColor(demoData[selectedSecondaryRune]["color"].stringValue)
+            s_r_2_title.textColor = UIColor(demoData[selectedSecondaryRune]["color"].stringValue)
+            s_r_2_title.text = RunesData[selectedSecondaryRune]["keystones"][11]["stone_title"].stringValue
+            s_r_2_image.tag = 78
+            a_stone_why[5] = ["keystones_id":RunesData[selectedSecondaryRune]["keystones"][11]["id"].intValue, "why":s_2_textView.text ?? ""]
         }
         else{
             if(sender.tag == 78){
@@ -675,7 +868,7 @@ class AddNewBuildViewController: UIViewController {
         
         // change level 1 runes
         for i in 0...s_1_button.count - 1{
-            let increase = 0
+            let increase = 3
             s_1_button[i].setImage(UIImage(named:RunesData[selectedSecondaryRune]["keystones"][i + increase]["stone_id"].stringValue), for: .normal)
             s_r_1_view[i].borderColor = UIColor(demoData[rune]["color"].stringValue)
         }
@@ -685,7 +878,7 @@ class AddNewBuildViewController: UIViewController {
         s_r_1_why.isHidden = true
         s_1_stack.isHidden = false
         s_1_textView.isHidden = true
-        s_1_textView.text = "Why did you pick this rune ?"
+        s_1_textView.text = "Why?"
         s_r_1_image.setImage(UIImage(named:"grid-placeholder"), for: .normal)
         s_r_1_image.borderWidth = 2
         s_r_1_image.borderColor = UIColor(demoData[rune]["color"].stringValue)
@@ -694,7 +887,7 @@ class AddNewBuildViewController: UIViewController {
         
         // change level 2 runes
         for i in 0...s_2_button.count - 1{
-            let increase = 3
+            let increase = 8
             s_2_button[i].setImage(UIImage(named:RunesData[selectedSecondaryRune]["keystones"][i + increase]["stone_id"].stringValue), for: .normal)
             s_r_2_view[i].borderColor = UIColor(demoData[rune]["color"].stringValue)
         }
@@ -704,7 +897,7 @@ class AddNewBuildViewController: UIViewController {
         s_r_2_why.isHidden = true
         s_2_stack.isHidden = false
         s_2_textView.isHidden = true
-        s_2_textView.text = "Why did you pick this rune ?"
+        s_2_textView.text = "Why?"
         s_r_2_image.setImage(UIImage(named:"grid-placeholder"), for: .normal)
         s_r_2_image.borderWidth = 2
         s_r_2_image.borderColor = UIColor(demoData[rune]["color"].stringValue)
@@ -723,7 +916,8 @@ class AddNewBuildViewController: UIViewController {
         setupLayout()
         changeMainRune(rune:selectedMainRune)
         changeSecondaryRune(rune: selectedSecondaryRune)
-        
+        setupTextfield()
+        print(RunesData)
     }
     
     func setupLayout(){
@@ -732,6 +926,12 @@ class AddNewBuildViewController: UIViewController {
         demoData.append(["name":"Sorcery","image":"8200","vfx":"vfx-s","subtitle":"Empowered abilities","color":"#9E6DF6","border":"sorcery_border"])
         demoData.append(["name":"Resolve","image":"8400","vfx":"vfx-r","subtitle":"Durability","color":"#52A64B","border":"resolve_border"])
         demoData.append(["name":"Inspiration","image":"8300","vfx":"vfx-i","subtitle":"Creative tools","color":"#689EB0","border":"inspiration_border"])
+        m_1_textView.delegate = self
+        m_2_textView.delegate = self
+        m_3_textView.delegate = self
+        m_4_textView.delegate = self
+        s_1_textView.delegate = self
+        s_2_textView.delegate = self
         // Do any additional setup after loading the view.
     }
     

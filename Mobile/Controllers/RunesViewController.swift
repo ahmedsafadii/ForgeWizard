@@ -15,7 +15,7 @@ class RunesViewController: UIViewController {
     var selectedIndex = 0
     var allowChange = true
     
-    let championsData = loadJson(fileName: "Runes")
+    let championsData = pathToJson(fileName: "Runes.json")
     
     
     @IBOutlet weak var RunesTableView: UITableView!

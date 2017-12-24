@@ -9,19 +9,44 @@
 import UIKit
 import AAPickerView
 
+protocol buttonDidClickedDelegate {
+    
+    func buttonClicked(summonerName:String,code:String,sumonerRegion:Int)
+}
+
+
 class JoinTheForgeTableViewCell: UITableViewCell {
 
+    var delegate: buttonDidClickedDelegate?
+    
+    
     @IBOutlet weak var summonerRegion: AAPickerView!
+    
+    @IBOutlet weak var summonerName: UITextField!
+    
+    @IBOutlet weak var summonerCode: UITextField!
+    
+    var regionIndex = -1
+    
+    @IBAction func register(_ sender: UIButton) {
+        self.delegate?.buttonClicked(summonerName: summonerName.text ?? "", code: summonerCode.text ?? "", sumonerRegion: regionIndex)
+
+    }
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
+    
         
-        let regions = ["EUW","EUNE"]
+        let servers = ["Brazil","Europe Nordic & East","Europe West","Latin America North","Latin America South","North America","Oceania","Russia","Turkey","Japan"]
+        
         summonerRegion.pickerType = .StringPicker
-        summonerRegion.stringPickerData = regions
+        summonerRegion.stringPickerData = servers
         summonerRegion.stringDidChange = { index in
-            print("selectedString ", regions[index])
+            self.regionIndex = index
         }
+        
+        summonerCode.text = randomString(length: 4)
         
         // Initialization code
     }

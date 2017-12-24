@@ -52,7 +52,7 @@ open class AAPickerView: UITextField {
     open var pickerRow: UILabel {
         let pickerLabel = UILabel()
         pickerLabel.textColor = .black
-        pickerLabel.font = UIFont(name: "HelveticaNeue", size: 20)
+        pickerLabel.font = UIFont(name: "Spiegel-Regular", size: 20)
         pickerLabel.textAlignment = .center
         pickerLabel.sizeToFit()
         return pickerLabel
@@ -76,7 +76,7 @@ open class AAPickerView: UITextField {
         let toolBar = UIToolbar()
         toolBar.barStyle = .default
         toolBar.isTranslucent = true
-        toolBar.tintColor = UIColor.blue
+        toolBar.tintColor = UIColor.black
         toolBar.sizeToFit()
         
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done,

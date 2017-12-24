@@ -14,5 +14,6 @@ target 'Forge Wizard' do
         pod 'Alamofire'
     	pod 'AlamofireImage'
         pod 'SwiftSpinner'
+        pod 'ReachabilitySwift'
 
 end

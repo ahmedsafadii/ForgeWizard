@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import SwiftyJSON
+import SwiftSpinner
 
 class PatchChangesViewController: UIViewController {
 
-    let patchData = loadJson(fileName: "getPatches")
-    let runesData = loadJson(fileName: "Runes")
+    var patchData:JSON!
+    let runesData = pathToJson(fileName: "Runes.json")
 
     
     @IBOutlet weak var PatchTableView: UITableView!
@@ -32,6 +34,36 @@ class PatchChangesViewController: UIViewController {
             Global.shared.RunesColors.append(RuneData)
         }
         
+        fetchLastUpdate()
+        
+    }
+    
+    @IBAction func updatePatches(_ sender: UIBarButtonItem) {
+        
+        fetchLastUpdate()
+    }
+    
+    
+    func fetchLastUpdate(){
+        
+        SwiftSpinner.show("Fetch latest changes...")
+        APIManager.instance.downloadPatches(fileName: "Patch.json", onSuccess: { json in
+            SwiftSpinner.hide()
+            self.patchData = json
+            self.PatchTableView.reloadData()
+            
+        }, onFailure: {error in
+            SwiftSpinner.hide()
+            if(fileExist(fileName: "Patch.json")){
+                self.patchData = pathToJson(fileName: "Patch.json")
+                self.PatchTableView.reloadData()
+            }
+            else{
+                self.patchData = []
+                self.PatchTableView.reloadData()
+            }
+        })
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,7 +80,7 @@ extension PatchChangesViewController : UITableViewDelegate,UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return patchData.count
+        return patchData?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

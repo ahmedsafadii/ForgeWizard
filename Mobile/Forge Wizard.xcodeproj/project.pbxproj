@@ -16,6 +16,7 @@
 		FE4AFD6C1FE6FEB900694EF4 /* MainRunesBuildTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE4AFD6A1FE6FEB900694EF4 /* MainRunesBuildTableViewCell.xib */; };
 		FE4AFD6F1FE7213F00694EF4 /* SecondaryRunesBuildsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4AFD6D1FE7213F00694EF4 /* SecondaryRunesBuildsTableViewCell.swift */; };
 		FE4AFD701FE7213F00694EF4 /* SecondaryRunesBuildsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE4AFD6E1FE7213F00694EF4 /* SecondaryRunesBuildsTableViewCell.xib */; };
+		FE5F436B1FED8F13006FB73B /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5F436A1FED8F13006FB73B /* UserDefaults.swift */; };
 		FE6E75AA1FE739BC009D43EA /* RunesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6E75A91FE739BC009D43EA /* RunesViewController.swift */; };
 		FE6E75AC1FE73A10009D43EA /* RuneCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6E75AB1FE73A10009D43EA /* RuneCollectionViewCell.swift */; };
 		FE6E75AF1FE74478009D43EA /* RuneHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6E75AD1FE74478009D43EA /* RuneHeaderTableViewCell.swift */; };
@@ -32,7 +33,6 @@
 		FE6E75CE1FE7DEF6009D43EA /* SelectedRuneDescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6E75CC1FE7DEF6009D43EA /* SelectedRuneDescriptionTableViewCell.swift */; };
 		FE6E75CF1FE7DEF6009D43EA /* SelectedRuneDescriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE6E75CD1FE7DEF6009D43EA /* SelectedRuneDescriptionTableViewCell.xib */; };
 		FE7063CF1FEBC3B00060458D /* AddNewBuildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7063CE1FEBC3B00060458D /* AddNewBuildViewController.swift */; };
-		FE7063D11FEC30FE0060458D /* Test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE7063D01FEC30FE0060458D /* Test.storyboard */; };
 		FE98232F1FEAFA6E0070C343 /* LocalChampions.json in Resources */ = {isa = PBXBuildFile; fileRef = FE98232E1FEAFA6E0070C343 /* LocalChampions.json */; };
 		FE9823311FEB062E0070C343 /* TimeAgo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9823301FEB062D0070C343 /* TimeAgo.swift */; };
 		FE9823331FEB0BB80070C343 /* Runes.json in Resources */ = {isa = PBXBuildFile; fileRef = FE9823321FEB0BB80070C343 /* Runes.json */; };
@@ -100,6 +100,7 @@
 		FE4AFD6A1FE6FEB900694EF4 /* MainRunesBuildTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainRunesBuildTableViewCell.xib; sourceTree = "<group>"; };
 		FE4AFD6D1FE7213F00694EF4 /* SecondaryRunesBuildsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryRunesBuildsTableViewCell.swift; sourceTree = "<group>"; };
 		FE4AFD6E1FE7213F00694EF4 /* SecondaryRunesBuildsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondaryRunesBuildsTableViewCell.xib; sourceTree = "<group>"; };
+		FE5F436A1FED8F13006FB73B /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		FE6E75A91FE739BC009D43EA /* RunesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunesViewController.swift; sourceTree = "<group>"; };
 		FE6E75AB1FE73A10009D43EA /* RuneCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuneCollectionViewCell.swift; sourceTree = "<group>"; };
 		FE6E75AD1FE74478009D43EA /* RuneHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuneHeaderTableViewCell.swift; sourceTree = "<group>"; };
@@ -116,7 +117,6 @@
 		FE6E75CC1FE7DEF6009D43EA /* SelectedRuneDescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedRuneDescriptionTableViewCell.swift; sourceTree = "<group>"; };
 		FE6E75CD1FE7DEF6009D43EA /* SelectedRuneDescriptionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedRuneDescriptionTableViewCell.xib; sourceTree = "<group>"; };
 		FE7063CE1FEBC3B00060458D /* AddNewBuildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewBuildViewController.swift; sourceTree = "<group>"; };
-		FE7063D01FEC30FE0060458D /* Test.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Test.storyboard; sourceTree = "<group>"; };
 		FE98232E1FEAFA6E0070C343 /* LocalChampions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LocalChampions.json; sourceTree = "<group>"; };
 		FE9823301FEB062D0070C343 /* TimeAgo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeAgo.swift; sourceTree = "<group>"; };
 		FE9823321FEB0BB80070C343 /* Runes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Runes.json; sourceTree = "<group>"; };
@@ -322,6 +322,7 @@
 				FEBA3AC51FE5F3EF0083FA11 /* IBDesignable.swift */,
 				FEBA3AC71FE5F3FE0083FA11 /* Extentions.swift */,
 				FEE4D51D1FE941270088247A /* Global.swift */,
+				FE5F436A1FED8F13006FB73B /* UserDefaults.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -352,7 +353,6 @@
 				FE9823401FEB25050070C343 /* SelectedPatchViewController.swift */,
 				FE9823641FEB34B10070C343 /* ForgeRunesViewController.swift */,
 				FE7063CE1FEBC3B00060458D /* AddNewBuildViewController.swift */,
-				FE7063D01FEC30FE0060458D /* Test.storyboard */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -460,7 +460,6 @@
 				FE9823621FEB31350070C343 /* render_FleetFootwork.m4v in Resources */,
 				FEC60CBE1FE6B63700BA3FF7 /* VerifyTableViewCell.xib in Resources */,
 				FE9823331FEB0BB80070C343 /* Runes.json in Resources */,
-				FE7063D11FEC30FE0060458D /* Test.storyboard in Resources */,
 				FE9823611FEB31350070C343 /* render_SummonAery.m4v in Resources */,
 				FE6E75B01FE74478009D43EA /* RuneHeaderTableViewCell.xib in Resources */,
 				FEC60CC21FE6B7CE00BA3FF7 /* Spiegel-Italic.ttf in Resources */,
@@ -495,6 +494,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftSpinner/SwiftSpinner.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/UIColor_Hex_Swift/UIColor_Hex_Swift.framework",
@@ -505,6 +505,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSpinner.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIColor_Hex_Swift.framework",
@@ -586,6 +587,7 @@
 				FE9823411FEB25050070C343 /* SelectedPatchViewController.swift in Sources */,
 				FE9823311FEB062E0070C343 /* TimeAgo.swift in Sources */,
 				FE6E75AC1FE73A10009D43EA /* RuneCollectionViewCell.swift in Sources */,
+				FE5F436B1FED8F13006FB73B /* UserDefaults.swift in Sources */,
 				FEBA3AC21FE5F3C30083FA11 /* ChmpionCollectionViewCell.swift in Sources */,
 				FE98233E1FEB21500070C343 /* GetPreviusPatchTableViewCell.swift in Sources */,
 				FE6E75CE1FE7DEF6009D43EA /* SelectedRuneDescriptionTableViewCell.swift in Sources */,

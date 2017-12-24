@@ -7,15 +7,110 @@
 //
 
 import UIKit
+import SwiftSpinner
+import SwiftyJSON
 
-class ForgeRunesViewController: UIViewController {
-
+class ForgeRunesViewController: UIViewController,buttonDidClickedDelegate {
+    
+    @IBOutlet var errorView: UIView!
+    @IBOutlet weak var errorMessage: UILabel!
+    
+    
+    @IBAction func updateMyRunes(_ sender: UIBarButtonItem) {
+        
+        checkLoginView()
+        print(builds)
+        
+    }
+    
+    @IBAction func logOut(_ sender: UIBarButtonItem) {
+        SwiftSpinner.show(duration: 1.0, title: "Logging out")
+        UserDefaultsData().removeObject(key: "summonerData")
+        checkLoginView()
+        SummonerTableView.reloadData()
+    }
+    
+    
+    var isLogin = true
+    
+    var builds:JSON!
+    
+    
+    func checkLoginView(){
+        if(UserDefaultsData().checkObject(key: "summonerData")){
+            Global.shared.summonerData = UserDefaultsData().getObject(key: "summonerData")
+            SwiftSpinner.show("Fetching your runes ...")
+            APIManager.instance.getUserData(id: Global.shared.summonerData["summoner"]["id"].stringValue, onSuccess: { json in
+                if(json.count == 0){
+                    self.errorMessage.text = "You dont have any runes"
+                    self.SummonerTableView.backgroundView = self.errorView
+                }
+                else{
+                    self.SummonerTableView.backgroundView = nil
+                    
+                }
+                self.builds = json
+                self.SummonerTableView.reloadData()
+                SwiftSpinner.hide()
+            }, onFailure: { error in
+                self.errorMessage.text = error.localizedDescription
+                self.SummonerTableView.backgroundView = self.errorView
+                self.builds = nil
+                self.SummonerTableView.reloadData()
+                SwiftSpinner.hide()
+            })
+            isLogin = false
+            addIcon.isEnabled = true
+            logoutIcon.isEnabled = true
+        }
+        else{
+            SummonerTableView.reloadData()
+            print("disabble")
+            isLogin = true
+            addIcon.isEnabled = false
+            logoutIcon.isEnabled = false
+        }
+    }
+    
+    
+    func buttonClicked(summonerName: String, code: String, sumonerRegion: Int) {
+        if(summonerName == ""){
+            self.showAlert(title: "", message: "Summoner name is required", ok: "ok")
+        }
+        else if(sumonerRegion == -1){
+            self.showAlert(title: "", message: "Region is required", ok: "ok")
+        }
+        else{
+            SwiftSpinner.show("Login in progress ...")
+            let summoner = summonerName.addingPercentEncoding( withAllowedCharacters: .urlHostAllowed) ?? ""
+            APIManager.instance.registerSummoner(name: summoner, region: Global.shared.regions[sumonerRegion]["key"] ?? "", code: code, onSuccess: { json in
+                print(json)
+                if(json["status"].exists()){
+                    SwiftSpinner.hide()
+                    if(json["status"]["status_code"].intValue == 404){
+                        self.showAlert(title: "", message: "Summoner " + summoner + " not found in " + Global.shared.regions[sumonerRegion]["name"]!, ok: "Ok")
+                    }
+                    else{
+                        self.showAlert(title: "", message: json["status"]["message"].stringValue, ok: "Ok")
+                    }
+                }
+                else{
+                    UserDefaultsData().setObject(value: json,key: "summonerData")
+                    Global.shared.summonerData = UserDefaultsData().getObject(key: "summonerData")
+                    self.checkLoginView()
+                }
+            }, onFailure: { error in
+                print(error)
+                SwiftSpinner.hide()
+                self.showAlert(title: "", message: error.localizedDescription, ok: "Ok")
+            })
+        }
+    }
+    
     @IBOutlet weak var addIcon: UIBarButtonItem!
     @IBOutlet weak var logoutIcon: UIBarButtonItem!
     
     @IBOutlet weak var SummonerTableView: UITableView!
-
-    var isLogin = true
     
     
     @IBAction func addBuild(_ sender: UIBarButtonItem) {
@@ -27,10 +122,10 @@ class ForgeRunesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideBackButton()
-
+        self.checkLoginView()
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
@@ -40,17 +135,17 @@ class ForgeRunesViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
 
 extension ForgeRunesViewController : UITableViewDelegate,UITableViewDataSource {
@@ -73,7 +168,7 @@ extension ForgeRunesViewController : UITableViewDelegate,UITableViewDataSource {
                 return 1
             }
             else{
-                return 10
+                return builds?.count ?? 0
             }
         }
     }
@@ -82,12 +177,15 @@ extension ForgeRunesViewController : UITableViewDelegate,UITableViewDataSource {
         
         if(isLogin){
             let cell = Bundle.main.loadNibNamed("JoinTheForgeTableViewCell", owner: self, options: nil)?.first as! JoinTheForgeTableViewCell
-            
+            cell.delegate = self
             return cell
         }
         else{
             if(indexPath.section == 0){
                 let cell = Bundle.main.loadNibNamed("SummonerLoginTableViewCell", owner: self, options: nil)?.first as! SummonerLoginTableViewCell
+                
+                cell.summonerName.text = Global.shared.summonerData["summoner"]["summoner_name"].stringValue
+                cell.summonerIcon.af_setImage(withURL: URL(string:"http://ddragon.leagueoflegends.com/cdn/7.24.2/img/profileicon/" + Global.shared.summonerData["summoner"]["summoner_profile_icon"].stringValue + ".png")!, placeholderImage: UIImage(named:"grid-placeholder"))
                 
                 return cell
                 
@@ -96,10 +194,25 @@ extension ForgeRunesViewController : UITableViewDelegate,UITableViewDataSource {
                 let cell = Bundle.main.loadNibNamed("RuneBuildTableViewCell", owner: self, options: nil)?.first as! RuneBuildTableViewCell
                 cell.dislikeButton.isHidden = false
                 cell.dislikeButton.setImage(UIImage(named:"remove"), for: .normal)
+                cell.runeTitle.text = builds[indexPath.row]["builds"][0]["title"].stringValue
+                cell.proName.text = builds[indexPath.row]["name"].stringValue
+                cell.proSubtitle.text = stringToDate(str: builds[indexPath.row]["builds"][0]["updated_at"]["date"].stringValue)
+                cell.proPlayer.af_setImage(withURL: generateUrl(name: builds[indexPath.row]["key"].stringValue, placeHolder: "grid-placeholder.png", type: "champions", extention: "jpg"), placeholderImage: UIImage(named:builds[indexPath.row]["key"].stringValue))
+                cell.runeDescription.text = builds[indexPath.row]["builds"][0]["description"].stringValue
+                cell.patch.text = builds[indexPath.row]["builds"][0]["patch"]["patch"].stringValue
+                cell.lane.text = builds[indexPath.row]["builds"][0]["lane"]["name"].stringValue
+
+                cell.laneImage.image = UIImage(named:builds[indexPath.row]["builds"][0]["lane"]["image"].stringValue)
+
+                cell.runeBackground.image = UIImage(named:getBuildRuneImage(runeId: builds[indexPath.row]["builds"][0]["rune_main"]["rune_id"].stringValue))
+
+                cell.main_rune.image = UIImage(named:builds[indexPath.row]["builds"][0]["primary_data"][0]["build_keystone"]["stone_id"].stringValue)
+                cell.second_rune.image = UIImage(named:builds[indexPath.row]["builds"][0]["rune_secondary"]["rune_id"].stringValue)
+
                 return cell
                 
             }
-
+            
         }
     }
     
