@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Champions extends Model
 {
     protected $table = 'champions';
-    
+
     protected $guarded = [];
 
     protected $hidden = ['created_at','updated_at'];
@@ -15,7 +15,7 @@ class Champions extends Model
 
     public function builds()
     {
-        return $this->hasMany('App\Builds','champion_id','id');
+        return $this->hasMany('App\Builds','champion_id','id')->orderBy('updated_at', 'DESC');
     }
 
     public function champions() {

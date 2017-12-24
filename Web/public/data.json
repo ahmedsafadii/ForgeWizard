@@ -277,7 +277,7 @@
    ],
    "Nunu":[
       {
-         "title":"Don't Make the Yeti Angry",
+         "title":"Don\u2019t Make the Yeti Angry",
          "description":"Neutral objective control and teamfight utility.",
          "patch":"7.24",
          "primary":"Resolve",
@@ -1432,7 +1432,7 @@
    ],
    "Teemo":[
       {
-         "title":"That's Gotta Sting",
+         "title":"That\u2019s Gotta Sting",
          "description":"Maximum lane pressure damage and harassment.",
          "patch":"7.23",
          "primary":"Sorcery",
@@ -1708,7 +1708,7 @@
    ],
    "Tryndamere":[
       {
-         "title":"This'll be a Slaughter",
+         "title":"This\u2019ll be a Slaughter",
          "description":"Massive all-in 1v1 threat and split-pushing.",
          "patch":"7.23",
          "primary":"Precision",
@@ -2687,7 +2687,7 @@
    ],
    "Nautilus":[
       {
-         "title":"Fear the Ocean's Weight",
+         "title":"Fear the Ocean\u2019s Weight",
          "description":"Lane sustain and teamfight utility.",
          "patch":"7.22",
          "primary":"Resolve",
@@ -2734,7 +2734,7 @@
    ],
    "Kled":[
       {
-         "title":"They's About to Be Dead",
+         "title":"They\u2019s About to Be Dead",
          "description":"Maximum damage output and dueling power.",
          "patch":"7.22",
          "primary":"Precision",
@@ -2875,7 +2875,7 @@
    ],
    "Irelia":[
       {
-         "title":"There's no turning back",
+         "title":"There\u2019s no turning back",
          "description":"Sustained fighting power and ramping damage.",
          "patch":"7.22",
          "primary":"Precision",
@@ -3014,7 +3014,7 @@
    ],
    "Zac":[
       {
-         "title":"Someone's About To Get Hurt",
+         "title":"Someone\u2019s About To Get Hurt",
          "description":"Early-to-mid game skirmishing and snowballing",
          "patch":"7.22",
          "primary":"Resolve",
@@ -3108,7 +3108,7 @@
    ],
    "Draven":[
       {
-         "title":"Hit 'em Where It Hurts",
+         "title":"Hit \u2019em Where It Hurts",
          "description":"Maximum damage and late game scaling.",
          "patch":"7.22",
          "primary":"Precision",
@@ -3153,7 +3153,7 @@
          "position":"Bottom"
       },
       {
-         "title":"Something need killin'?",
+         "title":"Something need killin\u2019?",
          "description":"Life steal sustain, and raw damage execution.",
          "patch":"7.22",
          "primary":"Precision",
@@ -3339,7 +3339,7 @@
    ],
    "Zilean":[
       {
-         "title":"I've Seen Their Death",
+         "title":"I\u2019ve Seen Their Death",
          "description":"Wave clear pressure, roams, and maximum utility.",
          "patch":"7.22",
          "primary":"Inspiration",
@@ -4179,7 +4179,7 @@
    ],
    "Amumu":[
       {
-         "title":"Don't Throw a Tantrum",
+         "title":"Don\u2019t Throw a Tantrum",
          "description":"Tank engage and teamfight utility.",
          "patch":"7.24",
          "primary":"Resolve",
@@ -4320,7 +4320,7 @@
    ],
    "Kayle":[
       {
-         "title":"Who's next?",
+         "title":"Who\u2019s next?",
          "description":"Last game scaling and dueling split push.",
          "patch":"7.22",
          "primary":"Precision",
@@ -4835,7 +4835,7 @@
    ],
    "Sivir":[
       {
-         "title":"Life's Cheap, Death Pays",
+         "title":"Life\u2019s Cheap, Death Pays",
          "description":"Heavy sustain, life steal, and safety.",
          "patch":"7.22",
          "primary":"Precision",
@@ -5164,7 +5164,7 @@
    ],
    "Maokai":[
       {
-         "title":"Nature's Grasping at Straws",
+         "title":"Nature\u2019s Grasping at Straws",
          "description":"Engage, tankiness, and massive team-wide healing.",
          "patch":"7.22",
          "primary":"Resolve",
@@ -5444,7 +5444,7 @@
    ],
    "Trundle":[
       {
-         "title":"I'm Just Trolling",
+         "title":"I\u2019m Just Trolling",
          "description":"Heavy split-push and healing.",
          "patch":"7.22",
          "primary":"Resolve",
@@ -6100,7 +6100,7 @@
    ],
    "Rakan":[
       {
-         "title":"Let's Dance",
+         "title":"Let\u2019s Dance",
          "description":"Teamfight initiation and survivability.",
          "patch":"7.22",
          "primary":"Resolve",
@@ -6147,7 +6147,7 @@
    ],
    "Gnar":[
       {
-         "title":"Where Do You Think You're going?",
+         "title":"Where Do You Think You\u2019re going?",
          "description":"Lane dominance, chase, and kill potential.",
          "patch":"7.22",
          "primary":"Inspiration",
@@ -6427,7 +6427,7 @@
    ],
    "Alistar":[
       {
-         "title":"Can't Milk Those",
+         "title":"Can\u2019t Milk Those",
          "description":"Engage and teamfight power with item actives.",
          "patch":"7.22",
          "primary":"Resolve",
@@ -7079,7 +7079,7 @@
    ],
    "Jinx":[
       {
-         "title":"They're Not Laughing",
+         "title":"They\u2019re Not Laughing",
          "description":"Hyper-scaling damage and reset damage.",
          "patch":"7.23",
          "primary":"Precision",
