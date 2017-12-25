@@ -414,7 +414,7 @@ public class SwiftSpinner: UIView {
     private var blurView: UIVisualEffectView!
     private var vibrancyView: UIVisualEffectView!
     
-    private let defaultTitleFont = UIFont(name: "HelveticaNeue", size: 22.0)!
+    private let defaultTitleFont = UIFont(name: "Spiegel-Regular", size: 17)!
     private var currentTitleFont : UIFont
     
     private var defaultTitleColor = UIColor.white

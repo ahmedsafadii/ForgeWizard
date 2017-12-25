@@ -61,7 +61,12 @@ class MainRunesBuildTableViewCell: UITableViewCell {
         
         for i in 0...why_description.count - 1 {
             
-            why_description[i].text = buildData["primary_data"][i]["stone_why"].stringValue.htmlToString
+            if(buildData["primary_data"][i]["stone_why"].stringValue == "Why?" || buildData["primary_data"][i]["stone_why"].stringValue == ""){
+                why_description[i].text = "Owner didn't say why :("
+            }
+            else{
+                why_description[i].text = buildData["primary_data"][i]["stone_why"].stringValue.htmlToString
+            }
         }
         
         

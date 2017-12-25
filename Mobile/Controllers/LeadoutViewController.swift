@@ -340,7 +340,7 @@ extension LeadoutViewController : UICollectionViewDelegate,UICollectionViewDataS
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        SwiftSpinner.show("Fetching champion runes", animated: true)
+        SwiftSpinner.show("Fetching " + championsDataFilter[indexPath.row]["name"].stringValue + " Runes", animated: true)
         SwiftSpinner.setTitleColor(UIColor.white)
         SwiftSpinner.sharedInstance.innerColor = nil
         APIManager.instance.getChampionData(id: championsDataFilter[indexPath.row]["id"].stringValue, onSuccess: { json in

@@ -118,7 +118,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SORCERY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="iR4-UG-fYv">
-                                                    <rect key="frame" x="16" y="102" width="66.5" height="19"/>
+                                                    <rect key="frame" x="16.5" y="102" width="66.5" height="19"/>
                                                     <fontDescription key="fontDescription" name="BeaufortforLOL-Bold" family="BeaufortforLOL-Bold" pointSize="15"/>
                                                     <color key="textColor" red="0.54509803921568623" green="0.396078431372549" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
