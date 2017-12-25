@@ -41,8 +41,6 @@ class AddNewBuildViewController: UIViewController,UITextViewDelegate {
     
     
     @IBAction func addNewRunes(_ sender: UIButton) {
-        SwiftSpinner.show("Please wait ...")
-
         var isStoneWhy = true
         var isKeystone = true
         a_stone_why[0]["why"] = m_1_textView.text ?? ""
@@ -83,7 +81,8 @@ class AddNewBuildViewController: UIViewController,UITextViewDelegate {
             self.showAlert(title: "", message: "All field are required", ok: "Ok")
         }
         else{
-            
+            SwiftSpinner.show("Please wait ...")
+
             a_userId = Global.shared.summonerData["summoner"]["id"].intValue
             a_title = runeTitle.text ?? ""
             a_desc = runeDescription.text ?? ""
