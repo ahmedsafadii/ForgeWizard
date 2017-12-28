@@ -59,29 +59,25 @@ Champions runes demo data reads from [RuneForge](http://runeforge.gg).
     <th>Endpoint</th>
     <th>Description</th>
     <th>Method</th>
-    <th>Parameters</th>
+    <th>Controller</th>
   </tr>
   <tr>
     <td>v1/champions/update</td>
     <td>Install the latest champions from league of legends to database</td>
     <td>GET</td>
-    <td></td>
+    <td><a href="Web/app/Http/Controllers/RiotController.php">RiotController.php</a></td>
   </tr>
     <tr>
     <td>v1/champions/updateFreeRotate</td>
     <td>Update free rotate stats for the champions</td>
     <td>GET</td>
-    <td></td>
+    <td><a href="Web/app/Http/Controllers/RiotController.php">RiotController.php</a></td>
   </tr>
     <tr>
     <td>v1/summoner/verify</td>
     <td>Check summoner name if exist and verify by third party verification endpoint from league</td>
     <td>POST</td>
-    <td>
-      name - String
-      region - String
-      code - String
-    </td>
+    <td><a href="Web/app/Http/Controllers/RiotController.php">RiotController.php</a></td>
   </tr>
 </table>
 
@@ -96,22 +92,21 @@ Champions runes demo data reads from [RuneForge](http://runeforge.gg).
   </tr>
   <tr>
     <td>v1/runes/updateRunes</td>
-    <td>Update or install the new runes fetch from [en_US_runesReforged.json](Web/public/en_US_runesReforged.json) </td>
+    <td>Update or install the new runes fetch from <a href="Web/public/en_US_runesReforged.json">en_US_runesReforged.json</a> </td>
     <td>GET</td>
-    <td></td>
+    <td><a href="Web/app/Http/Controllers/RunesController.php">RunesController.php</a></td>
   </tr>
     <tr>
     <td>v1/runes/updateLanes</td>
     <td>Update or install the champiosn roles fetch from [Lanes.json](Web/public/Lanes.json)</td>
     <td>GET</td>
-    <td></td>
+    <td><a href="Web/app/Http/Controllers/RunesController.php">RunesController.php</a></td>
   </tr>
     <tr>
     <td>v1/runes/getRunes</td>
     <td>Get latest runes for using in application</td>
     <td>GET</td>
-    <td>
-    </td>
+    <td><a href="Web/app/Http/Controllers/RunesController.php">RunesController.php</a></td>
   </tr>
 </table>
 
@@ -128,31 +123,19 @@ Champions runes demo data reads from [RuneForge](http://runeforge.gg).
     <td>v1/patch/addPatch</td>
     <td>Add patch version for the database</td>
     <td>POST</td>
-    <td>
-    patch - String
-    title - String
-    desc - String
-    patch_date - String
-    </td>
+    <td><a href="Web/app/Http/Controllers/PatchController.php">PatchController.php</a></td>
   </tr>
     <tr>
     <td>v1/patch/addNote</td>
     <td>Add note for the added patch</td>
     <td>POST</td>
-    <td>
-    title - String
-    description - String
-    type - {"nerf" || "buff"}
-    rune_id - Integer
-    patch_id - Integer
-    </td>
+    <td><a href="Web/app/Http/Controllers/PatchController.php">PatchController.php</a></td>
   </tr>
     <tr>
     <td>v1/patch/getPatches</td>
     <td>Get lataest patch for the runes include the notes</td>
     <td>GET</td>
-    <td>
-    </td>
+    <td><a href="Web/app/Http/Controllers/PatchController.php">PatchController.php</a></td>
   </tr>
 </table>
 
@@ -160,12 +143,27 @@ Champions runes demo data reads from [RuneForge](http://runeforge.gg).
 
 - Rune Build Endpoint
 
-| Endpoint  | Description | Method | Parameters |
-| ------------- | ------------- |
-| v1/build/getTools  | Fetch latest patches change, champions, and roles for using it before add the build |
-| v1/build/setupData  | Fetch latest runes build from [data.json](Web/public/data.json) |
-| v1/patch/getPatches | Get lataest patch for the runes include the notes |
 
+<table>
+  <tr>
+    <th>Endpoint</th>
+    <th>Description</th>
+    <th>Method</th>
+    <th>Parameters</th>
+  </tr>
+  <tr>
+    <td>v1/build/getTools</td>
+    <td>Fetch latest patches change, champions, and roles for using it before add the build</td>
+    <td>GET</td>
+    <td><a href="Web/app/Http/Controllers/PatchController.php">PatchController.php</a></td>
+  </tr>
+    <tr>
+    <td>v1/build/setupData</td>
+    <td>Fetch latest runes build from <a href="Web/public/data.json">data.json</a></td>
+    <td>POST</td>
+    <td><a href="Web/app/Http/Controllers/PatchController.php">PatchController.php</a></td>
+  </tr>
+</table>
 
 ## TODO in future 
 
