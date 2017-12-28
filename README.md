@@ -155,49 +155,55 @@ Champions runes demo data reads from [RuneForge](http://runeforge.gg).
     <td>v1/build/getTools</td>
     <td>Fetch latest patches change, champions, and roles for using it before add the build</td>
     <td>GET</td>
-    <td><a href="Web/app/Http/Controllers/BuildsController.php">BuildsController.php</a></td>
+    <td><a href="Web/app/Http/Controllers/BuildsController.php">BuildsController.php</a>@getTools</td>
   </tr>
     <tr>
     <td>v1/build/setupData</td>
-    <td>Fetch latest runes build from <a href="Web/public/data.json">data.json</a></td>
-    <td>POST</td>
-    <td><a href="Web/app/Http/Controllers/BuildsController.php">BuildsController.php</a></td>
+    <td>Fetch latest runes build from <a href="Web/public/data.json">data.json</a> and save it to the database</td>
+    <td>GET</td>
+    <td><a href="Web/app/Http/Controllers/BuildsController.php">BuildsController.php</a>@setupData</td>
   </tr>
    <tr>
-    <td>v1/build/setupData</td>
-    <td>Fetch latest runes build from <a href="Web/public/data.json">data.json</a></td>
+    <td>v1/build/addTopPlayer</td>
+    <td>Add pro player to the database</td>
     <td>POST</td>
-    <td><a href="Web/app/Http/Controllers/BuildsController.php">BuildsController.php</a></td>
+    <td><a href="Web/app/Http/Controllers/BuildsController.php">BuildsController.php</a>@AddTopPlayer</td>
   </tr>
    <tr>
-    <td>v1/build/setupData</td>
-    <td></td>
-    <td>POST</td>
-    <td><a href="Web/app/Http/Controllers/BuildsController.php">BuildsController.php</a></td>
+    <td>v1/build/getBuilds</td>
+    <td>get latest builds for the every chmpion maximum 5 per one</td>
+    <td>GET</td>
+    <td><a href="Web/app/Http/Controllers/BuildsController.php">BuildsController.php</a>@getData</td>
   </tr>
    <tr>
-    <td>v1/build/setupData</td>
-    <td></td>
-    <td>POST</td>
-    <td><a href="Web/app/Http/Controllers/BuildsController.php">BuildsController.php</a></td>
+    <td>v1/build/getBuilds/champion/{id}/</td>
+    <td>get the latest champion build by champion id</td>
+    <td>GET</td>
+    <td><a href="Web/app/Http/Controllers/BuildsController.php">BuildsController.php</a>@getDataByChampionId</td>
   </tr>
    <tr>
-    <td>v1/build/setupData</td>
-    <td></td>
-    <td>POST</td>
-    <td><a href="Web/app/Http/Controllers/BuildsController.php">BuildsController.php</a></td>
+    <td>v1/build/getBuilds/user/{id}/</td>
+    <td>get the latest champion build by user id</td>
+    <td>GET</td>
+    <td><a href="Web/app/Http/Controllers/BuildsController.php">BuildsController.php</a>@getDataByUserId</td>
   </tr>
    <tr>
-    <td>v1/build/setupData</td>
-    <td></td>
+    <td>v1/build/addBuild</td>
+    <td>Add new runes build to the database</td>
     <td>POST</td>
-    <td><a href="Web/app/Http/Controllers/BuildsController.php">BuildsController.php</a></td>
+    <td><a href="Web/app/Http/Controllers/BuildsController.php">BuildsController.php@AddBuild</a></td>
   </tr>
    <tr>
-    <td>v1/build/setupData</td>
-    <td></td>
+    <td>v1/build/removeBuild</td>
+    <td>Remove build from the databbase</td>
     <td>POST</td>
-    <td><a href="Web/app/Http/Controllers/BuildsController.php">BuildsController.php</a></td>
+    <td><a href="Web/app/Http/Controllers/BuildsController.php">BuildsController.php</a>@RemoveBuild</td>
+  </tr>
+    <tr>
+    <td>v1/build/addRate</td>
+    <td>Add rate for the build positive or negative</td>
+    <td>POST</td>
+    <td><a href="Web/app/Http/Controllers/BuildsController.php">BuildsController.php</a>@AddRate</td>
   </tr>
 </table>
 
