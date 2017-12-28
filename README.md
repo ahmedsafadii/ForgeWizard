@@ -62,20 +62,24 @@ Champions runes demo data reads from [RuneForge](http://runeforge.gg).
     <th>Parameters</th>
   </tr>
   <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
+    <td>v1/champions/update</td>
+    <td>Install the latest champions from league of legends to database</td>
+    <td>GET</td>
     <td>Germany</td>
+  </tr>
+    <tr>
+    <td>v1/champions/updateFreeRotate</td>
+    <td>Update free rotate stats for the champions</td>
+    <td>GET</td>
     <td>Germany</td>
+  </tr>
+    <tr>
+    <td>v1/summoner/verify</td>
+    <td>Check summoner name if exist and verify by third party verification endpoint from league</td>
+    <td>POST</td>
     <td>Germany</td>
   </tr>
 </table>
-
-
-| Endpoint  | Description | Method | Parameters |
-| ------------- | ------------- |
-| v1/champions/update  | Install the latest champions from league of legends to database  |
-| v1/champions/updateFreeRotate  | Update free rotate stats for the champions  |
-| v1/summoner/verify | Check summoner name if exist and verify by third party verification endpoint from league |
 
 - Runes Endpoint
 
