@@ -26,7 +26,7 @@ The project is an iOS application which helps the new users to educate about usi
 
 The app itself is an online/offline mode in case you want to see the champions RUNES and how it works, it's also provide the ability to specific your own RUNES so the other people could use them and share it with other friends,
 
-Champions runes data reads from http://runeforge.gg
+Champions runes demo data reads from [RuneForge](http://runeforge.gg).
 
 ## Features
 
@@ -53,6 +53,23 @@ Champions runes data reads from http://runeforge.gg
 ## Endpoints
 
 - Riot endpoints
+
+<table>
+  <tr>
+    <th>Endpoint</th>
+    <th>Description</th>
+    <th>Method</th>
+    <th>Parameters</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+    <td>Germany</td>
+    <td>Germany</td>
+  </tr>
+</table>
+
 
 | Endpoint  | Description | Method | Parameters |
 | ------------- | ------------- |
@@ -88,7 +105,11 @@ Champions runes data reads from http://runeforge.gg
 | v1/patch/getPatches | Get lataest patch for the runes include the notes |
 
 
+## TODO in future 
 
+* allow user to remove or edit his own build
+* allow user to rate other people builds
+* allow user to report the bad builds or troll builds
 
 
 ## Disclaimer 
