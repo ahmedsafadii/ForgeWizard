@@ -38,9 +38,45 @@ Champions runes data reads from http://runeforge.gg
 - Now you can call the endpoint :)
 
 
-## Documentation 
+## Endpoints
 
-Web service [here](web.md).
+- Riot endpoints
+
+| Endpoint  | Description | Method | Parameters |
+| ------------- | ------------- |
+| v1/champions/update  | Install the latest champions from league of legends to database  |
+| v1/champions/updateFreeRotate  | Update free rotate stats for the champions  |
+| v1/summoner/verify | Check summoner name if exist and verify by third party verification endpoint from league |
+
+- Runes Endpoint
+
+| Endpoint  | Description | Method | Parameters |
+| ------------- | ------------- |
+| v1/runes/updateRunes  | Update or install the new runes fetch from [en_US_runesReforged.json](Web/public/en_US_runesReforged.json) | GET | Null
+| v1/runes/updateLanes  | Update or install the champiosn roles fetch from [Lanes.json](Web/public/Lanes.json)  | GET | Null
+| v1/runes/getRunes | Get latest runes for using in application | POST | Null
+
+
+- Patch Endpoint
+
+| Endpoint  | Description | Method | Parameters |
+| ------------- | ------------- |
+| v1/patch/addPatch  | Add patch version for the database  |
+| v1/patch/addNote  | Add note for the added patch |
+| v1/patch/getPatches | Get lataest patch for the runes include the notes |
+
+
+
+- Rune Build Endpoint
+
+| Endpoint  | Description | Method | Parameters |
+| ------------- | ------------- |
+| v1/build/getTools  | Fetch latest patches change, champions, and roles for using it before add the build |
+| v1/build/setupData  | Fetch latest runes build from [data.json](Web/public/data.json) |
+| v1/patch/getPatches | Get lataest patch for the runes include the notes |
+
+
+
 
 
 ## Disclaimer 
