@@ -78,29 +78,83 @@ Champions runes demo data reads from [RuneForge](http://runeforge.gg).
     <td>Check summoner name if exist and verify by third party verification endpoint from league</td>
     <td>POST</td>
     <td>
-      {name:String}
-      {region:String}
-      {code:String}
+      name - String
+      region - String
+      code - String
     </td>
   </tr>
 </table>
 
 - Runes Endpoint
 
-| Endpoint  | Description | Method | Parameters |
-| ------------- | ------------- |
-| v1/runes/updateRunes  | Update or install the new runes fetch from [en_US_runesReforged.json](Web/public/en_US_runesReforged.json) | GET | Null
-| v1/runes/updateLanes  | Update or install the champiosn roles fetch from [Lanes.json](Web/public/Lanes.json)  | GET | Null
-| v1/runes/getRunes | Get latest runes for using in application | POST | Null
-
+<table>
+  <tr>
+    <th>Endpoint</th>
+    <th>Description</th>
+    <th>Method</th>
+    <th>Parameters</th>
+  </tr>
+  <tr>
+    <td>v1/runes/updateRunes</td>
+    <td>Update or install the new runes fetch from [en_US_runesReforged.json](Web/public/en_US_runesReforged.json) </td>
+    <td>GET</td>
+    <td></td>
+  </tr>
+    <tr>
+    <td>v1/runes/updateLanes</td>
+    <td>Update or install the champiosn roles fetch from [Lanes.json](Web/public/Lanes.json)</td>
+    <td>GET</td>
+    <td></td>
+  </tr>
+    <tr>
+    <td>v1/runes/getRunes</td>
+    <td>Get latest runes for using in application</td>
+    <td>GET</td>
+    <td>
+    </td>
+  </tr>
+</table>
 
 - Patch Endpoint
 
-| Endpoint  | Description | Method | Parameters |
-| ------------- | ------------- |
-| v1/patch/addPatch  | Add patch version for the database  |
-| v1/patch/addNote  | Add note for the added patch |
-| v1/patch/getPatches | Get lataest patch for the runes include the notes |
+<table>
+  <tr>
+    <th>Endpoint</th>
+    <th>Description</th>
+    <th>Method</th>
+    <th>Parameters</th>
+  </tr>
+  <tr>
+    <td>v1/patch/addPatch</td>
+    <td>Add patch version for the database</td>
+    <td>POST</td>
+    <td>
+    patch - String
+    title - String
+    desc - String
+    patch_date - String
+    </td>
+  </tr>
+    <tr>
+    <td>v1/patch/addNote</td>
+    <td>Add note for the added patch</td>
+    <td>POST</td>
+    <td>
+    title - String
+    description - String
+    type - {"nerf" || "buff"}
+    rune_id - Integer
+    patch_id - Integer
+    </td>
+  </tr>
+    <tr>
+    <td>v1/patch/getPatches</td>
+    <td>Get lataest patch for the runes include the notes</td>
+    <td>GET</td>
+    <td>
+    </td>
+  </tr>
+</table>
 
 
 
