@@ -129,7 +129,7 @@ Champions runes demo data reads from [RuneForge](http://runeforge.gg).
     <td>v1/patch/addNote</td>
     <td>Add note for the added patch</td>
     <td>POST</td>
-    <td><a href="Web/app/Http/Controllers/PatchController.php">PatchController.php</a@AddNotetd>
+      <td><a href="Web/app/Http/Controllers/PatchController.php">PatchController.php</a>@AddNote<td>
   </tr>
     <tr>
     <td>v1/patch/getPatches</td>
