@@ -208,7 +208,7 @@ Champions runes demo data reads from [RuneForge](http://runeforge.gg).
 </table>
 
 ## TODO in future 
-
+* enable auth login and register
 * allow user to remove or edit his own build
 * allow user to rate other people builds
 * allow user to report the bad builds or troll builds
