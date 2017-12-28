@@ -98,7 +98,7 @@ Champions runes demo data reads from [RuneForge](http://runeforge.gg).
   </tr>
     <tr>
     <td>v1/runes/updateLanes</td>
-    <td>Update or install the champiosn roles fetch from [Lanes.json](Web/public/Lanes.json)</td>
+    <td>Update or install the champiosn roles fetch from <a href="Web/public/Lanes.json">Lanes.json</a></td>
     <td>GET</td>
     <td><a href="Web/app/Http/Controllers/RunesController.php">RunesController.php</a></td>
   </tr>
