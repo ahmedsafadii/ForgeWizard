@@ -65,19 +65,19 @@ Champions runes demo data reads from [RuneForge](http://runeforge.gg).
     <td>v1/champions/update</td>
     <td>Install the latest champions from league of legends to database</td>
     <td>GET</td>
-    <td><a href="Web/app/Http/Controllers/RiotController.php">RiotController.php</a></td>
+    <td><a href="Web/app/Http/Controllers/RiotController.php">RiotController.php</a>@InstallOrUpdateChampions</td>
   </tr>
     <tr>
     <td>v1/champions/updateFreeRotate</td>
     <td>Update free rotate stats for the champions</td>
     <td>GET</td>
-    <td><a href="Web/app/Http/Controllers/RiotController.php">RiotController.php</a></td>
+    <td><a href="Web/app/Http/Controllers/RiotController.php">RiotController.php</a>@updateFreeRotate</td>
   </tr>
     <tr>
     <td>v1/summoner/verify</td>
     <td>Check summoner name if exist and verify by third party verification endpoint from league</td>
     <td>POST</td>
-    <td><a href="Web/app/Http/Controllers/RiotController.php">RiotController.php</a></td>
+    <td><a href="Web/app/Http/Controllers/RiotController.php">RiotController.php</a>@VerifySummonerAccount</td>
   </tr>
 </table>
 
@@ -94,19 +94,19 @@ Champions runes demo data reads from [RuneForge](http://runeforge.gg).
     <td>v1/runes/updateRunes</td>
     <td>Update or install the new runes fetch from <a href="Web/public/en_US_runesReforged.json">en_US_runesReforged.json</a> </td>
     <td>GET</td>
-    <td><a href="Web/app/Http/Controllers/RunesController.php">RunesController.php</a></td>
+    <td><a href="Web/app/Http/Controllers/RunesController.php">RunesController.php</a>@InstallOrUpdateRunes</td>
   </tr>
     <tr>
     <td>v1/runes/updateLanes</td>
     <td>Update or install the champiosn roles fetch from <a href="Web/public/Lanes.json">Lanes.json</a></td>
     <td>GET</td>
-    <td><a href="Web/app/Http/Controllers/RunesController.php">RunesController.php</a></td>
+    <td><a href="Web/app/Http/Controllers/RunesController.php">RunesController.php</a>@InstallOrUpdateLanes</td>
   </tr>
     <tr>
     <td>v1/runes/getRunes</td>
     <td>Get latest runes for using in application</td>
     <td>GET</td>
-    <td><a href="Web/app/Http/Controllers/RunesController.php">RunesController.php</a></td>
+    <td><a href="Web/app/Http/Controllers/RunesController.php">RunesController.php</a>@getRunes</td>
   </tr>
 </table>
 
@@ -123,19 +123,19 @@ Champions runes demo data reads from [RuneForge](http://runeforge.gg).
     <td>v1/patch/addPatch</td>
     <td>Add patch version for the database</td>
     <td>POST</td>
-    <td><a href="Web/app/Http/Controllers/PatchController.php">PatchController.php</a></td>
+    <td><a href="Web/app/Http/Controllers/PatchController.php">PatchController.php</a>@AddPatch</td>
   </tr>
     <tr>
     <td>v1/patch/addNote</td>
     <td>Add note for the added patch</td>
     <td>POST</td>
-    <td><a href="Web/app/Http/Controllers/PatchController.php">PatchController.php</a></td>
+    <td><a href="Web/app/Http/Controllers/PatchController.php">PatchController.php</a@AddNotetd>
   </tr>
     <tr>
     <td>v1/patch/getPatches</td>
     <td>Get lataest patch for the runes include the notes</td>
     <td>GET</td>
-    <td><a href="Web/app/Http/Controllers/PatchController.php">PatchController.php</a></td>
+    <td><a href="Web/app/Http/Controllers/PatchController.php">PatchController.php</a>@getPatches</td>
   </tr>
 </table>
 
@@ -191,7 +191,7 @@ Champions runes demo data reads from [RuneForge](http://runeforge.gg).
     <td>v1/build/addBuild</td>
     <td>Add new runes build to the database</td>
     <td>POST</td>
-    <td><a href="Web/app/Http/Controllers/BuildsController.php">BuildsController.php@AddBuild</a></td>
+    <td><a href="Web/app/Http/Controllers/BuildsController.php">BuildsController.php</a>@AddBuild</td>
   </tr>
    <tr>
     <td>v1/build/removeBuild</td>
