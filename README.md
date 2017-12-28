@@ -65,19 +65,23 @@ Champions runes demo data reads from [RuneForge](http://runeforge.gg).
     <td>v1/champions/update</td>
     <td>Install the latest champions from league of legends to database</td>
     <td>GET</td>
-    <td>Germany</td>
+    <td></td>
   </tr>
     <tr>
     <td>v1/champions/updateFreeRotate</td>
     <td>Update free rotate stats for the champions</td>
     <td>GET</td>
-    <td>Germany</td>
+    <td></td>
   </tr>
     <tr>
     <td>v1/summoner/verify</td>
     <td>Check summoner name if exist and verify by third party verification endpoint from league</td>
     <td>POST</td>
-    <td>Germany</td>
+    <td>
+      {name:String}
+      {region:String}
+      {code:String}
+    </td>
   </tr>
 </table>
 
