@@ -155,13 +155,49 @@ Champions runes demo data reads from [RuneForge](http://runeforge.gg).
     <td>v1/build/getTools</td>
     <td>Fetch latest patches change, champions, and roles for using it before add the build</td>
     <td>GET</td>
-    <td><a href="Web/app/Http/Controllers/PatchController.php">PatchController.php</a></td>
+    <td><a href="Web/app/Http/Controllers/BuildsController.php">BuildsController.php</a></td>
   </tr>
     <tr>
     <td>v1/build/setupData</td>
     <td>Fetch latest runes build from <a href="Web/public/data.json">data.json</a></td>
     <td>POST</td>
-    <td><a href="Web/app/Http/Controllers/PatchController.php">PatchController.php</a></td>
+    <td><a href="Web/app/Http/Controllers/BuildsController.php">BuildsController.php</a></td>
+  </tr>
+   <tr>
+    <td>v1/build/setupData</td>
+    <td>Fetch latest runes build from <a href="Web/public/data.json">data.json</a></td>
+    <td>POST</td>
+    <td><a href="Web/app/Http/Controllers/BuildsController.php">BuildsController.php</a></td>
+  </tr>
+   <tr>
+    <td>v1/build/setupData</td>
+    <td></td>
+    <td>POST</td>
+    <td><a href="Web/app/Http/Controllers/BuildsController.php">BuildsController.php</a></td>
+  </tr>
+   <tr>
+    <td>v1/build/setupData</td>
+    <td></td>
+    <td>POST</td>
+    <td><a href="Web/app/Http/Controllers/BuildsController.php">BuildsController.php</a></td>
+  </tr>
+   <tr>
+    <td>v1/build/setupData</td>
+    <td></td>
+    <td>POST</td>
+    <td><a href="Web/app/Http/Controllers/BuildsController.php">BuildsController.php</a></td>
+  </tr>
+   <tr>
+    <td>v1/build/setupData</td>
+    <td></td>
+    <td>POST</td>
+    <td><a href="Web/app/Http/Controllers/BuildsController.php">BuildsController.php</a></td>
+  </tr>
+   <tr>
+    <td>v1/build/setupData</td>
+    <td></td>
+    <td>POST</td>
+    <td><a href="Web/app/Http/Controllers/BuildsController.php">BuildsController.php</a></td>
   </tr>
 </table>
 
