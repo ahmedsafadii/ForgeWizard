@@ -87,6 +87,7 @@ class ForgeRunesViewController: UIViewController,buttonDidClickedDelegate {
             isLogin = false
             addIcon.isEnabled = true
             logoutIcon.isEnabled = true
+            reloadBuild.isEnabled = true
         }
         else{
             SummonerTableView.reloadData()
@@ -94,6 +95,7 @@ class ForgeRunesViewController: UIViewController,buttonDidClickedDelegate {
             isLogin = true
             addIcon.isEnabled = false
             logoutIcon.isEnabled = false
+            reloadBuild.isEnabled = false
         }
     }
     
@@ -141,15 +143,10 @@ class ForgeRunesViewController: UIViewController,buttonDidClickedDelegate {
     
     @IBOutlet weak var addIcon: UIBarButtonItem!
     @IBOutlet weak var logoutIcon: UIBarButtonItem!
+    @IBOutlet weak var reloadBuild: UIBarButtonItem!
     
     @IBOutlet weak var SummonerTableView: UITableView!
-    
-    
-    @IBAction func addBuild(_ sender: UIBarButtonItem) {
-        
-        self.performSegue(withIdentifier: "addBuild", sender: self)
-    }
-    
+
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
@@ -249,7 +246,7 @@ extension ForgeRunesViewController : UITableViewDelegate,UITableViewDataSource {
 
                 cell.main_rune.image = UIImage(named:builds[indexPath.row]["builds"][0]["primary_data"][0]["build_keystone"]["stone_id"].stringValue)
                 cell.second_rune.image = UIImage(named:builds[indexPath.row]["builds"][0]["rune_secondary"]["rune_id"].stringValue)
-
+                cell.dislikeButton.isHidden = true
                 return cell
                 
             }

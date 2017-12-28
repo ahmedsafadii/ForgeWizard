@@ -156,11 +156,18 @@ extension ChampionsBuildsListViewController : UITableViewDelegate,UITableViewDat
         
         if(championData["validBuild"].count != 0 && championData["usersBuild"].count != 0){
             if(indexPath.section == 0){
-                cell.proName.text = "Runeforge.gg"
                 
-                cell.proSubtitle.text = championData["validBuild"][indexPath.row]["updated_at"].stringValue
-                
-                cell.proPlayer.af_setImage(withURL: generateUrl(name: championData["validBuild"][indexPath.row]["player"]["image"].stringValue, placeHolder: "grid-placeholder.png", type: "pro", extention: "png"), placeholderImage: UIImage(named:"grid-placeholder.png"))
+                if(championData["validBuild"][indexPath.row]["player"]["name"].stringValue == "Free"){
+                    cell.proName.text = "Runeforge.gg"
+                    cell.proSubtitle.text = championData["validBuild"][indexPath.row]["updated_at"].stringValue
+                    cell.proPlayer.af_setImage(withURL: generateUrl(name: championData["validBuild"][indexPath.row]["player"]["image"].stringValue, placeHolder: "grid-placeholder.png", type: "pro", extention: "png"), placeholderImage: UIImage(named:"grid-placeholder.png"))
+                }
+                else{
+                    cell.proName.text = championData["validBuild"][indexPath.row]["player"]["name"].stringValue
+                    cell.proSubtitle.text = championData["validBuild"][indexPath.row]["updated_at"].stringValue
+                    cell.proPlayer.af_setImage(withURL: generateUrl(name: championData["validBuild"][indexPath.row]["player"]["image"].stringValue, placeHolder: "grid-placeholder.png", type: "pro", extention: "png"), placeholderImage: UIImage(named:"grid-placeholder.png"))
+                }
+
                 cell.Dislike.text = "0"
                 cell.Like.text = "1"
                 cell.runeTitle.text = championData["validBuild"][indexPath.row]["title"].stringValue
@@ -217,11 +224,17 @@ extension ChampionsBuildsListViewController : UITableViewDelegate,UITableViewDat
             cell.second_rune.image = UIImage(named:championData["usersBuild"][indexPath.row]["rune_secondary"]["rune_id"].stringValue)
         }
         else{
-            cell.proName.text = "Runeforge.gg"
+            if(championData["validBuild"][indexPath.row]["player"]["name"].stringValue == "Free"){
+                cell.proName.text = "Runeforge.gg"
+                cell.proSubtitle.text = championData["validBuild"][indexPath.row]["updated_at"].stringValue
+                cell.proPlayer.af_setImage(withURL: generateUrl(name: championData["validBuild"][indexPath.row]["player"]["image"].stringValue, placeHolder: "grid-placeholder.png", type: "pro", extention: "png"), placeholderImage: UIImage(named:"grid-placeholder.png"))
+            }
+            else{
+                cell.proName.text = championData["validBuild"][indexPath.row]["player"]["name"].stringValue
+                cell.proSubtitle.text = championData["validBuild"][indexPath.row]["updated_at"].stringValue
+                cell.proPlayer.af_setImage(withURL: generateUrl(name: championData["validBuild"][indexPath.row]["player"]["image"].stringValue, placeHolder: "grid-placeholder.png", type: "pro", extention: "png"), placeholderImage: UIImage(named:"grid-placeholder.png"))
+            }
             
-            cell.proSubtitle.text = championData["validBuild"][indexPath.row]["updated_at"].stringValue
-            
-            cell.proPlayer.af_setImage(withURL: generateUrl(name: championData["validBuild"][indexPath.row]["player"]["image"].stringValue, placeHolder: "grid-placeholder.png", type: "pro", extention: "png"), placeholderImage: UIImage(named:"grid-placeholder.png"))
             cell.Dislike.text = "0"
             cell.Like.text = "1"
             cell.runeTitle.text = championData["validBuild"][indexPath.row]["title"].stringValue

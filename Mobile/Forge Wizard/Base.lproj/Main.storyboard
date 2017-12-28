@@ -297,7 +297,7 @@
                                     <action selector="logOut:" destination="eQN-aI-jrX" id="SpY-1B-qBT"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem image="ic_update_white" id="euo-8Y-d0q">
+                            <barButtonItem enabled="NO" image="ic_update_white" id="euo-8Y-d0q">
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <action selector="updateMyRunes:" destination="eQN-aI-jrX" id="XKQ-jM-ZXR"/>
@@ -317,6 +317,7 @@
                         <outlet property="errorMessage" destination="Twy-TA-hEU" id="ElX-Yd-h9e"/>
                         <outlet property="errorView" destination="DaJ-rm-3QW" id="Hfv-T5-bAT"/>
                         <outlet property="logoutIcon" destination="Ac3-9O-FGx" id="0fP-JG-s1X"/>
+                        <outlet property="reloadBuild" destination="euo-8Y-d0q" id="KVF-Wy-KB3"/>
                         <segue destination="CXA-Sk-lsf" kind="show" identifier="addBuild" id="U36-bc-efh"/>
                     </connections>
                 </viewController>
@@ -326,7 +327,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error message" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Twy-TA-hEU">
-                            <rect key="frame" x="8" y="54.5" width="224" height="20.5"/>
+                            <rect key="frame" x="8" y="54" width="224" height="20"/>
                             <fontDescription key="fontDescription" name="Spiegel-Regular" family="Spiegel" pointSize="17"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
@@ -744,7 +745,11 @@
                                 <action selector="updateAgain:" destination="3fI-Hi-Qm8" id="8YC-zn-OnN"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="About" id="R0J-ti-FBj"/>
+                        <barButtonItem key="rightBarButtonItem" image="About" id="R0J-ti-FBj">
+                            <connections>
+                                <action selector="showRiotInfo:" destination="3fI-Hi-Qm8" id="YSV-5r-OQE"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="championNameSrarch" destination="rT2-Xf-eTz" id="ZeT-Aq-sQf"/>
@@ -893,7 +898,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No runes for this champion, be the first one" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RkI-tp-3b8">
-                            <rect key="frame" x="8" y="54.5" width="224" height="20.5"/>
+                            <rect key="frame" x="8" y="43.5" width="224" height="41"/>
                             <fontDescription key="fontDescription" name="Spiegel-Regular" family="Spiegel" pointSize="17"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
@@ -1079,7 +1084,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PNc-md-clQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-508" y="1105"/>
+            <point key="canvasLocation" x="-508" y="1395"/>
         </scene>
         <!--Patch Changes-->
         <scene sceneID="lbT-aQ-NdQ">
@@ -1100,7 +1105,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o7F-8A-AV4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-508" y="2090"/>
+            <point key="canvasLocation" x="-508" y="2471"/>
         </scene>
         <!--Add New Build View Controller-->
         <scene sceneID="Kat-IO-Lh2">
@@ -1125,7 +1130,7 @@
                                                 <color key="textColor" red="0.99607843139999996" green="0.90980392160000001" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="247" verticalHuggingPriority="247" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" text="What are you waiting, share your experice !" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t16-3o-JYu">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="247" verticalHuggingPriority="247" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" text="What are you waiting, share your experience !" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t16-3o-JYu">
                                                 <rect key="frame" x="20" y="61" width="280" height="17"/>
                                                 <fontDescription key="fontDescription" name="Spiegel-Regular" family="Spiegel" pointSize="14"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>

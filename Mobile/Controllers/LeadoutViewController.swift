@@ -15,6 +15,15 @@ import Reachability
 
 class LeadoutViewController: UIViewController,UITextFieldDelegate {
     
+    
+    @IBAction func showRiotInfo(_ sender: UIBarButtonItem) {
+        
+        // create the alert
+        let alert = UIAlertController(title: "Warrning", message: "This product is not endorsed, certified or otherwise approved in any way by Riot Games, Inc.™ or any of its affiliates.", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     @IBOutlet weak var championsCollection: UICollectionView!
     
     @IBOutlet var loadingView: UIView!
