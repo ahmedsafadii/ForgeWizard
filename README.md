@@ -4,9 +4,9 @@
 
 <table>
   <tr>
-    <td><a href=""><img src="https://image.prntscr.com/image/_BncBgN9StCNArvFjsZLvA.png" width="200" height="600" alt="screenshot" title="screenshot" /></a></td>
-    <td><a href=""><img src="https://image.prntscr.com/image/_BncBgN9StCNArvFjsZLvA.png" width="200" height="600" alt="screenshot" title="screenshot" /></a></td>
-    <td><a href=""><img src="https://image.prntscr.com/image/_BncBgN9StCNArvFjsZLvA.png" width="200" height="600" alt="screenshot" title="screenshot" /></a></td>
+    <td><a href=""><img src="https://image.prntscr.com/image/_BncBgN9StCNArvFjsZLvA.png" alt="screenshot" title="screenshot" /></a></td>
+    <td><a href=""><img src="https://image.prntscr.com/image/_BncBgN9StCNArvFjsZLvA.png" alt="screenshot" title="screenshot" /></a></td>
+    <td><a href=""><img src="https://image.prntscr.com/image/_BncBgN9StCNArvFjsZLvA.png" alt="screenshot" title="screenshot" /></a></td>
   </tr>
 </table>
   
