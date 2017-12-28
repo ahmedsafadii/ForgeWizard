@@ -1,12 +1,12 @@
-<p align="center"><img src="https://image.prntscr.com/image/95kB4FcaRbaGbILlaxlxqA.png"></p>
+<p align="center"><img src="https://image.prntscr.com/image/95kB4FcaRbaGbILlaxlxqA.png" alt="logo" title="logo" /></p>
 
 # Forge Wizard
 
 <table>
   <tr>
-    <th>Company</th>
-    <th>Contact</th>
-    <th>Country</th>
+    <td><a href=""><img src="https://image.prntscr.com/image/_BncBgN9StCNArvFjsZLvA.png" width="200" height="600" alt="screenshot" title="screenshot" /></a></td>
+    <td><a href=""><img src="https://image.prntscr.com/image/_BncBgN9StCNArvFjsZLvA.png" width="200" height="600" alt="screenshot" title="screenshot" /></a></td>
+    <td><a href=""><img src="https://image.prntscr.com/image/_BncBgN9StCNArvFjsZLvA.png" width="200" height="600" alt="screenshot" title="screenshot" /></a></td>
   </tr>
 </table>
   
