@@ -19,7 +19,7 @@ This project is an entry for the [The Riot Games API Challenge 2017](https://dis
 
 by (EUW: Skt T1 Feed3r, EUW: ðemoń)
 
-You can download the app from Itunes [Forge Wizard](https://itunes.apple.com), a video demo [here](https://youtu.be/m943wpkSOiI)
+You can download the app from Itunes [Forge Wizard](https://itunes.apple.com/us/app/forge-wizard/id1329367559), a video demo [here](https://youtu.be/m943wpkSOiI)
 
 
 The project is an iOS application which helps the new users to educate about using the new RUNES, and help the pro players to share their experience in the game by adding their own RUNES, not to mention the RUNES description with videos and how it works and the patch changes.
